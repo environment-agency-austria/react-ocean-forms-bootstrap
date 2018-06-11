@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <FileInput
     field={
       Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -53,6 +54,7 @@ ShallowWrapper {
         className="custom-file"
       >
         <Input
+          disabled={false}
           id="field0"
           invalid={false}
           name="field0"
@@ -79,6 +81,7 @@ ShallowWrapper {
         </Label>
       </div>,
       "field": Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -118,6 +121,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Input
+            disabled={false}
             id="field0"
             invalid={false}
             name="field0"
@@ -152,6 +156,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "disabled": false,
             "id": "field0",
             "invalid": false,
             "name": "field0",
@@ -200,6 +205,7 @@ ShallowWrapper {
           className="custom-file"
         >
           <Input
+            disabled={false}
             id="field0"
             invalid={false}
             name="field0"
@@ -226,6 +232,7 @@ ShallowWrapper {
           </Label>
         </div>,
         "field": Object {
+          "disabled": false,
           "id": "field0",
           "invalid": false,
           "name": "field0",
@@ -265,6 +272,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Input
+              disabled={false}
               id="field0"
               invalid={false}
               name="field0"
@@ -299,6 +307,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "disabled": false,
               "id": "field0",
               "invalid": false,
               "name": "field0",

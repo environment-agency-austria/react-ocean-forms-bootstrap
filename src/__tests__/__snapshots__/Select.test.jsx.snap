@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Select
     field={
       Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -140,6 +141,7 @@ ShallowWrapper {
         valueKey="value"
       />,
       "field": Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -338,6 +340,7 @@ ShallowWrapper {
           valueKey="value"
         />,
         "field": Object {
+          "disabled": false,
           "id": "field0",
           "invalid": false,
           "name": "field0",

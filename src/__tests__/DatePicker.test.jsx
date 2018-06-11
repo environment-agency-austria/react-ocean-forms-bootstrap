@@ -22,6 +22,7 @@ describe('<DatePicker />', () => {
     invalid: false,
     id: FIELD_ID,
     name: FIELD_NAME,
+    disabled: false,
     onChange: jest.fn(),
     onBlur: jest.fn(),
   };

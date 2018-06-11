@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Input
     field={
       Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -39,6 +40,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": <Input
+        disabled={false}
         id="field0"
         name="field0"
         onBlur={[MockFunction]}
@@ -47,6 +49,7 @@ ShallowWrapper {
         value=""
       />,
       "field": Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -73,6 +76,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "disabled": false,
         "id": "field0",
         "invalid": undefined,
         "name": "field0",
@@ -94,6 +98,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <Input
+          disabled={false}
           id="field0"
           name="field0"
           onBlur={[MockFunction]}
@@ -102,6 +107,7 @@ ShallowWrapper {
           value=""
         />,
         "field": Object {
+          "disabled": false,
           "id": "field0",
           "invalid": false,
           "name": "field0",
@@ -128,6 +134,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "disabled": false,
           "id": "field0",
           "invalid": undefined,
           "name": "field0",

@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DatePicker
     field={
       Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -59,6 +60,7 @@ ShallowWrapper {
         value={null}
       />,
       "field": Object {
+        "disabled": false,
         "id": "field0",
         "invalid": false,
         "name": "field0",
@@ -137,6 +139,7 @@ ShallowWrapper {
           value={null}
         />,
         "field": Object {
+          "disabled": false,
           "id": "field0",
           "invalid": false,
           "name": "field0",
