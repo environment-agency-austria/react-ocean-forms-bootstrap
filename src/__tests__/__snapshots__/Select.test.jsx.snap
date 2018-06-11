@@ -1,0 +1,478 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Select
+    field={
+      Object {
+        "id": "field0",
+        "invalid": false,
+        "name": "field0",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "value": "",
+      }
+    }
+    label="field0"
+    meta={
+      Object {
+        "error": undefined,
+        "isValidating": undefined,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_select_placeholder",
+            ],
+            Array [
+              "ojs_select_noresults",
+            ],
+            Array [
+              "ojs_select_clearValue",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_noresults",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_clearValue",
+            },
+          ],
+        },
+        "valid": true,
+      }
+    }
+    options={
+      Array [
+        Object {
+          "label": "One",
+          "value": "one",
+        },
+        Object {
+          "label": "Two",
+          "value": "two",
+        },
+      ]
+    }
+    placeholder="ojs_select_placeholder"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Select
+        arrowRenderer={[Function]}
+        autosize={true}
+        backspaceRemoves={true}
+        backspaceToRemoveMessage="Press backspace to remove {label}"
+        className="react-select-control"
+        clearAllText="Clear all"
+        clearRenderer={[Function]}
+        clearValueText="ojs_select_clearValue"
+        clearable={true}
+        closeOnSelect={true}
+        deleteRemoves={true}
+        delimiter=","
+        disabled={false}
+        escapeClearsValue={true}
+        filterOptions={[Function]}
+        id="field0"
+        ignoreAccents={true}
+        ignoreCase={true}
+        inputProps={Object {}}
+        invalid={false}
+        isLoading={false}
+        joinValues={false}
+        labelKey="label"
+        matchPos="any"
+        matchProp="any"
+        menuBuffer={0}
+        menuRenderer={[Function]}
+        multi={false}
+        noResultsText="ojs_select_noresults"
+        onBlur={[Function]}
+        onBlurResetsInput={true}
+        onChange={[Function]}
+        onCloseResetsInput={true}
+        onSelectResetsInput={true}
+        openOnClick={true}
+        optionComponent={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "One",
+              "value": "one",
+            },
+            Object {
+              "label": "Two",
+              "value": "two",
+            },
+          ]
+        }
+        pageSize={5}
+        placeholder="ojs_select_placeholder"
+        removeSelected={true}
+        required={false}
+        rtl={false}
+        scrollMenuIntoView={true}
+        searchable={true}
+        simpleValue={false}
+        tabSelectsValue={true}
+        trimFilter={true}
+        value=""
+        valueComponent={[Function]}
+        valueKey="value"
+      />,
+      "field": Object {
+        "id": "field0",
+        "invalid": false,
+        "name": "field0",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "value": "",
+      },
+      "info": undefined,
+      "label": "field0",
+      "meta": Object {
+        "error": undefined,
+        "isValidating": undefined,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_select_placeholder",
+            ],
+            Array [
+              "ojs_select_noresults",
+            ],
+            Array [
+              "ojs_select_clearValue",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_noresults",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_clearValue",
+            },
+          ],
+        },
+        "valid": true,
+      },
+      "options": Array [
+        Object {
+          "label": "One",
+          "value": "one",
+        },
+        Object {
+          "label": "Two",
+          "value": "two",
+        },
+      ],
+      "placeholder": "ojs_select_placeholder",
+      "prefix": undefined,
+      "suffix": undefined,
+      "validators": undefined,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "arrowRenderer": [Function],
+        "autosize": true,
+        "backspaceRemoves": true,
+        "backspaceToRemoveMessage": "Press backspace to remove {label}",
+        "className": "react-select-control",
+        "clearAllText": "Clear all",
+        "clearRenderer": [Function],
+        "clearValueText": "ojs_select_clearValue",
+        "clearable": true,
+        "closeOnSelect": true,
+        "deleteRemoves": true,
+        "delimiter": ",",
+        "disabled": false,
+        "escapeClearsValue": true,
+        "filterOptions": [Function],
+        "id": "field0",
+        "ignoreAccents": true,
+        "ignoreCase": true,
+        "inputProps": Object {},
+        "invalid": false,
+        "isLoading": false,
+        "joinValues": false,
+        "labelKey": "label",
+        "matchPos": "any",
+        "matchProp": "any",
+        "menuBuffer": 0,
+        "menuRenderer": [Function],
+        "multi": false,
+        "noResultsText": "ojs_select_noresults",
+        "onBlur": [Function],
+        "onBlurResetsInput": true,
+        "onChange": [Function],
+        "onCloseResetsInput": true,
+        "onSelectResetsInput": true,
+        "openOnClick": true,
+        "optionComponent": [Function],
+        "options": Array [
+          Object {
+            "label": "One",
+            "value": "one",
+          },
+          Object {
+            "label": "Two",
+            "value": "two",
+          },
+        ],
+        "pageSize": 5,
+        "placeholder": "ojs_select_placeholder",
+        "removeSelected": true,
+        "required": false,
+        "rtl": false,
+        "scrollMenuIntoView": true,
+        "searchable": true,
+        "simpleValue": false,
+        "tabSelectsValue": true,
+        "trimFilter": true,
+        "value": "",
+        "valueComponent": [Function],
+        "valueKey": "value",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Select
+          arrowRenderer={[Function]}
+          autosize={true}
+          backspaceRemoves={true}
+          backspaceToRemoveMessage="Press backspace to remove {label}"
+          className="react-select-control"
+          clearAllText="Clear all"
+          clearRenderer={[Function]}
+          clearValueText="ojs_select_clearValue"
+          clearable={true}
+          closeOnSelect={true}
+          deleteRemoves={true}
+          delimiter=","
+          disabled={false}
+          escapeClearsValue={true}
+          filterOptions={[Function]}
+          id="field0"
+          ignoreAccents={true}
+          ignoreCase={true}
+          inputProps={Object {}}
+          invalid={false}
+          isLoading={false}
+          joinValues={false}
+          labelKey="label"
+          matchPos="any"
+          matchProp="any"
+          menuBuffer={0}
+          menuRenderer={[Function]}
+          multi={false}
+          noResultsText="ojs_select_noresults"
+          onBlur={[Function]}
+          onBlurResetsInput={true}
+          onChange={[Function]}
+          onCloseResetsInput={true}
+          onSelectResetsInput={true}
+          openOnClick={true}
+          optionComponent={[Function]}
+          options={
+            Array [
+              Object {
+                "label": "One",
+                "value": "one",
+              },
+              Object {
+                "label": "Two",
+                "value": "two",
+              },
+            ]
+          }
+          pageSize={5}
+          placeholder="ojs_select_placeholder"
+          removeSelected={true}
+          required={false}
+          rtl={false}
+          scrollMenuIntoView={true}
+          searchable={true}
+          simpleValue={false}
+          tabSelectsValue={true}
+          trimFilter={true}
+          value=""
+          valueComponent={[Function]}
+          valueKey="value"
+        />,
+        "field": Object {
+          "id": "field0",
+          "invalid": false,
+          "name": "field0",
+          "onBlur": [MockFunction],
+          "onChange": [MockFunction],
+          "value": "",
+        },
+        "info": undefined,
+        "label": "field0",
+        "meta": Object {
+          "error": undefined,
+          "isValidating": undefined,
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "ojs_select_placeholder",
+              ],
+              Array [
+                "ojs_select_noresults",
+              ],
+              Array [
+                "ojs_select_clearValue",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "ojs_select_placeholder",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_select_noresults",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_select_clearValue",
+              },
+            ],
+          },
+          "valid": true,
+        },
+        "options": Array [
+          Object {
+            "label": "One",
+            "value": "one",
+          },
+          Object {
+            "label": "Two",
+            "value": "two",
+          },
+        ],
+        "placeholder": "ojs_select_placeholder",
+        "prefix": undefined,
+        "suffix": undefined,
+        "validators": undefined,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "arrowRenderer": [Function],
+          "autosize": true,
+          "backspaceRemoves": true,
+          "backspaceToRemoveMessage": "Press backspace to remove {label}",
+          "className": "react-select-control",
+          "clearAllText": "Clear all",
+          "clearRenderer": [Function],
+          "clearValueText": "ojs_select_clearValue",
+          "clearable": true,
+          "closeOnSelect": true,
+          "deleteRemoves": true,
+          "delimiter": ",",
+          "disabled": false,
+          "escapeClearsValue": true,
+          "filterOptions": [Function],
+          "id": "field0",
+          "ignoreAccents": true,
+          "ignoreCase": true,
+          "inputProps": Object {},
+          "invalid": false,
+          "isLoading": false,
+          "joinValues": false,
+          "labelKey": "label",
+          "matchPos": "any",
+          "matchProp": "any",
+          "menuBuffer": 0,
+          "menuRenderer": [Function],
+          "multi": false,
+          "noResultsText": "ojs_select_noresults",
+          "onBlur": [Function],
+          "onBlurResetsInput": true,
+          "onChange": [Function],
+          "onCloseResetsInput": true,
+          "onSelectResetsInput": true,
+          "openOnClick": true,
+          "optionComponent": [Function],
+          "options": Array [
+            Object {
+              "label": "One",
+              "value": "one",
+            },
+            Object {
+              "label": "Two",
+              "value": "two",
+            },
+          ],
+          "pageSize": 5,
+          "placeholder": "ojs_select_placeholder",
+          "removeSelected": true,
+          "required": false,
+          "rtl": false,
+          "scrollMenuIntoView": true,
+          "searchable": true,
+          "simpleValue": false,
+          "tabSelectsValue": true,
+          "trimFilter": true,
+          "value": "",
+          "valueComponent": [Function],
+          "valueKey": "value",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
