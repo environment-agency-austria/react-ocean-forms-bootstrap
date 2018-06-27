@@ -15,7 +15,7 @@ use the components inside of Fields.
 
 ```js
 import { Form, Field } from 'react-ocean-forms';
-import { Input, ValidationSummary } from 'react-ocean-forms';
+import { Input, ValidationSummary } from 'react-ocean-forms-bootstrap';
 ```
 
 Then use the components where needed.
