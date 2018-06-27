@@ -21,6 +21,7 @@ ShallowWrapper {
       Object {
         "error": undefined,
         "isValidating": undefined,
+        "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
@@ -96,6 +97,7 @@ ShallowWrapper {
             >
               <Input
                 defaultChecked={true}
+                disabled={false}
                 id="field0"
                 invalid={false}
                 name="field0"
@@ -187,6 +189,7 @@ ShallowWrapper {
               >
                 <Input
                   defaultChecked={true}
+                  disabled={false}
                   id="field0"
                   invalid={false}
                   name="field0"
@@ -254,6 +257,7 @@ ShallowWrapper {
                 >
                   <Input
                     defaultChecked={true}
+                    disabled={false}
                     id="field0"
                     invalid={false}
                     name="field0"
@@ -301,6 +305,7 @@ ShallowWrapper {
                   "children": Array [
                     <Input
                       defaultChecked={true}
+                      disabled={false}
                       id="field0"
                       invalid={false}
                       name="field0"
@@ -349,6 +354,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "defaultChecked": true,
+                      "disabled": false,
                       "id": "field0",
                       "invalid": false,
                       "name": "field0",
@@ -455,6 +461,7 @@ ShallowWrapper {
               >
                 <Input
                   defaultChecked={true}
+                  disabled={false}
                   id="field0"
                   invalid={false}
                   name="field0"
@@ -546,6 +553,7 @@ ShallowWrapper {
                 >
                   <Input
                     defaultChecked={true}
+                    disabled={false}
                     id="field0"
                     invalid={false}
                     name="field0"
@@ -613,6 +621,7 @@ ShallowWrapper {
                   >
                     <Input
                       defaultChecked={true}
+                      disabled={false}
                       id="field0"
                       invalid={false}
                       name="field0"
@@ -660,6 +669,7 @@ ShallowWrapper {
                     "children": Array [
                       <Input
                         defaultChecked={true}
+                        disabled={false}
                         id="field0"
                         invalid={false}
                         name="field0"
@@ -708,6 +718,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "defaultChecked": true,
+                        "disabled": false,
                         "id": "field0",
                         "invalid": false,
                         "name": "field0",

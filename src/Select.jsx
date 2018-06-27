@@ -8,6 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
+import { Input as StrapInput } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldLine from './FieldLine';
@@ -78,6 +79,20 @@ class Select extends React.Component {
         field.value.label = selectableValue.label;
         this.handleChange(field.value);
       }
+    }
+
+    // Support for plaintext display
+    if (meta.plaintext) {
+      let displayValue = '';
+      if (field.value !== undefined && field.value !== null) {
+        displayValue = field.value.label;
+      }
+
+      return (
+        <FieldLine {...this.props}>
+          <StrapInput {...field} value={displayValue} plaintext />
+        </FieldLine>
+      );
     }
 
     return (

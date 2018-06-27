@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DatePicker
+    dateFormat={null}
     field={
       Object {
         "disabled": false,
@@ -21,11 +22,13 @@ ShallowWrapper {
       Object {
         "error": undefined,
         "isValidating": undefined,
+        "plaintext": false,
         "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
     placeholder="ojs_select_placeholder"
+    timeFormat={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,11 +46,15 @@ ShallowWrapper {
         className=""
         closeOnSelect={true}
         closeOnTab={true}
-        dateFormat={true}
+        dateFormat={null}
         defaultValue=""
         id="field0"
         input={true}
-        inputProps={Object {}}
+        inputProps={
+          Object {
+            "disabled": false,
+          }
+        }
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -55,10 +62,11 @@ ShallowWrapper {
         placeholder="ojs_select_placeholder"
         strictParsing={true}
         timeConstraints={Object {}}
-        timeFormat={true}
+        timeFormat={null}
         utc={false}
         value={null}
       />,
+      "dateFormat": null,
       "field": Object {
         "disabled": false,
         "id": "field0",
@@ -73,12 +81,14 @@ ShallowWrapper {
       "meta": Object {
         "error": undefined,
         "isValidating": undefined,
+        "plaintext": false,
         "stringFormatter": [MockFunction],
         "valid": true,
       },
       "placeholder": "ojs_select_placeholder",
       "prefix": undefined,
       "suffix": undefined,
+      "timeFormat": null,
       "validators": undefined,
     },
     "ref": null,
@@ -90,11 +100,13 @@ ShallowWrapper {
         "className": "",
         "closeOnSelect": true,
         "closeOnTab": true,
-        "dateFormat": true,
+        "dateFormat": null,
         "defaultValue": "",
         "id": "field0",
         "input": true,
-        "inputProps": Object {},
+        "inputProps": Object {
+          "disabled": false,
+        },
         "onBlur": [Function],
         "onChange": [Function],
         "onFocus": [Function],
@@ -102,7 +114,7 @@ ShallowWrapper {
         "placeholder": "ojs_select_placeholder",
         "strictParsing": true,
         "timeConstraints": Object {},
-        "timeFormat": true,
+        "timeFormat": null,
         "utc": false,
         "value": null,
       },
@@ -122,11 +134,15 @@ ShallowWrapper {
           className=""
           closeOnSelect={true}
           closeOnTab={true}
-          dateFormat={true}
+          dateFormat={null}
           defaultValue=""
           id="field0"
           input={true}
-          inputProps={Object {}}
+          inputProps={
+            Object {
+              "disabled": false,
+            }
+          }
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -134,10 +150,11 @@ ShallowWrapper {
           placeholder="ojs_select_placeholder"
           strictParsing={true}
           timeConstraints={Object {}}
-          timeFormat={true}
+          timeFormat={null}
           utc={false}
           value={null}
         />,
+        "dateFormat": null,
         "field": Object {
           "disabled": false,
           "id": "field0",
@@ -152,12 +169,14 @@ ShallowWrapper {
         "meta": Object {
           "error": undefined,
           "isValidating": undefined,
+          "plaintext": false,
           "stringFormatter": [MockFunction],
           "valid": true,
         },
         "placeholder": "ojs_select_placeholder",
         "prefix": undefined,
         "suffix": undefined,
+        "timeFormat": null,
         "validators": undefined,
       },
       "ref": null,
@@ -169,11 +188,13 @@ ShallowWrapper {
           "className": "",
           "closeOnSelect": true,
           "closeOnTab": true,
-          "dateFormat": true,
+          "dateFormat": null,
           "defaultValue": "",
           "id": "field0",
           "input": true,
-          "inputProps": Object {},
+          "inputProps": Object {
+            "disabled": false,
+          },
           "onBlur": [Function],
           "onChange": [Function],
           "onFocus": [Function],
@@ -181,7 +202,7 @@ ShallowWrapper {
           "placeholder": "ojs_select_placeholder",
           "strictParsing": true,
           "timeConstraints": Object {},
-          "timeFormat": true,
+          "timeFormat": null,
           "utc": false,
           "value": null,
         },

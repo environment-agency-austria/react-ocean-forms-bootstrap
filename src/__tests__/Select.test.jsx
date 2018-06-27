@@ -20,6 +20,7 @@ describe('<Select />', () => {
     error: undefined,
     isValidating: undefined,
     stringFormatter: createMockFormatter(),
+    plaintext: false,
   };
   const field = {
     value: '',
@@ -84,5 +85,11 @@ describe('<Select />', () => {
     selectElement.simulate('keyDown', mockEvent({ keyCode: KEYCODE.TAB }));
 
     expect(field.onBlur).toHaveBeenCalledWith(event);
+  });
+
+  it('should correctly react to meta.plaintext', () => {
+    meta.plaintext = true;
+    const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
   });
 });

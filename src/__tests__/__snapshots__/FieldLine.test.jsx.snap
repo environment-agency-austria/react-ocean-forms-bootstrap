@@ -8,7 +8,6 @@ ReactWrapper {
       Object {
         "disabled": false,
         "id": "field0",
-        "invalid": false,
         "name": "field0",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -21,6 +20,7 @@ ReactWrapper {
       Object {
         "error": null,
         "isValidating": false,
+        "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
@@ -48,6 +48,7 @@ ReactWrapper {
             },
           ],
         },
+        "touched": false,
         "valid": true,
       }
     }
@@ -91,7 +92,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -102,6 +102,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -129,6 +130,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -144,7 +146,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -155,6 +156,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -182,6 +184,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -199,7 +202,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -210,6 +212,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -237,6 +240,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -354,7 +358,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -365,6 +368,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -392,6 +396,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": "demo",
@@ -421,7 +426,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -432,6 +436,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -459,6 +464,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": "demo",
@@ -490,7 +496,6 @@ ReactWrapper {
                     "field": Object {
                       "disabled": false,
                       "id": "field0",
-                      "invalid": false,
                       "name": "field0",
                       "onBlur": [MockFunction],
                       "onChange": [MockFunction],
@@ -501,6 +506,7 @@ ReactWrapper {
                     "meta": Object {
                       "error": null,
                       "isValidating": false,
+                      "plaintext": false,
                       "stringFormatter": [MockFunction] {
                         "calls": Array [
                           Array [
@@ -528,6 +534,7 @@ ReactWrapper {
                           },
                         ],
                       },
+                      "touched": false,
                       "valid": true,
                     },
                     "prefix": "demo",
@@ -616,7 +623,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -627,6 +633,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -654,6 +661,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": "demo",
@@ -688,7 +696,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -699,6 +706,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -726,6 +734,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -742,7 +751,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -753,6 +761,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -780,6 +789,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -2486,7 +2496,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -2497,6 +2506,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -2524,6 +2534,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": "demo",
@@ -2540,7 +2551,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -2551,6 +2561,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -2578,6 +2589,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": "demo",
@@ -2606,7 +2618,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -2617,6 +2628,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -2644,6 +2656,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -2659,7 +2672,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -2670,6 +2682,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -2697,6 +2710,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -2714,7 +2728,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -2725,6 +2738,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -2752,6 +2766,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": "demo",
@@ -2869,7 +2884,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -2880,6 +2894,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -2907,6 +2922,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": "demo",
@@ -2936,7 +2952,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -2947,6 +2962,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -2974,6 +2990,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": "demo",
@@ -3005,7 +3022,6 @@ ReactWrapper {
                     "field": Object {
                       "disabled": false,
                       "id": "field0",
-                      "invalid": false,
                       "name": "field0",
                       "onBlur": [MockFunction],
                       "onChange": [MockFunction],
@@ -3016,6 +3032,7 @@ ReactWrapper {
                     "meta": Object {
                       "error": null,
                       "isValidating": false,
+                      "plaintext": false,
                       "stringFormatter": [MockFunction] {
                         "calls": Array [
                           Array [
@@ -3043,6 +3060,7 @@ ReactWrapper {
                           },
                         ],
                       },
+                      "touched": false,
                       "valid": true,
                     },
                     "prefix": "demo",
@@ -3131,7 +3149,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -3142,6 +3159,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -3169,6 +3187,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": "demo",
@@ -3203,7 +3222,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -3214,6 +3232,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -3241,6 +3260,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -3257,7 +3277,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -3268,6 +3287,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -3295,6 +3315,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -3329,7 +3350,6 @@ ReactWrapper {
         "field": Object {
           "disabled": false,
           "id": "field0",
-          "invalid": false,
           "name": "field0",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
@@ -3340,6 +3360,7 @@ ReactWrapper {
         "meta": Object {
           "error": null,
           "isValidating": false,
+          "plaintext": false,
           "stringFormatter": [MockFunction] {
             "calls": Array [
               Array [
@@ -3367,6 +3388,7 @@ ReactWrapper {
               },
             ],
           },
+          "touched": false,
           "valid": true,
         },
         "prefix": "demo",
@@ -3392,7 +3414,6 @@ ReactWrapper {
       "field": Object {
         "disabled": false,
         "id": "field0",
-        "invalid": false,
         "name": "field0",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -3403,6 +3424,7 @@ ReactWrapper {
       "meta": Object {
         "error": null,
         "isValidating": false,
+        "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
@@ -3430,6 +3452,7 @@ ReactWrapper {
             },
           ],
         },
+        "touched": false,
         "valid": true,
       },
       "prefix": "demo",
@@ -4268,7 +4291,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -4279,6 +4301,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -4306,6 +4329,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -4321,7 +4345,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -4332,6 +4355,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -4359,6 +4383,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -4376,7 +4401,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -4387,6 +4411,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -4414,6 +4439,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -4531,7 +4557,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -4542,6 +4567,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -4569,6 +4595,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": "demo",
@@ -4598,7 +4625,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -4609,6 +4635,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -4636,6 +4663,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": "demo",
@@ -4667,7 +4695,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -4678,6 +4705,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -4705,6 +4733,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": "demo",
@@ -4793,7 +4822,6 @@ ReactWrapper {
                         "field": Object {
                           "disabled": false,
                           "id": "field0",
-                          "invalid": false,
                           "name": "field0",
                           "onBlur": [MockFunction],
                           "onChange": [MockFunction],
@@ -4804,6 +4832,7 @@ ReactWrapper {
                         "meta": Object {
                           "error": null,
                           "isValidating": false,
+                          "plaintext": false,
                           "stringFormatter": [MockFunction] {
                             "calls": Array [
                               Array [
@@ -4831,6 +4860,7 @@ ReactWrapper {
                               },
                             ],
                           },
+                          "touched": false,
                           "valid": true,
                         },
                         "prefix": "demo",
@@ -4865,7 +4895,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -4876,6 +4905,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -4903,6 +4933,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": "demo",
@@ -4919,7 +4950,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -4930,6 +4960,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -4957,6 +4988,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": "demo",
@@ -6663,7 +6695,6 @@ ReactWrapper {
             "field": Object {
               "disabled": false,
               "id": "field0",
-              "invalid": false,
               "name": "field0",
               "onBlur": [MockFunction],
               "onChange": [MockFunction],
@@ -6674,6 +6705,7 @@ ReactWrapper {
             "meta": Object {
               "error": null,
               "isValidating": false,
+              "plaintext": false,
               "stringFormatter": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -6701,6 +6733,7 @@ ReactWrapper {
                   },
                 ],
               },
+              "touched": false,
               "valid": true,
             },
             "prefix": "demo",
@@ -6717,7 +6750,6 @@ ReactWrapper {
             "field": Object {
               "disabled": false,
               "id": "field0",
-              "invalid": false,
               "name": "field0",
               "onBlur": [MockFunction],
               "onChange": [MockFunction],
@@ -6728,6 +6760,7 @@ ReactWrapper {
             "meta": Object {
               "error": null,
               "isValidating": false,
+              "plaintext": false,
               "stringFormatter": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -6755,6 +6788,7 @@ ReactWrapper {
                   },
                 ],
               },
+              "touched": false,
               "valid": true,
             },
             "prefix": "demo",
@@ -6783,7 +6817,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -6794,6 +6827,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -6821,6 +6855,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -6836,7 +6871,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -6847,6 +6881,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -6874,6 +6909,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -6891,7 +6927,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -6902,6 +6937,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -6929,6 +6965,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": "demo",
@@ -7046,7 +7083,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -7057,6 +7093,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -7084,6 +7121,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": "demo",
@@ -7113,7 +7151,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -7124,6 +7161,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -7151,6 +7189,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": "demo",
@@ -7182,7 +7221,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -7193,6 +7231,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -7220,6 +7259,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": "demo",
@@ -7308,7 +7348,6 @@ ReactWrapper {
                         "field": Object {
                           "disabled": false,
                           "id": "field0",
-                          "invalid": false,
                           "name": "field0",
                           "onBlur": [MockFunction],
                           "onChange": [MockFunction],
@@ -7319,6 +7358,7 @@ ReactWrapper {
                         "meta": Object {
                           "error": null,
                           "isValidating": false,
+                          "plaintext": false,
                           "stringFormatter": [MockFunction] {
                             "calls": Array [
                               Array [
@@ -7346,6 +7386,7 @@ ReactWrapper {
                               },
                             ],
                           },
+                          "touched": false,
                           "valid": true,
                         },
                         "prefix": "demo",
@@ -7380,7 +7421,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -7391,6 +7431,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -7418,6 +7459,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": "demo",
@@ -7434,7 +7476,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -7445,6 +7486,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -7472,6 +7514,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": "demo",
@@ -7506,7 +7549,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -7517,6 +7559,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -7544,6 +7587,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": "demo",
@@ -7569,7 +7613,6 @@ ReactWrapper {
         "field": Object {
           "disabled": false,
           "id": "field0",
-          "invalid": false,
           "name": "field0",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
@@ -7580,6 +7623,7 @@ ReactWrapper {
         "meta": Object {
           "error": null,
           "isValidating": false,
+          "plaintext": false,
           "stringFormatter": [MockFunction] {
             "calls": Array [
               Array [
@@ -7607,6 +7651,7 @@ ReactWrapper {
               },
             ],
           },
+          "touched": false,
           "valid": true,
         },
         "prefix": "demo",
@@ -8437,7 +8482,6 @@ ReactWrapper {
       Object {
         "disabled": false,
         "id": "field0",
-        "invalid": false,
         "name": "field0",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -8450,6 +8494,7 @@ ReactWrapper {
       Object {
         "error": null,
         "isValidating": false,
+        "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
@@ -8463,6 +8508,7 @@ ReactWrapper {
             },
           ],
         },
+        "touched": false,
         "valid": true,
       }
     }
@@ -8506,7 +8552,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -8517,6 +8562,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -8530,6 +8576,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -8545,7 +8592,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -8556,6 +8602,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -8569,6 +8616,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -8586,7 +8634,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -8597,6 +8644,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -8610,6 +8658,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -8723,7 +8772,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -8734,6 +8782,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -8747,6 +8796,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": [Function],
@@ -8776,7 +8826,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -8787,6 +8836,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -8800,6 +8850,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": [Function],
@@ -8831,7 +8882,6 @@ ReactWrapper {
                     "field": Object {
                       "disabled": false,
                       "id": "field0",
-                      "invalid": false,
                       "name": "field0",
                       "onBlur": [MockFunction],
                       "onChange": [MockFunction],
@@ -8842,6 +8892,7 @@ ReactWrapper {
                     "meta": Object {
                       "error": null,
                       "isValidating": false,
+                      "plaintext": false,
                       "stringFormatter": [MockFunction] {
                         "calls": Array [
                           Array [
@@ -8855,6 +8906,7 @@ ReactWrapper {
                           },
                         ],
                       },
+                      "touched": false,
                       "valid": true,
                     },
                     "prefix": [Function],
@@ -8939,7 +8991,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -8950,6 +9001,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -8963,6 +9015,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": [Function],
@@ -8997,7 +9050,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -9008,6 +9060,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -9021,6 +9074,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -9037,7 +9091,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -9048,6 +9101,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -9061,6 +9115,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -10529,7 +10584,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -10540,6 +10594,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -10553,6 +10608,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": [Function],
@@ -10569,7 +10625,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -10580,6 +10635,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -10593,6 +10649,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": [Function],
@@ -10621,7 +10678,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -10632,6 +10688,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -10645,6 +10702,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -10660,7 +10718,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -10671,6 +10728,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -10684,6 +10742,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -10701,7 +10760,6 @@ ReactWrapper {
               "field": Object {
                 "disabled": false,
                 "id": "field0",
-                "invalid": false,
                 "name": "field0",
                 "onBlur": [MockFunction],
                 "onChange": [MockFunction],
@@ -10712,6 +10770,7 @@ ReactWrapper {
               "meta": Object {
                 "error": null,
                 "isValidating": false,
+                "plaintext": false,
                 "stringFormatter": [MockFunction] {
                   "calls": Array [
                     Array [
@@ -10725,6 +10784,7 @@ ReactWrapper {
                     },
                   ],
                 },
+                "touched": false,
                 "valid": true,
               },
               "prefix": [Function],
@@ -10838,7 +10898,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -10849,6 +10908,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -10862,6 +10922,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": [Function],
@@ -10891,7 +10952,6 @@ ReactWrapper {
                           "field": Object {
                             "disabled": false,
                             "id": "field0",
-                            "invalid": false,
                             "name": "field0",
                             "onBlur": [MockFunction],
                             "onChange": [MockFunction],
@@ -10902,6 +10962,7 @@ ReactWrapper {
                           "meta": Object {
                             "error": null,
                             "isValidating": false,
+                            "plaintext": false,
                             "stringFormatter": [MockFunction] {
                               "calls": Array [
                                 Array [
@@ -10915,6 +10976,7 @@ ReactWrapper {
                                 },
                               ],
                             },
+                            "touched": false,
                             "valid": true,
                           },
                           "prefix": [Function],
@@ -10946,7 +11008,6 @@ ReactWrapper {
                     "field": Object {
                       "disabled": false,
                       "id": "field0",
-                      "invalid": false,
                       "name": "field0",
                       "onBlur": [MockFunction],
                       "onChange": [MockFunction],
@@ -10957,6 +11018,7 @@ ReactWrapper {
                     "meta": Object {
                       "error": null,
                       "isValidating": false,
+                      "plaintext": false,
                       "stringFormatter": [MockFunction] {
                         "calls": Array [
                           Array [
@@ -10970,6 +11032,7 @@ ReactWrapper {
                           },
                         ],
                       },
+                      "touched": false,
                       "valid": true,
                     },
                     "prefix": [Function],
@@ -11054,7 +11117,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -11065,6 +11127,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -11078,6 +11141,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": [Function],
@@ -11112,7 +11176,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -11123,6 +11186,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -11136,6 +11200,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -11152,7 +11217,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -11163,6 +11227,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -11176,6 +11241,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -11210,7 +11276,6 @@ ReactWrapper {
         "field": Object {
           "disabled": false,
           "id": "field0",
-          "invalid": false,
           "name": "field0",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
@@ -11221,6 +11286,7 @@ ReactWrapper {
         "meta": Object {
           "error": null,
           "isValidating": false,
+          "plaintext": false,
           "stringFormatter": [MockFunction] {
             "calls": Array [
               Array [
@@ -11234,6 +11300,7 @@ ReactWrapper {
               },
             ],
           },
+          "touched": false,
           "valid": true,
         },
         "prefix": [Function],
@@ -11259,7 +11326,6 @@ ReactWrapper {
       "field": Object {
         "disabled": false,
         "id": "field0",
-        "invalid": false,
         "name": "field0",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -11270,6 +11336,7 @@ ReactWrapper {
       "meta": Object {
         "error": null,
         "isValidating": false,
+        "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
@@ -11283,6 +11350,7 @@ ReactWrapper {
             },
           ],
         },
+        "touched": false,
         "valid": true,
       },
       "prefix": [Function],
@@ -12003,7 +12071,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -12014,6 +12081,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -12027,6 +12095,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -12042,7 +12111,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -12053,6 +12121,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -12066,6 +12135,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -12083,7 +12153,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -12094,6 +12163,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -12107,6 +12177,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -12220,7 +12291,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -12231,6 +12301,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -12244,6 +12315,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": [Function],
@@ -12273,7 +12345,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -12284,6 +12355,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -12297,6 +12369,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": [Function],
@@ -12328,7 +12401,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -12339,6 +12411,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -12352,6 +12425,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": [Function],
@@ -12436,7 +12510,6 @@ ReactWrapper {
                         "field": Object {
                           "disabled": false,
                           "id": "field0",
-                          "invalid": false,
                           "name": "field0",
                           "onBlur": [MockFunction],
                           "onChange": [MockFunction],
@@ -12447,6 +12520,7 @@ ReactWrapper {
                         "meta": Object {
                           "error": null,
                           "isValidating": false,
+                          "plaintext": false,
                           "stringFormatter": [MockFunction] {
                             "calls": Array [
                               Array [
@@ -12460,6 +12534,7 @@ ReactWrapper {
                               },
                             ],
                           },
+                          "touched": false,
                           "valid": true,
                         },
                         "prefix": [Function],
@@ -12494,7 +12569,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -12505,6 +12579,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -12518,6 +12593,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": [Function],
@@ -12534,7 +12610,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -12545,6 +12620,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -12558,6 +12634,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": [Function],
@@ -14026,7 +14103,6 @@ ReactWrapper {
             "field": Object {
               "disabled": false,
               "id": "field0",
-              "invalid": false,
               "name": "field0",
               "onBlur": [MockFunction],
               "onChange": [MockFunction],
@@ -14037,6 +14113,7 @@ ReactWrapper {
             "meta": Object {
               "error": null,
               "isValidating": false,
+              "plaintext": false,
               "stringFormatter": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -14050,6 +14127,7 @@ ReactWrapper {
                   },
                 ],
               },
+              "touched": false,
               "valid": true,
             },
             "prefix": [Function],
@@ -14066,7 +14144,6 @@ ReactWrapper {
             "field": Object {
               "disabled": false,
               "id": "field0",
-              "invalid": false,
               "name": "field0",
               "onBlur": [MockFunction],
               "onChange": [MockFunction],
@@ -14077,6 +14154,7 @@ ReactWrapper {
             "meta": Object {
               "error": null,
               "isValidating": false,
+              "plaintext": false,
               "stringFormatter": [MockFunction] {
                 "calls": Array [
                   Array [
@@ -14090,6 +14168,7 @@ ReactWrapper {
                   },
                 ],
               },
+              "touched": false,
               "valid": true,
             },
             "prefix": [Function],
@@ -14118,7 +14197,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -14129,6 +14207,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -14142,6 +14221,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -14157,7 +14237,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -14168,6 +14247,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -14181,6 +14261,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -14198,7 +14279,6 @@ ReactWrapper {
                 "field": Object {
                   "disabled": false,
                   "id": "field0",
-                  "invalid": false,
                   "name": "field0",
                   "onBlur": [MockFunction],
                   "onChange": [MockFunction],
@@ -14209,6 +14289,7 @@ ReactWrapper {
                 "meta": Object {
                   "error": null,
                   "isValidating": false,
+                  "plaintext": false,
                   "stringFormatter": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -14222,6 +14303,7 @@ ReactWrapper {
                       },
                     ],
                   },
+                  "touched": false,
                   "valid": true,
                 },
                 "prefix": [Function],
@@ -14335,7 +14417,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -14346,6 +14427,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -14359,6 +14441,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": [Function],
@@ -14388,7 +14471,6 @@ ReactWrapper {
                             "field": Object {
                               "disabled": false,
                               "id": "field0",
-                              "invalid": false,
                               "name": "field0",
                               "onBlur": [MockFunction],
                               "onChange": [MockFunction],
@@ -14399,6 +14481,7 @@ ReactWrapper {
                             "meta": Object {
                               "error": null,
                               "isValidating": false,
+                              "plaintext": false,
                               "stringFormatter": [MockFunction] {
                                 "calls": Array [
                                   Array [
@@ -14412,6 +14495,7 @@ ReactWrapper {
                                   },
                                 ],
                               },
+                              "touched": false,
                               "valid": true,
                             },
                             "prefix": [Function],
@@ -14443,7 +14527,6 @@ ReactWrapper {
                       "field": Object {
                         "disabled": false,
                         "id": "field0",
-                        "invalid": false,
                         "name": "field0",
                         "onBlur": [MockFunction],
                         "onChange": [MockFunction],
@@ -14454,6 +14537,7 @@ ReactWrapper {
                       "meta": Object {
                         "error": null,
                         "isValidating": false,
+                        "plaintext": false,
                         "stringFormatter": [MockFunction] {
                           "calls": Array [
                             Array [
@@ -14467,6 +14551,7 @@ ReactWrapper {
                             },
                           ],
                         },
+                        "touched": false,
                         "valid": true,
                       },
                       "prefix": [Function],
@@ -14551,7 +14636,6 @@ ReactWrapper {
                         "field": Object {
                           "disabled": false,
                           "id": "field0",
-                          "invalid": false,
                           "name": "field0",
                           "onBlur": [MockFunction],
                           "onChange": [MockFunction],
@@ -14562,6 +14646,7 @@ ReactWrapper {
                         "meta": Object {
                           "error": null,
                           "isValidating": false,
+                          "plaintext": false,
                           "stringFormatter": [MockFunction] {
                             "calls": Array [
                               Array [
@@ -14575,6 +14660,7 @@ ReactWrapper {
                               },
                             ],
                           },
+                          "touched": false,
                           "valid": true,
                         },
                         "prefix": [Function],
@@ -14609,7 +14695,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -14620,6 +14705,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -14633,6 +14719,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": [Function],
@@ -14649,7 +14736,6 @@ ReactWrapper {
                   "field": Object {
                     "disabled": false,
                     "id": "field0",
-                    "invalid": false,
                     "name": "field0",
                     "onBlur": [MockFunction],
                     "onChange": [MockFunction],
@@ -14660,6 +14746,7 @@ ReactWrapper {
                   "meta": Object {
                     "error": null,
                     "isValidating": false,
+                    "plaintext": false,
                     "stringFormatter": [MockFunction] {
                       "calls": Array [
                         Array [
@@ -14673,6 +14760,7 @@ ReactWrapper {
                         },
                       ],
                     },
+                    "touched": false,
                     "valid": true,
                   },
                   "prefix": [Function],
@@ -14707,7 +14795,6 @@ ReactWrapper {
           "field": Object {
             "disabled": false,
             "id": "field0",
-            "invalid": false,
             "name": "field0",
             "onBlur": [MockFunction],
             "onChange": [MockFunction],
@@ -14718,6 +14805,7 @@ ReactWrapper {
           "meta": Object {
             "error": null,
             "isValidating": false,
+            "plaintext": false,
             "stringFormatter": [MockFunction] {
               "calls": Array [
                 Array [
@@ -14731,6 +14819,7 @@ ReactWrapper {
                 },
               ],
             },
+            "touched": false,
             "valid": true,
           },
           "prefix": [Function],
@@ -14756,7 +14845,6 @@ ReactWrapper {
         "field": Object {
           "disabled": false,
           "id": "field0",
-          "invalid": false,
           "name": "field0",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
@@ -14767,6 +14855,7 @@ ReactWrapper {
         "meta": Object {
           "error": null,
           "isValidating": false,
+          "plaintext": false,
           "stringFormatter": [MockFunction] {
             "calls": Array [
               Array [
@@ -14780,6 +14869,7 @@ ReactWrapper {
               },
             ],
           },
+          "touched": false,
           "valid": true,
         },
         "prefix": [Function],

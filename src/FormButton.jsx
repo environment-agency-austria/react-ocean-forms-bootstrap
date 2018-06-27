@@ -27,6 +27,7 @@ function FormButton(props) {
 FormButton.propTypes = {
   context: PropTypes.shape({
     busy: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

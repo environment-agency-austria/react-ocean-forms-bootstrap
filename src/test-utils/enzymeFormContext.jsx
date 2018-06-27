@@ -15,55 +15,28 @@ import createMockFormatter from './createMockFormatter';
  */
 
 /**
- * Creates a field state
- * @param {*} index Index of the field
- * @param {*} error Error status
- */
-export function createMockFieldState(index, hasError) {
-  const name = 'field'.concat(String(index));
-  return {
-    [name]: {
-      label: name,
-      touched: false,
-      value: 'blubb',
-      valid: hasError ? false : undefined,
-      error: hasError ? { message_id: 'ojs_error_required', params: { } } : undefined,
-      isGroup: false,
-      validators: null,
-      asyncValidators: null,
-      asyncValidationWait: null,
-    },
-  };
-}
-
-/**
  * Creates a form context
- * @param {*} fieldCount Number of fields to be generated
- * @param {*} errorCount Number of fields with errors
  */
-export function createMockFormContext(fieldCount, errorCount) {
-  const context = {
-    fieldPrefix: null,
-    fieldStates: {},
+export const createMockFormContext = registerCallback => ({
+  fieldPrefix: null,
 
-    getFieldState: jest.fn(),
-    setFieldState: jest.fn(),
-    registerField: jest.fn(),
-    getValues: jest.fn(),
+  registerField: jest.fn().mockImplementation((name, state) => registerCallback(name, state)),
+  unregisterField: jest.fn(),
+  notifyFieldEvent: jest.fn(),
 
-    scrollToVS: false,
-    scrollToVSCallback: jest.fn(),
+  registerListener: jest.fn().mockImplementation((name, state) => registerCallback(name, state)),
+  unregisterListener: jest.fn(),
 
-    stringFormatter: createMockFormatter(),
-    asyncValidateOnChange: false,
-  };
+  getFieldState: jest.fn(),
+  getValues: jest.fn(),
 
-  for (let i = 0; i < fieldCount; i += 1) {
-    context.fieldStates = {
-      ...context.fieldStates,
-      ...createMockFieldState(i, i < errorCount),
-    };
-  }
+  stringFormatter: createMockFormatter(),
 
-  return context;
-}
+  busy: false,
+  disabled: false,
+  plaintext: false,
+
+  asyncValidateOnChange: false,
+  asyncValidationWait: 400,
+  defaultValues: {},
+});

@@ -27,7 +27,7 @@ function FileInput(props) {
   return (
     <FieldLine {...props}>
       <div className="custom-file">
-        <StrapInput type="file" {...field} />
+        {!meta.plaintext && <StrapInput type="file" {...field} />}
         <Label for={field.id} className="custom-file-label">
           {selectFileString}
         </Label>

@@ -81,15 +81,18 @@ class Check extends React.Component {
         <Col sm={9}>
           <InputGroup className={inputGroupClass}>
             <Label check>
-              <Input
-                id={field.id}
-                name={field.name}
-                type="checkbox"
-                onBlur={field.onBlur}
-                invalid={!meta.valid}
-                defaultChecked={isChecked}
-                onClick={this.handleChange}
-              />
+              {!meta.plaintext &&
+                <Input
+                  id={field.id}
+                  name={field.name}
+                  type="checkbox"
+                  onBlur={field.onBlur}
+                  invalid={!meta.valid}
+                  defaultChecked={isChecked}
+                  onClick={this.handleChange}
+                  disabled={field.disabled}
+                />
+              }
               {labelString}
               <BaseFieldError
                 id={`${field.id}_errors`}

@@ -40,13 +40,17 @@ describe('<FieldLine />', () => {
     label: FIELD_LABEL, info, meta, field, validators,
   });
 
-  const generateMeta = (valid, error, isValidating) => ({
-    valid, error, isValidating, stringFormatter: createMockFormatter(),
+  const generateMeta = (valid, error, isValidating, plaintext) => ({
+    valid,
+    error,
+    isValidating,
+    plaintext,
+    touched: false,
+    stringFormatter: createMockFormatter(),
   });
 
-  const generateField = (value, invalid) => ({
+  const generateField = value => ({
     value,
-    invalid,
     id: FIELD_ID,
     name: FIELD_NAME,
     disabled: false,
@@ -57,8 +61,8 @@ describe('<FieldLine />', () => {
   it('should render the proper base html', () => {
     setup(generateProps(
       null,
-      generateMeta(true, null, false),
-      generateField('', false),
+      generateMeta(true, null, false, false),
+      generateField(''),
       null,
     ));
 
@@ -75,8 +79,8 @@ describe('<FieldLine />', () => {
   it('should display an info button if provided with info id', () => {
     setup(generateProps(
       'ojs_select_noresults',
-      generateMeta(true, null, false),
-      generateField('', false),
+      generateMeta(true, null, false, false),
+      generateField(''),
       null,
     ));
 
@@ -88,8 +92,8 @@ describe('<FieldLine />', () => {
   it('should open the info alert if the info button is clicked', () => {
     const wrapper = setup(generateProps(
       'ojs_select_noresults',
-      generateMeta(true, null, false),
-      generateField('', false),
+      generateMeta(true, null, false, false),
+      generateField(''),
       null,
     ));
 
@@ -102,8 +106,8 @@ describe('<FieldLine />', () => {
   it('should display an required marker if it has a required validator', () => {
     setup(generateProps(
       null,
-      generateMeta(true, null, false),
-      generateField('', false),
+      generateMeta(true, null, false, false),
+      generateField(''),
       [defaultValidators.required],
     ));
 
@@ -116,8 +120,8 @@ describe('<FieldLine />', () => {
   it('should display a spinner if the state isValidating is true', () => {
     setup(generateProps(
       null,
-      generateMeta(true, null, true),
-      generateField('', false),
+      generateMeta(true, null, true, false),
+      generateField(''),
       null,
     ));
 
@@ -134,8 +138,9 @@ describe('<FieldLine />', () => {
           params: {},
         },
         false,
+        false,
       ),
-      generateField('', true),
+      generateField(''),
       null,
     ));
 
@@ -154,8 +159,8 @@ describe('<FieldLine />', () => {
       suffix: 'blubb',
       ...generateProps(
         null,
-        generateMeta(true, null, false),
-        generateField('', false),
+        generateMeta(true, null, false, false),
+        generateField(''),
         null,
       ),
     });
@@ -169,8 +174,8 @@ describe('<FieldLine />', () => {
       suffix: () => <div>custom suffix</div>,
       ...generateProps(
         null,
-        generateMeta(true, null, false),
-        generateField('', false),
+        generateMeta(true, null, false, false),
+        generateField(''),
         null,
       ),
     });

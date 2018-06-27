@@ -9,6 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Datetime from 'react-datetime';
 import moment from 'moment';
+import { Input as StrapInput } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldLine from './FieldLine';
@@ -40,9 +41,39 @@ class DatePicker extends React.Component {
       dateFormat,
       timeFormat,
       placeholder,
+      meta,
     } = this.props;
 
     const formattedValue = moment(field.value);
+    const inputProps = {
+      disabled: field.disabled,
+    };
+
+    // Support for plaintext display
+    if (meta.plaintext) {
+      let displayValue = '';
+      let parsedFormat = '';
+
+      if (typeof dateFormat === 'string') {
+        parsedFormat = dateFormat;
+      } else if (dateFormat === true) {
+        parsedFormat = 'L';
+      }
+
+      if (typeof timeFormat === 'string') {
+        parsedFormat = `${parsedFormat} ${timeFormat}`.trim();
+      } else if (timeFormat === true) {
+        parsedFormat = `${parsedFormat} LT`.trim();
+      }
+
+      displayValue = formattedValue.format(parsedFormat === '' ? undefined : parsedFormat);
+
+      return (
+        <FieldLine {...this.props}>
+          <StrapInput {...field} value={displayValue} plaintext />
+        </FieldLine>
+      );
+    }
 
     return (
       <FieldLine {...this.props}>
@@ -53,6 +84,7 @@ class DatePicker extends React.Component {
           onChange={this.handleChange}
           dateFormat={dateFormat}
           timeFormat={timeFormat}
+          inputProps={inputProps}
           closeOnSelect
         />
       </FieldLine>
@@ -63,6 +95,8 @@ class DatePicker extends React.Component {
 DatePicker.defaultProps = {
   info: undefined,
   placeholder: 'ojs_select_placeholder',
+  dateFormat: null,
+  timeFormat: null,
 };
 
 DatePicker.propTypes = {
@@ -71,6 +105,8 @@ DatePicker.propTypes = {
   meta: fieldMetaShape.isRequired,
   field: fieldShape.isRequired,
   placeholder: PropTypes.string,
+  dateFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  timeFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 export default DatePicker;

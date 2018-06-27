@@ -16,6 +16,7 @@ describe('<DatePicker />', () => {
     error: undefined,
     isValidating: undefined,
     stringFormatter: createMockFormatter(),
+    plaintext: false,
   };
   const field = {
     value: '',

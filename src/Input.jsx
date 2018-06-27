@@ -28,7 +28,7 @@ function Input(props) {
 
   return (
     <FieldLine {...props}>
-      <StrapInput type={type} {...field} invalid={invalid} />
+      <StrapInput type={type} {...field} invalid={invalid} plaintext={meta.plaintext} />
     </FieldLine>
   );
 }

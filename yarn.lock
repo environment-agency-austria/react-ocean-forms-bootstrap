@@ -5154,9 +5154,9 @@ react-is@^16.4.0:
   version "16.4.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.0.tgz#cc9fdc855ac34d2e7d9d2eb7059bbc240d35ffcf"
 
-react-ocean-forms@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-1.0.3.tgz#6a0ff05601c63877ca742d4ed4f48c792085296a"
+react-ocean-forms@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-1.1.0.tgz#648cb8d34a5e1510e7eabaff165a56ebfcd97ebe"
   dependencies:
     prop-types "^15.6.1"
 
