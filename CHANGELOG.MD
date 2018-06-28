@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## [1.1.0] - 2018-06-28
 - Updated to react-ocean-forms 1.1.0
 - Added support for new Form plaintext feature
 - DatePicker correctly reacts to Form disabled state
