@@ -24,10 +24,19 @@ function FileInput(props) {
   } = props;
 
   const selectFileString = meta.stringFormatter('ojs_form_select_file');
+
+  if (meta.plaintext) {
+    return (
+      <FieldLine {...props}>
+        <StrapInput {...field} plaintext>{selectFileString}</StrapInput>
+      </FieldLine>
+    );
+  }
+
   return (
     <FieldLine {...props}>
       <div className="custom-file">
-        {!meta.plaintext && <StrapInput type="file" {...field} />}
+        <StrapInput type="file" {...field} />
         <Label for={field.id} className="custom-file-label">
           {selectFileString}
         </Label>

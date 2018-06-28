@@ -1,5 +1,339 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<FileInput /> should react on meta.plaintext correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FileInput
+    field={
+      Object {
+        "disabled": false,
+        "id": "field0",
+        "invalid": false,
+        "name": "field0",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "value": "",
+      }
+    }
+    label="field0"
+    meta={
+      Object {
+        "error": undefined,
+        "isValidating": undefined,
+        "plaintext": true,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+          ],
+        },
+        "valid": true,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Input
+        disabled={false}
+        id="field0"
+        invalid={false}
+        name="field0"
+        onBlur={[MockFunction]}
+        onChange={[MockFunction]}
+        plaintext={true}
+        type="text"
+        value=""
+      >
+        ojs_form_select_file
+      </Input>,
+      "field": Object {
+        "disabled": false,
+        "id": "field0",
+        "invalid": false,
+        "name": "field0",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "value": "",
+      },
+      "info": undefined,
+      "label": "field0",
+      "meta": Object {
+        "error": undefined,
+        "isValidating": undefined,
+        "plaintext": true,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+            Array [
+              "ojs_form_select_file",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_form_select_file",
+            },
+          ],
+        },
+        "valid": true,
+      },
+      "prefix": undefined,
+      "suffix": undefined,
+      "validators": undefined,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": "ojs_form_select_file",
+        "disabled": false,
+        "id": "field0",
+        "invalid": false,
+        "name": "field0",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "plaintext": true,
+        "type": "text",
+        "value": "",
+      },
+      "ref": null,
+      "rendered": "ojs_form_select_file",
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Input
+          disabled={false}
+          id="field0"
+          invalid={false}
+          name="field0"
+          onBlur={[MockFunction]}
+          onChange={[MockFunction]}
+          plaintext={true}
+          type="text"
+          value=""
+        >
+          ojs_form_select_file
+        </Input>,
+        "field": Object {
+          "disabled": false,
+          "id": "field0",
+          "invalid": false,
+          "name": "field0",
+          "onBlur": [MockFunction],
+          "onChange": [MockFunction],
+          "value": "",
+        },
+        "info": undefined,
+        "label": "field0",
+        "meta": Object {
+          "error": undefined,
+          "isValidating": undefined,
+          "plaintext": true,
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+              Array [
+                "ojs_form_select_file",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_form_select_file",
+              },
+            ],
+          },
+          "valid": true,
+        },
+        "prefix": undefined,
+        "suffix": undefined,
+        "validators": undefined,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "ojs_form_select_file",
+          "disabled": false,
+          "id": "field0",
+          "invalid": false,
+          "name": "field0",
+          "onBlur": [MockFunction],
+          "onChange": [MockFunction],
+          "plaintext": true,
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": "ojs_form_select_file",
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`<FileInput /> should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,

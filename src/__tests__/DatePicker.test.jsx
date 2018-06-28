@@ -53,4 +53,10 @@ describe('<DatePicker />', () => {
     expect(wrapper.find(FieldLine).exists()).toBeTruthy();
     expect(wrapper.find(Datetime).exists()).toBeTruthy();
   });
+
+  it('should react on meta.plaintext correctly', () => {
+    meta.plaintext = true;
+    const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -90,7 +90,7 @@ class Select extends React.Component {
 
       return (
         <FieldLine {...this.props}>
-          <StrapInput {...field} value={displayValue} plaintext />
+          <StrapInput {...field} plaintext>{displayValue}</StrapInput>
         </FieldLine>
       );
     }

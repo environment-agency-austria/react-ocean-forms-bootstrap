@@ -49,7 +49,9 @@ ShallowWrapper {
         plaintext={true}
         type="text"
         value=""
-      />,
+      >
+        
+      </Input>,
       "field": Object {
         "disabled": false,
         "id": "field0",
@@ -79,6 +81,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": "",
         "disabled": false,
         "id": "field0",
         "invalid": undefined,
@@ -90,7 +93,7 @@ ShallowWrapper {
         "value": "",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "",
       "type": [Function],
     },
     "type": [Function],
@@ -110,7 +113,9 @@ ShallowWrapper {
           plaintext={true}
           type="text"
           value=""
-        />,
+        >
+          
+        </Input>,
         "field": Object {
           "disabled": false,
           "id": "field0",
@@ -140,6 +145,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "children": "",
           "disabled": false,
           "id": "field0",
           "invalid": undefined,
@@ -151,7 +157,7 @@ ShallowWrapper {
           "value": "",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": [Function],
       },
       "type": [Function],
@@ -246,6 +252,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": undefined,
         "disabled": false,
         "id": "field0",
         "invalid": undefined,
@@ -307,6 +314,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "children": undefined,
           "disabled": false,
           "id": "field0",
           "invalid": undefined,

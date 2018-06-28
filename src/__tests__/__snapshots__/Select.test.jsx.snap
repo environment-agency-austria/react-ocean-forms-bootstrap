@@ -213,6 +213,7 @@ ShallowWrapper {
         }
         plaintext={true}
         type="text"
+        value=""
       />,
       "field": Object {
         "disabled": false,
@@ -383,6 +384,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": undefined,
         "disabled": false,
         "id": "field0",
         "invalid": false,
@@ -411,7 +413,7 @@ ShallowWrapper {
         },
         "plaintext": true,
         "type": "text",
-        "value": undefined,
+        "value": "",
       },
       "ref": null,
       "rendered": null,
@@ -456,6 +458,7 @@ ShallowWrapper {
           }
           plaintext={true}
           type="text"
+          value=""
         />,
         "field": Object {
           "disabled": false,
@@ -626,6 +629,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "children": undefined,
           "disabled": false,
           "id": "field0",
           "invalid": false,
@@ -654,7 +658,7 @@ ShallowWrapper {
           },
           "plaintext": true,
           "type": "text",
-          "value": undefined,
+          "value": "",
         },
         "ref": null,
         "rendered": null,

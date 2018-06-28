@@ -80,4 +80,10 @@ describe('<FileInput />', () => {
     wrapper.find('Input').simulate('blur', event);
     expect(field.onBlur).toHaveBeenCalledWith(event);
   });
+
+  it('should react on meta.plaintext correctly', () => {
+    meta.plaintext = true;
+    const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
 });
