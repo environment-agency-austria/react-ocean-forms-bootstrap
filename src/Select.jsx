@@ -32,9 +32,10 @@ class Select extends React.Component {
    * default input onChange behaviour.
    */
   handleChange(value) {
-    this.props.field.onChange({
+    const { field } = this.props;
+    field.onChange({
       target: {
-        name: this.props.field.name,
+        name: field.name,
         value,
       },
     });
@@ -46,9 +47,10 @@ class Select extends React.Component {
    * default input onBlur behaviour.
    */
   handleBlur() {
-    this.props.field.onBlur({
+    const { field } = this.props;
+    field.onBlur({
       target: {
-        name: this.props.field.name,
+        name: field.name,
       },
     });
   }
