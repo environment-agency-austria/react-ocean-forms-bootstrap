@@ -52,7 +52,7 @@
     "react-datetime": "^2.14.0",
     "react-ocean-forms": "^1.1.0",
     "react-select": "^1.2.1",
-    "reactstrap": "^6.1.0"
+    "reactstrap": "^6.1.0 || ^6.2.0 || ^6.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
