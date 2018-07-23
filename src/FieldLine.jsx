@@ -10,7 +10,15 @@ import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner';
 import faExclamationCircle from '@fortawesome/fontawesome-free-solid/faExclamationCircle';
-import { FormGroup, Label, Col, Button, Alert, InputGroup, InputGroupAddon } from 'reactstrap';
+import {
+  FormGroup,
+  Label,
+  Col,
+  Button,
+  Alert,
+  InputGroup,
+  InputGroupAddon,
+} from 'reactstrap';
 import { fieldMetaShape, fieldShape, validators as defaultValidators } from 'react-ocean-forms';
 
 import { BaseFieldError } from './FieldError';
@@ -152,13 +160,13 @@ class FieldLine extends React.Component {
     const infoButton = this.createInfoAddonButton();
     const infoAlert = this.createInfoAlert();
 
-    const invalidAlert = meta.valid ?
-      null :
-      <FontAwesomeIcon icon={faExclamationCircle} className="ico-invalid mr-2" />;
+    const invalidAlert = meta.valid
+      ? null
+      : <FontAwesomeIcon icon={faExclamationCircle} className="ico-invalid mr-2" />;
 
-    const validatingSpinner = meta.isValidating ?
-      <FontAwesomeIcon icon={faSpinner} spin className="ico-loading mr-2" /> :
-      null;
+    const validatingSpinner = meta.isValidating
+      ? <FontAwesomeIcon icon={faSpinner} spin className="ico-loading mr-2" />
+      : null;
 
     const groupClass = meta.valid ? '' : 'is-invalid';
     const labelString = meta.stringFormatter(label);

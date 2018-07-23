@@ -279,7 +279,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -554,7 +554,7 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                  class="row form-group"
+                  class="position-relative row form-group"
                 >
                   <label
                     class="text-right col-sm-3 col-form-label"
@@ -2142,7 +2142,7 @@ ReactWrapper {
                   </InputGroup>
                 </Col>,
               ],
-              "className": "row form-group",
+              "className": "position-relative row form-group",
             },
             "memoizedState": null,
             "mode": 0,
@@ -2234,14 +2234,14 @@ ReactWrapper {
                   </InputGroup>
                 </Col>,
               ],
-              "className": "row form-group",
+              "className": "position-relative row form-group",
             },
             "ref": null,
             "return": [Circular],
             "selfBaseTime": 0,
             "sibling": null,
             "stateNode": <div
-              class="row form-group"
+              class="position-relative row form-group"
             >
               <label
                 class="text-right col-sm-3 col-form-label"
@@ -2805,7 +2805,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -3080,7 +3080,7 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                  class="row form-group"
+                  class="position-relative row form-group"
                 >
                   <label
                     class="text-right col-sm-3 col-form-label"
@@ -3558,7 +3558,7 @@ ReactWrapper {
       "ref": null,
       "rendered": Object {
         "instance": <div
-          class="row form-group"
+          class="position-relative row form-group"
         >
           <label
             class="text-right col-sm-3 col-form-label"
@@ -3685,7 +3685,7 @@ ReactWrapper {
               </InputGroup>
             </Col>,
           ],
-          "className": "row form-group",
+          "className": "position-relative row form-group",
         },
         "ref": null,
         "rendered": Array [
@@ -4478,7 +4478,7 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                      class="row form-group"
+                      class="position-relative row form-group"
                     >
                       <label
                         class="text-right col-sm-3 col-form-label"
@@ -4753,7 +4753,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -6341,7 +6341,7 @@ ReactWrapper {
                     </InputGroup>
                   </Col>,
                 ],
-                "className": "row form-group",
+                "className": "position-relative row form-group",
               },
               "memoizedState": null,
               "mode": 0,
@@ -6433,14 +6433,14 @@ ReactWrapper {
                     </InputGroup>
                   </Col>,
                 ],
-                "className": "row form-group",
+                "className": "position-relative row form-group",
               },
               "ref": null,
               "return": [Circular],
               "selfBaseTime": 0,
               "sibling": null,
               "stateNode": <div
-                class="row form-group"
+                class="position-relative row form-group"
               >
                 <label
                   class="text-right col-sm-3 col-form-label"
@@ -7004,7 +7004,7 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                      class="row form-group"
+                      class="position-relative row form-group"
                     >
                       <label
                         class="text-right col-sm-3 col-form-label"
@@ -7279,7 +7279,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -7757,7 +7757,7 @@ ReactWrapper {
         "ref": null,
         "rendered": Object {
           "instance": <div
-            class="row form-group"
+            class="position-relative row form-group"
           >
             <label
               class="text-right col-sm-3 col-form-label"
@@ -7884,7 +7884,7 @@ ReactWrapper {
                 </InputGroup>
               </Col>,
             ],
-            "className": "row form-group",
+            "className": "position-relative row form-group",
           },
           "ref": null,
           "rendered": Array [
@@ -8697,7 +8697,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -8926,7 +8926,7 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                  class="row form-group"
+                  class="position-relative row form-group"
                 >
                   <label
                     class="text-right col-sm-3 col-form-label"
@@ -10264,7 +10264,7 @@ ReactWrapper {
                   </InputGroup>
                 </Col>,
               ],
-              "className": "row form-group",
+              "className": "position-relative row form-group",
             },
             "memoizedState": null,
             "mode": 0,
@@ -10346,14 +10346,14 @@ ReactWrapper {
                   </InputGroup>
                 </Col>,
               ],
-              "className": "row form-group",
+              "className": "position-relative row form-group",
             },
             "ref": null,
             "return": [Circular],
             "selfBaseTime": 0,
             "sibling": null,
             "stateNode": <div
-              class="row form-group"
+              class="position-relative row form-group"
             >
               <label
                 class="text-right col-sm-3 col-form-label"
@@ -10823,7 +10823,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -11052,7 +11052,7 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                  class="row form-group"
+                  class="position-relative row form-group"
                 >
                   <label
                     class="text-right col-sm-3 col-form-label"
@@ -11446,7 +11446,7 @@ ReactWrapper {
       "ref": null,
       "rendered": Object {
         "instance": <div
-          class="row form-group"
+          class="position-relative row form-group"
         >
           <label
             class="text-right col-sm-3 col-form-label"
@@ -11559,7 +11559,7 @@ ReactWrapper {
               </InputGroup>
             </Col>,
           ],
-          "className": "row form-group",
+          "className": "position-relative row form-group",
         },
         "ref": null,
         "rendered": Array [
@@ -12216,7 +12216,7 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                      class="row form-group"
+                      class="position-relative row form-group"
                     >
                       <label
                         class="text-right col-sm-3 col-form-label"
@@ -12445,7 +12445,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -13783,7 +13783,7 @@ ReactWrapper {
                     </InputGroup>
                   </Col>,
                 ],
-                "className": "row form-group",
+                "className": "position-relative row form-group",
               },
               "memoizedState": null,
               "mode": 0,
@@ -13865,14 +13865,14 @@ ReactWrapper {
                     </InputGroup>
                   </Col>,
                 ],
-                "className": "row form-group",
+                "className": "position-relative row form-group",
               },
               "ref": null,
               "return": [Circular],
               "selfBaseTime": 0,
               "sibling": null,
               "stateNode": <div
-                class="row form-group"
+                class="position-relative row form-group"
               >
                 <label
                   class="text-right col-sm-3 col-form-label"
@@ -14342,7 +14342,7 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                      class="row form-group"
+                      class="position-relative row form-group"
                     >
                       <label
                         class="text-right col-sm-3 col-form-label"
@@ -14571,7 +14571,7 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                    class="row form-group"
+                    class="position-relative row form-group"
                   >
                     <label
                       class="text-right col-sm-3 col-form-label"
@@ -14965,7 +14965,7 @@ ReactWrapper {
         "ref": null,
         "rendered": Object {
           "instance": <div
-            class="row form-group"
+            class="position-relative row form-group"
           >
             <label
               class="text-right col-sm-3 col-form-label"
@@ -15078,7 +15078,7 @@ ReactWrapper {
                 </InputGroup>
               </Col>,
             ],
-            "className": "row form-group",
+            "className": "position-relative row form-group",
           },
           "ref": null,
           "rendered": Array [

@@ -10,9 +10,6 @@ import PropTypes from 'prop-types';
 import { FormFeedback } from 'reactstrap';
 import { errorsShape, withForm } from 'react-ocean-forms';
 
-import { toArray } from './utils/';
-
-
 /**
  * Component for displaying bootstrap
  * form feedbacks if there are any errors
@@ -29,7 +26,7 @@ function FieldError(props) {
   if (invalid !== true) return null;
 
   // Error could be either an string or an array of strings
-  const errorArray = toArray(error);
+  const errorArray = !Array.isArray(error) ? [error] : error;
   const errors = errorArray.map((item) => {
     const errorMessage = stringFormatter(item.message_id, item.params);
     return (

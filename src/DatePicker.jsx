@@ -26,9 +26,10 @@ class DatePicker extends React.Component {
 
   handleChange(value) {
     if (value instanceof moment) {
-      this.props.field.onChange({
+      const { field } = this.props;
+      field.onChange({
         target: {
-          name: this.props.field.name,
+          name: field.name,
           value: value.format(),
         },
       });

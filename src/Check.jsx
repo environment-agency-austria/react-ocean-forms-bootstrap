@@ -10,7 +10,16 @@ import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner';
 import faExclamationCircle from '@fortawesome/fontawesome-free-solid/faExclamationCircle';
-import { Input, FormGroup, Label, Col, Button, Alert, InputGroup, InputGroupAddon } from 'reactstrap';
+import {
+  Input,
+  FormGroup,
+  Label,
+  Col,
+  Button,
+  Alert,
+  InputGroup,
+  InputGroupAddon,
+} from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import { BaseFieldError } from './FieldError';
@@ -47,9 +56,10 @@ class Check extends React.Component {
    * property instead of value.
    */
   handleChange(event) {
-    this.props.field.onChange({
+    const { field } = this.props;
+    field.onChange({
       target: {
-        name: this.props.field.name,
+        name: field.name,
         value: event.target.checked,
       },
     });
@@ -67,6 +77,8 @@ class Check extends React.Component {
       },
     } = this.props;
 
+    const { infoVisible } = this.state;
+
     const isChecked = value === true;
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
     const groupClass = (className + (meta.valid ? '' : ' is-invalid')).trim();
@@ -81,7 +93,7 @@ class Check extends React.Component {
         <Col sm={9}>
           <InputGroup className={inputGroupClass}>
             <Label check>
-              {!meta.plaintext &&
+              {!meta.plaintext && (
                 <Input
                   id={field.id}
                   name={field.name}
@@ -92,7 +104,7 @@ class Check extends React.Component {
                   onClick={this.handleChange}
                   disabled={field.disabled}
                 />
-              }
+              )}
               {labelString}
               <BaseFieldError
                 id={`${field.id}_errors`}
@@ -101,27 +113,25 @@ class Check extends React.Component {
                 context={{ stringFormatter: meta.stringFormatter }}
               />
             </Label>
-            {
-              info &&
+            {info && (
               <InputGroupAddon addonType="append">
                 <Button onClick={this.toggleInfo} outline>
                   <FontAwesomeIcon icon={faExclamationCircle} />
                 </Button>
               </InputGroupAddon>
-            }
+            )}
           </InputGroup>
 
-          {
-            info &&
+          {info && (
             <Alert
               color="success"
               className="mt-2"
-              isOpen={this.state.infoVisible}
+              isOpen={infoVisible}
               toggle={this.toggleInfo}
             >
               {meta.stringFormatter(info)}
             </Alert>
-          }
+          )}
         </Col>
       </FormGroup>
     );
