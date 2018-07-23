@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+- Fixed Select class on invalid state
+
 ## [1.1.0] - 2018-06-28
 - Updated to react-ocean-forms 1.1.0
 - Added support for new Form plaintext feature

@@ -68,7 +68,7 @@ class Select extends React.Component {
 
     // Generate a css class based on the validity of the select element
     let selectClass = 'react-select-control';
-    selectClass = (selectClass + (field.invalid ? ' is-invalid' : '')).trim();
+    selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
 
     // Check if the current value has a different label than the value
     // with the same key in the options array. Bugfix to change the
@@ -108,7 +108,7 @@ class Select extends React.Component {
           placeholder={selectPlaceholder}
           noResultsText={selectNoResults}
           clearValueText={selectClearValue}
-          invalid={field.invalid}
+          invalid={!meta.valid}
           className={selectClass}
         />
       </FieldLine>
