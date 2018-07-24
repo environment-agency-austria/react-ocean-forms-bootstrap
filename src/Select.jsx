@@ -120,6 +120,8 @@ class Select extends React.Component {
   }
 }
 
+Select.displayName = 'Select';
+
 Select.defaultProps = {
   info: undefined,
   multi: false,

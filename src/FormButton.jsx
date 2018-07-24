@@ -24,6 +24,8 @@ function FormButton(props) {
   );
 }
 
+FormButton.displayName = 'FormButton';
+
 FormButton.propTypes = {
   context: PropTypes.shape({
     busy: PropTypes.bool.isRequired,

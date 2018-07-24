@@ -138,6 +138,8 @@ class Check extends React.Component {
   }
 }
 
+Check.displayName = 'Check';
+
 Check.defaultProps = {
   info: undefined,
   className: undefined,

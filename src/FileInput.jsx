@@ -45,6 +45,8 @@ function FileInput(props) {
   );
 }
 
+FileInput.displayName = 'FileInput';
+
 FileInput.defaultProps = {
   info: undefined,
 };

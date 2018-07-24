@@ -93,6 +93,8 @@ class DatePicker extends React.Component {
   }
 }
 
+DatePicker.displayName = 'DatePicker';
+
 DatePicker.defaultProps = {
   info: undefined,
   placeholder: 'ojs_select_placeholder',

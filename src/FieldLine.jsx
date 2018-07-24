@@ -208,6 +208,8 @@ class FieldLine extends React.Component {
   }
 }
 
+FieldLine.displayName = 'FieldLine';
+
 FieldLine.defaultProps = {
   info: undefined,
   validators: undefined,

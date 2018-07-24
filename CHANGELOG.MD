@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 - Fixed Select class on invalid state
 - new property for `Select` enable/disable multiselect
 - Hidden required marker in plaintext mode
+- Added displayName props
 
 ## [1.1.0] - 2018-06-28
 - Updated to react-ocean-forms 1.1.0

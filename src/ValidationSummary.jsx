@@ -45,6 +45,8 @@ function BootstrapValidationSummary(props) {
   );
 }
 
+BootstrapValidationSummary.displayName = 'BootstrapValidationSummary';
+
 BootstrapValidationSummary.defaultProps = {
   title: 'ojs_form_validationSummaryHeader',
 };
