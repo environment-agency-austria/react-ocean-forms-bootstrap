@@ -60,6 +60,7 @@ class Select extends React.Component {
       field,
       placeholder,
       options,
+      multi,
       meta,
     } = this.props;
 
@@ -107,6 +108,7 @@ class Select extends React.Component {
           onChange={this.handleChange}
           onBlur={this.handleBlur}
           options={options}
+          multi={multi}
           placeholder={selectPlaceholder}
           noResultsText={selectNoResults}
           clearValueText={selectClearValue}
@@ -120,6 +122,7 @@ class Select extends React.Component {
 
 Select.defaultProps = {
   info: undefined,
+  multi: false,
   placeholder: 'ojs_select_placeholder',
 };
 
@@ -129,6 +132,7 @@ Select.propTypes = {
   placeholder: PropTypes.string,
   meta: fieldMetaShape.isRequired,
   field: fieldShape.isRequired,
+  multi: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,

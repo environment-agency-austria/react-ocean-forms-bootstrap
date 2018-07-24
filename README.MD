@@ -118,6 +118,9 @@ Message id of an additional info text. A info button will be rendered on the sid
 ***options*** (Array of objects, required)
 Must contain the available select values. See the documentation of `react-select` for further details.
 
+***multi*** (boolean, optional)
+Enable/disable multiselect. See the documentation of `react-select` for further details.
+
 ## ValidationSummary Component
 Displays a box with all the failed validations in the form. The element must be enclosed in a Form component.
 

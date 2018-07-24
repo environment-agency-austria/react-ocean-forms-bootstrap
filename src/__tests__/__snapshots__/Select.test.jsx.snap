@@ -156,6 +156,7 @@ ShallowWrapper {
         "valid": true,
       }
     }
+    multi={false}
     options={
       Array [
         Object {
@@ -363,6 +364,7 @@ ShallowWrapper {
         },
         "valid": true,
       },
+      "multi": false,
       "options": Array [
         Object {
           "label": "One",
@@ -608,6 +610,7 @@ ShallowWrapper {
           },
           "valid": true,
         },
+        "multi": false,
         "options": Array [
           Object {
             "label": "One",
@@ -729,6 +732,7 @@ ShallowWrapper {
         "valid": true,
       }
     }
+    multi={false}
     options={
       Array [
         Object {
@@ -862,6 +866,7 @@ ShallowWrapper {
         },
         "valid": true,
       },
+      "multi": false,
       "options": Array [
         Object {
           "label": "One",
@@ -1062,6 +1067,7 @@ ShallowWrapper {
           },
           "valid": true,
         },
+        "multi": false,
         "options": Array [
           Object {
             "label": "One",
