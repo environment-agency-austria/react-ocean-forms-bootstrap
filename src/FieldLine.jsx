@@ -57,6 +57,11 @@ class FieldLine extends React.Component {
       meta,
     } = this.props;
 
+    if (meta.plaintext) {
+      // Hide the required star in plaintext mode
+      return null;
+    }
+
     if (Array.isArray(validators) && validators.includes(defaultValidators.required)) {
       const requiredTitle = meta.stringFormatter('ojs_field_required');
       return <span className="field-required" title={requiredTitle}> *</span>;

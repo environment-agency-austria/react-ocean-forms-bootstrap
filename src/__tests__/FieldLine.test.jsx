@@ -117,6 +117,18 @@ describe('<FieldLine />', () => {
     expect(requiredMarker.text()).toEqual(' *');
   });
 
+  it('should NOT display a required marker if it is required but the form is in plaintext mode', () => {
+    setup(generateProps(
+      null,
+      generateMeta(true, null, false, true),
+      generateField(''),
+      [defaultValidators.required],
+    ));
+
+    const requiredMarker = label.find('.field-required');
+    expect(requiredMarker.exists()).not.toBeTruthy();
+  });
+
   it('should display a spinner if the state isValidating is true', () => {
     setup(generateProps(
       null,
