@@ -77,7 +77,10 @@ class FieldLine extends React.Component {
   createInfoAddonButton() {
     const {
       info,
+      meta,
     } = this.props;
+
+    if (meta.plaintext) return null;
 
     if (info) {
       return (
@@ -96,6 +99,7 @@ class FieldLine extends React.Component {
     if (!item) return null;
 
     const { meta } = this.props;
+    if (meta.plaintext) return null;
 
     let child = null;
     if (typeof item === 'function') {
@@ -134,6 +138,8 @@ class FieldLine extends React.Component {
     const {
       infoVisible,
     } = this.state;
+
+    if (meta.plaintext) return null;
 
     if (info) {
       const infoString = meta.stringFormatter(info);
