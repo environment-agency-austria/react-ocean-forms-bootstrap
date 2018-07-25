@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.2.0] - 2018-07-25
 - Fixed Select class on invalid state
 - new property for `Select` enable/disable multiselect
 - Hidden required marker, info, prefix and suffix in plaintext mode
