@@ -121,6 +121,30 @@ Must contain the available select values. See the documentation of `react-select
 ***multi*** (boolean, optional)
 Enable/disable multiselect. See the documentation of `react-select` for further details.
 
+## OnOffToggleButton Component 
+Displays a Bootstrap ButtonGroup with 2 buttons as On/Off toggler.
+```jsx
+import { Field } from 'react-ocean-forms';
+import { OnOffToggleButton } from 'react-ocean-forms-bootstrap';
+
+<Field
+  name="test"
+  label="label_test"
+  component={OnOffToggleButton}
+  onLabel="yes"
+  offLabel="no"
+/>
+```
+
+### Properties 
+
+***onLabel*** (String, optional,  default: 'On')
+Message displayed at ON button.
+
+***offLabel*** (String, optional, default: 'Off')
+Message displayed at OFF button.
+
+
 ## ValidationSummary Component
 Displays a box with all the failed validations in the form. The element must be enclosed in a Form component.
 
@@ -134,7 +158,7 @@ import { ValidationSummary } from 'react-ocean-forms-bootstrap';
 </Form>
 ```
 
-#### Properties
+### Properties
 ***title*** (String, optional)
 Optional message id of the title of the error box.
 

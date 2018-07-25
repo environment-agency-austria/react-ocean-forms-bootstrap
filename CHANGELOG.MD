@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - new property for `Select` enable/disable multiselect
 - Hidden required marker, info, prefix and suffix in plaintext mode
 - Added displayName props
+- new component `OnOffToggleButton`
 
 ## [1.1.0] - 2018-06-28
 - Updated to react-ocean-forms 1.1.0

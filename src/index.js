@@ -10,3 +10,4 @@ export { default as Input } from './Input';
 export { default as Select } from './Select';
 export { default as ValidationSummary } from './ValidationSummary';
 export { default as FormButton } from './FormButton';
+export { default as OnOffToggleButton } from './OnOffToggleButton';

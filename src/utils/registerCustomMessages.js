@@ -12,5 +12,7 @@ const DEFAULT_MESSAGES = {
   ojs_form_select_file: 'Choose file',
   ojs_select_noresults: 'No results',
   ojs_select_clearValue: 'Clear value',
+  ojs_togglebutton_on: 'On',
+  ojs_togglebutton_off: 'Off',
 };
 addCustomMessages(DEFAULT_MESSAGES);
