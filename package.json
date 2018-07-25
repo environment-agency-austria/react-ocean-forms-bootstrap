@@ -50,7 +50,7 @@
     "@fortawesome/react-fontawesome": "^0.0.20",
     "prop-types": "^15.6.1",
     "react-datetime": "^2.14.0",
-    "react-ocean-forms": "^1.1.0",
+    "react-ocean-forms": "^1.2.0",
     "react-select": "^1.2.1",
     "reactstrap": "^6.1.0 || ^6.2.0 || ^6.3.0"
   },
