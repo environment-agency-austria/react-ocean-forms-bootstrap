@@ -2,9 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    main: './src/scss/main.scss',
+  },
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -19,9 +23,18 @@ module.exports = {
         exclude: /(node_modules|bower_components|build|coverage)/,
         use: {
           loader: 'babel-loader',
-        }
-      }
-    ]
+        },
+      },
+      {
+        test: /\.scss$/,
+        exclude: /(node_modules|bower_components|build|coverage)/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
@@ -43,5 +56,11 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ],
 };

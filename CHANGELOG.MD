@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added stylesheets for better out-of-the-box experience
 - Adapted to the new `FormButton` element of `react-ocean-forms`
 
 ## [1.2.0] - 2018-07-25
