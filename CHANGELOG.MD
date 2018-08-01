@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+- Adapted to the new `FormButton` element of `react-ocean-forms`
+
 ## [1.2.0] - 2018-07-25
 - Fixed Select class on invalid state
 - new property for `Select` enable/disable multiselect
