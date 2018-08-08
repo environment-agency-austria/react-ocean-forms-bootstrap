@@ -2,7 +2,6 @@
 
 exports[`<FieldLine /> plaintext mode should not display prefixes and suffixes 1`] = `
 ReactWrapper {
-  "length": 1,
   Symbol(enzyme.__unrendered__): <FieldLine
     field={
       Object {
@@ -5602,15 +5601,22 @@ ReactWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<FieldLine /> should support prefixes and suffixes 1`] = `
 ReactWrapper {
-  "length": 1,
   Symbol(enzyme.__unrendered__): <FieldLine
     field={
       Object {
@@ -14076,15 +14082,22 @@ ReactWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<FieldLine /> should support prefixes and suffixes with functions 1`] = `
 ReactWrapper {
-  "length": 1,
   Symbol(enzyme.__unrendered__): <FieldLine
     field={
       Object {
@@ -21176,8 +21189,16 @@ ReactWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
