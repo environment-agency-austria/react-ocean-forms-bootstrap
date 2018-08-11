@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+- Added `is-touched` class to `FieldLine` as soon as the field has been touched
+- Default style: made the label of touched fields blue by default
+
 ## [1.3.0] # 2018-08-02
 - Added stylesheets for better out-of-the-box experience
 - Adapted to the new `FormButton` element of `react-ocean-forms`

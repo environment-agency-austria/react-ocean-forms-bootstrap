@@ -183,6 +183,20 @@ describe('<FieldLine />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should change the group class if the field has been touched', () => {
+    const meta = generateMeta(true, null, false, false);
+    meta.touched = true;
+
+    setup(generateProps(
+      null,
+      meta,
+      generateField(''),
+      null,
+    ));
+
+    expect(formGroup.prop('className')).toEqual(expect.stringContaining('is-touched'));
+  });
+
   describe('plaintext mode', () => {
     it('should not display a required marker', () => {
       setup(generateProps(

@@ -179,7 +179,10 @@ class FieldLine extends React.Component {
       ? <FontAwesomeIcon icon={faSpinner} spin className="ico-loading mr-2" />
       : null;
 
-    const groupClass = meta.valid ? '' : 'is-invalid';
+    let groupClass = meta.valid ? '' : 'is-invalid';
+    groupClass += meta.touched ? ' is-touched' : '';
+    groupClass = groupClass.trim();
+
     const labelString = meta.stringFormatter(label);
 
     const prefixItem = this.createPrefix();

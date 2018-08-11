@@ -76,6 +76,12 @@
   }
 }
 
+.form-group.is-touched {
+  label {
+    color: #0856B6;
+  }
+}
+
 // Workaround for checkboxes with an info button
 .input-group.has-info {
   .form-check-label {
