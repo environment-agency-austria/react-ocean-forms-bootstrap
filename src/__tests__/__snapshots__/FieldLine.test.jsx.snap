@@ -8,8 +8,8 @@ ShallowWrapper {
       Object {
         "disabled": false,
         "name": "mock-field",
-        "onBlur": [Function],
-        "onChange": [Function],
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
         "value": "mock-value",
       }
     }
@@ -227,8 +227,26 @@ ShallowWrapper {
         </Col>,
       ],
       "className": "",
-      "row": true,
-      "tag": "div",
+      "meta": Object {
+        "error": null,
+        "isValidating": false,
+        "plaintext": false,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "label",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "label",
+            },
+          ],
+        },
+        "touched": false,
+        "valid": true,
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -901,8 +919,26 @@ ShallowWrapper {
           </Col>,
         ],
         "className": "",
-        "row": true,
-        "tag": "div",
+        "meta": Object {
+          "error": null,
+          "isValidating": false,
+          "plaintext": false,
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "label",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "label",
+              },
+            ],
+          },
+          "touched": false,
+          "valid": true,
+        },
       },
       "ref": null,
       "rendered": Array [

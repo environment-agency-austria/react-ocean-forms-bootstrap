@@ -60,6 +60,6 @@ export const createMockField = () => ({
   name: 'mock-field',
   value: 'mock-value',
   disabled: false,
-  onChange: () => {},
-  onBlur: () => {},
+  onChange: jest.fn(),
+  onBlur: jest.fn(),
 });

@@ -6,14 +6,10 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FormGroup,
-  Label,
-  Col,
-  InputGroup,
-} from 'reactstrap';
+import { Label, Col, InputGroup } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
+import FieldRow from './components/FieldRow';
 import RequiredMarker from './components/RequiredMarker';
 import InvalidAlert from './components/InvalidAlert';
 import ValidatingSpinner from './components/ValidatingSpinner';
@@ -60,14 +56,10 @@ class FieldLine extends React.Component {
 
     const { infoVisible } = this.state;
 
-    let groupClass = meta.valid ? '' : 'is-invalid';
-    groupClass += meta.touched ? ' is-touched' : '';
-    groupClass = groupClass.trim();
-
     const labelString = meta.stringFormatter(label);
 
     return (
-      <FormGroup row className={groupClass}>
+      <FieldRow meta={meta}>
         <Label sm="3" for={field.id} className="text-right">
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
@@ -89,7 +81,7 @@ class FieldLine extends React.Component {
           </InputGroup>
           <InfoAlert visible={infoVisible} info={info} meta={meta} onClose={this.toggleInfo} />
         </Col>
-      </FormGroup>
+      </FieldRow>
     );
   }
 }
