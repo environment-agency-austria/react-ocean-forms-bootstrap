@@ -1,36 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import mockEvent, { KEYCODE } from '../test-utils/enzymeEventUtils';
-import createMockFormatter from '../test-utils/createMockFormatter';
 
+import mockEvent, { KEYCODE } from '../test-utils/enzymeEventUtils';
+import { createMockFieldMeta, createMockField } from '../test-utils/enzymeFormContext';
 import Select from '../Select';
 import FieldLine from '../FieldLine';
 
 describe('<Select />', () => {
-  const FIELD_ID = 'field0';
-  const FIELD_NAME = 'field0';
   const FIELD_LABEL = 'field0';
 
   const options = [
     { value: 'one', label: 'One' },
     { value: 'two', label: 'Two' },
   ];
-  const meta = {
-    valid: true,
-    error: undefined,
-    isValidating: undefined,
-    stringFormatter: createMockFormatter(),
-    plaintext: false,
-  };
-  const field = {
-    value: '',
-    invalid: false,
-    id: FIELD_ID,
-    name: FIELD_NAME,
-    disabled: false,
-    onChange: jest.fn(),
-    onBlur: jest.fn(),
-  };
+  const meta = createMockFieldMeta();
+  const field = createMockField();
+  field.value = '';
 
   const setup = props => shallow((
     <Select
@@ -62,7 +47,7 @@ describe('<Select />', () => {
 
   it('should call field.onChange when the input changes', () => {
     const wrapper = setup();
-    const event = { target: { name: FIELD_ID, value: options[0] } };
+    const event = { target: { name: field.id, value: options[0] } };
 
     // The react-select element doesn't support direct
     // simulate calls of change / blur types on itself.
@@ -77,7 +62,7 @@ describe('<Select />', () => {
 
   it.skip('should call field.onBlur when there is an input blur', () => {
     const wrapper = setup();
-    const event = { target: { name: FIELD_ID } };
+    const event = { target: { name: field.id } };
 
     const selectElement = wrapper.find('Select').dive().find('.Select-control');
     selectElement.focus();

@@ -7,6 +7,7 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
+        "id": "mock-field",
         "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -44,6 +45,7 @@ ShallowWrapper {
       "children": Array [
         <Label
           className="text-right"
+          for="mock-field"
           sm="3"
           tag="label"
           widths={
@@ -113,7 +115,7 @@ ShallowWrapper {
             />
             <FieldError
               error={null}
-              id="undefined_errors"
+              id="mock-field_errors"
               invalid={false}
             />
           </InputGroup>
@@ -165,7 +167,7 @@ ShallowWrapper {
             />,
           ],
           "className": "text-right",
-          "for": undefined,
+          "for": "mock-field",
           "sm": "3",
           "tag": "label",
           "widths": Array [
@@ -261,7 +263,7 @@ ShallowWrapper {
               />
               <FieldError
                 error={null}
-                id="undefined_errors"
+                id="mock-field_errors"
                 invalid={false}
               />
             </InputGroup>,
@@ -308,7 +310,7 @@ ShallowWrapper {
                 />,
                 <FieldError
                   error={null}
-                  id="undefined_errors"
+                  id="mock-field_errors"
                   invalid={false}
                 />,
               ],
@@ -372,7 +374,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "error": null,
-                  "id": "undefined_errors",
+                  "id": "mock-field_errors",
                   "invalid": false,
                 },
                 "ref": null,
@@ -411,6 +413,7 @@ ShallowWrapper {
         "children": Array [
           <Label
             className="text-right"
+            for="mock-field"
             sm="3"
             tag="label"
             widths={
@@ -480,7 +483,7 @@ ShallowWrapper {
               />
               <FieldError
                 error={null}
-                id="undefined_errors"
+                id="mock-field_errors"
                 invalid={false}
               />
             </InputGroup>
@@ -532,7 +535,7 @@ ShallowWrapper {
               />,
             ],
             "className": "text-right",
-            "for": undefined,
+            "for": "mock-field",
             "sm": "3",
             "tag": "label",
             "widths": Array [
@@ -628,7 +631,7 @@ ShallowWrapper {
                 />
                 <FieldError
                   error={null}
-                  id="undefined_errors"
+                  id="mock-field_errors"
                   invalid={false}
                 />
               </InputGroup>,
@@ -675,7 +678,7 @@ ShallowWrapper {
                   />,
                   <FieldError
                     error={null}
-                    id="undefined_errors"
+                    id="mock-field_errors"
                     invalid={false}
                   />,
                 ],
@@ -739,7 +742,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "error": null,
-                    "id": "undefined_errors",
+                    "id": "mock-field_errors",
                     "invalid": false,
                   },
                   "ref": null,

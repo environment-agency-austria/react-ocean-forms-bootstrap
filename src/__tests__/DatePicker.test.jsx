@@ -2,31 +2,16 @@ import React from 'react';
 import Datetime from 'react-datetime';
 import { shallow } from 'enzyme';
 
-import createMockFormatter from '../test-utils/createMockFormatter';
+import { createMockFieldMeta, createMockField } from '../test-utils/enzymeFormContext';
 import DatePicker from '../DatePicker';
 import FieldLine from '../FieldLine';
 
 describe('<DatePicker />', () => {
-  const FIELD_ID = 'field0';
-  const FIELD_NAME = 'field0';
   const FIELD_LABEL = 'field0';
 
-  const meta = {
-    valid: true,
-    error: undefined,
-    isValidating: undefined,
-    stringFormatter: createMockFormatter(),
-    plaintext: false,
-  };
-  const field = {
-    value: '',
-    invalid: false,
-    id: FIELD_ID,
-    name: FIELD_NAME,
-    disabled: false,
-    onChange: jest.fn(),
-    onBlur: jest.fn(),
-  };
+  const meta = createMockFieldMeta();
+  const field = createMockField();
+  field.value = '';
 
   const setup = props => shallow((
     <DatePicker

@@ -10,28 +10,31 @@ import PropTypes from 'prop-types';
 import { Alert } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faExclamationCircle from '@fortawesome/fontawesome-free-solid/faExclamationCircle';
-import { ValidationSummary } from 'react-ocean-forms';
+import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
 
 /**
  * Component for displaying a summary of all
  * validation errors of the form this component
  * lives in.
  */
-function BootstrapValidationSummary(props) {
+function ValidationSummary(props) {
   const {
     title,
     ...rest
   } = props;
 
   return (
-    <ValidationSummary
+    <CoreValidationSummary
       title={title}
       {...rest}
       renderFieldError={(id, fieldName, errors, linkCallback) => (
         <li key={id}>
           <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" />
           <a href="#" onClick={linkCallback}>
-            {fieldName}: {errors}
+            {fieldName}
+            :
+            {' '}
+            {errors}
           </a>
         </li>
       )}
@@ -45,13 +48,13 @@ function BootstrapValidationSummary(props) {
   );
 }
 
-BootstrapValidationSummary.displayName = 'BootstrapValidationSummary';
+ValidationSummary.displayName = 'ValidationSummary';
 
-BootstrapValidationSummary.defaultProps = {
+ValidationSummary.defaultProps = {
   title: 'ojs_form_validationSummaryHeader',
 };
 
-BootstrapValidationSummary.propTypes = {
+ValidationSummary.propTypes = {
   title: PropTypes.string,
 };
-export default BootstrapValidationSummary;
+export default ValidationSummary;

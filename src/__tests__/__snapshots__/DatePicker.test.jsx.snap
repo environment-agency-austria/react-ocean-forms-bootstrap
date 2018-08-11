@@ -8,9 +8,8 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -19,10 +18,11 @@ ShallowWrapper {
     label="field0"
     meta={
       Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       }
     }
@@ -43,9 +43,8 @@ ShallowWrapper {
     "props": Object {
       "children": <Input
         disabled={false}
-        id="field0"
-        invalid={false}
-        name="field0"
+        id="mock-field"
+        name="mock-field"
         onBlur={[MockFunction]}
         onChange={[MockFunction]}
         plaintext={true}
@@ -57,9 +56,8 @@ ShallowWrapper {
       "dateFormat": null,
       "field": Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -67,10 +65,11 @@ ShallowWrapper {
       "info": undefined,
       "label": "field0",
       "meta": Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       },
       "placeholder": "ojs_select_placeholder",
@@ -87,9 +86,8 @@ ShallowWrapper {
       "props": Object {
         "children": "Invalid date",
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "plaintext": true,
@@ -110,9 +108,8 @@ ShallowWrapper {
       "props": Object {
         "children": <Input
           disabled={false}
-          id="field0"
-          invalid={false}
-          name="field0"
+          id="mock-field"
+          name="mock-field"
           onBlur={[MockFunction]}
           onChange={[MockFunction]}
           plaintext={true}
@@ -124,9 +121,8 @@ ShallowWrapper {
         "dateFormat": null,
         "field": Object {
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
           "value": "",
@@ -134,10 +130,11 @@ ShallowWrapper {
         "info": undefined,
         "label": "field0",
         "meta": Object {
-          "error": undefined,
-          "isValidating": undefined,
+          "error": null,
+          "isValidating": false,
           "plaintext": true,
           "stringFormatter": [MockFunction],
+          "touched": false,
           "valid": true,
         },
         "placeholder": "ojs_select_placeholder",
@@ -154,9 +151,8 @@ ShallowWrapper {
         "props": Object {
           "children": "Invalid date",
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
           "plaintext": true,
@@ -196,9 +192,8 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -207,10 +202,11 @@ ShallowWrapper {
     label="field0"
     meta={
       Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       }
     }
@@ -235,7 +231,7 @@ ShallowWrapper {
         closeOnTab={true}
         dateFormat={null}
         defaultValue=""
-        id="field0"
+        id="mock-field"
         input={true}
         inputProps={
           Object {
@@ -256,9 +252,8 @@ ShallowWrapper {
       "dateFormat": null,
       "field": Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -266,10 +261,11 @@ ShallowWrapper {
       "info": undefined,
       "label": "field0",
       "meta": Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       },
       "placeholder": "ojs_select_placeholder",
@@ -289,7 +285,7 @@ ShallowWrapper {
         "closeOnTab": true,
         "dateFormat": null,
         "defaultValue": "",
-        "id": "field0",
+        "id": "mock-field",
         "input": true,
         "inputProps": Object {
           "disabled": false,
@@ -323,7 +319,7 @@ ShallowWrapper {
           closeOnTab={true}
           dateFormat={null}
           defaultValue=""
-          id="field0"
+          id="mock-field"
           input={true}
           inputProps={
             Object {
@@ -344,9 +340,8 @@ ShallowWrapper {
         "dateFormat": null,
         "field": Object {
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
           "value": "",
@@ -354,10 +349,11 @@ ShallowWrapper {
         "info": undefined,
         "label": "field0",
         "meta": Object {
-          "error": undefined,
-          "isValidating": undefined,
+          "error": null,
+          "isValidating": false,
           "plaintext": false,
           "stringFormatter": [MockFunction],
+          "touched": false,
           "valid": true,
         },
         "placeholder": "ojs_select_placeholder",
@@ -377,7 +373,7 @@ ShallowWrapper {
           "closeOnTab": true,
           "dateFormat": null,
           "defaultValue": "",
-          "id": "field0",
+          "id": "mock-field",
           "input": true,
           "inputProps": Object {
             "disabled": false,

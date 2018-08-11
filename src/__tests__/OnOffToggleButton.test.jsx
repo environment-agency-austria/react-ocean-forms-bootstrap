@@ -1,32 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
-import createMockFormatter from '../test-utils/createMockFormatter';
 
+import { createMockFieldMeta, createMockField } from '../test-utils/enzymeFormContext';
 import { BaseOnOffToggleButton } from '../OnOffToggleButton';
 
 describe('<BaseOnOffToggleButton />', () => {
-  const FIELD_ID = 'field0';
-  const FIELD_NAME = 'field0';
   const FIELD_LABEL = 'field0';
 
-  const meta = {
-    valid: true,
-    error: undefined,
-    isValidating: undefined,
-    stringFormatter: createMockFormatter(),
-    plaintext: false,
-  };
-
-  const field = {
-    value: '',
-    invalid: false,
-    id: FIELD_ID,
-    name: FIELD_NAME,
-    disabled: false,
-    onChange: jest.fn(),
-    onBlur: jest.fn(),
-  };
+  const meta = createMockFieldMeta();
+  const field = createMockField();
 
   const setup = props => shallow((
     <BaseOnOffToggleButton
@@ -50,10 +33,17 @@ describe('<BaseOnOffToggleButton />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render the correct label in plaintext mode', () => {
+    meta.plaintext = true;
+    field.value = false;
+    const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
+
   const testButton = (value) => {
     describe(`${value} Button`, () => {
       const wrapper = setup();
-      const buttonOn = wrapper.find(`#field0-${value}`);
+      const buttonOn = wrapper.find(`#${field.id}-${value}`);
 
       it('should render labels for button', () => {
         expect(buttonOn.find(FormText).prop('text')).toBe(value);
@@ -61,7 +51,7 @@ describe('<BaseOnOffToggleButton />', () => {
 
       it('should trigger onChange on click', () => {
         buttonOn.simulate('click');
-        expect(field.onChange).toHaveBeenCalledWith({ target: { name: FIELD_NAME, value: value === 'on' } });
+        expect(field.onChange).toHaveBeenCalledWith({ target: { name: field.name, value: value === 'on' } });
       });
     });
   };

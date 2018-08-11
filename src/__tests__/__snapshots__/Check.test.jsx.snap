@@ -7,6 +7,7 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
+        "id": "mock-field",
         "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
@@ -91,6 +92,7 @@ ShallowWrapper {
               <Input
                 defaultChecked={false}
                 disabled={false}
+                id="mock-field"
                 invalid={false}
                 name="mock-field"
                 onBlur={[MockFunction]}
@@ -102,7 +104,7 @@ ShallowWrapper {
               />
               <FieldError
                 error={null}
-                id="undefined_errors"
+                id="mock-field_errors"
                 invalid={false}
               />
             </Label>
@@ -206,6 +208,7 @@ ShallowWrapper {
                 <Input
                   defaultChecked={false}
                   disabled={false}
+                  id="mock-field"
                   invalid={false}
                   name="mock-field"
                   onBlur={[MockFunction]}
@@ -217,7 +220,7 @@ ShallowWrapper {
                 />
                 <FieldError
                   error={null}
-                  id="undefined_errors"
+                  id="mock-field_errors"
                   invalid={false}
                 />
               </Label>
@@ -266,6 +269,7 @@ ShallowWrapper {
                   <Input
                     defaultChecked={false}
                     disabled={false}
+                    id="mock-field"
                     invalid={false}
                     name="mock-field"
                     onBlur={[MockFunction]}
@@ -277,7 +281,7 @@ ShallowWrapper {
                   />
                   <FieldError
                     error={null}
-                    id="undefined_errors"
+                    id="mock-field_errors"
                     invalid={false}
                   />
                 </Label>,
@@ -301,6 +305,7 @@ ShallowWrapper {
                     <Input
                       defaultChecked={false}
                       disabled={false}
+                      id="mock-field"
                       invalid={false}
                       name="mock-field"
                       onBlur={[MockFunction]}
@@ -312,7 +317,7 @@ ShallowWrapper {
                     />,
                     <FieldError
                       error={null}
-                      id="undefined_errors"
+                      id="mock-field_errors"
                       invalid={false}
                     />,
                   ],
@@ -334,7 +339,7 @@ ShallowWrapper {
                     "props": Object {
                       "defaultChecked": false,
                       "disabled": false,
-                      "id": undefined,
+                      "id": "mock-field",
                       "invalid": false,
                       "name": "mock-field",
                       "onBlur": [MockFunction],
@@ -362,7 +367,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "error": null,
-                      "id": "undefined_errors",
+                      "id": "mock-field_errors",
                       "invalid": false,
                     },
                     "ref": null,
@@ -468,6 +473,7 @@ ShallowWrapper {
                 <Input
                   defaultChecked={false}
                   disabled={false}
+                  id="mock-field"
                   invalid={false}
                   name="mock-field"
                   onBlur={[MockFunction]}
@@ -479,7 +485,7 @@ ShallowWrapper {
                 />
                 <FieldError
                   error={null}
-                  id="undefined_errors"
+                  id="mock-field_errors"
                   invalid={false}
                 />
               </Label>
@@ -583,6 +589,7 @@ ShallowWrapper {
                   <Input
                     defaultChecked={false}
                     disabled={false}
+                    id="mock-field"
                     invalid={false}
                     name="mock-field"
                     onBlur={[MockFunction]}
@@ -594,7 +601,7 @@ ShallowWrapper {
                   />
                   <FieldError
                     error={null}
-                    id="undefined_errors"
+                    id="mock-field_errors"
                     invalid={false}
                   />
                 </Label>
@@ -643,6 +650,7 @@ ShallowWrapper {
                     <Input
                       defaultChecked={false}
                       disabled={false}
+                      id="mock-field"
                       invalid={false}
                       name="mock-field"
                       onBlur={[MockFunction]}
@@ -654,7 +662,7 @@ ShallowWrapper {
                     />
                     <FieldError
                       error={null}
-                      id="undefined_errors"
+                      id="mock-field_errors"
                       invalid={false}
                     />
                   </Label>,
@@ -678,6 +686,7 @@ ShallowWrapper {
                       <Input
                         defaultChecked={false}
                         disabled={false}
+                        id="mock-field"
                         invalid={false}
                         name="mock-field"
                         onBlur={[MockFunction]}
@@ -689,7 +698,7 @@ ShallowWrapper {
                       />,
                       <FieldError
                         error={null}
-                        id="undefined_errors"
+                        id="mock-field_errors"
                         invalid={false}
                       />,
                     ],
@@ -711,7 +720,7 @@ ShallowWrapper {
                       "props": Object {
                         "defaultChecked": false,
                         "disabled": false,
-                        "id": undefined,
+                        "id": "mock-field",
                         "invalid": false,
                         "name": "mock-field",
                         "onBlur": [MockFunction],
@@ -739,7 +748,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "error": null,
-                        "id": "undefined_errors",
+                        "id": "mock-field_errors",
                         "invalid": false,
                       },
                       "ref": null,

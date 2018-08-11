@@ -57,6 +57,7 @@ export const createMockFieldMeta = () => ({
  * Creates a mock field shape
  */
 export const createMockField = () => ({
+  id: 'mock-field',
   name: 'mock-field',
   value: 'mock-value',
   disabled: false,

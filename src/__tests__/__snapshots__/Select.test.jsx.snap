@@ -7,16 +7,15 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction] {
           "calls": Array [
             Array [
               Object {
                 "target": Object {
-                  "name": "field0",
+                  "name": "mock-field",
                   "value": Object {
                     "label": "One",
                     "value": "one",
@@ -38,10 +37,11 @@ ShallowWrapper {
     label="field0"
     meta={
       Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       }
     }
@@ -74,9 +74,8 @@ ShallowWrapper {
     "props": Object {
       "children": <Input
         disabled={false}
-        id="field0"
-        invalid={false}
-        name="field0"
+        id="mock-field"
+        name="mock-field"
         onBlur={[MockFunction]}
         onChange={
           [MockFunction] {
@@ -84,7 +83,7 @@ ShallowWrapper {
               Array [
                 Object {
                   "target": Object {
-                    "name": "field0",
+                    "name": "mock-field",
                     "value": Object {
                       "label": "One",
                       "value": "one",
@@ -107,16 +106,15 @@ ShallowWrapper {
       />,
       "field": Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction] {
           "calls": Array [
             Array [
               Object {
                 "target": Object {
-                  "name": "field0",
+                  "name": "mock-field",
                   "value": Object {
                     "label": "One",
                     "value": "one",
@@ -137,10 +135,11 @@ ShallowWrapper {
       "info": undefined,
       "label": "field0",
       "meta": Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       },
       "multi": false,
@@ -167,16 +166,15 @@ ShallowWrapper {
       "props": Object {
         "children": undefined,
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction] {
           "calls": Array [
             Array [
               Object {
                 "target": Object {
-                  "name": "field0",
+                  "name": "mock-field",
                   "value": Object {
                     "label": "One",
                     "value": "one",
@@ -210,9 +208,8 @@ ShallowWrapper {
       "props": Object {
         "children": <Input
           disabled={false}
-          id="field0"
-          invalid={false}
-          name="field0"
+          id="mock-field"
+          name="mock-field"
           onBlur={[MockFunction]}
           onChange={
             [MockFunction] {
@@ -220,7 +217,7 @@ ShallowWrapper {
                 Array [
                   Object {
                     "target": Object {
-                      "name": "field0",
+                      "name": "mock-field",
                       "value": Object {
                         "label": "One",
                         "value": "one",
@@ -243,16 +240,15 @@ ShallowWrapper {
         />,
         "field": Object {
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction] {
             "calls": Array [
               Array [
                 Object {
                   "target": Object {
-                    "name": "field0",
+                    "name": "mock-field",
                     "value": Object {
                       "label": "One",
                       "value": "one",
@@ -273,10 +269,11 @@ ShallowWrapper {
         "info": undefined,
         "label": "field0",
         "meta": Object {
-          "error": undefined,
-          "isValidating": undefined,
+          "error": null,
+          "isValidating": false,
           "plaintext": true,
           "stringFormatter": [MockFunction],
+          "touched": false,
           "valid": true,
         },
         "multi": false,
@@ -303,16 +300,15 @@ ShallowWrapper {
         "props": Object {
           "children": undefined,
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction] {
             "calls": Array [
               Array [
                 Object {
                   "target": Object {
-                    "name": "field0",
+                    "name": "mock-field",
                     "value": Object {
                       "label": "One",
                       "value": "one",
@@ -364,9 +360,8 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -375,10 +370,11 @@ ShallowWrapper {
     label="field0"
     meta={
       Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       }
     }
@@ -429,7 +425,7 @@ ShallowWrapper {
         disabled={false}
         escapeClearsValue={true}
         filterOptions={[Function]}
-        id="field0"
+        id="mock-field"
         ignoreAccents={true}
         ignoreCase={true}
         inputProps={Object {}}
@@ -486,9 +482,8 @@ ShallowWrapper {
       />,
       "field": Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "id": "mock-field",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
         "value": "",
@@ -496,10 +491,11 @@ ShallowWrapper {
       "info": undefined,
       "label": "field0",
       "meta": Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
+        "touched": false,
         "valid": true,
       },
       "multi": false,
@@ -541,7 +537,7 @@ ShallowWrapper {
         "disabled": false,
         "escapeClearsValue": true,
         "filterOptions": [Function],
-        "id": "field0",
+        "id": "mock-field",
         "ignoreAccents": true,
         "ignoreCase": true,
         "inputProps": Object {},
@@ -622,7 +618,7 @@ ShallowWrapper {
           disabled={false}
           escapeClearsValue={true}
           filterOptions={[Function]}
-          id="field0"
+          id="mock-field"
           ignoreAccents={true}
           ignoreCase={true}
           inputProps={Object {}}
@@ -679,9 +675,8 @@ ShallowWrapper {
         />,
         "field": Object {
           "disabled": false,
-          "id": "field0",
-          "invalid": false,
-          "name": "field0",
+          "id": "mock-field",
+          "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
           "value": "",
@@ -689,10 +684,11 @@ ShallowWrapper {
         "info": undefined,
         "label": "field0",
         "meta": Object {
-          "error": undefined,
-          "isValidating": undefined,
+          "error": null,
+          "isValidating": false,
           "plaintext": false,
           "stringFormatter": [MockFunction],
+          "touched": false,
           "valid": true,
         },
         "multi": false,
@@ -734,7 +730,7 @@ ShallowWrapper {
           "disabled": false,
           "escapeClearsValue": true,
           "filterOptions": [Function],
-          "id": "field0",
+          "id": "mock-field",
           "ignoreAccents": true,
           "ignoreCase": true,
           "inputProps": Object {},
