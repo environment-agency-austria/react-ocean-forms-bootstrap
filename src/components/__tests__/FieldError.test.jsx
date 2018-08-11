@@ -1,8 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import { FormText } from 'react-ocean-forms';
 
-import { createMockFormContext } from '../test-utils/enzymeFormContext';
-import { BaseFieldError } from '../FieldError';
+import { createMockFormContext } from '../../test-utils/enzymeFormContext';
+import FieldError from '../FieldError';
 
 describe('<FieldError />', () => {
   const generateError = (msg, params) => ({
@@ -12,27 +13,30 @@ describe('<FieldError />', () => {
 
   const setup = (props) => {
     const formContext = createMockFormContext(3, 0);
-    return mount(<BaseFieldError id="unit" context={formContext} {...props} />);
+    return shallow(<FieldError id="unit" context={formContext} {...props} />);
   };
 
   test('displays nothing when its valid', () => {
     const wrapper = setup({ invalid: false });
-    expect(wrapper.find('.invalid-feedback').exists()).toBe(false);
+    expect(wrapper.find('FormFeedback').exists()).toBe(false);
   });
 
   test('displays a single error correctly', () => {
     const error = generateError('ojs_error_required');
     const wrapper = setup({ invalid: true, error });
 
-    expect(wrapper.find('.invalid-feedback')).toHaveLength(1);
+    expect(wrapper.find('FormFeedback')).toHaveLength(1);
   });
 
   test('displays a single error with parameters correctly', () => {
-    const error = generateError('ojs_error_minLength', { length: 42 });
+    const MOCK_ERROR = 'ojs_error_minLength';
+    const MOCK_VALUES = { length: 42 };
+
+    const error = generateError(MOCK_ERROR, MOCK_VALUES);
     const wrapper = setup({ invalid: true, error });
 
-    expect(wrapper.find('.invalid-feedback').text())
-      .toBe('ojs_error_minLength');
+    expect(wrapper.find(FormText).prop('text')).toBe(MOCK_ERROR);
+    expect(wrapper.find(FormText).prop('values')).toBe(MOCK_VALUES);
   });
 
   test('displays multiple errors correctly', () => {
@@ -42,6 +46,6 @@ describe('<FieldError />', () => {
     ];
     const wrapper = setup({ invalid: true, error: errors });
 
-    expect(wrapper.find('.invalid-feedback')).toHaveLength(2);
+    expect(wrapper.find('FormFeedback')).toHaveLength(2);
   });
 });

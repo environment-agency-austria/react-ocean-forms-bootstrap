@@ -111,23 +111,6 @@ ShallowWrapper {
               />
               field0
               <FieldError
-                context={
-                  Object {
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "field0",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "field0",
-                        },
-                      ],
-                    },
-                  }
-                }
                 error={null}
                 id="undefined_errors"
                 invalid={false}
@@ -274,23 +257,6 @@ ShallowWrapper {
                 />
                 field0
                 <FieldError
-                  context={
-                    Object {
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "field0",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "field0",
-                          },
-                        ],
-                      },
-                    }
-                  }
                   error={null}
                   id="undefined_errors"
                   invalid={false}
@@ -370,23 +336,6 @@ ShallowWrapper {
                   />
                   field0
                   <FieldError
-                    context={
-                      Object {
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "field0",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "field0",
-                            },
-                          ],
-                        },
-                      }
-                    }
                     error={null}
                     id="undefined_errors"
                     invalid={false}
@@ -420,23 +369,6 @@ ShallowWrapper {
                     />,
                     "field0",
                     <FieldError
-                      context={
-                        Object {
-                          "stringFormatter": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                "field0",
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": "field0",
-                              },
-                            ],
-                          },
-                        }
-                      }
                       error={null}
                       id="undefined_errors"
                       invalid={false}
@@ -477,21 +409,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "context": Object {
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "field0",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "field0",
-                            },
-                          ],
-                        },
-                      },
                       "error": null,
                       "id": "undefined_errors",
                       "invalid": false,
@@ -626,23 +543,6 @@ ShallowWrapper {
                 />
                 field0
                 <FieldError
-                  context={
-                    Object {
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "field0",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "field0",
-                          },
-                        ],
-                      },
-                    }
-                  }
                   error={null}
                   id="undefined_errors"
                   invalid={false}
@@ -789,23 +689,6 @@ ShallowWrapper {
                   />
                   field0
                   <FieldError
-                    context={
-                      Object {
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "field0",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "field0",
-                            },
-                          ],
-                        },
-                      }
-                    }
                     error={null}
                     id="undefined_errors"
                     invalid={false}
@@ -885,23 +768,6 @@ ShallowWrapper {
                     />
                     field0
                     <FieldError
-                      context={
-                        Object {
-                          "stringFormatter": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                "field0",
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": "field0",
-                              },
-                            ],
-                          },
-                        }
-                      }
                       error={null}
                       id="undefined_errors"
                       invalid={false}
@@ -935,23 +801,6 @@ ShallowWrapper {
                       />,
                       "field0",
                       <FieldError
-                        context={
-                          Object {
-                            "stringFormatter": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  "field0",
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": "field0",
-                                },
-                              ],
-                            },
-                          }
-                        }
                         error={null}
                         id="undefined_errors"
                         invalid={false}
@@ -992,21 +841,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "context": Object {
-                          "stringFormatter": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                "field0",
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": "field0",
-                              },
-                            ],
-                          },
-                        },
                         "error": null,
                         "id": "undefined_errors",
                         "invalid": false,

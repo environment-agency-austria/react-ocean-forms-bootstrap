@@ -176,23 +176,6 @@ ShallowWrapper {
               plaintext={false}
             />
             <FieldError
-              context={
-                Object {
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                }
-              }
               error={null}
               id="undefined_errors"
               invalid={false}
@@ -428,23 +411,6 @@ ShallowWrapper {
                 plaintext={false}
               />
               <FieldError
-                context={
-                  Object {
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                  }
-                }
                 error={null}
                 id="undefined_errors"
                 invalid={false}
@@ -555,23 +521,6 @@ ShallowWrapper {
                   plaintext={false}
                 />,
                 <FieldError
-                  context={
-                    Object {
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                    }
-                  }
                   error={null}
                   id="undefined_errors"
                   invalid={false}
@@ -674,21 +623,6 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "context": Object {
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                  },
                   "error": null,
                   "id": "undefined_errors",
                   "invalid": false,
@@ -868,23 +802,6 @@ ShallowWrapper {
                 plaintext={false}
               />
               <FieldError
-                context={
-                  Object {
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                  }
-                }
                 error={null}
                 id="undefined_errors"
                 invalid={false}
@@ -1120,23 +1037,6 @@ ShallowWrapper {
                   plaintext={false}
                 />
                 <FieldError
-                  context={
-                    Object {
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                    }
-                  }
                   error={null}
                   id="undefined_errors"
                   invalid={false}
@@ -1247,23 +1147,6 @@ ShallowWrapper {
                     plaintext={false}
                   />,
                   <FieldError
-                    context={
-                      Object {
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "label",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "label",
-                            },
-                          ],
-                        },
-                      }
-                    }
                     error={null}
                     id="undefined_errors"
                     invalid={false}
@@ -1366,21 +1249,6 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "context": Object {
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                    },
                     "error": null,
                     "id": "undefined_errors",
                     "invalid": false,

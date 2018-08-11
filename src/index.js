@@ -3,7 +3,7 @@ import './utils/registerCustomMessages';
 
 export { default as Check } from './Check';
 export { default as DatePicker } from './DatePicker';
-export { default as FieldError } from './FieldError';
+export { default as FieldError } from './components/FieldError';
 export { default as FieldLine } from './FieldLine';
 export { default as FileInput } from './FileInput';
 export { default as Input } from './Input';

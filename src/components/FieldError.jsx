@@ -8,7 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormFeedback } from 'reactstrap';
-import { errorsShape, withForm } from 'react-ocean-forms';
+import { FormText, errorsShape } from 'react-ocean-forms';
 
 /**
  * Component for displaying bootstrap
@@ -19,7 +19,6 @@ function FieldError(props) {
     id,
     invalid,
     error,
-    context: { stringFormatter },
   } = props;
 
   // If the field isn't invalid do nothing
@@ -27,12 +26,11 @@ function FieldError(props) {
 
   // Error could be either an string or an array of strings
   const errorArray = !Array.isArray(error) ? [error] : error;
-  const errors = errorArray.map((item) => {
-    const errorMessage = stringFormatter(item.message_id, item.params);
-    return (
-      <FormFeedback key={`${id}_${item.message_id}`}>{errorMessage}</FormFeedback>
-    );
-  });
+  const errors = errorArray.map(item => ((
+    <FormFeedback key={`${id}_${item.message_id}`}>
+      <FormText text={item.message_id} values={item.params} />
+    </FormFeedback>
+  )));
 
   return errors;
 }
@@ -47,10 +45,6 @@ FieldError.propTypes = {
   id: PropTypes.string.isRequired,
   invalid: PropTypes.bool.isRequired,
   error: errorsShape,
-  context: PropTypes.shape({
-    stringFormatter: PropTypes.func.isRequired,
-  }),
 };
 
-export const BaseFieldError = FieldError;
-export default withForm(FieldError);
+export default FieldError;

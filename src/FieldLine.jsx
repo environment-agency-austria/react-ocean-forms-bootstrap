@@ -16,7 +16,7 @@ import ValidatingSpinner from './components/ValidatingSpinner';
 import FieldLineAddon from './components/FieldLineAddon';
 import InfoAddonButton from './components/InfoAddonButton';
 import InfoAlert from './components/InfoAlert';
-import { BaseFieldError } from './FieldError';
+import FieldError from './components/FieldError';
 
 /**
  * Component for displaying bootstrap
@@ -72,11 +72,10 @@ class FieldLine extends React.Component {
             {children}
             <FieldLineAddon meta={meta} type="append" content={suffix} />
             <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
-            <BaseFieldError
+            <FieldError
               id={`${field.id}_errors`}
               invalid={!meta.valid}
               error={meta.error}
-              context={{ stringFormatter: meta.stringFormatter }}
             />
           </InputGroup>
           <InfoAlert visible={infoVisible} info={info} meta={meta} onClose={this.toggleInfo} />

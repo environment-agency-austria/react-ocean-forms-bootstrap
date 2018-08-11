@@ -20,7 +20,7 @@ import InvalidAlert from './components/InvalidAlert';
 import ValidatingSpinner from './components/ValidatingSpinner';
 import InfoAddonButton from './components/InfoAddonButton';
 import InfoAlert from './components/InfoAlert';
-import { BaseFieldError } from './FieldError';
+import FieldError from './components/FieldError';
 
 /**
  * Component for displaying bootstrap
@@ -103,11 +103,10 @@ class Check extends React.Component {
                 />
               )}
               {labelString}
-              <BaseFieldError
+              <FieldError
                 id={`${field.id}_errors`}
                 invalid={!meta.valid}
                 error={meta.error}
-                context={{ stringFormatter: meta.stringFormatter }}
               />
             </Label>
             <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
