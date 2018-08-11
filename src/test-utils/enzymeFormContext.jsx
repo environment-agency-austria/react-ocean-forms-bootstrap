@@ -40,3 +40,26 @@ export const createMockFormContext = registerCallback => ({
   asyncValidationWait: 400,
   defaultValues: {},
 });
+
+/**
+ * Creates a mock field meta
+ */
+export const createMockFieldMeta = () => ({
+  valid: true,
+  error: null,
+  isValidating: false,
+  touched: false,
+  stringFormatter: createMockFormatter(),
+  plaintext: false,
+});
+
+/**
+ * Creates a mock field shape
+ */
+export const createMockField = () => ({
+  name: 'mock-field',
+  value: 'mock-value',
+  disabled: false,
+  onChange: () => {},
+  onBlur: () => {},
+});
