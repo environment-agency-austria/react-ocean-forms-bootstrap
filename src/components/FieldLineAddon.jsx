@@ -7,18 +7,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { InputGroupAddon } from 'reactstrap';
-import { fieldMetaShape } from 'react-ocean-forms';
+import { FormText } from 'react-ocean-forms';
 
 /**
  * Displays a prefix / suffix addon for the FieldLine
  */
-function FieldLineAddon({ meta, content, type }) {
-  if (meta.plaintext) return null;
+function FieldLineAddon({ plaintext, content, type }) {
+  if (plaintext) return null;
   if (!content) return null;
 
   let child = null;
   if (typeof content === 'string') {
-    child = meta.stringFormatter(content);
+    child = <FormText text={content} />;
   } else {
     child = content;
   }
@@ -41,7 +41,7 @@ FieldLineAddon.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
-  meta: fieldMetaShape.isRequired,
+  plaintext: PropTypes.bool.isRequired,
 };
 
 export default FieldLineAddon;

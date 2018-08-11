@@ -1,23 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { FormText } from 'react-ocean-forms';
 
 import FieldLineAddon from '../FieldLineAddon';
-import { createMockFieldMeta } from '../../test-utils/enzymeFormContext';
 
 describe('<FieldLineAddon />', () => {
   const setup = (plaintext, content, type = 'prepend') => {
-    const meta = createMockFieldMeta();
-    meta.plaintext = plaintext;
-
     const wrapper = shallow((
       <FieldLineAddon
-        meta={meta}
+        plaintext={plaintext}
         content={content}
         type={type}
       />
     ));
 
-    return { wrapper, meta };
+    return wrapper;
   };
 
   const checkAddonRender = (wrapper, type) => {
@@ -31,26 +28,28 @@ describe('<FieldLineAddon />', () => {
   };
 
   it('should render nothing if meta.plaintext is active', () => {
-    const { wrapper } = setup(true);
+    const wrapper = setup(true);
     expect(wrapper.exists('InputGroupAddon')).toBeFalsy();
   });
 
   it('should render nothing if there is no content', () => {
-    const { wrapper } = setup(false, null);
+    const wrapper = setup(false, null);
     expect(wrapper.exists('InputGroupAddon')).toBeFalsy();
   });
 
   describe('text content', () => {
     const MOCK_CONTENT = 'mock-string';
     const MOCK_TYPE = 'prepend';
-    const { wrapper, meta } = setup(false, MOCK_CONTENT, MOCK_TYPE);
-
-    it('should pass the text content through meta.stringFormatter', () => {
-      expect(meta.stringFormatter).toHaveBeenCalledWith(MOCK_CONTENT);
-    });
+    const wrapper = setup(false, MOCK_CONTENT, MOCK_TYPE);
 
     describe('render', () => {
       checkAddonRender(wrapper, MOCK_TYPE);
+
+      it('should wrap the text content in a FormText', () => {
+        const formText = wrapper.find(FormText);
+        expect(formText).toHaveLength(1);
+        expect(formText.prop('text')).toBe(MOCK_CONTENT);
+      });
 
       it('should render correctly', () => {
         expect(wrapper).toMatchSnapshot();
@@ -61,14 +60,14 @@ describe('<FieldLineAddon />', () => {
   describe('custom content', () => {
     const MOCK_CONTENT = <div id="mock-content" />;
     const MOCK_TYPE = 'append';
-    const { wrapper, meta } = setup(false, MOCK_CONTENT, MOCK_TYPE);
-
-    it('should not pass the content through meta.stringFormatter', () => {
-      expect(meta.stringFormatter).not.toHaveBeenCalledWith(MOCK_CONTENT);
-    });
+    const wrapper = setup(false, MOCK_CONTENT, MOCK_TYPE);
 
     describe('render', () => {
       checkAddonRender(wrapper, MOCK_TYPE);
+
+      it('should wrap the text content in a FormText', () => {
+        expect(wrapper.find(FormText)).toHaveLength(0);
+      });
 
       it('should render correctly', () => {
         expect(wrapper).toMatchSnapshot();

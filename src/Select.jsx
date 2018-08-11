@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 import { Input as StrapInput } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { FormText, fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldLine from './FieldLine';
 
@@ -64,11 +64,6 @@ class Select extends React.Component {
       meta,
     } = this.props;
 
-    // Grab some default texts from the internationalized messages
-    const selectPlaceholder = meta.stringFormatter(placeholder);
-    const selectNoResults = meta.stringFormatter('ojs_select_noresults');
-    const selectClearValue = meta.stringFormatter('ojs_select_clearValue');
-
     // Generate a css class based on the validity of the select element
     let selectClass = 'react-select-control';
     selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
@@ -93,7 +88,9 @@ class Select extends React.Component {
 
       return (
         <FieldLine {...this.props}>
-          <StrapInput {...field} plaintext>{displayValue}</StrapInput>
+          <StrapInput {...field} plaintext>
+            {displayValue}
+          </StrapInput>
         </FieldLine>
       );
     }
@@ -109,9 +106,9 @@ class Select extends React.Component {
           onBlur={this.handleBlur}
           options={options}
           multi={multi}
-          placeholder={selectPlaceholder}
-          noResultsText={selectNoResults}
-          clearValueText={selectClearValue}
+          placeholder={<FormText text={placeholder} />}
+          noResultsText={<FormText text="ojs_select_noresults" />}
+          clearValueText={<FormText text="ojs_select_clearValue" />}
           invalid={!meta.valid}
           className={selectClass}
         />

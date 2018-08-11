@@ -8,7 +8,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Input as StrapInput, Label } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { FormText, fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldLine from './FieldLine';
 
@@ -23,12 +23,12 @@ function FileInput(props) {
     meta,
   } = props;
 
-  const selectFileString = meta.stringFormatter('ojs_form_select_file');
-
   if (meta.plaintext) {
     return (
       <FieldLine {...props}>
-        <StrapInput {...field} plaintext>{selectFileString}</StrapInput>
+        <StrapInput {...field} plaintext>
+          <FormText text="ojs_form_select_file" />
+        </StrapInput>
       </FieldLine>
     );
   }
@@ -38,7 +38,7 @@ function FileInput(props) {
       <div className="custom-file">
         <StrapInput type="file" {...field} />
         <Label for={field.id} className="custom-file-label">
-          {selectFileString}
+          <FormText text="ojs_form_select_file" />
         </Label>
       </div>
     </FieldLine>

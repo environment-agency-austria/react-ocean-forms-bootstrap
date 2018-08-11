@@ -41,117 +41,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -250,117 +140,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "multi": false,
@@ -496,117 +276,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": true,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "multi": false,
@@ -708,33 +378,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -773,7 +417,11 @@ ShallowWrapper {
         className="react-select-control"
         clearAllText="Clear all"
         clearRenderer={[Function]}
-        clearValueText="ojs_select_clearValue"
+        clearValueText={
+          <FormComponent(FormText)
+            text="ojs_select_clearValue"
+          />
+        }
         clearable={true}
         closeOnSelect={true}
         deleteRemoves={true}
@@ -794,7 +442,11 @@ ShallowWrapper {
         menuBuffer={0}
         menuRenderer={[Function]}
         multi={false}
-        noResultsText="ojs_select_noresults"
+        noResultsText={
+          <FormComponent(FormText)
+            text="ojs_select_noresults"
+          />
+        }
         onBlur={[Function]}
         onBlurResetsInput={true}
         onChange={[Function]}
@@ -815,7 +467,11 @@ ShallowWrapper {
           ]
         }
         pageSize={5}
-        placeholder="ojs_select_placeholder"
+        placeholder={
+          <FormComponent(FormText)
+            text="ojs_select_placeholder"
+          />
+        }
         removeSelected={true}
         required={false}
         rtl={false}
@@ -843,33 +499,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-            Array [
-              "ojs_select_noresults",
-            ],
-            Array [
-              "ojs_select_clearValue",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_noresults",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_clearValue",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "multi": false,
@@ -901,7 +531,9 @@ ShallowWrapper {
         "className": "react-select-control",
         "clearAllText": "Clear all",
         "clearRenderer": [Function],
-        "clearValueText": "ojs_select_clearValue",
+        "clearValueText": <FormComponent(FormText)
+          text="ojs_select_clearValue"
+        />,
         "clearable": true,
         "closeOnSelect": true,
         "deleteRemoves": true,
@@ -922,7 +554,9 @@ ShallowWrapper {
         "menuBuffer": 0,
         "menuRenderer": [Function],
         "multi": false,
-        "noResultsText": "ojs_select_noresults",
+        "noResultsText": <FormComponent(FormText)
+          text="ojs_select_noresults"
+        />,
         "onBlur": [Function],
         "onBlurResetsInput": true,
         "onChange": [Function],
@@ -941,7 +575,9 @@ ShallowWrapper {
           },
         ],
         "pageSize": 5,
-        "placeholder": "ojs_select_placeholder",
+        "placeholder": <FormComponent(FormText)
+          text="ojs_select_placeholder"
+        />,
         "removeSelected": true,
         "required": false,
         "rtl": false,
@@ -974,7 +610,11 @@ ShallowWrapper {
           className="react-select-control"
           clearAllText="Clear all"
           clearRenderer={[Function]}
-          clearValueText="ojs_select_clearValue"
+          clearValueText={
+            <FormComponent(FormText)
+              text="ojs_select_clearValue"
+            />
+          }
           clearable={true}
           closeOnSelect={true}
           deleteRemoves={true}
@@ -995,7 +635,11 @@ ShallowWrapper {
           menuBuffer={0}
           menuRenderer={[Function]}
           multi={false}
-          noResultsText="ojs_select_noresults"
+          noResultsText={
+            <FormComponent(FormText)
+              text="ojs_select_noresults"
+            />
+          }
           onBlur={[Function]}
           onBlurResetsInput={true}
           onChange={[Function]}
@@ -1016,7 +660,11 @@ ShallowWrapper {
             ]
           }
           pageSize={5}
-          placeholder="ojs_select_placeholder"
+          placeholder={
+            <FormComponent(FormText)
+              text="ojs_select_placeholder"
+            />
+          }
           removeSelected={true}
           required={false}
           rtl={false}
@@ -1044,33 +692,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "ojs_select_placeholder",
-              ],
-              Array [
-                "ojs_select_noresults",
-              ],
-              Array [
-                "ojs_select_clearValue",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_noresults",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_clearValue",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "multi": false,
@@ -1102,7 +724,9 @@ ShallowWrapper {
           "className": "react-select-control",
           "clearAllText": "Clear all",
           "clearRenderer": [Function],
-          "clearValueText": "ojs_select_clearValue",
+          "clearValueText": <FormComponent(FormText)
+            text="ojs_select_clearValue"
+          />,
           "clearable": true,
           "closeOnSelect": true,
           "deleteRemoves": true,
@@ -1123,7 +747,9 @@ ShallowWrapper {
           "menuBuffer": 0,
           "menuRenderer": [Function],
           "multi": false,
-          "noResultsText": "ojs_select_noresults",
+          "noResultsText": <FormComponent(FormText)
+            text="ojs_select_noresults"
+          />,
           "onBlur": [Function],
           "onBlurResetsInput": true,
           "onChange": [Function],
@@ -1142,7 +768,9 @@ ShallowWrapper {
             },
           ],
           "pageSize": 5,
-          "placeholder": "ojs_select_placeholder",
+          "placeholder": <FormComponent(FormText)
+            text="ojs_select_placeholder"
+          />,
           "removeSelected": true,
           "required": false,
           "rtl": false,

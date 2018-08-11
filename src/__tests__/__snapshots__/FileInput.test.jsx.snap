@@ -21,61 +21,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -103,7 +49,9 @@ ShallowWrapper {
         type="text"
         value=""
       >
-        ojs_form_select_file
+        <FormComponent(FormText)
+          text="ojs_form_select_file"
+        />
       </Input>,
       "field": Object {
         "disabled": false,
@@ -120,61 +68,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-            Array [
-              "ojs_form_select_file",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "prefix": undefined,
@@ -187,7 +81,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "ojs_form_select_file",
+        "children": <FormComponent(FormText)
+          text="ojs_form_select_file"
+        />,
         "disabled": false,
         "id": "field0",
         "invalid": false,
@@ -199,7 +95,17 @@ ShallowWrapper {
         "value": "",
       },
       "ref": null,
-      "rendered": "ojs_form_select_file",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "text": "ojs_form_select_file",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       "type": [Function],
     },
     "type": [Function],
@@ -221,7 +127,9 @@ ShallowWrapper {
           type="text"
           value=""
         >
-          ojs_form_select_file
+          <FormComponent(FormText)
+            text="ojs_form_select_file"
+          />
         </Input>,
         "field": Object {
           "disabled": false,
@@ -238,61 +146,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": true,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-              Array [
-                "ojs_form_select_file",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "prefix": undefined,
@@ -305,7 +159,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "ojs_form_select_file",
+          "children": <FormComponent(FormText)
+            text="ojs_form_select_file"
+          />,
           "disabled": false,
           "id": "field0",
           "invalid": false,
@@ -317,7 +173,17 @@ ShallowWrapper {
           "value": "",
         },
         "ref": null,
-        "rendered": "ojs_form_select_file",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "text": "ojs_form_select_file",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
@@ -362,19 +228,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_form_select_file",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -418,7 +272,9 @@ ShallowWrapper {
             ]
           }
         >
-          ojs_form_select_file
+          <FormComponent(FormText)
+            text="ojs_form_select_file"
+          />
         </Label>
       </div>,
       "field": Object {
@@ -436,19 +292,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_form_select_file",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_form_select_file",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "prefix": undefined,
@@ -486,7 +330,9 @@ ShallowWrapper {
               ]
             }
           >
-            ojs_form_select_file
+            <FormComponent(FormText)
+              text="ojs_form_select_file"
+            />
           </Label>,
         ],
         "className": "custom-file",
@@ -516,7 +362,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "ojs_form_select_file",
+            "children": <FormComponent(FormText)
+              text="ojs_form_select_file"
+            />,
             "className": "custom-file-label",
             "for": "field0",
             "tag": "label",
@@ -529,7 +377,17 @@ ShallowWrapper {
             ],
           },
           "ref": null,
-          "rendered": "ojs_form_select_file",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "text": "ojs_form_select_file",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
       ],
@@ -570,7 +428,9 @@ ShallowWrapper {
               ]
             }
           >
-            ojs_form_select_file
+            <FormComponent(FormText)
+              text="ojs_form_select_file"
+            />
           </Label>
         </div>,
         "field": Object {
@@ -588,19 +448,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "ojs_form_select_file",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "ojs_form_select_file",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "prefix": undefined,
@@ -638,7 +486,9 @@ ShallowWrapper {
                 ]
               }
             >
-              ojs_form_select_file
+              <FormComponent(FormText)
+                text="ojs_form_select_file"
+              />
             </Label>,
           ],
           "className": "custom-file",
@@ -668,7 +518,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": "ojs_form_select_file",
+              "children": <FormComponent(FormText)
+                text="ojs_form_select_file"
+              />,
               "className": "custom-file-label",
               "for": "field0",
               "tag": "label",
@@ -681,7 +533,17 @@ ShallowWrapper {
               ],
             },
             "ref": null,
-            "rendered": "ojs_form_select_file",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "text": "ojs_form_select_file",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
         ],

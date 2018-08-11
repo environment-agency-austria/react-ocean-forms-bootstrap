@@ -9,16 +9,7 @@ ShallowWrapper {
         id="mock-content"
       />
     }
-    meta={
-      Object {
-        "error": null,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
+    plaintext={false}
     type="append"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -103,28 +94,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FieldLineAddon
     content="mock-string"
-    meta={
-      Object {
-        "error": null,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "mock-string",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "mock-string",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      }
-    }
+    plaintext={false}
     type="prepend"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -140,11 +110,23 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "addonType": "prepend",
-      "children": "mock-string",
+      "children": <FormComponent(FormText)
+        text="mock-string"
+      />,
       "tag": "div",
     },
     "ref": null,
-    "rendered": "mock-string",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "text": "mock-string",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -154,11 +136,23 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "addonType": "prepend",
-        "children": "mock-string",
+        "children": <FormComponent(FormText)
+          text="mock-string"
+        />,
         "tag": "div",
       },
       "ref": null,
-      "rendered": "mock-string",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "text": "mock-string",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       "type": [Function],
     },
   ],

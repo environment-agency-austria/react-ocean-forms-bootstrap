@@ -21,68 +21,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -112,7 +51,9 @@ ShallowWrapper {
         type="text"
         value=""
       >
-        off
+        <FormComponent(FormText)
+          text="off"
+        />
       </Input>,
       "field": Object {
         "disabled": false,
@@ -129,68 +70,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "offLabel": "off",
@@ -205,7 +85,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "off",
+        "children": <FormComponent(FormText)
+          text="off"
+        />,
         "disabled": false,
         "id": "field0",
         "invalid": false,
@@ -217,7 +99,17 @@ ShallowWrapper {
         "value": "",
       },
       "ref": null,
-      "rendered": "off",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "text": "off",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       "type": [Function],
     },
     "type": [Function],
@@ -239,7 +131,9 @@ ShallowWrapper {
           type="text"
           value=""
         >
-          off
+          <FormComponent(FormText)
+            text="off"
+          />
         </Input>,
         "field": Object {
           "disabled": false,
@@ -256,68 +150,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": true,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "offLabel": "off",
@@ -332,7 +165,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "off",
+          "children": <FormComponent(FormText)
+            text="off"
+          />,
           "disabled": false,
           "id": "field0",
           "invalid": false,
@@ -344,7 +179,17 @@ ShallowWrapper {
           "value": "",
         },
         "ref": null,
-        "rendered": "off",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "text": "off",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
@@ -389,54 +234,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       }
     }
@@ -467,7 +265,9 @@ ShallowWrapper {
           onClick={[Function]}
           tag="button"
         >
-          on
+          <FormComponent(FormText)
+            text="on"
+          />
         </Button>
         <Button
           active={true}
@@ -476,7 +276,9 @@ ShallowWrapper {
           onClick={[Function]}
           tag="button"
         >
-          off
+          <FormComponent(FormText)
+            text="off"
+          />
         </Button>
       </ButtonGroup>,
       "field": Object {
@@ -494,54 +296,7 @@ ShallowWrapper {
         "error": undefined,
         "isValidating": undefined,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-            Array [
-              "on",
-            ],
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "valid": true,
       },
       "offLabel": "off",
@@ -564,7 +319,9 @@ ShallowWrapper {
             onClick={[Function]}
             tag="button"
           >
-            on
+            <FormComponent(FormText)
+              text="on"
+            />
           </Button>,
           <Button
             active={true}
@@ -573,7 +330,9 @@ ShallowWrapper {
             onClick={[Function]}
             tag="button"
           >
-            off
+            <FormComponent(FormText)
+              text="off"
+            />
           </Button>,
         ],
         "id": "field0",
@@ -588,14 +347,26 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "active": false,
-            "children": "on",
+            "children": <FormComponent(FormText)
+              text="on"
+            />,
             "color": "primary",
             "id": "field0-on",
             "onClick": [Function],
             "tag": "button",
           },
           "ref": null,
-          "rendered": "on",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "text": "on",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
         Object {
@@ -604,14 +375,26 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "active": true,
-            "children": "off",
+            "children": <FormComponent(FormText)
+              text="off"
+            />,
             "color": "primary",
             "id": "field0-off",
             "onClick": [Function],
             "tag": "button",
           },
           "ref": null,
-          "rendered": "off",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "text": "off",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
       ],
@@ -637,7 +420,9 @@ ShallowWrapper {
             onClick={[Function]}
             tag="button"
           >
-            on
+            <FormComponent(FormText)
+              text="on"
+            />
           </Button>
           <Button
             active={true}
@@ -646,7 +431,9 @@ ShallowWrapper {
             onClick={[Function]}
             tag="button"
           >
-            off
+            <FormComponent(FormText)
+              text="off"
+            />
           </Button>
         </ButtonGroup>,
         "field": Object {
@@ -664,54 +451,7 @@ ShallowWrapper {
           "error": undefined,
           "isValidating": undefined,
           "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-              Array [
-                "on",
-              ],
-              Array [
-                "off",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "valid": true,
         },
         "offLabel": "off",
@@ -734,7 +474,9 @@ ShallowWrapper {
               onClick={[Function]}
               tag="button"
             >
-              on
+              <FormComponent(FormText)
+                text="on"
+              />
             </Button>,
             <Button
               active={true}
@@ -743,7 +485,9 @@ ShallowWrapper {
               onClick={[Function]}
               tag="button"
             >
-              off
+              <FormComponent(FormText)
+                text="off"
+              />
             </Button>,
           ],
           "id": "field0",
@@ -758,14 +502,26 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "active": false,
-              "children": "on",
+              "children": <FormComponent(FormText)
+                text="on"
+              />,
               "color": "primary",
               "id": "field0-on",
               "onClick": [Function],
               "tag": "button",
             },
             "ref": null,
-            "rendered": "on",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "text": "on",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           Object {
@@ -774,14 +530,26 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "active": true,
-              "children": "off",
+              "children": <FormComponent(FormText)
+                text="off"
+              />,
               "color": "primary",
               "id": "field0-off",
               "onClick": [Function],
               "tag": "button",
             },
             "ref": null,
-            "rendered": "off",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "text": "off",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
         ],

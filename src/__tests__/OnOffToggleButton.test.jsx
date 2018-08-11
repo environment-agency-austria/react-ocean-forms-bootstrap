@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { FormText } from 'react-ocean-forms';
 import createMockFormatter from '../test-utils/createMockFormatter';
 
 import { BaseOnOffToggleButton } from '../OnOffToggleButton';
@@ -52,10 +53,10 @@ describe('<BaseOnOffToggleButton />', () => {
   const testButton = (value) => {
     describe(`${value} Button`, () => {
       const wrapper = setup();
-      const buttonOn = wrapper.find(`#field0-${value}`).dive();
+      const buttonOn = wrapper.find(`#field0-${value}`);
 
       it('should render labels for button', () => {
-        expect(buttonOn.text()).toBe(value);
+        expect(buttonOn.find(FormText).prop('text')).toBe(value);
       });
 
       it('should trigger onChange on click', () => {

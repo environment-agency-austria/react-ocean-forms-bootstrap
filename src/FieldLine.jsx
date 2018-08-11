@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Label, Col, InputGroup } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { FormText, fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldRow from './components/FieldRow';
 import RequiredMarker from './components/RequiredMarker';
@@ -56,21 +56,19 @@ class FieldLine extends React.Component {
 
     const { infoVisible } = this.state;
 
-    const labelString = meta.stringFormatter(label);
-
     return (
       <FieldRow meta={meta}>
         <Label sm="3" for={field.id} className="text-right">
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
-          {labelString}
+          <FormText text={label} />
           <RequiredMarker meta={meta} validators={validators} />
         </Label>
         <Col sm="9">
           <InputGroup>
-            <FieldLineAddon meta={meta} type="prepend" content={prefix} />
+            <FieldLineAddon plaintext={meta.plaintext} type="prepend" content={prefix} />
             {children}
-            <FieldLineAddon meta={meta} type="append" content={suffix} />
+            <FieldLineAddon plaintext={meta.plaintext} type="append" content={suffix} />
             <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
             <FieldError
               id={`${field.id}_errors`}
@@ -78,7 +76,12 @@ class FieldLine extends React.Component {
               error={meta.error}
             />
           </InputGroup>
-          <InfoAlert visible={infoVisible} info={info} meta={meta} onClose={this.toggleInfo} />
+          <InfoAlert
+            visible={infoVisible}
+            info={info}
+            plaintext={meta.plaintext}
+            onClose={this.toggleInfo}
+          />
         </Col>
       </FieldRow>
     );

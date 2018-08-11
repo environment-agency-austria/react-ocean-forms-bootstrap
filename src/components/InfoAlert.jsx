@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'reactstrap';
-import { fieldMetaShape } from 'react-ocean-forms';
+import { FormText } from 'react-ocean-forms';
 
 /**
  * Displays an bootstrap alert containing the parsed
@@ -16,13 +16,12 @@ import { fieldMetaShape } from 'react-ocean-forms';
 function InfoAlert({
   visible,
   info,
-  meta,
+  plaintext,
   onClose,
 }) {
-  if (meta.plaintext) return null;
+  if (plaintext) return null;
   if (!info) return null;
 
-  const infoString = meta.stringFormatter(info);
   return (
     <Alert
       color="success"
@@ -30,7 +29,7 @@ function InfoAlert({
       isOpen={visible}
       toggle={onClose}
     >
-      {infoString}
+      <FormText text={info} />
     </Alert>
   );
 }
@@ -42,7 +41,7 @@ InfoAlert.defaultProps = {
 InfoAlert.propTypes = {
   visible: PropTypes.bool.isRequired,
   info: PropTypes.string,
-  meta: fieldMetaShape.isRequired,
+  plaintext: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 

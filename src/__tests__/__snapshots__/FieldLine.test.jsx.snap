@@ -19,19 +19,7 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "label",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "label",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "touched": false,
         "valid": true,
       }
@@ -74,26 +62,16 @@ ShallowWrapper {
           <ValidatingSpinner
             isValidating={false}
           />
-          label
+          <FormComponent(FormText)
+            text="label"
+          />
           <RequiredMarker
             meta={
               Object {
                 "error": null,
                 "isValidating": false,
                 "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "label",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "label",
-                    },
-                  ],
-                },
+                "stringFormatter": [MockFunction],
                 "touched": false,
                 "valid": true,
               }
@@ -118,28 +96,7 @@ ShallowWrapper {
           >
             <FieldLineAddon
               content={null}
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
+              plaintext={false}
               type="prepend"
             />
             <div
@@ -147,28 +104,7 @@ ShallowWrapper {
             />
             <FieldLineAddon
               content={null}
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
+              plaintext={false}
               type="append"
             />
             <InfoAddonButton
@@ -182,29 +118,8 @@ ShallowWrapper {
             />
           </InputGroup>
           <InfoAlert
-            meta={
-              Object {
-                "error": null,
-                "isValidating": false,
-                "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "label",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "label",
-                    },
-                  ],
-                },
-                "touched": false,
-                "valid": true,
-              }
-            }
             onClose={[Function]}
+            plaintext={false}
             visible={false}
           />
         </Col>,
@@ -214,19 +129,7 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "label",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "label",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "touched": false,
         "valid": true,
       },
@@ -245,26 +148,16 @@ ShallowWrapper {
             <ValidatingSpinner
               isValidating={false}
             />,
-            "label",
+            <FormComponent(FormText)
+              text="label"
+            />,
             <RequiredMarker
               meta={
                 Object {
                   "error": null,
                   "isValidating": false,
                   "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
+                  "stringFormatter": [MockFunction],
                   "touched": false,
                   "valid": true,
                 }
@@ -307,7 +200,17 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
-          "label",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "text": "label",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -317,19 +220,7 @@ ShallowWrapper {
                 "error": null,
                 "isValidating": false,
                 "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "label",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "label",
-                    },
-                  ],
-                },
+                "stringFormatter": [MockFunction],
                 "touched": false,
                 "valid": true,
               },
@@ -353,28 +244,7 @@ ShallowWrapper {
             >
               <FieldLineAddon
                 content={null}
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
+                plaintext={false}
                 type="prepend"
               />
               <div
@@ -382,28 +252,7 @@ ShallowWrapper {
               />
               <FieldLineAddon
                 content={null}
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
+                plaintext={false}
                 type="append"
               />
               <InfoAddonButton
@@ -417,29 +266,8 @@ ShallowWrapper {
               />
             </InputGroup>,
             <InfoAlert
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
               onClose={[Function]}
+              plaintext={false}
               visible={false}
             />,
           ],
@@ -463,28 +291,7 @@ ShallowWrapper {
               "children": Array [
                 <FieldLineAddon
                   content={null}
-                  meta={
-                    Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    }
-                  }
+                  plaintext={false}
                   type="prepend"
                 />,
                 <div
@@ -492,28 +299,7 @@ ShallowWrapper {
                 />,
                 <FieldLineAddon
                   content={null}
-                  meta={
-                    Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    }
-                  }
+                  plaintext={false}
                   type="append"
                 />,
                 <InfoAddonButton
@@ -536,26 +322,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "content": null,
-                  "meta": Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  },
+                  "plaintext": false,
                   "type": "prepend",
                 },
                 "ref": null,
@@ -579,26 +346,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "content": null,
-                  "meta": Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  },
+                  "plaintext": false,
                   "type": "append",
                 },
                 "ref": null,
@@ -640,27 +388,8 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "info": undefined,
-              "meta": Object {
-                "error": null,
-                "isValidating": false,
-                "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "label",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "label",
-                    },
-                  ],
-                },
-                "touched": false,
-                "valid": true,
-              },
               "onClose": [Function],
+              "plaintext": false,
               "visible": false,
             },
             "ref": null,
@@ -700,26 +429,16 @@ ShallowWrapper {
             <ValidatingSpinner
               isValidating={false}
             />
-            label
+            <FormComponent(FormText)
+              text="label"
+            />
             <RequiredMarker
               meta={
                 Object {
                   "error": null,
                   "isValidating": false,
                   "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
+                  "stringFormatter": [MockFunction],
                   "touched": false,
                   "valid": true,
                 }
@@ -744,28 +463,7 @@ ShallowWrapper {
             >
               <FieldLineAddon
                 content={null}
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
+                plaintext={false}
                 type="prepend"
               />
               <div
@@ -773,28 +471,7 @@ ShallowWrapper {
               />
               <FieldLineAddon
                 content={null}
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
+                plaintext={false}
                 type="append"
               />
               <InfoAddonButton
@@ -808,29 +485,8 @@ ShallowWrapper {
               />
             </InputGroup>
             <InfoAlert
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
               onClose={[Function]}
+              plaintext={false}
               visible={false}
             />
           </Col>,
@@ -840,19 +496,7 @@ ShallowWrapper {
           "error": null,
           "isValidating": false,
           "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "label",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "label",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "touched": false,
           "valid": true,
         },
@@ -871,26 +515,16 @@ ShallowWrapper {
               <ValidatingSpinner
                 isValidating={false}
               />,
-              "label",
+              <FormComponent(FormText)
+                text="label"
+              />,
               <RequiredMarker
                 meta={
                   Object {
                     "error": null,
                     "isValidating": false,
                     "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
+                    "stringFormatter": [MockFunction],
                     "touched": false,
                     "valid": true,
                   }
@@ -933,7 +567,17 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            "label",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "text": "label",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,
@@ -943,19 +587,7 @@ ShallowWrapper {
                   "error": null,
                   "isValidating": false,
                   "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
+                  "stringFormatter": [MockFunction],
                   "touched": false,
                   "valid": true,
                 },
@@ -979,28 +611,7 @@ ShallowWrapper {
               >
                 <FieldLineAddon
                   content={null}
-                  meta={
-                    Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    }
-                  }
+                  plaintext={false}
                   type="prepend"
                 />
                 <div
@@ -1008,28 +619,7 @@ ShallowWrapper {
                 />
                 <FieldLineAddon
                   content={null}
-                  meta={
-                    Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    }
-                  }
+                  plaintext={false}
                   type="append"
                 />
                 <InfoAddonButton
@@ -1043,29 +633,8 @@ ShallowWrapper {
                 />
               </InputGroup>,
               <InfoAlert
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "label",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "label",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
                 onClose={[Function]}
+                plaintext={false}
                 visible={false}
               />,
             ],
@@ -1089,28 +658,7 @@ ShallowWrapper {
                 "children": Array [
                   <FieldLineAddon
                     content={null}
-                    meta={
-                      Object {
-                        "error": null,
-                        "isValidating": false,
-                        "plaintext": false,
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "label",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "label",
-                            },
-                          ],
-                        },
-                        "touched": false,
-                        "valid": true,
-                      }
-                    }
+                    plaintext={false}
                     type="prepend"
                   />,
                   <div
@@ -1118,28 +666,7 @@ ShallowWrapper {
                   />,
                   <FieldLineAddon
                     content={null}
-                    meta={
-                      Object {
-                        "error": null,
-                        "isValidating": false,
-                        "plaintext": false,
-                        "stringFormatter": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              "label",
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": "label",
-                            },
-                          ],
-                        },
-                        "touched": false,
-                        "valid": true,
-                      }
-                    }
+                    plaintext={false}
                     type="append"
                   />,
                   <InfoAddonButton
@@ -1162,26 +689,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "content": null,
-                    "meta": Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    },
+                    "plaintext": false,
                     "type": "prepend",
                   },
                   "ref": null,
@@ -1205,26 +713,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "content": null,
-                    "meta": Object {
-                      "error": null,
-                      "isValidating": false,
-                      "plaintext": false,
-                      "stringFormatter": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            "label",
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": "label",
-                          },
-                        ],
-                      },
-                      "touched": false,
-                      "valid": true,
-                    },
+                    "plaintext": false,
                     "type": "append",
                   },
                   "ref": null,
@@ -1266,27 +755,8 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "info": undefined,
-                "meta": Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "label",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "label",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                },
                 "onClose": [Function],
+                "plaintext": false,
                 "visible": false,
               },
               "ref": null,

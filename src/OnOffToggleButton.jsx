@@ -8,7 +8,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonGroup, Button, Input } from 'reactstrap';
-import { fieldMetaShape, fieldShape, withForm } from 'react-ocean-forms';
+import {
+  FormText,
+  fieldMetaShape,
+  fieldShape,
+  withForm,
+} from 'react-ocean-forms';
 
 import FieldLine from './FieldLine';
 
@@ -41,21 +46,19 @@ class OnOffToggleButton extends React.Component {
       offLabel,
       meta: {
         plaintext,
-        stringFormatter,
       },
       field: {
         value,
       },
     } = this.props;
-    const onValue = stringFormatter(onLabel);
-    const offValue = stringFormatter(offLabel);
+
     const isOn = !(value === '' || value === false);
 
     if (plaintext) {
       return (
         <FieldLine {...this.props}>
           <Input {...field} plaintext>
-            {isOn ? onValue : offValue}
+            <FormText text={isOn ? onLabel : offLabel} />
           </Input>
         </FieldLine>
       );
@@ -70,7 +73,7 @@ class OnOffToggleButton extends React.Component {
             onClick={() => this.onRadioBtnClick(true)}
             active={isOn}
           >
-            {onValue}
+            <FormText text={onLabel} />
           </Button>
           <Button
             id={`${field.id}-off`}
@@ -78,7 +81,7 @@ class OnOffToggleButton extends React.Component {
             onClick={() => this.onRadioBtnClick(false)}
             active={!isOn}
           >
-            {offValue}
+            <FormText text={offLabel} />
           </Button>
         </ButtonGroup>
       </FieldLine>

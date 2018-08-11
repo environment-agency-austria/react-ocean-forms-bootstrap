@@ -19,19 +19,7 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "field0",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "field0",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "touched": false,
         "valid": true,
       }
@@ -109,7 +97,9 @@ ShallowWrapper {
                 onClick={[Function]}
                 type="checkbox"
               />
-              field0
+              <FormComponent(FormText)
+                text="field0"
+              />
               <FieldError
                 error={null}
                 id="undefined_errors"
@@ -122,29 +112,8 @@ ShallowWrapper {
             />
           </InputGroup>
           <InfoAlert
-            meta={
-              Object {
-                "error": null,
-                "isValidating": false,
-                "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "field0",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "field0",
-                    },
-                  ],
-                },
-                "touched": false,
-                "valid": true,
-              }
-            }
             onClose={[Function]}
+            plaintext={false}
             visible={false}
           />
         </Col>,
@@ -154,19 +123,7 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "field0",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "field0",
-            },
-          ],
-        },
+        "stringFormatter": [MockFunction],
         "touched": false,
         "valid": true,
       },
@@ -255,7 +212,9 @@ ShallowWrapper {
                   onClick={[Function]}
                   type="checkbox"
                 />
-                field0
+                <FormComponent(FormText)
+                  text="field0"
+                />
                 <FieldError
                   error={null}
                   id="undefined_errors"
@@ -268,29 +227,8 @@ ShallowWrapper {
               />
             </InputGroup>,
             <InfoAlert
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "field0",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "field0",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
               onClose={[Function]}
+              plaintext={false}
               visible={false}
             />,
           ],
@@ -334,7 +272,9 @@ ShallowWrapper {
                     onClick={[Function]}
                     type="checkbox"
                   />
-                  field0
+                  <FormComponent(FormText)
+                    text="field0"
+                  />
                   <FieldError
                     error={null}
                     id="undefined_errors"
@@ -367,7 +307,9 @@ ShallowWrapper {
                       onClick={[Function]}
                       type="checkbox"
                     />,
-                    "field0",
+                    <FormComponent(FormText)
+                      text="field0"
+                    />,
                     <FieldError
                       error={null}
                       id="undefined_errors"
@@ -403,7 +345,17 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
-                  "field0",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "text": "field0",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -442,27 +394,8 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "info": undefined,
-              "meta": Object {
-                "error": null,
-                "isValidating": false,
-                "plaintext": false,
-                "stringFormatter": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "field0",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": "field0",
-                    },
-                  ],
-                },
-                "touched": false,
-                "valid": true,
-              },
               "onClose": [Function],
+              "plaintext": false,
               "visible": false,
             },
             "ref": null,
@@ -541,7 +474,9 @@ ShallowWrapper {
                   onClick={[Function]}
                   type="checkbox"
                 />
-                field0
+                <FormComponent(FormText)
+                  text="field0"
+                />
                 <FieldError
                   error={null}
                   id="undefined_errors"
@@ -554,29 +489,8 @@ ShallowWrapper {
               />
             </InputGroup>
             <InfoAlert
-              meta={
-                Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "field0",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "field0",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                }
-              }
               onClose={[Function]}
+              plaintext={false}
               visible={false}
             />
           </Col>,
@@ -586,19 +500,7 @@ ShallowWrapper {
           "error": null,
           "isValidating": false,
           "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "field0",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "field0",
-              },
-            ],
-          },
+          "stringFormatter": [MockFunction],
           "touched": false,
           "valid": true,
         },
@@ -687,7 +589,9 @@ ShallowWrapper {
                     onClick={[Function]}
                     type="checkbox"
                   />
-                  field0
+                  <FormComponent(FormText)
+                    text="field0"
+                  />
                   <FieldError
                     error={null}
                     id="undefined_errors"
@@ -700,29 +604,8 @@ ShallowWrapper {
                 />
               </InputGroup>,
               <InfoAlert
-                meta={
-                  Object {
-                    "error": null,
-                    "isValidating": false,
-                    "plaintext": false,
-                    "stringFormatter": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          "field0",
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": "field0",
-                        },
-                      ],
-                    },
-                    "touched": false,
-                    "valid": true,
-                  }
-                }
                 onClose={[Function]}
+                plaintext={false}
                 visible={false}
               />,
             ],
@@ -766,7 +649,9 @@ ShallowWrapper {
                       onClick={[Function]}
                       type="checkbox"
                     />
-                    field0
+                    <FormComponent(FormText)
+                      text="field0"
+                    />
                     <FieldError
                       error={null}
                       id="undefined_errors"
@@ -799,7 +684,9 @@ ShallowWrapper {
                         onClick={[Function]}
                         type="checkbox"
                       />,
-                      "field0",
+                      <FormComponent(FormText)
+                        text="field0"
+                      />,
                       <FieldError
                         error={null}
                         id="undefined_errors"
@@ -835,7 +722,17 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
-                    "field0",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "text": "field0",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -874,27 +771,8 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "info": undefined,
-                "meta": Object {
-                  "error": null,
-                  "isValidating": false,
-                  "plaintext": false,
-                  "stringFormatter": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        "field0",
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": "field0",
-                      },
-                    ],
-                  },
-                  "touched": false,
-                  "valid": true,
-                },
                 "onClose": [Function],
+                "plaintext": false,
                 "visible": false,
               },
               "ref": null,

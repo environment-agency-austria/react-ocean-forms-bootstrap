@@ -13,7 +13,7 @@ import {
   Col,
   InputGroup,
 } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { FormText, fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
 import FieldRow from './components/FieldRow';
 import InvalidAlert from './components/InvalidAlert';
@@ -79,7 +79,6 @@ class Check extends React.Component {
 
     const isChecked = value === true;
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
-    const labelString = meta.stringFormatter(label);
 
     return (
       <FieldRow meta={meta} className={className}>
@@ -102,7 +101,7 @@ class Check extends React.Component {
                   disabled={field.disabled}
                 />
               )}
-              {labelString}
+              <FormText text={label} />
               <FieldError
                 id={`${field.id}_errors`}
                 invalid={!meta.valid}
@@ -111,7 +110,12 @@ class Check extends React.Component {
             </Label>
             <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
           </InputGroup>
-          <InfoAlert visible={infoVisible} info={info} meta={meta} onClose={this.toggleInfo} />
+          <InfoAlert
+            visible={infoVisible}
+            info={info}
+            plaintext={meta.plaintext}
+            onClose={this.toggleInfo}
+          />
         </Col>
       </FieldRow>
     );
