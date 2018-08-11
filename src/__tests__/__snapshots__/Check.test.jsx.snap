@@ -7,19 +7,17 @@ ShallowWrapper {
     field={
       Object {
         "disabled": false,
-        "id": "field0",
-        "invalid": false,
-        "name": "field0",
+        "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
-        "value": true,
+        "value": "mock-value",
       }
     }
     label="field0"
     meta={
       Object {
-        "error": undefined,
-        "isValidating": undefined,
+        "error": null,
+        "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction] {
           "calls": Array [
@@ -34,6 +32,7 @@ ShallowWrapper {
             },
           ],
         },
+        "touched": false,
         "valid": true,
       }
     }
@@ -64,7 +63,14 @@ ShallowWrapper {
               "xl",
             ]
           }
-        />,
+        >
+          <InvalidAlert
+            valid={true}
+          />
+          <ValidatingSpinner
+            isValidating={false}
+          />
+        </Col>,
         <Col
           sm={9}
           tag="div"
@@ -95,11 +101,10 @@ ShallowWrapper {
               }
             >
               <Input
-                defaultChecked={true}
+                defaultChecked={false}
                 disabled={false}
-                id="field0"
                 invalid={false}
-                name="field0"
+                name="mock-field"
                 onBlur={[MockFunction]}
                 onClick={[Function]}
                 type="checkbox"
@@ -124,16 +129,64 @@ ShallowWrapper {
                   }
                 }
                 error={null}
-                id="field0_errors"
+                id="undefined_errors"
                 invalid={false}
               />
             </Label>
+            <InfoAddonButton
+              onClick={[Function]}
+              plaintext={false}
+            />
           </InputGroup>
+          <InfoAlert
+            meta={
+              Object {
+                "error": null,
+                "isValidating": false,
+                "plaintext": false,
+                "stringFormatter": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      "field0",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": "field0",
+                    },
+                  ],
+                },
+                "touched": false,
+                "valid": true,
+              }
+            }
+            onClose={[Function]}
+            visible={false}
+          />
         </Col>,
       ],
-      "className": "undefined",
-      "row": true,
-      "tag": "div",
+      "className": "",
+      "meta": Object {
+        "error": null,
+        "isValidating": false,
+        "plaintext": false,
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "field0",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "field0",
+            },
+          ],
+        },
+        "touched": false,
+        "valid": true,
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -143,8 +196,12 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            false,
-            undefined,
+            <InvalidAlert
+              valid={true}
+            />,
+            <ValidatingSpinner
+              isValidating={false}
+            />,
           ],
           "className": "text-right check-label-col",
           "sm": 3,
@@ -159,8 +216,28 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          false,
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "valid": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "isValidating": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": [Function],
       },
@@ -187,11 +264,10 @@ ShallowWrapper {
                 }
               >
                 <Input
-                  defaultChecked={true}
+                  defaultChecked={false}
                   disabled={false}
-                  id="field0"
                   invalid={false}
-                  name="field0"
+                  name="mock-field"
                   onBlur={[MockFunction]}
                   onClick={[Function]}
                   type="checkbox"
@@ -216,12 +292,41 @@ ShallowWrapper {
                     }
                   }
                   error={null}
-                  id="field0_errors"
+                  id="undefined_errors"
                   invalid={false}
                 />
               </Label>
+              <InfoAddonButton
+                onClick={[Function]}
+                plaintext={false}
+              />
             </InputGroup>,
-            undefined,
+            <InfoAlert
+              meta={
+                Object {
+                  "error": null,
+                  "isValidating": false,
+                  "plaintext": false,
+                  "stringFormatter": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "field0",
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": "field0",
+                      },
+                    ],
+                  },
+                  "touched": false,
+                  "valid": true,
+                }
+              }
+              onClose={[Function]}
+              visible={false}
+            />,
           ],
           "sm": 9,
           "tag": "div",
@@ -255,11 +360,10 @@ ShallowWrapper {
                   }
                 >
                   <Input
-                    defaultChecked={true}
+                    defaultChecked={false}
                     disabled={false}
-                    id="field0"
                     invalid={false}
-                    name="field0"
+                    name="mock-field"
                     onBlur={[MockFunction]}
                     onClick={[Function]}
                     type="checkbox"
@@ -284,11 +388,14 @@ ShallowWrapper {
                       }
                     }
                     error={null}
-                    id="field0_errors"
+                    id="undefined_errors"
                     invalid={false}
                   />
                 </Label>,
-                undefined,
+                <InfoAddonButton
+                  onClick={[Function]}
+                  plaintext={false}
+                />,
               ],
               "className": undefined,
               "tag": "div",
@@ -303,11 +410,10 @@ ShallowWrapper {
                   "check": true,
                   "children": Array [
                     <Input
-                      defaultChecked={true}
+                      defaultChecked={false}
                       disabled={false}
-                      id="field0"
                       invalid={false}
-                      name="field0"
+                      name="mock-field"
                       onBlur={[MockFunction]}
                       onClick={[Function]}
                       type="checkbox"
@@ -332,7 +438,7 @@ ShallowWrapper {
                         }
                       }
                       error={null}
-                      id="field0_errors"
+                      id="undefined_errors"
                       invalid={false}
                     />,
                   ],
@@ -352,11 +458,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "defaultChecked": true,
+                      "defaultChecked": false,
                       "disabled": false,
-                      "id": "field0",
+                      "id": undefined,
                       "invalid": false,
-                      "name": "field0",
+                      "name": "mock-field",
                       "onBlur": [MockFunction],
                       "onClick": [Function],
                       "type": "checkbox",
@@ -387,7 +493,7 @@ ShallowWrapper {
                         },
                       },
                       "error": null,
-                      "id": "field0_errors",
+                      "id": "undefined_errors",
                       "invalid": false,
                     },
                     "ref": null,
@@ -397,11 +503,55 @@ ShallowWrapper {
                 ],
                 "type": [Function],
               },
-              undefined,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "info": undefined,
+                  "onClick": [Function],
+                  "plaintext": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": [Function],
           },
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "info": undefined,
+              "meta": Object {
+                "error": null,
+                "isValidating": false,
+                "plaintext": false,
+                "stringFormatter": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      "field0",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": "field0",
+                    },
+                  ],
+                },
+                "touched": false,
+                "valid": true,
+              },
+              "onClose": [Function],
+              "visible": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": [Function],
       },
@@ -428,7 +578,14 @@ ShallowWrapper {
                 "xl",
               ]
             }
-          />,
+          >
+            <InvalidAlert
+              valid={true}
+            />
+            <ValidatingSpinner
+              isValidating={false}
+            />
+          </Col>,
           <Col
             sm={9}
             tag="div"
@@ -459,11 +616,10 @@ ShallowWrapper {
                 }
               >
                 <Input
-                  defaultChecked={true}
+                  defaultChecked={false}
                   disabled={false}
-                  id="field0"
                   invalid={false}
-                  name="field0"
+                  name="mock-field"
                   onBlur={[MockFunction]}
                   onClick={[Function]}
                   type="checkbox"
@@ -488,16 +644,64 @@ ShallowWrapper {
                     }
                   }
                   error={null}
-                  id="field0_errors"
+                  id="undefined_errors"
                   invalid={false}
                 />
               </Label>
+              <InfoAddonButton
+                onClick={[Function]}
+                plaintext={false}
+              />
             </InputGroup>
+            <InfoAlert
+              meta={
+                Object {
+                  "error": null,
+                  "isValidating": false,
+                  "plaintext": false,
+                  "stringFormatter": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "field0",
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": "field0",
+                      },
+                    ],
+                  },
+                  "touched": false,
+                  "valid": true,
+                }
+              }
+              onClose={[Function]}
+              visible={false}
+            />
           </Col>,
         ],
-        "className": "undefined",
-        "row": true,
-        "tag": "div",
+        "className": "",
+        "meta": Object {
+          "error": null,
+          "isValidating": false,
+          "plaintext": false,
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "field0",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "field0",
+              },
+            ],
+          },
+          "touched": false,
+          "valid": true,
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -507,8 +711,12 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              false,
-              undefined,
+              <InvalidAlert
+                valid={true}
+              />,
+              <ValidatingSpinner
+                isValidating={false}
+              />,
             ],
             "className": "text-right check-label-col",
             "sm": 3,
@@ -523,8 +731,28 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            false,
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "valid": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "isValidating": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": [Function],
         },
@@ -551,11 +779,10 @@ ShallowWrapper {
                   }
                 >
                   <Input
-                    defaultChecked={true}
+                    defaultChecked={false}
                     disabled={false}
-                    id="field0"
                     invalid={false}
-                    name="field0"
+                    name="mock-field"
                     onBlur={[MockFunction]}
                     onClick={[Function]}
                     type="checkbox"
@@ -580,12 +807,41 @@ ShallowWrapper {
                       }
                     }
                     error={null}
-                    id="field0_errors"
+                    id="undefined_errors"
                     invalid={false}
                   />
                 </Label>
+                <InfoAddonButton
+                  onClick={[Function]}
+                  plaintext={false}
+                />
               </InputGroup>,
-              undefined,
+              <InfoAlert
+                meta={
+                  Object {
+                    "error": null,
+                    "isValidating": false,
+                    "plaintext": false,
+                    "stringFormatter": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          "field0",
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": "field0",
+                        },
+                      ],
+                    },
+                    "touched": false,
+                    "valid": true,
+                  }
+                }
+                onClose={[Function]}
+                visible={false}
+              />,
             ],
             "sm": 9,
             "tag": "div",
@@ -619,11 +875,10 @@ ShallowWrapper {
                     }
                   >
                     <Input
-                      defaultChecked={true}
+                      defaultChecked={false}
                       disabled={false}
-                      id="field0"
                       invalid={false}
-                      name="field0"
+                      name="mock-field"
                       onBlur={[MockFunction]}
                       onClick={[Function]}
                       type="checkbox"
@@ -648,11 +903,14 @@ ShallowWrapper {
                         }
                       }
                       error={null}
-                      id="field0_errors"
+                      id="undefined_errors"
                       invalid={false}
                     />
                   </Label>,
-                  undefined,
+                  <InfoAddonButton
+                    onClick={[Function]}
+                    plaintext={false}
+                  />,
                 ],
                 "className": undefined,
                 "tag": "div",
@@ -667,11 +925,10 @@ ShallowWrapper {
                     "check": true,
                     "children": Array [
                       <Input
-                        defaultChecked={true}
+                        defaultChecked={false}
                         disabled={false}
-                        id="field0"
                         invalid={false}
-                        name="field0"
+                        name="mock-field"
                         onBlur={[MockFunction]}
                         onClick={[Function]}
                         type="checkbox"
@@ -696,7 +953,7 @@ ShallowWrapper {
                           }
                         }
                         error={null}
-                        id="field0_errors"
+                        id="undefined_errors"
                         invalid={false}
                       />,
                     ],
@@ -716,11 +973,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "defaultChecked": true,
+                        "defaultChecked": false,
                         "disabled": false,
-                        "id": "field0",
+                        "id": undefined,
                         "invalid": false,
-                        "name": "field0",
+                        "name": "mock-field",
                         "onBlur": [MockFunction],
                         "onClick": [Function],
                         "type": "checkbox",
@@ -751,7 +1008,7 @@ ShallowWrapper {
                           },
                         },
                         "error": null,
-                        "id": "field0_errors",
+                        "id": "undefined_errors",
                         "invalid": false,
                       },
                       "ref": null,
@@ -761,11 +1018,55 @@ ShallowWrapper {
                   ],
                   "type": [Function],
                 },
-                undefined,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "info": undefined,
+                    "onClick": [Function],
+                    "plaintext": false,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
               ],
               "type": [Function],
             },
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "info": undefined,
+                "meta": Object {
+                  "error": null,
+                  "isValidating": false,
+                  "plaintext": false,
+                  "stringFormatter": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "field0",
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": "field0",
+                      },
+                    ],
+                  },
+                  "touched": false,
+                  "valid": true,
+                },
+                "onClose": [Function],
+                "visible": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": [Function],
         },

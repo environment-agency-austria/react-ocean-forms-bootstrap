@@ -1,55 +1,51 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import createMockFormatter from '../test-utils/createMockFormatter';
+import checkInfoToggling from '../test-utils/checkInfoToggling';
+import { createMockFieldMeta, createMockField } from '../test-utils/enzymeFormContext';
 import Check from '../Check';
 
 describe('<Check />', () => {
-  const FIELD_ID = 'field0';
-  const FIELD_NAME = 'field0';
   const FIELD_LABEL = 'field0';
 
-  const meta = {
-    valid: true,
-    error: undefined,
-    isValidating: undefined,
-    stringFormatter: createMockFormatter(),
-    plaintext: false,
-  };
-  const field = {
-    value: true,
-    invalid: false,
-    id: FIELD_ID,
-    name: FIELD_NAME,
-    disabled: false,
-    onChange: jest.fn(),
-    onBlur: jest.fn(),
-  };
+  const MOCK_META = createMockFieldMeta();
+  const MOCK_FIELD = createMockField();
 
-  const setup = props => shallow((
+  const wrapper = shallow((
     <Check
       label={FIELD_LABEL}
-      meta={meta}
-      field={field}
-      {...props}
+      meta={MOCK_META}
+      field={MOCK_FIELD}
     />
   ));
 
   it('should render correctly', () => {
-    const wrapper = setup();
+    expect(wrapper.exists('Input')).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should call field.onChange when the input changes', () => {
-    const wrapper = setup();
-    const event = { target: { name: FIELD_ID, checked: false } };
+    const event = { target: { name: MOCK_FIELD.name, checked: false } };
 
     wrapper.find('Input').simulate('click', event);
-    expect(field.onChange).toHaveBeenCalledWith({
+    expect(MOCK_FIELD.onChange).toHaveBeenCalledWith({
       target: {
-        name: FIELD_ID,
+        name: MOCK_FIELD.name,
         value: false,
       },
     });
+  });
+
+  checkInfoToggling(wrapper);
+
+  it('should add the has-info class to InputGroup if info is present', () => {
+    wrapper.setProps({ info: 'mock-info' });
+    expect(wrapper.find('InputGroup').prop('className')).toEqual(expect.stringContaining('has-info'));
+  });
+
+  it('should not render the checkbox in plaintext mode', () => {
+    MOCK_META.plaintext = true;
+    wrapper.setProps({ meta: MOCK_META });
+    expect(wrapper.exists('Input')).toBeFalsy();
   });
 });

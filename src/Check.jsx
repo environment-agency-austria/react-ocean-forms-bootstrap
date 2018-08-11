@@ -7,21 +7,19 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner';
-import faExclamationCircle from '@fortawesome/fontawesome-free-solid/faExclamationCircle';
 import {
   Input,
-  FormGroup,
   Label,
   Col,
-  Button,
-  Alert,
   InputGroup,
-  InputGroupAddon,
 } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
 
+import FieldRow from './components/FieldRow';
+import InvalidAlert from './components/InvalidAlert';
+import ValidatingSpinner from './components/ValidatingSpinner';
+import InfoAddonButton from './components/InfoAddonButton';
+import InfoAlert from './components/InfoAlert';
 import { BaseFieldError } from './FieldError';
 
 /**
@@ -81,14 +79,13 @@ class Check extends React.Component {
 
     const isChecked = value === true;
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
-    const groupClass = (className + (meta.valid ? '' : ' is-invalid')).trim();
     const labelString = meta.stringFormatter(label);
 
     return (
-      <FormGroup row className={groupClass}>
+      <FieldRow meta={meta} className={className}>
         <Col sm={3} className="text-right check-label-col">
-          {!meta.valid && <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" />}
-          {meta.isValidating && <FontAwesomeIcon icon={faSpinner} spin className="mr-2" />}
+          <InvalidAlert valid={meta.valid} />
+          <ValidatingSpinner isValidating={meta.isValidating} />
         </Col>
         <Col sm={9}>
           <InputGroup className={inputGroupClass}>
@@ -113,27 +110,11 @@ class Check extends React.Component {
                 context={{ stringFormatter: meta.stringFormatter }}
               />
             </Label>
-            {info && (
-              <InputGroupAddon addonType="append">
-                <Button onClick={this.toggleInfo} outline>
-                  <FontAwesomeIcon icon={faExclamationCircle} />
-                </Button>
-              </InputGroupAddon>
-            )}
+            <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
           </InputGroup>
-
-          {info && (
-            <Alert
-              color="success"
-              className="mt-2"
-              isOpen={infoVisible}
-              toggle={this.toggleInfo}
-            >
-              {meta.stringFormatter(info)}
-            </Alert>
-          )}
+          <InfoAlert visible={infoVisible} info={info} meta={meta} onClose={this.toggleInfo} />
         </Col>
-      </FormGroup>
+      </FieldRow>
     );
   }
 }
