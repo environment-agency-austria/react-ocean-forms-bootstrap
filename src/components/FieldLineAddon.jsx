@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { InputGroupAddon } from 'reactstrap';
+import { InputGroupAddon, InputGroupText } from 'reactstrap';
 import { FormText } from 'react-ocean-forms';
 
 /**
@@ -18,7 +18,11 @@ function FieldLineAddon({ plaintext, content, type }) {
 
   let child = null;
   if (typeof content === 'string') {
-    child = <FormText text={content} />;
+    child = (
+      <InputGroupText>
+        <FormText text={content} />
+      </InputGroupText>
+    );
   } else {
     child = content;
   }

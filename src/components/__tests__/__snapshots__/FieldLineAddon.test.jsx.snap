@@ -110,9 +110,13 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "addonType": "prepend",
-      "children": <FormComponent(FormText)
-        text="mock-string"
-      />,
+      "children": <InputGroupText
+        tag="span"
+      >
+        <FormComponent(FormText)
+          text="mock-string"
+        />
+      </InputGroupText>,
       "tag": "div",
     },
     "ref": null,
@@ -121,25 +125,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "text": "mock-string",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "addonType": "prepend",
         "children": <FormComponent(FormText)
           text="mock-string"
         />,
-        "tag": "div",
+        "tag": "span",
       },
       "ref": null,
       "rendered": Object {
@@ -151,6 +140,51 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "addonType": "prepend",
+        "children": <InputGroupText
+          tag="span"
+        >
+          <FormComponent(FormText)
+            text="mock-string"
+          />
+        </InputGroupText>,
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <FormComponent(FormText)
+            text="mock-string"
+          />,
+          "tag": "span",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "text": "mock-string",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
