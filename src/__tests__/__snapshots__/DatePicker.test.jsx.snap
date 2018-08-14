@@ -225,7 +225,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Unknown
+      "children": <DateTime
         className=""
         closeOnSelect={true}
         closeOnTab={true}
@@ -241,6 +241,8 @@ ShallowWrapper {
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        onNavigateBack={[Function]}
+        onNavigateForward={[Function]}
         onViewModeChange={[Function]}
         placeholder="ojs_select_placeholder"
         strictParsing={true}
@@ -293,6 +295,8 @@ ShallowWrapper {
         "onBlur": [Function],
         "onChange": [Function],
         "onFocus": [Function],
+        "onNavigateBack": [Function],
+        "onNavigateForward": [Function],
         "onViewModeChange": [Function],
         "placeholder": "ojs_select_placeholder",
         "strictParsing": true,
@@ -313,7 +317,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Unknown
+        "children": <DateTime
           className=""
           closeOnSelect={true}
           closeOnTab={true}
@@ -329,6 +333,8 @@ ShallowWrapper {
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          onNavigateBack={[Function]}
+          onNavigateForward={[Function]}
           onViewModeChange={[Function]}
           placeholder="ojs_select_placeholder"
           strictParsing={true}
@@ -381,6 +387,8 @@ ShallowWrapper {
           "onBlur": [Function],
           "onChange": [Function],
           "onFocus": [Function],
+          "onNavigateBack": [Function],
+          "onNavigateForward": [Function],
           "onViewModeChange": [Function],
           "placeholder": "ojs_select_placeholder",
           "strictParsing": true,
