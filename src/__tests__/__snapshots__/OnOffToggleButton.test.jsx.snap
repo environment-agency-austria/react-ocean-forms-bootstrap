@@ -468,6 +468,7 @@ ShallowWrapper {
           color="primary"
           id="mock-field-on"
           onClick={[Function]}
+          outline={true}
           tag="button"
         >
           <FormComponent(FormText)
@@ -479,6 +480,7 @@ ShallowWrapper {
           color="primary"
           id="mock-field-off"
           onClick={[Function]}
+          outline={true}
           tag="button"
         >
           <FormComponent(FormText)
@@ -522,6 +524,7 @@ ShallowWrapper {
             color="primary"
             id="mock-field-on"
             onClick={[Function]}
+            outline={true}
             tag="button"
           >
             <FormComponent(FormText)
@@ -533,6 +536,7 @@ ShallowWrapper {
             color="primary"
             id="mock-field-off"
             onClick={[Function]}
+            outline={true}
             tag="button"
           >
             <FormComponent(FormText)
@@ -558,6 +562,7 @@ ShallowWrapper {
             "color": "primary",
             "id": "mock-field-on",
             "onClick": [Function],
+            "outline": true,
             "tag": "button",
           },
           "ref": null,
@@ -586,6 +591,7 @@ ShallowWrapper {
             "color": "primary",
             "id": "mock-field-off",
             "onClick": [Function],
+            "outline": true,
             "tag": "button",
           },
           "ref": null,
@@ -623,6 +629,7 @@ ShallowWrapper {
             color="primary"
             id="mock-field-on"
             onClick={[Function]}
+            outline={true}
             tag="button"
           >
             <FormComponent(FormText)
@@ -634,6 +641,7 @@ ShallowWrapper {
             color="primary"
             id="mock-field-off"
             onClick={[Function]}
+            outline={true}
             tag="button"
           >
             <FormComponent(FormText)
@@ -677,6 +685,7 @@ ShallowWrapper {
               color="primary"
               id="mock-field-on"
               onClick={[Function]}
+              outline={true}
               tag="button"
             >
               <FormComponent(FormText)
@@ -688,6 +697,7 @@ ShallowWrapper {
               color="primary"
               id="mock-field-off"
               onClick={[Function]}
+              outline={true}
               tag="button"
             >
               <FormComponent(FormText)
@@ -713,6 +723,7 @@ ShallowWrapper {
               "color": "primary",
               "id": "mock-field-on",
               "onClick": [Function],
+              "outline": true,
               "tag": "button",
             },
             "ref": null,
@@ -741,6 +752,7 @@ ShallowWrapper {
               "color": "primary",
               "id": "mock-field-off",
               "onClick": [Function],
+              "outline": true,
               "tag": "button",
             },
             "ref": null,
