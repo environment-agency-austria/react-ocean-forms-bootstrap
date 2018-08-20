@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.4.0] # 2018-08-20
 - Added `is-touched` class to `FieldLine` as soon as the field has been touched
 - Default style: made the label of touched fields blue by default
 - Default style: OnOffToggleButton is now `outline` per default
