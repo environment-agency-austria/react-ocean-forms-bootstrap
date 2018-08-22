@@ -52,19 +52,22 @@ class FieldLine extends React.Component {
       prefix,
       suffix,
       info,
+      labelSize,
+      inputSize,
+      labelClass,
     } = this.props;
 
     const { infoVisible } = this.state;
 
     return (
       <FieldRow meta={meta}>
-        <Label sm="3" for={field.id} className="text-right">
+        <Label sm={labelSize} for={field.id} className={labelClass}>
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
           <FormText text={label} />
           <RequiredMarker meta={meta} validators={validators} />
         </Label>
-        <Col sm="9">
+        <Col sm={inputSize}>
           <InputGroup>
             <FieldLineAddon plaintext={meta.plaintext} type="prepend" content={prefix} />
             {children}
@@ -95,6 +98,9 @@ FieldLine.defaultProps = {
   validators: undefined,
   prefix: undefined,
   suffix: undefined,
+  labelSize: 3,
+  inputSize: 9,
+  labelClass: 'text-right',
 };
 
 FieldLine.propTypes = {
@@ -117,6 +123,9 @@ FieldLine.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
+  labelSize: PropTypes.string,
+  inputSize: PropTypes.string,
+  labelClass: PropTypes.string,
 };
 
 export default FieldLine;

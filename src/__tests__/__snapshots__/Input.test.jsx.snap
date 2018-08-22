@@ -60,7 +60,10 @@ ShallowWrapper {
         "value": "",
       },
       "info": undefined,
+      "inputSize": 9,
       "label": "field0",
+      "labelClass": "text-right",
+      "labelSize": 3,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -124,7 +127,10 @@ ShallowWrapper {
           "value": "",
         },
         "info": undefined,
+        "inputSize": 9,
         "label": "field0",
+        "labelClass": "text-right",
+        "labelSize": 3,
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -238,7 +244,10 @@ ShallowWrapper {
         "value": "",
       },
       "info": undefined,
+      "inputSize": 9,
       "label": "field0",
+      "labelClass": "text-right",
+      "labelSize": 3,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -300,7 +309,10 @@ ShallowWrapper {
           "value": "",
         },
         "info": undefined,
+        "inputSize": 9,
         "label": "field0",
+        "labelClass": "text-right",
+        "labelSize": 3,
         "meta": Object {
           "error": null,
           "isValidating": false,
