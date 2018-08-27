@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+- Fixed `OnOffToggleButton` not reacting to `disabled` state
+
 ## [1.4.1] # 2018-08-22
 - Added `labelSize`, `inputSize` and `labelClass` to `FieldLine`
 

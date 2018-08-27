@@ -73,6 +73,7 @@ class OnOffToggleButton extends React.Component {
             onClick={() => this.onRadioBtnClick(true)}
             outline
             active={isOn}
+            disabled={field.disabled}
           >
             <FormText text={onLabel} />
           </Button>
@@ -82,6 +83,7 @@ class OnOffToggleButton extends React.Component {
             onClick={() => this.onRadioBtnClick(false)}
             outline
             active={!isOn}
+            disabled={field.disabled}
           >
             <FormText text={offLabel} />
           </Button>

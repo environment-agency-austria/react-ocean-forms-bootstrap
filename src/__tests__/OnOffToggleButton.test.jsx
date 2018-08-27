@@ -40,6 +40,12 @@ describe('<BaseOnOffToggleButton />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render correctly in disabled mode', () => {
+    field.disabled = true;
+    const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
+
   const testButton = (value) => {
     describe(`${value} Button`, () => {
       const wrapper = setup();

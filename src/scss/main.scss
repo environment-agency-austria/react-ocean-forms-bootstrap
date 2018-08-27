@@ -91,6 +91,13 @@
   }
 }
 
+// Better display of disabled OnOffToggleButtons
+.btn.btn-outline-primary.active.disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
 .validation-summary {
   h4 {
     font-weight: normal;
