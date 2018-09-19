@@ -16,6 +16,8 @@ import { IInfoAddonButtonProps } from './InfoAddonButton.types';
  * Displays an input addon with an info icon button
  */
 export class InfoAddonButton extends React.Component<IInfoAddonButtonProps> {
+  public static displayName: string = 'InfoAddonButton';
+
   public render(): JSX.Element | null {
     const { info, plaintext, onClick } = this.props;
 

@@ -16,6 +16,8 @@ import { IInvalidAlertProps } from './InvalidAlert.types';
  * Displays an error icon if valid is false
  */
 export class InvalidAlert extends React.Component<IInvalidAlertProps> {
+  public static displayName: string = 'InvalidAlert';
+
   public render(): JSX.Element | null {
     const { valid } = this.props;
 

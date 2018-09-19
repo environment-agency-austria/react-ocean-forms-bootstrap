@@ -15,6 +15,8 @@ import { IFieldLineAddonProps } from './FieldLineAddon.types';
  * Displays a prefix / suffix addon for the FieldLine
  */
 export class FieldLineAddon extends React.Component<IFieldLineAddonProps> {
+  public static displayName: string = 'FieldLineAddon';
+
   public render(): JSX.Element | null {
     const { plaintext, content, type } = this.props;
 

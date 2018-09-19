@@ -16,6 +16,8 @@ import { IRequiredMarkerProps } from './RequiredMarker.types';
  * presence of react-ocean-forms validators.required
  */
 export class RequiredMarker extends React.Component<IRequiredMarkerProps> {
+  public static displayName: string = 'RequiredMarker';
+
   public render(): JSX.Element | null {
     const { validators, meta } = this.props;
 

@@ -16,6 +16,8 @@ import { IValidatingSpinnerProps } from './ValidatingSpinner.types';
  * Displays an error icon if valid is false
  */
 export class ValidatingSpinner extends React.Component<IValidatingSpinnerProps> {
+  public static displayName: string = 'ValidatingSpinner';
+
   public render(): JSX.Element | null {
     const { isValidating } = this.props;
 

@@ -16,6 +16,8 @@ import { IInfoAlertProps } from './InfoAlert.types';
  * info message
  */
 export class InfoAlert extends React.Component<IInfoAlertProps> {
+  public static displayName: string = 'InfoAlert';
+
   public render(): JSX.Element | null {
     const {
       visible,
