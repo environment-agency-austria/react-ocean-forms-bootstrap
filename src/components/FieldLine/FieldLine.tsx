@@ -44,14 +44,12 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
     this.state = {
       infoVisible: false,
     };
-
-    this.toggleInfo = this.toggleInfo.bind(this);
   }
 
   /**
    * Toggles the visibility of the info alert
    */
-  private toggleInfo(): void {
+  private toggleInfo = (): void => {
     this.setState(prevState => ({
       infoVisible: !prevState.infoVisible,
     }));
