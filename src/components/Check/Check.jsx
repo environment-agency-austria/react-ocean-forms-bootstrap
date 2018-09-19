@@ -17,7 +17,7 @@ import { FormText } from 'react-ocean-forms';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import { FieldRow } from '../FieldLine/FieldRow';
-import InvalidAlert from '../FieldLine/InvalidAlert';
+import { InvalidAlert } from '../FieldLine/InvalidAlert';
 import ValidatingSpinner from '../FieldLine/ValidatingSpinner';
 import { InfoAddonButton } from '../FieldLine/InfoAddonButton';
 import { InfoAlert } from '../FieldLine/InfoAlert';

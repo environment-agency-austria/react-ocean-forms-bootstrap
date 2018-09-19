@@ -12,7 +12,7 @@ import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import { FieldRow } from './FieldRow';
 import RequiredMarker from './RequiredMarker';
-import InvalidAlert from './InvalidAlert';
+import { InvalidAlert } from './InvalidAlert';
 import ValidatingSpinner from './ValidatingSpinner';
 import { FieldLineAddon } from './FieldLineAddon';
 import { InfoAddonButton } from './InfoAddonButton';

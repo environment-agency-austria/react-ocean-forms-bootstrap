@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import InvalidAlert from './InvalidAlert';
+import { InvalidAlert } from './InvalidAlert';
 
 describe('<InvalidAlert />', () => {
   const setup = valid => shallow((
