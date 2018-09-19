@@ -5,8 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 import * as React from 'react';
+
 import { FormText } from 'react-ocean-forms';
 import { InputGroupAddon, InputGroupText } from 'reactstrap';
+
 import { IFieldLineAddonProps } from './FieldLineAddon.types';
 
 /**
