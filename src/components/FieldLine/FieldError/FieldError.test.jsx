@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
 import { createMockFormContext } from '../../../test-utils/enzymeFormContext';
-import FieldError from './FieldError';
+import { FieldError } from './FieldError';
 
 describe('<FieldError />', () => {
   const generateError = (msg, params) => ({
