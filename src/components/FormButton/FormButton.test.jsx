@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FormButton from './FormButton';
+import { FormButton } from './FormButton';
 
 describe('<FormButton />', () => {
   const wrapper = shallow((
