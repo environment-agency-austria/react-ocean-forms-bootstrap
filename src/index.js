@@ -5,7 +5,8 @@ export { default as Check } from './components/Check';
 export { default as DatePicker } from './components/DatePicker';
 export { default as FieldError } from './components/FieldLine/FieldError';
 export { default as FieldLine } from './components/FieldLine';
-export { default as FileInput } from './components/FileInput';
+// TODO: Re-Add fixed FileInput
+// export { default as FileInput } from './components/FileInput';
 export { default as Input } from './components/Input';
 export { default as Select } from './components/Select';
 export { default as ValidationSummary } from './components/ValidationSummary';
