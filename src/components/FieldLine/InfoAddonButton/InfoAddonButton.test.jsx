@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import InfoAddonButton from './InfoAddonButton';
+import { InfoAddonButton } from './InfoAddonButton';
 
 describe('<InfoAddonButton />', () => {
   const setup = (plaintext, info, onClick = () => {}) => shallow((
