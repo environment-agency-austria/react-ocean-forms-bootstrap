@@ -8,7 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormFeedback } from 'reactstrap';
-import { FormText, errorsShape } from 'react-ocean-forms';
+import { FormText } from 'react-ocean-forms';
+import { errorsShape } from 'react-ocean-forms-legacy';
 
 /**
  * Component for displaying bootstrap

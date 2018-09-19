@@ -13,7 +13,8 @@ import {
   Col,
   InputGroup,
 } from 'reactstrap';
-import { FormText, fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { FormText } from 'react-ocean-forms';
+import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import FieldRow from '../FieldLine/FieldRow';
 import InvalidAlert from '../FieldLine/InvalidAlert';

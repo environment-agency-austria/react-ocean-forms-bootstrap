@@ -51,6 +51,7 @@
     "prop-types": "^15.6.1",
     "react-datetime": "^2.15.0",
     "react-ocean-forms": "^2.0.0-alpha1",
+    "react-ocean-forms-legacy": "npm:react-ocean-forms@latest",
     "react-select": "^1.2.1",
     "reactstrap": "^6.1.0 || ^6.2.0 || ^6.3.0 || ^6.4.0"
   },

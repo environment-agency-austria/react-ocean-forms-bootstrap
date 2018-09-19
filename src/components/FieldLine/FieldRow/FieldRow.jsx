@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormGroup } from 'reactstrap';
-import { fieldMetaShape } from 'react-ocean-forms';
+import { fieldMetaShape } from 'react-ocean-forms-legacy';
 
 /**
  * Wrapper for FormGroup that generates additional

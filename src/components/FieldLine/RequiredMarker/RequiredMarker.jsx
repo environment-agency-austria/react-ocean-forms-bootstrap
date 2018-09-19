@@ -7,7 +7,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { fieldMetaShape, validators as defaultValidators } from 'react-ocean-forms';
+import { validators as defaultValidators } from 'react-ocean-forms';
+import { fieldMetaShape } from 'react-ocean-forms-legacy';
 
 /**
  * Displays a * if the field is required - based on the

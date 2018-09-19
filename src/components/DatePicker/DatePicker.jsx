@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import Datetime from 'react-datetime';
 import moment from 'moment';
 import { Input as StrapInput } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms';
+import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import FieldLine from '../FieldLine';
 

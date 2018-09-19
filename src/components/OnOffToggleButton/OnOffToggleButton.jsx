@@ -8,12 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonGroup, Button, Input } from 'reactstrap';
-import {
-  FormText,
-  fieldMetaShape,
-  fieldShape,
-  withForm,
-} from 'react-ocean-forms';
+import { FormText, withForm } from 'react-ocean-forms';
+import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import FieldLine from '../FieldLine';
 
