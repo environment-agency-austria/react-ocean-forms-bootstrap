@@ -10,27 +10,7 @@ ShallowWrapper {
         "id": "mock-field",
         "name": "mock-field",
         "onBlur": [MockFunction],
-        "onChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "target": Object {
-                  "name": "mock-field",
-                  "value": Object {
-                    "label": "One",
-                    "value": "one",
-                  },
-                },
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "onChange": [MockFunction],
         "value": "",
       }
     }
@@ -40,7 +20,26 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": true,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_select_placeholder",
+            ],
+            Array [
+              "ojs_select_placeholder",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       }
@@ -77,71 +76,49 @@ ShallowWrapper {
         id="mock-field"
         name="mock-field"
         onBlur={[MockFunction]}
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "target": Object {
-                    "name": "mock-field",
-                    "value": Object {
-                      "label": "One",
-                      "value": "one",
-                    },
-                  },
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onChange={[MockFunction]}
         plaintext={true}
         type="text"
         value=""
-      />,
+      >
+        
+      </Input>,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
         "onBlur": [MockFunction],
-        "onChange": [MockFunction] {
+        "onChange": [MockFunction],
+        "value": "",
+      },
+      "inputSize": "9",
+      "label": "field0",
+      "labelClass": "text-right",
+      "labelSize": "3",
+      "meta": Object {
+        "error": null,
+        "isValidating": false,
+        "plaintext": true,
+        "stringFormatter": [MockFunction] {
           "calls": Array [
             Array [
-              Object {
-                "target": Object {
-                  "name": "mock-field",
-                  "value": Object {
-                    "label": "One",
-                    "value": "one",
-                  },
-                },
-              },
+              "ojs_select_placeholder",
+            ],
+            Array [
+              "ojs_select_placeholder",
             ],
           ],
           "results": Array [
             Object {
               "isThrow": false,
-              "value": undefined,
+              "value": "ojs_select_placeholder",
+            },
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
             },
           ],
         },
-        "value": "",
-      },
-      "info": undefined,
-      "inputSize": 9,
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": 3,
-      "meta": Object {
-        "error": null,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
         "touched": false,
         "valid": true,
       },
@@ -157,9 +134,6 @@ ShallowWrapper {
         },
       ],
       "placeholder": "ojs_select_placeholder",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -167,38 +141,18 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": undefined,
+        "children": "",
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
         "onBlur": [MockFunction],
-        "onChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "target": Object {
-                  "name": "mock-field",
-                  "value": Object {
-                    "label": "One",
-                    "value": "one",
-                  },
-                },
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "onChange": [MockFunction],
         "plaintext": true,
         "type": "text",
         "value": "",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "",
       "type": [Function],
     },
     "type": [Function],
@@ -214,71 +168,49 @@ ShallowWrapper {
           id="mock-field"
           name="mock-field"
           onBlur={[MockFunction]}
-          onChange={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "target": Object {
-                      "name": "mock-field",
-                      "value": Object {
-                        "label": "One",
-                        "value": "one",
-                      },
-                    },
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          onChange={[MockFunction]}
           plaintext={true}
           type="text"
           value=""
-        />,
+        >
+          
+        </Input>,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
           "onBlur": [MockFunction],
-          "onChange": [MockFunction] {
+          "onChange": [MockFunction],
+          "value": "",
+        },
+        "inputSize": "9",
+        "label": "field0",
+        "labelClass": "text-right",
+        "labelSize": "3",
+        "meta": Object {
+          "error": null,
+          "isValidating": false,
+          "plaintext": true,
+          "stringFormatter": [MockFunction] {
             "calls": Array [
               Array [
-                Object {
-                  "target": Object {
-                    "name": "mock-field",
-                    "value": Object {
-                      "label": "One",
-                      "value": "one",
-                    },
-                  },
-                },
+                "ojs_select_placeholder",
+              ],
+              Array [
+                "ojs_select_placeholder",
               ],
             ],
             "results": Array [
               Object {
                 "isThrow": false,
-                "value": undefined,
+                "value": "ojs_select_placeholder",
+              },
+              Object {
+                "isThrow": false,
+                "value": "ojs_select_placeholder",
               },
             ],
           },
-          "value": "",
-        },
-        "info": undefined,
-        "inputSize": 9,
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": 3,
-        "meta": Object {
-          "error": null,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction],
           "touched": false,
           "valid": true,
         },
@@ -294,9 +226,6 @@ ShallowWrapper {
           },
         ],
         "placeholder": "ojs_select_placeholder",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
       },
       "ref": null,
       "rendered": Object {
@@ -304,38 +233,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": undefined,
+          "children": "",
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
           "onBlur": [MockFunction],
-          "onChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "target": Object {
-                    "name": "mock-field",
-                    "value": Object {
-                      "label": "One",
-                      "value": "one",
-                    },
-                  },
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onChange": [MockFunction],
           "plaintext": true,
           "type": "text",
           "value": "",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": [Function],
       },
       "type": [Function],
@@ -379,7 +288,19 @@ ShallowWrapper {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_select_placeholder",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       }
@@ -411,51 +332,16 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Select
-        arrowRenderer={[Function]}
-        autosize={true}
-        backspaceRemoves={true}
-        backspaceToRemoveMessage="Press backspace to remove {label}"
+      "children": <StateManager
         className="react-select-control"
-        clearAllText="Clear all"
-        clearRenderer={[Function]}
-        clearValueText={
-          <FormComponent(FormText)
-            text="ojs_select_clearValue"
-          />
-        }
-        clearable={true}
-        closeOnSelect={true}
-        deleteRemoves={true}
-        delimiter=","
-        disabled={false}
-        escapeClearsValue={true}
-        filterOptions={[Function]}
+        defaultInputValue=""
+        defaultMenuIsOpen={false}
+        defaultValue={null}
         id="mock-field"
-        ignoreAccents={true}
-        ignoreCase={true}
-        inputProps={Object {}}
-        invalid={false}
-        isLoading={false}
-        joinValues={false}
-        labelKey="label"
-        matchPos="any"
-        matchProp="any"
-        menuBuffer={0}
-        menuRenderer={[Function]}
-        multi={false}
-        noResultsText={
-          <FormComponent(FormText)
-            text="ojs_select_noresults"
-          />
-        }
+        isDisabled={false}
+        isMulti={false}
         onBlur={[Function]}
-        onBlurResetsInput={true}
         onChange={[Function]}
-        onCloseResetsInput={true}
-        onSelectResetsInput={true}
-        openOnClick={true}
-        optionComponent={[Function]}
         options={
           Array [
             Object {
@@ -468,23 +354,7 @@ ShallowWrapper {
             },
           ]
         }
-        pageSize={5}
-        placeholder={
-          <FormComponent(FormText)
-            text="ojs_select_placeholder"
-          />
-        }
-        removeSelected={true}
-        required={false}
-        rtl={false}
-        scrollMenuIntoView={true}
-        searchable={true}
-        simpleValue={false}
-        tabSelectsValue={true}
-        trimFilter={true}
-        value=""
-        valueComponent={[Function]}
-        valueKey="value"
+        placeholder="ojs_select_placeholder"
       />,
       "field": Object {
         "disabled": false,
@@ -494,16 +364,27 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "",
       },
-      "info": undefined,
-      "inputSize": 9,
+      "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
-      "labelSize": 3,
+      "labelSize": "3",
       "meta": Object {
         "error": null,
         "isValidating": false,
         "plaintext": false,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "ojs_select_placeholder",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "ojs_select_placeholder",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       },
@@ -519,9 +400,6 @@ ShallowWrapper {
         },
       ],
       "placeholder": "ojs_select_placeholder",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -529,46 +407,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "arrowRenderer": [Function],
-        "autosize": true,
-        "backspaceRemoves": true,
-        "backspaceToRemoveMessage": "Press backspace to remove {label}",
         "className": "react-select-control",
-        "clearAllText": "Clear all",
-        "clearRenderer": [Function],
-        "clearValueText": <FormComponent(FormText)
-          text="ojs_select_clearValue"
-        />,
-        "clearable": true,
-        "closeOnSelect": true,
-        "deleteRemoves": true,
-        "delimiter": ",",
-        "disabled": false,
-        "escapeClearsValue": true,
-        "filterOptions": [Function],
+        "defaultInputValue": "",
+        "defaultMenuIsOpen": false,
+        "defaultValue": null,
         "id": "mock-field",
-        "ignoreAccents": true,
-        "ignoreCase": true,
-        "inputProps": Object {},
-        "invalid": false,
-        "isLoading": false,
-        "joinValues": false,
-        "labelKey": "label",
-        "matchPos": "any",
-        "matchProp": "any",
-        "menuBuffer": 0,
-        "menuRenderer": [Function],
-        "multi": false,
-        "noResultsText": <FormComponent(FormText)
-          text="ojs_select_noresults"
-        />,
+        "isDisabled": false,
+        "isMulti": false,
         "onBlur": [Function],
-        "onBlurResetsInput": true,
         "onChange": [Function],
-        "onCloseResetsInput": true,
-        "onSelectResetsInput": true,
-        "openOnClick": true,
-        "optionComponent": [Function],
         "options": Array [
           Object {
             "label": "One",
@@ -579,21 +426,8 @@ ShallowWrapper {
             "value": "two",
           },
         ],
-        "pageSize": 5,
-        "placeholder": <FormComponent(FormText)
-          text="ojs_select_placeholder"
-        />,
-        "removeSelected": true,
-        "required": false,
-        "rtl": false,
-        "scrollMenuIntoView": true,
-        "searchable": true,
-        "simpleValue": false,
-        "tabSelectsValue": true,
-        "trimFilter": true,
-        "value": "",
-        "valueComponent": [Function],
-        "valueKey": "value",
+        "placeholder": "ojs_select_placeholder",
+        "value": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -607,51 +441,16 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Select
-          arrowRenderer={[Function]}
-          autosize={true}
-          backspaceRemoves={true}
-          backspaceToRemoveMessage="Press backspace to remove {label}"
+        "children": <StateManager
           className="react-select-control"
-          clearAllText="Clear all"
-          clearRenderer={[Function]}
-          clearValueText={
-            <FormComponent(FormText)
-              text="ojs_select_clearValue"
-            />
-          }
-          clearable={true}
-          closeOnSelect={true}
-          deleteRemoves={true}
-          delimiter=","
-          disabled={false}
-          escapeClearsValue={true}
-          filterOptions={[Function]}
+          defaultInputValue=""
+          defaultMenuIsOpen={false}
+          defaultValue={null}
           id="mock-field"
-          ignoreAccents={true}
-          ignoreCase={true}
-          inputProps={Object {}}
-          invalid={false}
-          isLoading={false}
-          joinValues={false}
-          labelKey="label"
-          matchPos="any"
-          matchProp="any"
-          menuBuffer={0}
-          menuRenderer={[Function]}
-          multi={false}
-          noResultsText={
-            <FormComponent(FormText)
-              text="ojs_select_noresults"
-            />
-          }
+          isDisabled={false}
+          isMulti={false}
           onBlur={[Function]}
-          onBlurResetsInput={true}
           onChange={[Function]}
-          onCloseResetsInput={true}
-          onSelectResetsInput={true}
-          openOnClick={true}
-          optionComponent={[Function]}
           options={
             Array [
               Object {
@@ -664,23 +463,7 @@ ShallowWrapper {
               },
             ]
           }
-          pageSize={5}
-          placeholder={
-            <FormComponent(FormText)
-              text="ojs_select_placeholder"
-            />
-          }
-          removeSelected={true}
-          required={false}
-          rtl={false}
-          scrollMenuIntoView={true}
-          searchable={true}
-          simpleValue={false}
-          tabSelectsValue={true}
-          trimFilter={true}
-          value=""
-          valueComponent={[Function]}
-          valueKey="value"
+          placeholder="ojs_select_placeholder"
         />,
         "field": Object {
           "disabled": false,
@@ -690,16 +473,27 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "",
         },
-        "info": undefined,
-        "inputSize": 9,
+        "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
-        "labelSize": 3,
+        "labelSize": "3",
         "meta": Object {
           "error": null,
           "isValidating": false,
           "plaintext": false,
-          "stringFormatter": [MockFunction],
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "ojs_select_placeholder",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "ojs_select_placeholder",
+              },
+            ],
+          },
           "touched": false,
           "valid": true,
         },
@@ -715,9 +509,6 @@ ShallowWrapper {
           },
         ],
         "placeholder": "ojs_select_placeholder",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
       },
       "ref": null,
       "rendered": Object {
@@ -725,46 +516,15 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "arrowRenderer": [Function],
-          "autosize": true,
-          "backspaceRemoves": true,
-          "backspaceToRemoveMessage": "Press backspace to remove {label}",
           "className": "react-select-control",
-          "clearAllText": "Clear all",
-          "clearRenderer": [Function],
-          "clearValueText": <FormComponent(FormText)
-            text="ojs_select_clearValue"
-          />,
-          "clearable": true,
-          "closeOnSelect": true,
-          "deleteRemoves": true,
-          "delimiter": ",",
-          "disabled": false,
-          "escapeClearsValue": true,
-          "filterOptions": [Function],
+          "defaultInputValue": "",
+          "defaultMenuIsOpen": false,
+          "defaultValue": null,
           "id": "mock-field",
-          "ignoreAccents": true,
-          "ignoreCase": true,
-          "inputProps": Object {},
-          "invalid": false,
-          "isLoading": false,
-          "joinValues": false,
-          "labelKey": "label",
-          "matchPos": "any",
-          "matchProp": "any",
-          "menuBuffer": 0,
-          "menuRenderer": [Function],
-          "multi": false,
-          "noResultsText": <FormComponent(FormText)
-            text="ojs_select_noresults"
-          />,
+          "isDisabled": false,
+          "isMulti": false,
           "onBlur": [Function],
-          "onBlurResetsInput": true,
           "onChange": [Function],
-          "onCloseResetsInput": true,
-          "onSelectResetsInput": true,
-          "openOnClick": true,
-          "optionComponent": [Function],
           "options": Array [
             Object {
               "label": "One",
@@ -775,21 +535,8 @@ ShallowWrapper {
               "value": "two",
             },
           ],
-          "pageSize": 5,
-          "placeholder": <FormComponent(FormText)
-            text="ojs_select_placeholder"
-          />,
-          "removeSelected": true,
-          "required": false,
-          "rtl": false,
-          "scrollMenuIntoView": true,
-          "searchable": true,
-          "simpleValue": false,
-          "tabSelectsValue": true,
-          "trimFilter": true,
-          "value": "",
-          "valueComponent": [Function],
-          "valueKey": "value",
+          "placeholder": "ojs_select_placeholder",
+          "value": undefined,
         },
         "ref": null,
         "rendered": null,
