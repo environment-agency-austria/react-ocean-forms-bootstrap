@@ -180,19 +180,20 @@ ShallowWrapper {
           "prefix": "fas",
         }
       }
+      inverse={false}
       listItem={false}
       mask={null}
-      name=""
       pull={null}
       pulse={false}
       rotation={null}
       size={null}
       spin={false}
       symbol={false}
+      title=""
       transform={null}
     />
     <a
-      href="#"
+      href="#mock-id"
       onClick={[Function]}
     >
       mock-name
@@ -232,19 +233,20 @@ ShallowWrapper {
               "prefix": "fas",
             }
           }
+          inverse={false}
           listItem={false}
           mask={null}
-          name=""
           pull={null}
           pulse={false}
           rotation={null}
           size={null}
           spin={false}
           symbol={false}
+          title=""
           transform={null}
         />,
         <a
-          href="#"
+          href="#mock-id"
           onClick={[Function]}
         >
           mock-name
@@ -276,15 +278,16 @@ ShallowWrapper {
             "iconName": "exclamation-circle",
             "prefix": "fas",
           },
+          "inverse": false,
           "listItem": false,
           "mask": null,
-          "name": "",
           "pull": null,
           "pulse": false,
           "rotation": null,
           "size": null,
           "spin": false,
           "symbol": false,
+          "title": "",
           "transform": null,
         },
         "ref": null,
@@ -302,7 +305,7 @@ ShallowWrapper {
             " ",
             "mock-error",
           ],
-          "href": "#",
+          "href": "#mock-id",
           "onClick": [Function],
         },
         "ref": null,
@@ -342,19 +345,20 @@ ShallowWrapper {
                 "prefix": "fas",
               }
             }
+            inverse={false}
             listItem={false}
             mask={null}
-            name=""
             pull={null}
             pulse={false}
             rotation={null}
             size={null}
             spin={false}
             symbol={false}
+            title=""
             transform={null}
           />,
           <a
-            href="#"
+            href="#mock-id"
             onClick={[Function]}
           >
             mock-name
@@ -386,15 +390,16 @@ ShallowWrapper {
               "iconName": "exclamation-circle",
               "prefix": "fas",
             },
+            "inverse": false,
             "listItem": false,
             "mask": null,
-            "name": "",
             "pull": null,
             "pulse": false,
             "rotation": null,
             "size": null,
             "spin": false,
             "symbol": false,
+            "title": "",
             "transform": null,
           },
           "ref": null,
@@ -412,7 +417,7 @@ ShallowWrapper {
               " ",
               "mock-error",
             ],
-            "href": "#",
+            "href": "#mock-id",
             "onClick": [Function],
           },
           "ref": null,

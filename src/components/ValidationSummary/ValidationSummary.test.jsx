@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
 
-import ValidationSummary from './ValidationSummary';
+import { ValidationSummary } from './ValidationSummary';
 
 describe('<ValidationSummary />', () => {
   const wrapper = shallow((
