@@ -100,7 +100,6 @@ ShallowWrapper {
             tag="div"
           >
             <FieldLineAddon
-              content={null}
               plaintext={false}
               type="prepend"
             />
@@ -108,7 +107,6 @@ ShallowWrapper {
               id="mock-child"
             />
             <FieldLineAddon
-              content={null}
               plaintext={false}
               type="append"
             />
@@ -247,7 +245,6 @@ ShallowWrapper {
               tag="div"
             >
               <FieldLineAddon
-                content={null}
                 plaintext={false}
                 type="prepend"
               />
@@ -255,7 +252,6 @@ ShallowWrapper {
                 id="mock-child"
               />
               <FieldLineAddon
-                content={null}
                 plaintext={false}
                 type="append"
               />
@@ -294,7 +290,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <FieldLineAddon
-                  content={null}
                   plaintext={false}
                   type="prepend"
                 />,
@@ -302,7 +297,6 @@ ShallowWrapper {
                   id="mock-child"
                 />,
                 <FieldLineAddon
-                  content={null}
                   plaintext={false}
                   type="append"
                 />,
@@ -323,9 +317,9 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
-                  "content": null,
+                  "content": undefined,
                   "plaintext": false,
                   "type": "prepend",
                 },
@@ -347,9 +341,9 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
-                  "content": null,
+                  "content": undefined,
                   "plaintext": false,
                   "type": "append",
                 },
@@ -467,7 +461,6 @@ ShallowWrapper {
               tag="div"
             >
               <FieldLineAddon
-                content={null}
                 plaintext={false}
                 type="prepend"
               />
@@ -475,7 +468,6 @@ ShallowWrapper {
                 id="mock-child"
               />
               <FieldLineAddon
-                content={null}
                 plaintext={false}
                 type="append"
               />
@@ -614,7 +606,6 @@ ShallowWrapper {
                 tag="div"
               >
                 <FieldLineAddon
-                  content={null}
                   plaintext={false}
                   type="prepend"
                 />
@@ -622,7 +613,6 @@ ShallowWrapper {
                   id="mock-child"
                 />
                 <FieldLineAddon
-                  content={null}
                   plaintext={false}
                   type="append"
                 />
@@ -661,7 +651,6 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <FieldLineAddon
-                    content={null}
                     plaintext={false}
                     type="prepend"
                   />,
@@ -669,7 +658,6 @@ ShallowWrapper {
                     id="mock-child"
                   />,
                   <FieldLineAddon
-                    content={null}
                     plaintext={false}
                     type="append"
                   />,
@@ -690,9 +678,9 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "content": null,
+                    "content": undefined,
                     "plaintext": false,
                     "type": "prepend",
                   },
@@ -714,9 +702,9 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "content": null,
+                    "content": undefined,
                     "plaintext": false,
                     "type": "append",
                   },

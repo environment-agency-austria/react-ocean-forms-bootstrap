@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
-import FieldLineAddon from './FieldLineAddon';
+import { FieldLineAddon } from './FieldLineAddon';
 
 describe('<FieldLineAddon />', () => {
   const setup = (plaintext, content, type = 'prepend') => {

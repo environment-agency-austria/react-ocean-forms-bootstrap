@@ -14,7 +14,7 @@ import { FieldRow } from './FieldRow';
 import RequiredMarker from './RequiredMarker';
 import InvalidAlert from './InvalidAlert';
 import ValidatingSpinner from './ValidatingSpinner';
-import FieldLineAddon from './FieldLineAddon';
+import { FieldLineAddon } from './FieldLineAddon';
 import InfoAddonButton from './InfoAddonButton';
 import InfoAlert from './InfoAlert';
 import FieldError from './FieldError';
