@@ -5,45 +5,44 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import {
-  Input,
-  Label,
-  Col,
-  InputGroup,
-} from 'reactstrap';
-import { FormText } from 'react-ocean-forms';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
+import * as React from 'react';
 
+import { FormText } from 'react-ocean-forms';
+import { Col, Input, InputGroup, Label } from 'reactstrap';
+
+import { FieldError } from '../FieldLine/FieldError';
 import { FieldRow } from '../FieldLine/FieldRow';
-import { InvalidAlert } from '../FieldLine/InvalidAlert';
-import { ValidatingSpinner } from '../FieldLine/ValidatingSpinner';
 import { InfoAddonButton } from '../FieldLine/InfoAddonButton';
 import { InfoAlert } from '../FieldLine/InfoAlert';
-import { FieldError } from '../FieldLine/FieldError';
+import { InvalidAlert } from '../FieldLine/InvalidAlert';
+import { ValidatingSpinner } from '../FieldLine/ValidatingSpinner';
+
+import { ICheckProps } from './Check.types';
+
+interface ICheckState {
+  infoVisible: boolean;
+}
 
 /**
  * Component for displaying bootstrap
  * form groups with an html checkbox and
  * oForm support
  */
-class Check extends React.Component {
-  constructor(props) {
+export class Check extends React.Component<ICheckProps, ICheckState> {
+  public static displayName: string = 'Check';
+
+  constructor(props: ICheckProps) {
     super(props);
 
     this.state = {
       infoVisible: false,
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.toggleInfo = this.toggleInfo.bind(this);
   }
 
   /**
    * Toggles the visibility state of the info alert
    */
-  toggleInfo() {
+  private toggleInfo = (): void => {
     this.setState(prevState => ({
       infoVisible: !prevState.infoVisible,
     }));
@@ -54,17 +53,25 @@ class Check extends React.Component {
    * the checkbox so we can use the checked
    * property instead of value.
    */
-  handleChange(event) {
+  private handleChange = (event: React.MouseEvent<HTMLInputElement>): void => {
     const { field } = this.props;
+
+    // event.target.checked exists in this case
+    // because of the HtmlInputElement
+    // @ts-ignore
+    const checked = event.target.checked;
+
+    // @ts-ignore Tested to work
     field.onChange({
       target: {
         name: field.name,
-        value: event.target.checked,
+        value: checked,
       },
     });
   }
 
-  render() {
+  // tslint:disable-next-line:member-ordering
+  public render(): JSX.Element {
     const {
       field,
       label,
@@ -122,20 +129,3 @@ class Check extends React.Component {
     );
   }
 }
-
-Check.displayName = 'Check';
-
-Check.defaultProps = {
-  info: undefined,
-  className: undefined,
-};
-
-Check.propTypes = {
-  label: PropTypes.string.isRequired,
-  info: PropTypes.string,
-  meta: fieldMetaShape.isRequired,
-  field: fieldShape.isRequired,
-  className: PropTypes.string,
-};
-
-export default Check;

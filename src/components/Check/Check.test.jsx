@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import checkInfoToggling from '../../test-utils/checkInfoToggling';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import Check from './Check';
+import { Check } from './Check';
 
 describe('<Check />', () => {
   const FIELD_LABEL = 'field0';
