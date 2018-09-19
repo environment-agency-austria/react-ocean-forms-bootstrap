@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FieldRow from './FieldRow';
+import { FieldRow } from './FieldRow';
 import { createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 
 describe('<FieldRow />', () => {

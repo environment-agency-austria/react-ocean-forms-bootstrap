@@ -36,7 +36,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
         <Col
@@ -120,7 +120,7 @@ ShallowWrapper {
           />
         </Col>,
       ],
-      "className": "",
+      "className": undefined,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -417,7 +417,7 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <Col
@@ -501,7 +501,7 @@ ShallowWrapper {
             />
           </Col>,
         ],
-        "className": "",
+        "className": undefined,
         "meta": Object {
           "error": null,
           "isValidating": false,
