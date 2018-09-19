@@ -25,12 +25,20 @@
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{js,jsx,mjs}"
     ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "<rootDir>/src/tsconfig.json"
+      }
+    },
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest"
     },
     "moduleFileExtensions": [
+      "ts",
+      "tsx",
       "web.js",
       "mjs",
       "js",
