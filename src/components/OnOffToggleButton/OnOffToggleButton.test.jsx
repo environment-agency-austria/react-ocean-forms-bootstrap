@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import { BaseOnOffToggleButton } from './OnOffToggleButton';
+import { OnOffToggleButton } from './OnOffToggleButton';
 
 describe('<BaseOnOffToggleButton />', () => {
   const FIELD_LABEL = 'field0';
@@ -12,7 +12,7 @@ describe('<BaseOnOffToggleButton />', () => {
   const field = createMockField();
 
   const setup = props => shallow((
-    <BaseOnOffToggleButton
+    <OnOffToggleButton
       label={FIELD_LABEL}
       meta={meta}
       field={field}

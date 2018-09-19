@@ -40,20 +40,6 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Input
-        disabled={true}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value={false}
-      >
-        <FormComponent(FormText)
-          text="off"
-        />
-      </Input>,
       "field": Object {
         "disabled": true,
         "id": "mock-field",
@@ -62,11 +48,7 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": false,
       },
-      "info": undefined,
-      "inputSize": 9,
       "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": 3,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -77,42 +59,10 @@ ShallowWrapper {
       },
       "offLabel": "off",
       "onLabel": "on",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
+      "type": "text",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <FormComponent(FormText)
-          text="off"
-        />,
-        "disabled": true,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": false,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "text": "off",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -121,20 +71,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Input
-          disabled={true}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value={false}
-        >
-          <FormComponent(FormText)
-            text="off"
-          />
-        </Input>,
         "field": Object {
           "disabled": true,
           "id": "mock-field",
@@ -143,11 +79,7 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": false,
         },
-        "info": undefined,
-        "inputSize": 9,
         "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": 3,
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -158,42 +90,10 @@ ShallowWrapper {
         },
         "offLabel": "off",
         "onLabel": "on",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
+        "type": "text",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <FormComponent(FormText)
-            text="off"
-          />,
-          "disabled": true,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": false,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "text": "off",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
+      "rendered": null,
       "type": [Function],
     },
   ],
@@ -255,20 +155,6 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value="mock-value"
-      >
-        <FormComponent(FormText)
-          text="on"
-        />
-      </Input>,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -277,11 +163,7 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "mock-value",
       },
-      "info": undefined,
-      "inputSize": 9,
       "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": 3,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -292,42 +174,10 @@ ShallowWrapper {
       },
       "offLabel": "off",
       "onLabel": "on",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
+      "type": "text",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <FormComponent(FormText)
-          text="on"
-        />,
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": "mock-value",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "text": "on",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -336,20 +186,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value="mock-value"
-        >
-          <FormComponent(FormText)
-            text="on"
-          />
-        </Input>,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -358,11 +194,7 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "mock-value",
         },
-        "info": undefined,
-        "inputSize": 9,
         "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": 3,
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -373,42 +205,10 @@ ShallowWrapper {
         },
         "offLabel": "off",
         "onLabel": "on",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
+        "type": "text",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <FormComponent(FormText)
-            text="on"
-          />,
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": "mock-value",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "text": "on",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
+      "rendered": null,
       "type": [Function],
     },
   ],
@@ -470,20 +270,6 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value={false}
-      >
-        <FormComponent(FormText)
-          text="off"
-        />
-      </Input>,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -492,11 +278,7 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": false,
       },
-      "info": undefined,
-      "inputSize": 9,
       "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": 3,
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -507,42 +289,10 @@ ShallowWrapper {
       },
       "offLabel": "off",
       "onLabel": "on",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
+      "type": "text",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <FormComponent(FormText)
-          text="off"
-        />,
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": false,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "text": "off",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -551,20 +301,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value={false}
-        >
-          <FormComponent(FormText)
-            text="off"
-          />
-        </Input>,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -573,11 +309,7 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": false,
         },
-        "info": undefined,
-        "inputSize": 9,
         "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": 3,
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -588,42 +320,10 @@ ShallowWrapper {
         },
         "offLabel": "off",
         "onLabel": "on",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
+        "type": "text",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <FormComponent(FormText)
-            text="off"
-          />,
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": false,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "text": "off",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
+      "rendered": null,
       "type": [Function],
     },
   ],
@@ -725,11 +425,10 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "mock-value",
       },
-      "info": undefined,
-      "inputSize": 9,
+      "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
-      "labelSize": 3,
+      "labelSize": "3",
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -740,9 +439,6 @@ ShallowWrapper {
       },
       "offLabel": "off",
       "onLabel": "on",
-      "prefix": undefined,
-      "suffix": undefined,
-      "validators": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -895,11 +591,10 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "mock-value",
         },
-        "info": undefined,
-        "inputSize": 9,
+        "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
-        "labelSize": 3,
+        "labelSize": "3",
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -910,9 +605,6 @@ ShallowWrapper {
         },
         "offLabel": "off",
         "onLabel": "on",
-        "prefix": undefined,
-        "suffix": undefined,
-        "validators": undefined,
       },
       "ref": null,
       "rendered": Object {

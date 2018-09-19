@@ -5,28 +5,33 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ButtonGroup, Button, Input } from 'reactstrap';
-import { FormText, withForm } from 'react-ocean-forms';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
+import * as React from 'react';
+
+import { FormText } from 'react-ocean-forms';
+import { Button, ButtonGroup } from 'reactstrap';
 
 import { FieldLine } from '../FieldLine';
+import { Input } from '../Input';
+import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
 
 /**
  * Component for displaying bootstrap
  * form groups with an html input and
  * oForm support
  */
-class OnOffToggleButton extends React.Component {
-  constructor(props) {
-    super(props);
+export class OnOffToggleButton extends React.Component<IOnOffToggleButtonProps> {
+  public static displayName: string = 'OnOffToggleButton';
 
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
-  }
+  // tslint:disable-next-line:typedef
+  public static defaultProps = {
+    onLabel: 'ojs_togglebutton_on',
+    offLabel: 'ojs_togglebutton_off',
+  };
 
-  onRadioBtnClick(value) {
+  private onRadioBtnClick = (value: boolean): void => {
     const { field: { onChange, name } } = this.props;
+
+    // @ts-ignore Tested to work
     onChange({
       target: {
         name,
@@ -35,7 +40,16 @@ class OnOffToggleButton extends React.Component {
     });
   }
 
-  render() {
+  private onOnButtonClick = (): void => {
+    this.onRadioBtnClick(true);
+  }
+
+  private onOffButtonClick = (): void => {
+    this.onRadioBtnClick(false);
+  }
+
+  // tslint:disable-next-line:member-ordering
+  public render(): JSX.Element {
     const {
       field,
       onLabel,
@@ -52,11 +66,7 @@ class OnOffToggleButton extends React.Component {
 
     if (plaintext) {
       return (
-        <FieldLine {...this.props}>
-          <Input {...field} plaintext>
-            <FormText text={isOn ? onLabel : offLabel} />
-          </Input>
-        </FieldLine>
+        <Input {...this.props} />
       );
     }
 
@@ -66,7 +76,7 @@ class OnOffToggleButton extends React.Component {
           <Button
             id={`${field.id}-on`}
             color="primary"
-            onClick={() => this.onRadioBtnClick(true)}
+            onClick={this.onOnButtonClick}
             outline
             active={isOn}
             disabled={field.disabled}
@@ -76,7 +86,7 @@ class OnOffToggleButton extends React.Component {
           <Button
             id={`${field.id}-off`}
             color="primary"
-            onClick={() => this.onRadioBtnClick(false)}
+            onClick={this.onOffButtonClick}
             outline
             active={!isOn}
             disabled={field.disabled}
@@ -88,21 +98,3 @@ class OnOffToggleButton extends React.Component {
     );
   }
 }
-
-OnOffToggleButton.displayName = 'OnOffToggleButton';
-
-OnOffToggleButton.defaultProps = {
-  onLabel: 'ojs_togglebutton_on',
-  offLabel: 'ojs_togglebutton_off',
-};
-
-OnOffToggleButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  onLabel: PropTypes.string,
-  offLabel: PropTypes.string,
-  meta: fieldMetaShape.isRequired,
-  field: fieldShape.isRequired,
-};
-
-export const BaseOnOffToggleButton = OnOffToggleButton;
-export default withForm(OnOffToggleButton);
