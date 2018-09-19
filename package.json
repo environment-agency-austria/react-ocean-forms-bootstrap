@@ -20,14 +20,16 @@
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
-      "**/?(*.)+(spec|test).js?(x)"
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).js?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
     ],
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{js,jsx,mjs}"
     ],
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "<rootDir>/src/tsconfig.json"
+        "tsConfig": "<rootDir>/src/tsconfig.json"
       }
     },
     "testEnvironment": "jsdom",
