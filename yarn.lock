@@ -5728,9 +5728,9 @@ react-lifecycles-compat@^3.0.4:
   dependencies:
     prop-types "^15.6.1"
 
-react-ocean-forms@^2.0.0-alpha1:
-  version "2.0.0-alpha1"
-  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-2.0.0-alpha1.tgz#ab19e565ab80ecfb8346b5d0ebb9a44d3091a44a"
+react-ocean-forms@^2.0.0-alpha2:
+  version "2.0.0-alpha2"
+  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-2.0.0-alpha2.tgz#1f5edcccf1b6964339818490f86c15a88a8fe640"
   dependencies:
     prop-types "^15.6.1"
 
