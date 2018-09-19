@@ -5,47 +5,55 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+
+import * as moment from 'moment';
+// tslint:disable-next-line:import-name
 import Datetime from 'react-datetime';
-import moment from 'moment';
 import { Input as StrapInput } from 'reactstrap';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
 import { FieldLine } from '../FieldLine';
+import { IDatePickerProps } from './DatePicker.types';
 
 /**
  * Component for displaying datetime
  */
-class DatePicker extends React.Component {
-  constructor(props) {
-    super(props);
+export class DatePicker extends React.Component<IDatePickerProps> {
+  public static displayName: string = 'DatePicker';
 
-    this.handleChange = this.handleChange.bind(this);
+  private handleChange = (value: moment.Moment | string): void => {
+    if (!(moment.isMoment(value))) { return; }
+
+    const { field } = this.props;
+    // @ts-ignore Tested to work
+    field.onChange({
+      target: {
+        name: field.name,
+        value: value.format(),
+      },
+    });
   }
 
-  handleChange(value) {
-    if (value instanceof moment) {
-      const { field } = this.props;
-      field.onChange({
-        target: {
-          name: field.name,
-          value: value.format(),
-        },
-      });
-    }
-  }
-
-  render() {
+  // tslint:disable-next-line:member-ordering
+  public render(): JSX.Element {
     const {
       field,
       dateFormat,
       timeFormat,
-      placeholder,
       meta,
     } = this.props;
 
-    const formattedValue = moment(field.value);
+    const fieldValue = field.value;
+    if (typeof fieldValue !== 'string' && typeof fieldValue !== 'number'
+        && typeof fieldValue !== 'number' && !moment.isMoment(fieldValue)
+        && fieldValue !== undefined) {
+      throw new Error(
+        'Incompatible field value supplied for input component '
+        + `${field.id}. Only values with type string, number or undefined are allowed.`,
+      );
+    }
+
+    const formattedValue = moment(fieldValue);
     const inputProps = {
       disabled: field.disabled,
     };
@@ -71,7 +79,7 @@ class DatePicker extends React.Component {
 
       return (
         <FieldLine {...this.props}>
-          <StrapInput {...field} plaintext>{displayValue}</StrapInput>
+          <StrapInput {...field} value="" plaintext>{displayValue}</StrapInput>
         </FieldLine>
       );
     }
@@ -79,9 +87,7 @@ class DatePicker extends React.Component {
     return (
       <FieldLine {...this.props}>
         <Datetime
-          id={field.id}
           value={formattedValue}
-          placeholder={placeholder}
           onChange={this.handleChange}
           dateFormat={dateFormat}
           timeFormat={timeFormat}
@@ -92,24 +98,3 @@ class DatePicker extends React.Component {
     );
   }
 }
-
-DatePicker.displayName = 'DatePicker';
-
-DatePicker.defaultProps = {
-  info: undefined,
-  placeholder: 'ojs_select_placeholder',
-  dateFormat: null,
-  timeFormat: null,
-};
-
-DatePicker.propTypes = {
-  label: PropTypes.string.isRequired,
-  info: PropTypes.string,
-  meta: fieldMetaShape.isRequired,
-  field: fieldShape.isRequired,
-  placeholder: PropTypes.string,
-  dateFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  timeFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-};
-
-export default DatePicker;

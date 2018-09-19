@@ -3,7 +3,7 @@ import Datetime from 'react-datetime';
 import { shallow } from 'enzyme';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import DatePicker from './DatePicker';
+import { DatePicker } from './DatePicker';
 import { FieldLine } from '../FieldLine';
 
 describe('<DatePicker />', () => {
