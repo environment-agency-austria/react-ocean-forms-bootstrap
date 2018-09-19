@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ValidatingSpinner from './ValidatingSpinner';
+import { ValidatingSpinner } from './ValidatingSpinner';
 
 describe('<ValidatingSpinner />', () => {
   const setup = isValidating => shallow((
