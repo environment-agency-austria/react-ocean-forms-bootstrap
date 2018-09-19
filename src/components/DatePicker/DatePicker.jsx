@@ -12,7 +12,7 @@ import moment from 'moment';
 import { Input as StrapInput } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 /**
  * Component for displaying datetime

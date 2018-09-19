@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import FileInput from './FileInput';
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 describe('<FileInput />', () => {
   const FIELD_ID = 'field0';

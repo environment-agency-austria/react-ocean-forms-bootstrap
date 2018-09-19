@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import DatePicker from './DatePicker';
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 describe('<DatePicker />', () => {
   const FIELD_LABEL = 'field0';

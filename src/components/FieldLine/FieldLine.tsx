@@ -4,27 +4,41 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Label, Col, InputGroup } from 'reactstrap';
-import { FormText } from 'react-ocean-forms';
-import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
+import * as React from 'react';
 
-import { FieldRow } from './FieldRow';
-import { RequiredMarker } from './RequiredMarker';
-import { InvalidAlert } from './InvalidAlert';
-import { ValidatingSpinner } from './ValidatingSpinner';
+import { FormText } from 'react-ocean-forms';
+import { Col, InputGroup, Label } from 'reactstrap';
+
+import { FieldError } from './FieldError';
 import { FieldLineAddon } from './FieldLineAddon';
+import { FieldRow } from './FieldRow';
 import { InfoAddonButton } from './InfoAddonButton';
 import { InfoAlert } from './InfoAlert';
-import { FieldError } from './FieldError';
+import { InvalidAlert } from './InvalidAlert';
+import { RequiredMarker } from './RequiredMarker';
+import { ValidatingSpinner } from './ValidatingSpinner';
+
+import { IFieldLineProps } from './FieldLine.types';
+
+interface IFieldLineState {
+  infoVisible: boolean;
+}
 
 /**
  * Component for displaying bootstrap
  * form groups with any children
  */
-class FieldLine extends React.Component {
-  constructor(props) {
+export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState> {
+  public static displayName: string = 'FieldLine';
+
+  // tslint:disable-next-line:typedef
+  public static defaultProps = {
+    labelSize: '3',
+    inputSize: '9',
+    labelClass: 'text-right',
+  };
+
+  constructor(props: IFieldLineProps) {
     super(props);
 
     this.state = {
@@ -37,13 +51,14 @@ class FieldLine extends React.Component {
   /**
    * Toggles the visibility of the info alert
    */
-  toggleInfo() {
+  private toggleInfo(): void {
     this.setState(prevState => ({
       infoVisible: !prevState.infoVisible,
     }));
   }
 
-  render() {
+  // tslint:disable-next-line:member-ordering
+  public render(): JSX.Element {
     const {
       field,
       meta,
@@ -91,42 +106,3 @@ class FieldLine extends React.Component {
     );
   }
 }
-
-FieldLine.displayName = 'FieldLine';
-
-FieldLine.defaultProps = {
-  info: undefined,
-  validators: undefined,
-  prefix: undefined,
-  suffix: undefined,
-  labelSize: 3,
-  inputSize: 9,
-  labelClass: 'text-right',
-};
-
-FieldLine.propTypes = {
-  label: PropTypes.string.isRequired,
-  info: PropTypes.string,
-  meta: fieldMetaShape.isRequired,
-  field: fieldShape.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  validators: PropTypes.arrayOf(PropTypes.func),
-  prefix: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-    PropTypes.func,
-  ]),
-  suffix: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-    PropTypes.func,
-  ]),
-  labelSize: PropTypes.string,
-  inputSize: PropTypes.string,
-  labelClass: PropTypes.string,
-};
-
-export default FieldLine;

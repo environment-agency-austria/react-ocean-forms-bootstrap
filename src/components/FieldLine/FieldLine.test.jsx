@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FieldLine from './FieldLine';
+import { FieldLine } from './FieldLine';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import checkInfoToggling from '../../test-utils/checkInfoToggling';
 

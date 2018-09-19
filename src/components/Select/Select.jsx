@@ -12,7 +12,7 @@ import { Input as StrapInput } from 'reactstrap';
 import { FormText } from 'react-ocean-forms';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 /**
  * Component for displaying bootstrap

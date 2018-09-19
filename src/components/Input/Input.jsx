@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { Input as StrapInput } from 'reactstrap';
 import { fieldMetaShape, fieldShape } from 'react-ocean-forms-legacy';
 
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 /**
  * Component for displaying bootstrap

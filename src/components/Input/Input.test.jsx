@@ -4,7 +4,7 @@ import { Input as StrapInput } from 'reactstrap';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import Input from './Input';
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 describe('<Input />', () => {
   const FIELD_ID = 'field0';

@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import mockEvent, { KEYCODE } from '../../test-utils/enzymeEventUtils';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import Select from './Select';
-import FieldLine from '../FieldLine';
+import { FieldLine } from '../FieldLine';
 
 describe('<Select />', () => {
   const FIELD_LABEL = 'field0';
