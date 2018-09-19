@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
-import InfoAlert from './InfoAlert';
+import { InfoAlert } from './InfoAlert';
 
 describe('<InfoAlert />', () => {
   const setup = (plaintext, info, visible = false, onClose = () => {}) => {

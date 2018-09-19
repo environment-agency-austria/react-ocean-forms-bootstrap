@@ -20,7 +20,7 @@ import { FieldRow } from '../FieldLine/FieldRow';
 import InvalidAlert from '../FieldLine/InvalidAlert';
 import ValidatingSpinner from '../FieldLine/ValidatingSpinner';
 import { InfoAddonButton } from '../FieldLine/InfoAddonButton';
-import InfoAlert from '../FieldLine/InfoAlert';
+import { InfoAlert } from '../FieldLine/InfoAlert';
 import FieldError from '../FieldLine/FieldError';
 
 /**

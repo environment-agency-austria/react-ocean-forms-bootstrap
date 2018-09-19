@@ -16,7 +16,7 @@ import InvalidAlert from './InvalidAlert';
 import ValidatingSpinner from './ValidatingSpinner';
 import { FieldLineAddon } from './FieldLineAddon';
 import { InfoAddonButton } from './InfoAddonButton';
-import InfoAlert from './InfoAlert';
+import { InfoAlert } from './InfoAlert';
 import FieldError from './FieldError';
 
 /**
