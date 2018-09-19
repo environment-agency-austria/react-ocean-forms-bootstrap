@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { Input as StrapInput } from 'reactstrap';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import Input from './Input';
+import { Input } from './Input';
 import { FieldLine } from '../FieldLine';
 
 describe('<Input />', () => {
