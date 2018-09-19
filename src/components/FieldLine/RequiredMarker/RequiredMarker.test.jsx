@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { validators as defaultValidators } from 'react-ocean-forms';
 
-import RequiredMarker from './RequiredMarker';
+import { RequiredMarker } from './RequiredMarker';
 import { createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 
 describe('<RequiredMarker />', () => {
