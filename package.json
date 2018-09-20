@@ -17,7 +17,7 @@
   "jest": {
     "setupFiles": [
       "<rootDir>/config/jest/enzyme.js",
-      "<rootDir>/src/utils/registerCustomMessages.js"
+      "<rootDir>/src/utils/registerCustomMessages.ts"
     ],
     "testMatch": [
       "**/__tests__/**/*.js?(x)",
