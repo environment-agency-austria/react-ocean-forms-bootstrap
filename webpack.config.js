@@ -11,7 +11,7 @@ const srcPath = path.resolve(__dirname, 'src');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
     main: './src/scss/main.scss',
   },
   devtool: 'source-map',
