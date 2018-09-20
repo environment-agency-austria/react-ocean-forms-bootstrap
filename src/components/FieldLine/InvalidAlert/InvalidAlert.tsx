@@ -21,7 +21,7 @@ export class InvalidAlert extends React.Component<IInvalidAlertProps> {
   public render(): JSX.Element | null {
     const { valid } = this.props;
 
-    if (!valid) { return null; }
+    if (valid) { return null; }
 
     return (
       <FontAwesomeIcon
