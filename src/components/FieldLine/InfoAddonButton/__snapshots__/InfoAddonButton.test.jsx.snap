@@ -45,15 +45,16 @@ ShallowWrapper {
               "prefix": "fas",
             }
           }
+          inverse={false}
           listItem={false}
           mask={null}
-          name=""
           pull={null}
           pulse={false}
           rotation={null}
           size={null}
           spin={false}
           symbol={false}
+          title=""
           transform={null}
         />
       </Button>,
@@ -83,15 +84,16 @@ ShallowWrapper {
               "prefix": "fas",
             }
           }
+          inverse={false}
           listItem={false}
           mask={null}
-          name=""
           pull={null}
           pulse={false}
           rotation={null}
           size={null}
           spin={false}
           symbol={false}
+          title=""
           transform={null}
         />,
         "color": "secondary",
@@ -120,15 +122,16 @@ ShallowWrapper {
             "iconName": "exclamation-circle",
             "prefix": "fas",
           },
+          "inverse": false,
           "listItem": false,
           "mask": null,
-          "name": "",
           "pull": null,
           "pulse": false,
           "rotation": null,
           "size": null,
           "spin": false,
           "symbol": false,
+          "title": "",
           "transform": null,
         },
         "ref": null,
@@ -170,15 +173,16 @@ ShallowWrapper {
                 "prefix": "fas",
               }
             }
+            inverse={false}
             listItem={false}
             mask={null}
-            name=""
             pull={null}
             pulse={false}
             rotation={null}
             size={null}
             spin={false}
             symbol={false}
+            title=""
             transform={null}
           />
         </Button>,
@@ -208,15 +212,16 @@ ShallowWrapper {
                 "prefix": "fas",
               }
             }
+            inverse={false}
             listItem={false}
             mask={null}
-            name=""
             pull={null}
             pulse={false}
             rotation={null}
             size={null}
             spin={false}
             symbol={false}
+            title=""
             transform={null}
           />,
           "color": "secondary",
@@ -245,15 +250,16 @@ ShallowWrapper {
               "iconName": "exclamation-circle",
               "prefix": "fas",
             },
+            "inverse": false,
             "listItem": false,
             "mask": null,
-            "name": "",
             "pull": null,
             "pulse": false,
             "rotation": null,
             "size": null,
             "spin": false,
             "symbol": false,
+            "title": "",
             "transform": null,
           },
           "ref": null,

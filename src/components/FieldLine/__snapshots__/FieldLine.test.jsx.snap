@@ -14,10 +14,10 @@ ShallowWrapper {
         "value": "mock-value",
       }
     }
-    inputSize={9}
+    inputSize="9"
     label="label"
     labelClass="text-right"
-    labelSize={3}
+    labelSize="3"
     meta={
       Object {
         "error": null,
@@ -49,7 +49,7 @@ ShallowWrapper {
         <Label
           className="text-right"
           for="mock-field"
-          sm={3}
+          sm="3"
           tag="label"
           widths={
             Array [
@@ -84,7 +84,7 @@ ShallowWrapper {
           />
         </Label>,
         <Col
-          sm={9}
+          sm="9"
           tag="div"
           widths={
             Array [
@@ -168,7 +168,7 @@ ShallowWrapper {
           ],
           "className": "text-right",
           "for": "mock-field",
-          "sm": 3,
+          "sm": "3",
           "tag": "label",
           "widths": Array [
             "xs",
@@ -183,7 +183,7 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "valid": true,
             },
@@ -194,7 +194,7 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "isValidating": false,
             },
@@ -216,7 +216,7 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "meta": Object {
                 "error": null,
@@ -271,7 +271,7 @@ ShallowWrapper {
               visible={false}
             />,
           ],
-          "sm": 9,
+          "sm": "9",
           "tag": "div",
           "widths": Array [
             "xs",
@@ -354,7 +354,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "info": undefined,
                   "onClick": [Function],
@@ -367,7 +367,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "error": null,
                   "id": "mock-field_errors",
@@ -383,7 +383,7 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "info": undefined,
               "onClose": [Function],
@@ -410,7 +410,7 @@ ShallowWrapper {
           <Label
             className="text-right"
             for="mock-field"
-            sm={3}
+            sm="3"
             tag="label"
             widths={
               Array [
@@ -445,7 +445,7 @@ ShallowWrapper {
             />
           </Label>,
           <Col
-            sm={9}
+            sm="9"
             tag="div"
             widths={
               Array [
@@ -529,7 +529,7 @@ ShallowWrapper {
             ],
             "className": "text-right",
             "for": "mock-field",
-            "sm": 3,
+            "sm": "3",
             "tag": "label",
             "widths": Array [
               "xs",
@@ -544,7 +544,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "valid": true,
               },
@@ -555,7 +555,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "isValidating": false,
               },
@@ -577,7 +577,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "meta": Object {
                   "error": null,
@@ -632,7 +632,7 @@ ShallowWrapper {
                 visible={false}
               />,
             ],
-            "sm": 9,
+            "sm": "9",
             "tag": "div",
             "widths": Array [
               "xs",
@@ -715,7 +715,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "info": undefined,
                     "onClick": [Function],
@@ -728,7 +728,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "error": null,
                     "id": "mock-field_errors",
@@ -744,7 +744,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "info": undefined,
                 "onClose": [Function],

@@ -4,7 +4,6 @@ exports[`<DatePicker /> should react on meta.plaintext correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DatePicker
-    dateFormat={null}
     field={
       Object {
         "disabled": false,
@@ -26,8 +25,6 @@ ShallowWrapper {
         "valid": true,
       }
     }
-    placeholder="ojs_select_placeholder"
-    timeFormat={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -53,7 +50,6 @@ ShallowWrapper {
       >
         Invalid date
       </Input>,
-      "dateFormat": null,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -62,11 +58,10 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "",
       },
-      "info": undefined,
-      "inputSize": 9,
+      "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
-      "labelSize": 3,
+      "labelSize": "3",
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -75,11 +70,6 @@ ShallowWrapper {
         "touched": false,
         "valid": true,
       },
-      "placeholder": "ojs_select_placeholder",
-      "prefix": undefined,
-      "suffix": undefined,
-      "timeFormat": null,
-      "validators": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -121,7 +111,6 @@ ShallowWrapper {
         >
           Invalid date
         </Input>,
-        "dateFormat": null,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -130,11 +119,10 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "",
         },
-        "info": undefined,
-        "inputSize": 9,
+        "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
-        "labelSize": 3,
+        "labelSize": "3",
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -143,11 +131,6 @@ ShallowWrapper {
           "touched": false,
           "valid": true,
         },
-        "placeholder": "ojs_select_placeholder",
-        "prefix": undefined,
-        "suffix": undefined,
-        "timeFormat": null,
-        "validators": undefined,
       },
       "ref": null,
       "rendered": Object {
@@ -194,7 +177,6 @@ exports[`<DatePicker /> should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DatePicker
-    dateFormat={null}
     field={
       Object {
         "disabled": false,
@@ -216,8 +198,6 @@ ShallowWrapper {
         "valid": true,
       }
     }
-    placeholder="ojs_select_placeholder"
-    timeFormat={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -235,9 +215,8 @@ ShallowWrapper {
         className=""
         closeOnSelect={true}
         closeOnTab={true}
-        dateFormat={null}
+        dateFormat={true}
         defaultValue=""
-        id="mock-field"
         input={true}
         inputProps={
           Object {
@@ -250,14 +229,12 @@ ShallowWrapper {
         onNavigateBack={[Function]}
         onNavigateForward={[Function]}
         onViewModeChange={[Function]}
-        placeholder="ojs_select_placeholder"
         strictParsing={true}
         timeConstraints={Object {}}
-        timeFormat={null}
+        timeFormat={true}
         utc={false}
         value={null}
       />,
-      "dateFormat": null,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -266,11 +243,10 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "",
       },
-      "info": undefined,
-      "inputSize": 9,
+      "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
-      "labelSize": 3,
+      "labelSize": "3",
       "meta": Object {
         "error": null,
         "isValidating": false,
@@ -279,11 +255,6 @@ ShallowWrapper {
         "touched": false,
         "valid": true,
       },
-      "placeholder": "ojs_select_placeholder",
-      "prefix": undefined,
-      "suffix": undefined,
-      "timeFormat": null,
-      "validators": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -294,9 +265,8 @@ ShallowWrapper {
         "className": "",
         "closeOnSelect": true,
         "closeOnTab": true,
-        "dateFormat": null,
+        "dateFormat": true,
         "defaultValue": "",
-        "id": "mock-field",
         "input": true,
         "inputProps": Object {
           "disabled": false,
@@ -307,10 +277,9 @@ ShallowWrapper {
         "onNavigateBack": [Function],
         "onNavigateForward": [Function],
         "onViewModeChange": [Function],
-        "placeholder": "ojs_select_placeholder",
         "strictParsing": true,
         "timeConstraints": Object {},
-        "timeFormat": null,
+        "timeFormat": true,
         "utc": false,
         "value": null,
       },
@@ -330,9 +299,8 @@ ShallowWrapper {
           className=""
           closeOnSelect={true}
           closeOnTab={true}
-          dateFormat={null}
+          dateFormat={true}
           defaultValue=""
-          id="mock-field"
           input={true}
           inputProps={
             Object {
@@ -345,14 +313,12 @@ ShallowWrapper {
           onNavigateBack={[Function]}
           onNavigateForward={[Function]}
           onViewModeChange={[Function]}
-          placeholder="ojs_select_placeholder"
           strictParsing={true}
           timeConstraints={Object {}}
-          timeFormat={null}
+          timeFormat={true}
           utc={false}
           value={null}
         />,
-        "dateFormat": null,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -361,11 +327,10 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "",
         },
-        "info": undefined,
-        "inputSize": 9,
+        "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
-        "labelSize": 3,
+        "labelSize": "3",
         "meta": Object {
           "error": null,
           "isValidating": false,
@@ -374,11 +339,6 @@ ShallowWrapper {
           "touched": false,
           "valid": true,
         },
-        "placeholder": "ojs_select_placeholder",
-        "prefix": undefined,
-        "suffix": undefined,
-        "timeFormat": null,
-        "validators": undefined,
       },
       "ref": null,
       "rendered": Object {
@@ -389,9 +349,8 @@ ShallowWrapper {
           "className": "",
           "closeOnSelect": true,
           "closeOnTab": true,
-          "dateFormat": null,
+          "dateFormat": true,
           "defaultValue": "",
-          "id": "mock-field",
           "input": true,
           "inputProps": Object {
             "disabled": false,
@@ -402,10 +361,9 @@ ShallowWrapper {
           "onNavigateBack": [Function],
           "onNavigateForward": [Function],
           "onViewModeChange": [Function],
-          "placeholder": "ojs_select_placeholder",
           "strictParsing": true,
           "timeConstraints": Object {},
-          "timeFormat": null,
+          "timeFormat": true,
           "utc": false,
           "value": null,
         },
