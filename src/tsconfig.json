@@ -28,5 +28,7 @@
     // disable javascript for now. The js sources are transpiled with webpack anyway
     "allowJs": false,
     "checkJs": false,
+    // enable this for import moment from moment.
+    "allowSyntheticDefaultImports": true
   }
 }
