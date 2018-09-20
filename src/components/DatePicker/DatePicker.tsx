@@ -9,7 +9,7 @@ import * as React from 'react';
 
 import * as moment from 'moment';
 // tslint:disable-next-line:import-name
-import Datetime from 'react-datetime';
+import * as Datetime from 'react-datetime';
 import { Input as StrapInput } from 'reactstrap';
 
 import { FieldLine } from '../FieldLine';
