@@ -5852,9 +5852,9 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-ocean-forms@^2.0.0-alpha2:
-  version "2.0.0-alpha2"
-  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-2.0.0-alpha2.tgz#1f5edcccf1b6964339818490f86c15a88a8fe640"
+react-ocean-forms@^2.0.0-alpha3:
+  version "2.0.0-alpha3"
+  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-2.0.0-alpha3.tgz#e1a4c3cad4b30d9bc77bf6ee33196a11266414d7"
   dependencies:
     prop-types "^15.6.1"
 
