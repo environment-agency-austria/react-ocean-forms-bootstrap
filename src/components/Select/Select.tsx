@@ -35,11 +35,9 @@ export class Select extends React.Component<ISelectProps> {
   private handleChange = (value: ISelectOption): void => {
     const { field } = this.props;
 
-    // @ts-ignore Tested to work
     field.onChange({
       target: {
         value,
-        name: field.name,
       },
     });
   }
@@ -52,12 +50,7 @@ export class Select extends React.Component<ISelectProps> {
   private handleBlur = (): void => {
     const { field } = this.props;
 
-    // @ts-ignore Tested to work
-    field.onBlur({
-      target: {
-        name: field.name,
-      },
-    });
+    field.onBlur();
   }
 
   // tslint:disable-next-line:member-ordering

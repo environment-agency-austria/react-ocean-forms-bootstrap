@@ -29,12 +29,10 @@ export class OnOffToggleButton extends React.Component<IOnOffToggleButtonProps> 
   };
 
   private onRadioBtnClick = (value: boolean): void => {
-    const { field: { onChange, name } } = this.props;
+    const { field: { onChange } } = this.props;
 
-    // @ts-ignore Tested to work
     onChange({
       target: {
-        name,
         value,
       },
     });

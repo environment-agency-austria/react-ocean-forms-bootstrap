@@ -57,7 +57,7 @@ describe('<BaseOnOffToggleButton />', () => {
 
       it('should trigger onChange on click', () => {
         buttonOn.simulate('click');
-        expect(field.onChange).toHaveBeenCalledWith({ target: { name: field.name, value: value === 'on' } });
+        expect(field.onChange).toHaveBeenCalledWith({ target: { value: value === 'on' } });
       });
     });
   };

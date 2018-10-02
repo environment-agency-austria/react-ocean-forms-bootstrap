@@ -25,10 +25,8 @@ export class DatePicker extends React.Component<IDatePickerProps> {
     if (!(moment.isMoment(value))) { return; }
 
     const { field } = this.props;
-    // @ts-ignore Tested to work
     field.onChange({
       target: {
-        name: field.name,
         value: value.format(),
       },
     });

@@ -61,10 +61,8 @@ export class Check extends React.Component<ICheckProps, ICheckState> {
     // @ts-ignore
     const checked = event.target.checked;
 
-    // @ts-ignore Tested to work
     field.onChange({
       target: {
-        name: field.name,
         value: checked,
       },
     });

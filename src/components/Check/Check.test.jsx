@@ -30,7 +30,6 @@ describe('<Check />', () => {
     wrapper.find('Input').simulate('click', event);
     expect(MOCK_FIELD.onChange).toHaveBeenCalledWith({
       target: {
-        name: MOCK_FIELD.name,
         value: false,
       },
     });
