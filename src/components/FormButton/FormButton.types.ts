@@ -1,7 +1,8 @@
-import { IFormButtonProps as CoreIFormButtonProps } from 'react-ocean-forms';
+import {FormButton, PropsOf, Subtract } from 'react-ocean-forms';
+
+type TUpstreamButtonProps = PropsOf<typeof FormButton>;
 
 /**
  * Props for the FormButton component
  */
-// tslint:disable-next-line:no-empty-interface
-export interface IFormButtonProps extends CoreIFormButtonProps { }
+export interface IFormButtonProps extends Subtract<TUpstreamButtonProps, { component: string }> { }
