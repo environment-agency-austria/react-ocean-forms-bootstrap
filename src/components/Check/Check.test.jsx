@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import checkInfoToggling from '../../test-utils/checkInfoToggling';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import { Check } from './Check';
+import { BaseCheck } from './Check';
 
 describe('<Check />', () => {
   const FIELD_LABEL = 'field0';
@@ -12,7 +12,7 @@ describe('<Check />', () => {
   const MOCK_FIELD = createMockField();
 
   const wrapper = shallow((
-    <Check
+    <BaseCheck
       label={FIELD_LABEL}
       meta={MOCK_META}
       field={MOCK_FIELD}

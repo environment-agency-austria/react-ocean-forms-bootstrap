@@ -7,7 +7,7 @@
 
 import * as React from 'react';
 
-import { FormText } from 'react-ocean-forms';
+import { FormText, withField } from 'react-ocean-forms';
 import { Col, Input, InputGroup, Label } from 'reactstrap';
 
 import { FieldError } from '../FieldLine/FieldError';
@@ -28,7 +28,7 @@ interface ICheckState {
  * form groups with an html checkbox and
  * oForm support
  */
-export class Check extends React.Component<ICheckProps, ICheckState> {
+export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
   public static displayName: string = 'Check';
 
   constructor(props: ICheckProps) {
@@ -127,3 +127,5 @@ export class Check extends React.Component<ICheckProps, ICheckState> {
     );
   }
 }
+
+export const Check = withField(BaseCheck);

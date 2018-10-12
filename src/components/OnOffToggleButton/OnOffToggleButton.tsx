@@ -7,11 +7,11 @@
 
 import * as React from 'react';
 
-import { FormText } from 'react-ocean-forms';
+import { FormText, withField } from 'react-ocean-forms';
 import { Button, ButtonGroup } from 'reactstrap';
 
 import { FieldLine } from '../FieldLine';
-import { Input } from '../Input';
+import { BaseInput } from '../Input';
 import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
 
 /**
@@ -19,7 +19,7 @@ import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
  * form groups with an html input and
  * oForm support
  */
-export class OnOffToggleButton extends React.Component<IOnOffToggleButtonProps> {
+export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonProps> {
   public static displayName: string = 'OnOffToggleButton';
 
   // tslint:disable-next-line:typedef
@@ -64,7 +64,7 @@ export class OnOffToggleButton extends React.Component<IOnOffToggleButtonProps> 
 
     if (plaintext) {
       return (
-        <Input {...this.props} />
+        <BaseInput {...this.props} />
       );
     }
 
@@ -96,3 +96,5 @@ export class OnOffToggleButton extends React.Component<IOnOffToggleButtonProps> 
     );
   }
 }
+
+export const OnOffToggleButton = withField(BaseOnOffToggleButton);

@@ -7,6 +7,7 @@
 
 import * as React from 'react';
 
+import { withField } from 'react-ocean-forms';
 import { default as ReactSelect } from 'react-select';
 import { Input as StrapInput } from 'reactstrap';
 
@@ -18,7 +19,7 @@ import { ISelectOption, ISelectProps, isSelectOption } from './Select.types';
  * form groups with an select input and
  * oForm support
  */
-export class Select extends React.Component<ISelectProps> {
+export class BaseSelect extends React.Component<ISelectProps> {
   public static displayName: string = 'Select';
 
   // tslint:disable-next-line:typedef
@@ -116,3 +117,5 @@ export class Select extends React.Component<ISelectProps> {
     );
   }
 }
+
+export const Select = withField(BaseSelect);

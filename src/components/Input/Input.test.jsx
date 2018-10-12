@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { Input as StrapInput } from 'reactstrap';
 
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import { Input } from './Input';
+import { BaseInput } from './Input';
 import { FieldLine } from '../FieldLine';
 
 describe('<Input />', () => {
@@ -17,7 +17,7 @@ describe('<Input />', () => {
   field.name = FIELD_NAME;
 
   const setup = props => shallow((
-    <Input
+    <BaseInput
       label={FIELD_LABEL}
       meta={meta}
       field={field}

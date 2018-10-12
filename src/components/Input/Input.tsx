@@ -7,7 +7,10 @@
 
 import * as React from 'react';
 
+import { withField } from 'react-ocean-forms';
 import { Input as StrapInput } from 'reactstrap';
+// tslint:disable-next-line:no-submodule-imports
+import { InputType } from 'reactstrap/lib/Input';
 
 import { FieldLine } from '../FieldLine';
 import { IInputProps } from './Input.types';
@@ -17,15 +20,12 @@ import { IInputProps } from './Input.types';
  * form groups with an html input and
  * oForm support
  */
-export class Input extends React.Component<IInputProps> {
+export class BaseInput extends React.Component<IInputProps> {
   public static displayName: string = 'Input';
 
-  // tslint:disable-next-line:typedef
-  public static defaultProps = {
+  // tslint:disable-next-line:no-reserved-keywords
+  public static defaultProps: { type: InputType } = {
     type: 'text',
-    // TODO: Without this, the usage of Input
-    // inside of a Field would throw a type error..
-    label: undefined,
   };
 
   public render(): JSX.Element {
@@ -54,3 +54,5 @@ export class Input extends React.Component<IInputProps> {
     );
   }
 }
+
+export const Input = withField(BaseInput);

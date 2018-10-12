@@ -8,8 +8,8 @@
 import * as React from 'react';
 
 import moment from 'moment';
-// tslint:disable-next-line:import-name
-import Datetime from 'react-datetime';
+import { default as Datetime } from 'react-datetime';
+import { withField } from 'react-ocean-forms';
 import { Input as StrapInput } from 'reactstrap';
 
 import { FieldLine } from '../FieldLine';
@@ -18,7 +18,7 @@ import { IDatePickerProps } from './DatePicker.types';
 /**
  * Component for displaying datetime
  */
-export class DatePicker extends React.Component<IDatePickerProps> {
+export class BaseDatePicker extends React.Component<IDatePickerProps> {
   public static displayName: string = 'DatePicker';
 
   private handleChange = (value: moment.Moment | string): void => {
@@ -96,3 +96,5 @@ export class DatePicker extends React.Component<IDatePickerProps> {
     );
   }
 }
+
+export const DatePicker = withField(BaseDatePicker);

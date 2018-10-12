@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import mockEvent, { KEYCODE } from '../../test-utils/enzymeEventUtils';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import { Select } from './Select';
+import { BaseSelect } from './Select';
 import { FieldLine } from '../FieldLine';
 
 describe('<Select />', () => {
@@ -18,7 +18,7 @@ describe('<Select />', () => {
   field.value = '';
 
   const setup = props => shallow((
-    <Select
+    <BaseSelect
       label={FIELD_LABEL}
       meta={meta}
       field={field}
