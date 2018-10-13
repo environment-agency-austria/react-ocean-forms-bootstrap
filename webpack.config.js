@@ -25,7 +25,6 @@ module.exports = {
       {
         test: /\.(js|jsx|mjs)$/,
         include: srcPath,
-        exclude: /(node_modules|bower_components|build|coverage)/,
         use: {
           loader: 'babel-loader',
         },
@@ -36,7 +35,6 @@ module.exports = {
         // using babel-loader.
         test: /\.(tsx?)$/,
         include: srcPath,
-        exclude: /(node_modules|bower_components|build|coverage)/,
         use: [
           'babel-loader', {
             loader: 'ts-loader',
@@ -48,7 +46,6 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        exclude: /(node_modules|bower_components|build|coverage)/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
