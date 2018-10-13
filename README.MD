@@ -1,6 +1,8 @@
 # react-ocean-forms-bootstrap
 [![npm](https://img.shields.io/npm/v/react-ocean-forms-bootstrap.svg)](https://www.npmjs.com/package/react-ocean-forms-bootstrap)
 [![GitHub license](https://img.shields.io/github/license/environment-agency-austria/react-ocean-forms-bootstrap.svg)](https://github.com/environment-agency-austria/react-ocean-forms-bootstrap/blob/master/LICENSE)
+[![travis](https://travis-ci.com/environment-agency-austria/react-ocean-forms-bootstrap.svg?branch=master)](https://travis-ci.com/environment-agency-austria/react-ocean-forms-bootstrap)
+[![Coverage Status](https://coveralls.io/repos/github/environment-agency-austria/react-ocean-forms-bootstrap/badge.svg?branch=fmaster)](https://coveralls.io/github/environment-agency-austria/react-ocean-forms-bootstrap?branch=master)
 
 Bootstrap input components for [react-ocean-forms](https://github.com/environment-agency-austria/react-ocean-forms) with `reactstrap`.
 
