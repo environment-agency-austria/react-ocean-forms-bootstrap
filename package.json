@@ -26,7 +26,7 @@
       "**/?(*.)+(spec|test).ts?(x)"
     ],
     "collectCoverageFrom": [
-      "<rootDir>/src/**/*.{js,jsx,mjs}"
+      "<rootDir>/src/**/*.{js,jsx,mjs,ts,tsx}"
     ],
     "globals": {
       "ts-jest": {
