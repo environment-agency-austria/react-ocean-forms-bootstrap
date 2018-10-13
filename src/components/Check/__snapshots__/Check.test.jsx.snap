@@ -1,0 +1,817 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Check /> should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Check
+    field={
+      Object {
+        "disabled": false,
+        "id": "mock-field",
+        "name": "mock-field",
+        "onBlur": [MockFunction],
+        "onChange": [MockFunction],
+        "value": "mock-value",
+      }
+    }
+    label="field0"
+    meta={
+      Object {
+        "error": null,
+        "isValidating": false,
+        "plaintext": false,
+        "stringFormatter": [MockFunction],
+        "touched": false,
+        "valid": true,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Col
+          className="text-right check-label-col"
+          sm={3}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <InvalidAlert
+            valid={true}
+          />
+          <ValidatingSpinner
+            isValidating={false}
+          />
+        </Col>,
+        <Col
+          sm={9}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <InputGroup
+            tag="div"
+          >
+            <Label
+              check={true}
+              tag="label"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              <Input
+                defaultChecked={false}
+                disabled={false}
+                id="mock-field"
+                invalid={false}
+                name="mock-field"
+                onBlur={[MockFunction]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <FormComponent(FormText)
+                text="field0"
+              />
+              <FieldError
+                error={null}
+                id="mock-field_errors"
+                invalid={false}
+              />
+            </Label>
+            <InfoAddonButton
+              onClick={[Function]}
+              plaintext={false}
+            />
+          </InputGroup>
+          <InfoAlert
+            onClose={[Function]}
+            plaintext={false}
+            visible={false}
+          />
+        </Col>,
+      ],
+      "className": undefined,
+      "meta": Object {
+        "error": null,
+        "isValidating": false,
+        "plaintext": false,
+        "stringFormatter": [MockFunction],
+        "touched": false,
+        "valid": true,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <InvalidAlert
+              valid={true}
+            />,
+            <ValidatingSpinner
+              isValidating={false}
+            />,
+          ],
+          "className": "text-right check-label-col",
+          "sm": 3,
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "valid": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "isValidating": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <InputGroup
+              tag="div"
+            >
+              <Label
+                check={true}
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <Input
+                  defaultChecked={false}
+                  disabled={false}
+                  id="mock-field"
+                  invalid={false}
+                  name="mock-field"
+                  onBlur={[MockFunction]}
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                <FormComponent(FormText)
+                  text="field0"
+                />
+                <FieldError
+                  error={null}
+                  id="mock-field_errors"
+                  invalid={false}
+                />
+              </Label>
+              <InfoAddonButton
+                onClick={[Function]}
+                plaintext={false}
+              />
+            </InputGroup>,
+            <InfoAlert
+              onClose={[Function]}
+              plaintext={false}
+              visible={false}
+            />,
+          ],
+          "sm": 9,
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Label
+                  check={true}
+                  tag="label"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Input
+                    defaultChecked={false}
+                    disabled={false}
+                    id="mock-field"
+                    invalid={false}
+                    name="mock-field"
+                    onBlur={[MockFunction]}
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                  <FormComponent(FormText)
+                    text="field0"
+                  />
+                  <FieldError
+                    error={null}
+                    id="mock-field_errors"
+                    invalid={false}
+                  />
+                </Label>,
+                <InfoAddonButton
+                  onClick={[Function]}
+                  plaintext={false}
+                />,
+              ],
+              "className": undefined,
+              "tag": "div",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "check": true,
+                  "children": Array [
+                    <Input
+                      defaultChecked={false}
+                      disabled={false}
+                      id="mock-field"
+                      invalid={false}
+                      name="mock-field"
+                      onBlur={[MockFunction]}
+                      onClick={[Function]}
+                      type="checkbox"
+                    />,
+                    <FormComponent(FormText)
+                      text="field0"
+                    />,
+                    <FieldError
+                      error={null}
+                      id="mock-field_errors"
+                      invalid={false}
+                    />,
+                  ],
+                  "tag": "label",
+                  "widths": Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "defaultChecked": false,
+                      "disabled": false,
+                      "id": "mock-field",
+                      "invalid": false,
+                      "name": "mock-field",
+                      "onBlur": [MockFunction],
+                      "onClick": [Function],
+                      "type": "checkbox",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "text": "field0",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": null,
+                      "id": "mock-field_errors",
+                      "invalid": false,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "info": undefined,
+                  "onClick": [Function],
+                  "plaintext": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "info": undefined,
+              "onClose": [Function],
+              "plaintext": false,
+              "visible": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Col
+            className="text-right check-label-col"
+            sm={3}
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            <InvalidAlert
+              valid={true}
+            />
+            <ValidatingSpinner
+              isValidating={false}
+            />
+          </Col>,
+          <Col
+            sm={9}
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            <InputGroup
+              tag="div"
+            >
+              <Label
+                check={true}
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <Input
+                  defaultChecked={false}
+                  disabled={false}
+                  id="mock-field"
+                  invalid={false}
+                  name="mock-field"
+                  onBlur={[MockFunction]}
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                <FormComponent(FormText)
+                  text="field0"
+                />
+                <FieldError
+                  error={null}
+                  id="mock-field_errors"
+                  invalid={false}
+                />
+              </Label>
+              <InfoAddonButton
+                onClick={[Function]}
+                plaintext={false}
+              />
+            </InputGroup>
+            <InfoAlert
+              onClose={[Function]}
+              plaintext={false}
+              visible={false}
+            />
+          </Col>,
+        ],
+        "className": undefined,
+        "meta": Object {
+          "error": null,
+          "isValidating": false,
+          "plaintext": false,
+          "stringFormatter": [MockFunction],
+          "touched": false,
+          "valid": true,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <InvalidAlert
+                valid={true}
+              />,
+              <ValidatingSpinner
+                isValidating={false}
+              />,
+            ],
+            "className": "text-right check-label-col",
+            "sm": 3,
+            "tag": "div",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "valid": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "isValidating": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <InputGroup
+                tag="div"
+              >
+                <Label
+                  check={true}
+                  tag="label"
+                  widths={
+                    Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ]
+                  }
+                >
+                  <Input
+                    defaultChecked={false}
+                    disabled={false}
+                    id="mock-field"
+                    invalid={false}
+                    name="mock-field"
+                    onBlur={[MockFunction]}
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                  <FormComponent(FormText)
+                    text="field0"
+                  />
+                  <FieldError
+                    error={null}
+                    id="mock-field_errors"
+                    invalid={false}
+                  />
+                </Label>
+                <InfoAddonButton
+                  onClick={[Function]}
+                  plaintext={false}
+                />
+              </InputGroup>,
+              <InfoAlert
+                onClose={[Function]}
+                plaintext={false}
+                visible={false}
+              />,
+            ],
+            "sm": 9,
+            "tag": "div",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Label
+                    check={true}
+                    tag="label"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <Input
+                      defaultChecked={false}
+                      disabled={false}
+                      id="mock-field"
+                      invalid={false}
+                      name="mock-field"
+                      onBlur={[MockFunction]}
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                    <FormComponent(FormText)
+                      text="field0"
+                    />
+                    <FieldError
+                      error={null}
+                      id="mock-field_errors"
+                      invalid={false}
+                    />
+                  </Label>,
+                  <InfoAddonButton
+                    onClick={[Function]}
+                    plaintext={false}
+                  />,
+                ],
+                "className": undefined,
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "check": true,
+                    "children": Array [
+                      <Input
+                        defaultChecked={false}
+                        disabled={false}
+                        id="mock-field"
+                        invalid={false}
+                        name="mock-field"
+                        onBlur={[MockFunction]}
+                        onClick={[Function]}
+                        type="checkbox"
+                      />,
+                      <FormComponent(FormText)
+                        text="field0"
+                      />,
+                      <FieldError
+                        error={null}
+                        id="mock-field_errors"
+                        invalid={false}
+                      />,
+                    ],
+                    "tag": "label",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "defaultChecked": false,
+                        "disabled": false,
+                        "id": "mock-field",
+                        "invalid": false,
+                        "name": "mock-field",
+                        "onBlur": [MockFunction],
+                        "onClick": [Function],
+                        "type": "checkbox",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "text": "field0",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": null,
+                        "id": "mock-field_errors",
+                        "invalid": false,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "info": undefined,
+                    "onClick": [Function],
+                    "plaintext": false,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "info": undefined,
+                "onClose": [Function],
+                "plaintext": false,
+                "visible": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
