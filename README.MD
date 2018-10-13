@@ -34,10 +34,9 @@ Then use the components where needed.
 >
   <ValidationSummary />
 
-  <Field
+  <Input
     name="name"
     label="demo_name"
-    component={Input}
   />
 
   <button type="submit">Submit</button>
