@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { FieldLine } from './FieldLine';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
-import checkInfoToggling from '../../test-utils/checkInfoToggling';
+import { checkInfoToggling } from '../../test-utils/checkInfoToggling';
 
 describe('<FieldLine />', () => {
   const MOCK_LABEL = 'label';

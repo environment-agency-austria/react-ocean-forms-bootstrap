@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import checkInfoToggling from '../../test-utils/checkInfoToggling';
+import { checkInfoToggling } from '../../test-utils/checkInfoToggling';
 import { createMockFieldMeta, createMockField } from '../../test-utils/enzymeFormContext';
 import { BaseCheck } from './Check';
 

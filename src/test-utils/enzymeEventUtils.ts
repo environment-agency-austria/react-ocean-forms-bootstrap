@@ -10,17 +10,20 @@ export const KEYCODE = {
   DOWN_ARROW: 40,
 };
 
+interface IMockEvent {
+  preventDefault(): void;
+  [key: string]: unknown;
+}
+
 /**
  * Generates a mocked event to be used with
  * enzymes simulate in situations where the
  * tested code wants to call preventDefault
- * and/or stopPropagation.
- * @param {object} props Additional event props
+ * @param props Additional event props
  */
-const mockEvent = props => ({
-  preventDefault: () => {},
-  stopPropagation: () => {},
+// tslint:disable-next-line:naming-convention
+export const mockEvent = (props?: object): IMockEvent => ({
+  // tslint:disable-next-line:no-empty
+  preventDefault: (): void => {},
   ...props,
 });
-
-export default mockEvent;

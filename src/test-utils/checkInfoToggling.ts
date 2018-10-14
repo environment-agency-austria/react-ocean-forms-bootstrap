@@ -1,10 +1,13 @@
+import { ShallowWrapper } from 'enzyme';
+
 /**
  * Re-usable test suite to check the info visibility
  * toggling between InfoAlert and InfoAddonButton
  */
-const checkInfoToggling = (wrapper) => {
+// tslint:disable-next-line:naming-convention
+export const checkInfoToggling = (wrapper: ShallowWrapper): void => {
   describe('info visible toggling', () => {
-    const getVisibility = () => wrapper.find('InfoAlert').prop('visible');
+    const getVisibility = (): boolean => wrapper.find('InfoAlert').prop('visible');
 
     const toggleCases = [
       ['InfoAddonButton', 'onClick'],
@@ -16,7 +19,9 @@ const checkInfoToggling = (wrapper) => {
 
       it(`should toggle the info visibility on ${element} click`, () => {
         for (let i = 0; i < 2; i += 1) {
-          wrapper.find(element).prop(prop)();
+          const callback = <Function>wrapper.find(element).prop(prop);
+          callback();
+
           const newVisibility = getVisibility();
           expect(newVisibility).toBe(!visibility);
           visibility = newVisibility;
@@ -25,5 +30,3 @@ const checkInfoToggling = (wrapper) => {
     });
   });
 };
-
-export default checkInfoToggling;
