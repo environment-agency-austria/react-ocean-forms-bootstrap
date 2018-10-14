@@ -18,11 +18,11 @@ Bootstrap input components for [react-ocean-forms](https://github.com/environmen
 ```yarn add react-ocean-forms-bootstrap```
 
 ## Usage
-To use the components you need a `react-ocean-forms` Form and Field. Then you can simply
-use the components inside of Fields.
+To use the components you need a `react-ocean-forms` Form. Then you can simply
+use the components inside of a Form.
 
 ```js
-import { Form, Field } from 'react-ocean-forms';
+import { Form } from 'react-ocean-forms';
 import { Input, ValidationSummary } from 'react-ocean-forms-bootstrap';
 ```
 
