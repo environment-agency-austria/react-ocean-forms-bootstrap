@@ -20,8 +20,7 @@ export class FieldLineAddon extends React.Component<IFieldLineAddonProps> {
   public render(): JSX.Element | null {
     const { plaintext, content, type } = this.props;
 
-    if (plaintext) { return null; }
-    if (!content) { return null; }
+    if (plaintext || content === undefined) { return null; }
 
     let child = null;
     if (typeof content === 'string') {

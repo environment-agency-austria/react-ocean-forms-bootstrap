@@ -4,8 +4,9 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import { IFieldComponentFieldProps, IFieldComponentMeta, IFieldState, IFormContext, TFormEventListener } from 'react-ocean-forms';
 
-import createMockFormatter from './createMockFormatter';
+import { createMockFormatter } from './createMockFormatter';
 
 /**
  * Components inside the form module require access to the form context.
@@ -17,20 +18,30 @@ import createMockFormatter from './createMockFormatter';
 /**
  * Creates a form context
  */
-export const createMockFormContext = registerCallback => ({
+// tslint:disable-next-line:naming-convention
+export const createMockFormContext = (registerCallback?: Function): IFormContext => ({
   fieldPrefix: null,
 
-  registerField: jest.fn().mockImplementation((name, state) => registerCallback(name, state)),
+  registerField: jest.fn().mockImplementation((name: string, state: IFieldState): void => {
+    if (registerCallback) {
+      registerCallback(name, state);
+    }
+  }),
   unregisterField: jest.fn(),
   notifyFieldEvent: jest.fn(),
 
-  registerListener: jest.fn().mockImplementation((name, state) => registerCallback(name, state)),
+  registerListener: jest.fn().mockImplementation((name: string, callback: TFormEventListener): void => {
+    if (registerCallback) {
+      registerCallback(name, callback);
+    }
+  }),
   unregisterListener: jest.fn(),
 
   getFieldState: jest.fn(),
   getValues: jest.fn(),
 
   stringFormatter: createMockFormatter(),
+  submit: jest.fn(),
 
   busy: false,
   disabled: false,
@@ -44,7 +55,8 @@ export const createMockFormContext = registerCallback => ({
 /**
  * Creates a mock field meta
  */
-export const createMockFieldMeta = () => ({
+// tslint:disable-next-line:naming-convention
+export const createMockFieldMeta = (): IFieldComponentMeta => ({
   valid: true,
   error: null,
   isValidating: false,
@@ -56,7 +68,8 @@ export const createMockFieldMeta = () => ({
 /**
  * Creates a mock field shape
  */
-export const createMockField = () => ({
+// tslint:disable-next-line:naming-convention
+export const createMockField = (): IFieldComponentFieldProps => ({
   id: 'mock-field',
   name: 'mock-field',
   value: 'mock-value',

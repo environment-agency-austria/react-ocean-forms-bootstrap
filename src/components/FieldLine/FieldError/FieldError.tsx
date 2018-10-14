@@ -27,8 +27,7 @@ export class FieldError extends React.Component<IFieldErrorProps> {
     } = this.props;
 
     // If the field isn't invalid do nothing
-    if (invalid !== true) { return null; }
-    if (error === null) { return null; }
+    if (invalid !== true || error === null) { return null; }
 
     // Error could be either an string or an array of strings
     const errorArray = !Array.isArray(error) ? [error] : error;

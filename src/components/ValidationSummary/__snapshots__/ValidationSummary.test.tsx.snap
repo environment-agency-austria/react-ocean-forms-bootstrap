@@ -197,7 +197,7 @@ ShallowWrapper {
     />
     <a
       href="#mock-id"
-      onClick={[Function]}
+      onClick={[MockFunction]}
     >
       mock-name
       :
@@ -251,7 +251,7 @@ ShallowWrapper {
         />,
         <a
           href="#mock-id"
-          onClick={[Function]}
+          onClick={[MockFunction]}
         >
           mock-name
           :
@@ -310,7 +310,7 @@ ShallowWrapper {
             "mock-error",
           ],
           "href": "#mock-id",
-          "onClick": [Function],
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": Array [
@@ -363,7 +363,7 @@ ShallowWrapper {
           />,
           <a
             href="#mock-id"
-            onClick={[Function]}
+            onClick={[MockFunction]}
           >
             mock-name
             :
@@ -422,7 +422,7 @@ ShallowWrapper {
               "mock-error",
             ],
             "href": "#mock-id",
-            "onClick": [Function],
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": Array [
@@ -461,7 +461,7 @@ exports[`<ValidationSummary /> should render without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ValidationSummary
-    title="ojs_form_validationSummaryHeader"
+    id="mock-summary"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -476,9 +476,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "id": "mock-summary",
       "render": [Function],
       "renderFieldError": [Function],
-      "title": "ojs_form_validationSummaryHeader",
     },
     "ref": null,
     "rendered": null,
@@ -490,9 +490,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "id": "mock-summary",
         "render": [Function],
         "renderFieldError": [Function],
-        "title": "ojs_form_validationSummaryHeader",
       },
       "ref": null,
       "rendered": null,

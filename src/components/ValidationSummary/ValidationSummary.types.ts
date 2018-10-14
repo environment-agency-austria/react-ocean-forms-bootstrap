@@ -1,11 +1,8 @@
-import { IValidationSummaryProps as CoreIValidationSummaryProps } from 'react-ocean-forms';
+import { PropsOf, Subtract, ValidationSummary } from 'react-ocean-forms';
+
+type TUpstreamValidationSummaryProps = PropsOf<typeof ValidationSummary>;
 
 /**
  * Props for the ValidationSummary component
  */
-export interface IValidationSummaryProps extends CoreIValidationSummaryProps {
-  /**
-   * Title text of the summary
-   */
-  title: string;
-}
+export interface IValidationSummaryProps extends Subtract<TUpstreamValidationSummaryProps, { render: string; renderFieldError: string }> { }

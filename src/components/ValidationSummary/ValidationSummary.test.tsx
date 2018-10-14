@@ -1,19 +1,39 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import * as  React from 'react';
+
+import { shallow, ShallowWrapper } from 'enzyme';
 import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
 
 import { ValidationSummary } from './ValidationSummary';
+import { IValidationSummaryProps } from './ValidationSummary.types';
 
 describe('<ValidationSummary />', () => {
-  const wrapper = shallow((
-    <ValidationSummary />
-  ));
+  interface ISetupArgs {
+    props?: Partial<IValidationSummaryProps>;
+  }
+
+  interface ISetupResult {
+    wrapper: ShallowWrapper;
+  }
+
+  const setup = ({
+    props,
+  }: ISetupArgs = {}): ISetupResult => {
+    const wrapper = shallow((
+      <ValidationSummary id="mock-summary" {...props} />
+    ));
+
+    return {
+      wrapper,
+    };
+  };
 
   it('should render without crashing', () => {
+    const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('render prop', () => {
+    const { wrapper } = setup();
     const renderProp = wrapper.find(CoreValidationSummary).prop('render');
 
     it('should set the render prop correctly', () => {
@@ -28,6 +48,7 @@ describe('<ValidationSummary />', () => {
   });
 
   describe('renderFieldError prop', () => {
+    const { wrapper } = setup();
     const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop('renderFieldError');
 
     it('should set the render prop correctly', () => {
@@ -39,7 +60,7 @@ describe('<ValidationSummary />', () => {
         'mock-id',
         'mock-name',
         'mock-error',
-        () => {},
+        jest.fn(),
       ));
       expect(renderWrapper).toMatchSnapshot();
     });

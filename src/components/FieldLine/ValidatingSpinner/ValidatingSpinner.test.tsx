@@ -1,10 +1,11 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import * as React from 'react';
+
+import { shallow, ShallowWrapper } from 'enzyme';
 
 import { ValidatingSpinner } from './ValidatingSpinner';
 
 describe('<ValidatingSpinner />', () => {
-  const setup = isValidating => shallow((
+  const setup = (isValidating: boolean): ShallowWrapper => shallow((
     <ValidatingSpinner
       isValidating={isValidating}
     />
@@ -12,12 +13,12 @@ describe('<ValidatingSpinner />', () => {
 
   it('should render nothing if isValidating is false', () => {
     const wrapper = setup(false);
-    expect(wrapper.exists('FontAwesomeIcon')).toBeFalsy();
+    expect(wrapper.find('FontAwesomeIcon').exists()).toBeFalsy();
   });
 
   it('should render a FontAwesomeIcon if isValidating is true', () => {
     const wrapper = setup(true);
-    expect(wrapper.exists('FontAwesomeIcon')).toBeTruthy();
+    expect(wrapper.find('FontAwesomeIcon').exists()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 });

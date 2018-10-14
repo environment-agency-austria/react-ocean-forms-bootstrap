@@ -1,25 +1,31 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import * as React from 'react';
+
+import { shallow, ShallowWrapper } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
 import { FieldLineAddon } from './FieldLineAddon';
+import { IFieldLineAddonType } from './FieldLineAddon.types';
 
 describe('<FieldLineAddon />', () => {
-  const setup = (plaintext, content, type = 'prepend') => {
-    const wrapper = shallow((
+  const setup = (
+    plaintext: boolean,
+    content?: React.ReactNode,
+    // tslint:disable-next-line:no-reserved-keywords
+    type: IFieldLineAddonType = 'prepend',
+  ): ShallowWrapper => {
+    return shallow((
       <FieldLineAddon
         plaintext={plaintext}
         content={content}
         type={type}
       />
     ));
-
-    return wrapper;
   };
 
-  const checkAddonRender = (wrapper, type) => {
+  // tslint:disable-next-line:no-reserved-keywords
+  const checkAddonRender = (wrapper: ShallowWrapper, type: IFieldLineAddonType): void => {
     it('should render an InputGroupAddon', () => {
-      expect(wrapper.exists('InputGroupAddon')).toBeTruthy();
+      expect(wrapper.find('InputGroupAddon').exists()).toBeTruthy();
     });
 
     it('should pass the correct addon type', () => {
@@ -29,26 +35,26 @@ describe('<FieldLineAddon />', () => {
 
   it('should render nothing if meta.plaintext is active', () => {
     const wrapper = setup(true);
-    expect(wrapper.exists('InputGroupAddon')).toBeFalsy();
+    expect(wrapper.find('InputGroupAddon').exists()).toBeFalsy();
   });
 
   it('should render nothing if there is no content', () => {
-    const wrapper = setup(false, null);
-    expect(wrapper.exists('InputGroupAddon')).toBeFalsy();
+    const wrapper = setup(false);
+    expect(wrapper.find('InputGroupAddon').exists()).toBeFalsy();
   });
 
   describe('text content', () => {
-    const MOCK_CONTENT = 'mock-string';
-    const MOCK_TYPE = 'prepend';
-    const wrapper = setup(false, MOCK_CONTENT, MOCK_TYPE);
+    const mockContent = 'mock-string';
+    const mockType = 'prepend';
+    const wrapper = setup(false, mockContent, mockType);
 
     describe('render', () => {
-      checkAddonRender(wrapper, MOCK_TYPE);
+      checkAddonRender(wrapper, mockType);
 
       it('should wrap the text content in a FormText', () => {
         const formText = wrapper.find(FormText);
         expect(formText).toHaveLength(1);
-        expect(formText.prop('text')).toBe(MOCK_CONTENT);
+        expect(formText.prop('text')).toBe(mockContent);
       });
 
       it('should render correctly', () => {
@@ -58,12 +64,12 @@ describe('<FieldLineAddon />', () => {
   });
 
   describe('custom content', () => {
-    const MOCK_CONTENT = <div id="mock-content" />;
-    const MOCK_TYPE = 'append';
-    const wrapper = setup(false, MOCK_CONTENT, MOCK_TYPE);
+    const mockContent = <div id="mock-content" />;
+    const mockType = 'append';
+    const wrapper = setup(false, mockContent, mockType);
 
     describe('render', () => {
-      checkAddonRender(wrapper, MOCK_TYPE);
+      checkAddonRender(wrapper, mockType);
 
       it('should wrap the text content in a FormText', () => {
         expect(wrapper.find(FormText)).toHaveLength(0);

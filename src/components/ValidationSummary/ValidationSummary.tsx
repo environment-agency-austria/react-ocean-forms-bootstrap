@@ -21,11 +21,6 @@ import { IValidationSummaryProps } from './ValidationSummary.types';
 export class ValidationSummary extends React.Component<IValidationSummaryProps> {
   public static displayName: string = 'ValidationSummary';
 
-  // tslint:disable-next-line:typedef
-  public static defaultProps = {
-    title: 'ojs_form_validationSummaryHeader',
-  };
-
   private renderFieldError = (
     id: string,
     fieldName: string,
@@ -55,15 +50,9 @@ export class ValidationSummary extends React.Component<IValidationSummaryProps> 
 
   // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
-    const {
-      title,
-      ...rest
-    } = this.props;
-
     return (
       <CoreValidationSummary
-        title={title}
-        {...rest}
+        {...this.props}
         renderFieldError={this.renderFieldError}
         render={this.renderSummary}
       />

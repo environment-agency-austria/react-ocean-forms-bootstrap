@@ -1,3 +1,5 @@
+export type IFieldLineAddonType = 'prepend' | 'append';
+
 /**
  * Props for the FieldLineAddon component
  */
@@ -6,7 +8,7 @@ export interface IFieldLineAddonProps {
    * Addon type
    */
   // tslint:disable-next-line:no-reserved-keywords
-  type: 'prepend' | 'append';
+  type: IFieldLineAddonType;
   /**
    * Form plaintext mode
    */
@@ -14,5 +16,5 @@ export interface IFieldLineAddonProps {
   /**
    * Addon content / child
    */
-  content?: React.ReactType;
+  content?: React.ReactNode;
 }

@@ -32,6 +32,30 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
     });
   }
 
+  /**
+   * Mimicks the behaviour of react-datetime to display
+   * the same value in plaintext mode
+   */
+  private getDisplayValue = (value: moment.Moment): string => {
+    const { dateFormat, timeFormat } = this.props;
+
+    let parsedFormat = '';
+
+    if (typeof dateFormat === 'string') {
+      parsedFormat = dateFormat;
+    } else if (dateFormat === true) {
+      parsedFormat = 'L';
+    }
+
+    if (typeof timeFormat === 'string') {
+      parsedFormat = `${parsedFormat} ${timeFormat}`.trim();
+    } else if (timeFormat === true) {
+      parsedFormat = `${parsedFormat} LT`.trim();
+    }
+
+    return value.format(parsedFormat === '' ? undefined : parsedFormat);
+  }
+
   // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
@@ -43,8 +67,7 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
 
     const fieldValue = field.value;
     if (typeof fieldValue !== 'string' && typeof fieldValue !== 'number'
-        && typeof fieldValue !== 'number' && !moment.isMoment(fieldValue)
-        && fieldValue !== undefined) {
+        && !moment.isMoment(fieldValue) && fieldValue !== undefined) {
       throw new Error(
         'Incompatible field value supplied for input component '
         + `${field.id}. Only values with type string, number or undefined are allowed.`,
@@ -52,28 +75,10 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
     }
 
     const formattedValue = moment(fieldValue);
-    const inputProps = {
-      disabled: field.disabled,
-    };
 
     // Support for plaintext display
     if (meta.plaintext) {
-      let displayValue = '';
-      let parsedFormat = '';
-
-      if (typeof dateFormat === 'string') {
-        parsedFormat = dateFormat;
-      } else if (dateFormat === true) {
-        parsedFormat = 'L';
-      }
-
-      if (typeof timeFormat === 'string') {
-        parsedFormat = `${parsedFormat} ${timeFormat}`.trim();
-      } else if (timeFormat === true) {
-        parsedFormat = `${parsedFormat} LT`.trim();
-      }
-
-      displayValue = formattedValue.format(parsedFormat === '' ? undefined : parsedFormat);
+      const displayValue = this.getDisplayValue(formattedValue);
 
       return (
         <FieldLine {...this.props}>
@@ -81,6 +86,10 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
         </FieldLine>
       );
     }
+
+    const inputProps = {
+      disabled: field.disabled,
+    };
 
     return (
       <FieldLine {...this.props}>

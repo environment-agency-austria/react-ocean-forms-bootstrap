@@ -26,8 +26,7 @@ export class InfoAlert extends React.Component<IInfoAlertProps> {
       onClose,
     } = this.props;
 
-    if (plaintext) { return null; }
-    if (!info) { return null; }
+    if (plaintext || info === undefined) { return null; }
 
     return (
       <Alert
