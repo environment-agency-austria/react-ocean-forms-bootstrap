@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DatePicker /> should react on meta.plaintext correctly 1`] = `
+exports[`<DatePicker /> meta.plaintext handling should react on meta.plaintext correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DatePicker
