@@ -1,12 +1,13 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { validators as defaultValidators } from 'react-ocean-forms';
+import * as React from 'react';
 
-import { RequiredMarker } from './RequiredMarker';
+import { shallow, ShallowWrapper } from 'enzyme';
+import { TValidator, validators as defaultValidators } from 'react-ocean-forms';
+
 import { createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
+import { RequiredMarker } from './RequiredMarker';
 
 describe('<RequiredMarker />', () => {
-  const setup = (plaintext, validators) => {
+  const setup = (plaintext: boolean, validators?: TValidator[]): ShallowWrapper => {
     const meta = createMockFieldMeta();
     meta.plaintext = plaintext;
 
@@ -20,17 +21,17 @@ describe('<RequiredMarker />', () => {
 
   it('should render nothing if meta.plaintext is active', () => {
     const wrapper = setup(true);
-    expect(wrapper.exists('.field-required')).toBeFalsy();
+    expect(wrapper.find('.field-required').exists()).toBeFalsy();
   });
 
   it('should render nothing if there is no required field validator', () => {
     const wrapper = setup(false);
-    expect(wrapper.exists('.field-required')).toBeFalsy();
+    expect(wrapper.find('.field-required').exists()).toBeFalsy();
   });
 
   it('should render the field required marker if there is a required field validator', () => {
     const wrapper = setup(false, [defaultValidators.required]);
-    expect(wrapper.exists('.field-required')).toBeTruthy();
+    expect(wrapper.find('.field-required').exists()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 });
