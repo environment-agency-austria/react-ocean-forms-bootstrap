@@ -1,12 +1,18 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import * as React from 'react';
+
+import { shallow, ShallowWrapper } from 'enzyme';
 import { FormText } from 'react-ocean-forms';
 
 import { InfoAlert } from './InfoAlert';
 
 describe('<InfoAlert />', () => {
-  const setup = (plaintext, info, visible = false, onClose = () => {}) => {
-    const wrapper = shallow((
+  const setup = (
+    plaintext: boolean,
+    info?: string,
+    visible: boolean = false,
+    onClose: (() => void) = (): undefined => undefined,
+  ): ShallowWrapper => {
+    return shallow((
       <InfoAlert
         plaintext={plaintext}
         visible={visible}
@@ -14,39 +20,37 @@ describe('<InfoAlert />', () => {
         onClose={onClose}
       />
     ));
-
-    return wrapper;
   };
 
   it('should render nothing if meta.plaintext is active', () => {
     const wrapper = setup(true);
-    expect(wrapper.exists('Alert')).toBeFalsy();
+    expect(wrapper.find('Alert').exists()).toBeFalsy();
   });
 
   it('should render nothing if there is no info', () => {
-    const wrapper = setup(false, null);
-    expect(wrapper.exists('Alert')).toBeFalsy();
+    const wrapper = setup(false);
+    expect(wrapper.find('Alert').exists()).toBeFalsy();
   });
 
   describe('info present', () => {
-    const MOCK_INFO = 'mock-info';
-    const MOCK_VISIBLE = true;
-    const MOCK_ON_CLOSE = jest.fn();
+    const mockInfo = 'mock-info';
+    const mockVisible = true;
+    const mockOnClose = jest.fn();
 
-    const wrapper = setup(false, MOCK_INFO, MOCK_VISIBLE, MOCK_ON_CLOSE);
+    const wrapper = setup(false, mockInfo, mockVisible, mockOnClose);
 
     it('should wrap the info with a FormText', () => {
       const formText = wrapper.find(FormText);
       expect(formText).toHaveLength(1);
-      expect(formText.prop('text')).toBe(MOCK_INFO);
+      expect(formText.prop('text')).toBe(mockInfo);
     });
 
     it('should render an Alert with the correct props', () => {
-      expect(wrapper.exists('Alert')).toBeTruthy();
+      expect(wrapper.find('Alert').exists()).toBeTruthy();
 
       const alert = wrapper.find('Alert');
-      expect(alert.prop('isOpen')).toBe(MOCK_VISIBLE);
-      expect(alert.prop('toggle')).toBe(MOCK_ON_CLOSE);
+      expect(alert.prop('isOpen')).toBe(mockVisible);
+      expect(alert.prop('toggle')).toBe(mockOnClose);
     });
 
     it('should render correctly', () => {
