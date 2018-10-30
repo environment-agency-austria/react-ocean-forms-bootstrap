@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Breaking changes
+- Updated to react-ocean-forms 2.0.0
+- Updated to @fortawesome/react-fontawesome 0.1.3
+- Updated to react-select 2.1.0
+
+### Misc
 - Fixed `OnOffToggleButton` not reacting to `disabled` state
 
 ## [1.4.1] # 2018-08-22
