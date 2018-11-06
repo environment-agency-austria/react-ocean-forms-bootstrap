@@ -59,7 +59,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
     // event.target.checked exists in this case
     // because of the HtmlInputElement
     // @ts-ignore
-    const checked = event.target.checked;
+    const checked = event.target.checked as boolean;
 
     field.onChange({
       target: {
@@ -86,6 +86,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
     const isChecked = value === true;
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
 
+    // tslint:disable:strict-boolean-expressions
     return (
       <FieldRow meta={meta} className={className}>
         <Col sm={3} className="text-right check-label-col">
@@ -125,6 +126,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
         </Col>
       </FieldRow>
     );
+    // tslint:enable:strict-boolean-expressions
   }
 }
 

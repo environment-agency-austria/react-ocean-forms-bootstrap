@@ -107,7 +107,7 @@ describe('<Select />', () => {
     it('should call field.onChange when the input changes', () => {
       const { wrapper, field, options } = setup();
 
-      const changeProp = wrapper.find(ReactSelect).prop('onChange');
+      const changeProp = wrapper.find(ReactSelect).prop('onChange') as Function;
       changeProp(options[1]);
 
       expect(field.onChange).toHaveBeenCalledWith({
@@ -120,7 +120,7 @@ describe('<Select />', () => {
     it('should call field.onBlur when there is an input blur', () => {
       const { wrapper, field } = setup();
 
-      const blurProp = wrapper.find(ReactSelect).prop('onBlur');
+      const blurProp = wrapper.find(ReactSelect).prop('onBlur') as Function;
       blurProp();
 
       expect(field.onBlur).toHaveBeenCalledWith();

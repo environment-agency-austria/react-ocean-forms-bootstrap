@@ -7,12 +7,15 @@
 
 import { addCustomMessages } from 'react-ocean-forms';
 
-const DEFAULT_MESSAGES = {
-  ojs_select_placeholder: 'Choose a value',
-  ojs_form_select_file: 'Choose file',
-  ojs_select_noresults: 'No results',
-  ojs_select_clearValue: 'Clear value',
-  ojs_togglebutton_on: 'On',
-  ojs_togglebutton_off: 'Off',
+// tslint:disable-next-line:naming-convention
+export const registerCustomMessages = (): void => {
+  const defaultMessages = {
+    ojs_select_placeholder: 'Choose a value',
+    ojs_form_select_file: 'Choose file',
+    ojs_select_noresults: 'No results',
+    ojs_select_clearValue: 'Clear value',
+    ojs_togglebutton_on: 'On',
+    ojs_togglebutton_off: 'Off',
+  };
+  addCustomMessages(defaultMessages);
 };
-addCustomMessages(DEFAULT_MESSAGES);

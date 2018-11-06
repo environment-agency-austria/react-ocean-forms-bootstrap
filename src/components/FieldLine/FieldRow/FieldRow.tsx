@@ -25,7 +25,7 @@ export class FieldRow extends React.Component<IFieldRowProps> {
       ...rest
     } = this.props;
 
-    const classes = className ? [className] : [];
+    const classes = className === '' || className === undefined ? [] : [className];
 
     if (!meta.valid) { classes.push('is-invalid'); }
     if (meta.touched) { classes.push('is-touched'); }

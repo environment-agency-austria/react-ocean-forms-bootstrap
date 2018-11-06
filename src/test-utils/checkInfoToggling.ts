@@ -14,12 +14,12 @@ export const checkInfoToggling = (wrapper: ShallowWrapper): void => {
       ['InfoAlert', 'onClose'],
     ];
 
-    describe.each(toggleCases)('%s click', (element, prop) => {
+    describe.each(toggleCases)('%s click', (element: string, prop: string) => {
       let visibility = getVisibility();
 
       it(`should toggle the info visibility on ${element} click`, () => {
         for (let i = 0; i < 2; i += 1) {
-          const callback = <Function>wrapper.find(element).prop(prop);
+          const callback: Function = wrapper.find(element).prop(prop);
           callback();
 
           const newVisibility = getVisibility();

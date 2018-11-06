@@ -76,7 +76,7 @@ describe('<DatePicker />', () => {
   describe('onChange handling', () => {
     it('should not call onChange if the changed value is not a valid moment value', () => {
       const { wrapper, field } = setup();
-      const onChangeProp = wrapper.find(Datetime).prop('onChange');
+      const onChangeProp: Function | undefined = wrapper.find(Datetime).prop('onChange');
 
       if (onChangeProp === undefined) {
         throw new Error('Invalid test state');
@@ -88,7 +88,7 @@ describe('<DatePicker />', () => {
 
     it('should call onChange with the formatted value', () => {
       const { wrapper, field } = setup();
-      const onChangeProp = wrapper.find(Datetime).prop('onChange');
+      const onChangeProp: Function | undefined = wrapper.find(Datetime).prop('onChange');
 
       if (onChangeProp === undefined) {
         throw new Error('Invalid test state');
@@ -100,7 +100,6 @@ describe('<DatePicker />', () => {
         format: jest.fn().mockReturnValue('formatted-mock-date'),
       };
 
-      // @ts-ignore
       onChangeProp(mockDate);
       expect(field.onChange).toHaveBeenCalledWith({
         target: {
@@ -124,7 +123,7 @@ describe('<DatePicker />', () => {
         });
 
         // @ts-ignore
-        return wrapper.instance().getDisplayValue;
+        return (wrapper.instance() as BaseDatePicker).getDisplayValue;
       };
 
       const cases = [
@@ -142,7 +141,9 @@ describe('<DatePicker />', () => {
         ['Mock Mock', 'Mock', 'Mock'],
       ];
 
-      it.each(cases)('should format the value with "%s" if dateFormat is %s and timeFormat is %s', (name, dateFormat, timeFormat) => {
+      it.each(cases)(
+        'should format the value with "%s" if dateFormat is %s and timeFormat is %s',
+        (name?: string, dateFormat?: string, timeFormat?: string) => {
         const mockDate = {
           format: jest.fn().mockReturnValue('mock-date'),
         };

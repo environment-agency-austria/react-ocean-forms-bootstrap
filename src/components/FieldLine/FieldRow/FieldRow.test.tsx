@@ -58,7 +58,7 @@ describe('<FieldRow />', () => {
     ['field is touched', 'touched', true, 'is-touched'],
   ];
 
-  describe.each(metaCases)('%s', (name, prop, value, className) => {
+  describe.each(metaCases)('%s', (name: string, prop: string, value: boolean, className: string) => {
     it(`should set the class ${className} to the FormGroup if meta.${prop} is ${value}`, () => {
       const { wrapper } = setup({
         metaOverrides: { [prop]: value },
@@ -75,8 +75,6 @@ describe('<FieldRow />', () => {
       });
 
       const groupClass = wrapper.find('FormGroup').prop('className');
-      // The jest typings are incorrect, see https://github.com/DefinitelyTyped/DefinitelyTyped/issues/29715
-      // @ts-ignore
       expect(groupClass).toEqual(expect.not.stringContaining(className));
       expect(groupClass).toEqual(expect.stringContaining(baseClassName));
     });
