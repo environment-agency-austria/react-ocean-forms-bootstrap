@@ -1,6 +1,17 @@
 import { IFieldComponentProps, TValidator } from 'react-ocean-forms';
 
 /**
+ * Props for components that use the info
+ * feature of the FieldLine
+ */
+export interface IInfoProps {
+  /**
+   * Info text
+   */
+  info?: string;
+}
+
+/**
  * Props for the FieldLine component
  */
 export interface IFieldLineProps extends IFieldComponentProps, IInfoProps {
@@ -29,15 +40,4 @@ export interface IFieldLineProps extends IFieldComponentProps, IInfoProps {
    * Validators
    */
   validators?: TValidator[];
-}
-
-/**
- * Props for components that use the info
- * feature of the FieldLine
- */
-export interface IInfoProps {
-  /**
-   * Info text
-   */
-  info?: string;
 }

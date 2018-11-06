@@ -1,5 +1,6 @@
 // Register our custom messages to react-ocean-forms
-import './utils/registerCustomMessages';
+import { registerCustomMessages } from './utils/registerCustomMessages';
+registerCustomMessages();
 
 export * from './components/Check';
 export * from './components/DatePicker';

@@ -22,7 +22,7 @@ export class InfoAddonButton extends React.Component<IInfoAddonButtonProps> {
     const { info, plaintext, onClick } = this.props;
 
     if (plaintext) { return null; }
-    if (!info) { return null; }
+    if (info === undefined || info === '') { return null; }
 
     return (
       <InputGroupAddon addonType="append">

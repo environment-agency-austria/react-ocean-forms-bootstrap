@@ -34,7 +34,7 @@ describe('<ValidationSummary />', () => {
 
   describe('render prop', () => {
     const { wrapper } = setup();
-    const renderProp = wrapper.find(CoreValidationSummary).prop('render');
+    const renderProp = wrapper.find(CoreValidationSummary).prop<((children: JSX.Element) => JSX.Element)>('render');
 
     it('should set the render prop correctly', () => {
       expect(typeof renderProp).toBe('function');
@@ -49,7 +49,7 @@ describe('<ValidationSummary />', () => {
 
   describe('renderFieldError prop', () => {
     const { wrapper } = setup();
-    const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop('renderFieldError');
+    const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop<((...rest: unknown[]) => JSX.Element)>('renderFieldError');
 
     it('should set the render prop correctly', () => {
       expect(typeof renderFieldErrorProp).toBe('function');

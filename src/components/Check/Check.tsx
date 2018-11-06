@@ -59,7 +59,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
     // event.target.checked exists in this case
     // because of the HtmlInputElement
     // @ts-ignore
-    const checked = event.target.checked;
+    const checked = event.target.checked as boolean;
 
     field.onChange({
       target: {
