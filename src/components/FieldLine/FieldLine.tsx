@@ -62,7 +62,6 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
       meta,
       label,
       children,
-      validators,
       prefix,
       suffix,
       info,
@@ -79,7 +78,7 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
           <FormText text={label} />
-          <RequiredMarker meta={meta} validators={validators} />
+          <RequiredMarker meta={meta} />
         </Label>
         <Col sm={inputSize}>
           <InputGroup>

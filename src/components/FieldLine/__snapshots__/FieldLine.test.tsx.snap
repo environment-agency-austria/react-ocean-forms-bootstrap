@@ -21,6 +21,7 @@ ShallowWrapper {
     meta={
       Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
@@ -75,6 +76,7 @@ ShallowWrapper {
             meta={
               Object {
                 "error": null,
+                "isRequired": false,
                 "isValidating": false,
                 "plaintext": false,
                 "stringFormatter": [MockFunction],
@@ -130,6 +132,7 @@ ShallowWrapper {
       ],
       "meta": Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
@@ -158,6 +161,7 @@ ShallowWrapper {
               meta={
                 Object {
                   "error": null,
+                  "isRequired": false,
                   "isValidating": false,
                   "plaintext": false,
                   "stringFormatter": [MockFunction],
@@ -221,13 +225,13 @@ ShallowWrapper {
             "props": Object {
               "meta": Object {
                 "error": null,
+                "isRequired": false,
                 "isValidating": false,
                 "plaintext": false,
                 "stringFormatter": [MockFunction],
                 "touched": false,
                 "valid": true,
               },
-              "validators": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -436,6 +440,7 @@ ShallowWrapper {
               meta={
                 Object {
                   "error": null,
+                  "isRequired": false,
                   "isValidating": false,
                   "plaintext": false,
                   "stringFormatter": [MockFunction],
@@ -491,6 +496,7 @@ ShallowWrapper {
         ],
         "meta": Object {
           "error": null,
+          "isRequired": false,
           "isValidating": false,
           "plaintext": false,
           "stringFormatter": [MockFunction],
@@ -519,6 +525,7 @@ ShallowWrapper {
                 meta={
                   Object {
                     "error": null,
+                    "isRequired": false,
                     "isValidating": false,
                     "plaintext": false,
                     "stringFormatter": [MockFunction],
@@ -582,13 +589,13 @@ ShallowWrapper {
               "props": Object {
                 "meta": Object {
                   "error": null,
+                  "isRequired": false,
                   "isValidating": false,
                   "plaintext": false,
                   "stringFormatter": [MockFunction],
                   "touched": false,
                   "valid": true,
                 },
-                "validators": undefined,
               },
               "ref": null,
               "rendered": null,

@@ -18,6 +18,7 @@ ShallowWrapper {
     meta={
       Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
@@ -65,6 +66,7 @@ ShallowWrapper {
       "labelSize": "3",
       "meta": Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": true,
         "stringFormatter": [MockFunction],
@@ -126,6 +128,7 @@ ShallowWrapper {
         "labelSize": "3",
         "meta": Object {
           "error": null,
+          "isRequired": false,
           "isValidating": false,
           "plaintext": true,
           "stringFormatter": [MockFunction],
@@ -194,6 +197,7 @@ ShallowWrapper {
     meta={
       Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
@@ -253,6 +257,7 @@ ShallowWrapper {
       "labelSize": "3",
       "meta": Object {
         "error": null,
+        "isRequired": false,
         "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction],
@@ -337,6 +342,7 @@ ShallowWrapper {
         "labelSize": "3",
         "meta": Object {
           "error": null,
+          "isRequired": false,
           "isValidating": false,
           "plaintext": false,
           "stringFormatter": [MockFunction],

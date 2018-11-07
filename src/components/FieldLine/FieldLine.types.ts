@@ -1,4 +1,4 @@
-import { IFieldComponentProps, TValidator } from 'react-ocean-forms';
+import { IFieldComponentProps } from 'react-ocean-forms';
 
 /**
  * Props for components that use the info
@@ -36,8 +36,4 @@ export interface IFieldLineProps extends IFieldComponentProps, IInfoProps {
    * Suffix component
    */
   suffix?: React.ReactType;
-  /**
-   * Validators
-   */
-  validators?: TValidator[];
 }

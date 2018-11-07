@@ -7,6 +7,7 @@ ShallowWrapper {
     meta={
       Object {
         "error": null,
+        "isRequired": true,
         "isValidating": false,
         "plaintext": false,
         "stringFormatter": [MockFunction] {
@@ -25,11 +26,6 @@ ShallowWrapper {
         "touched": false,
         "valid": true,
       }
-    }
-    validators={
-      Array [
-        [Function],
-      ]
     }
   />,
   Symbol(enzyme.__renderer__): Object {

@@ -7,8 +7,6 @@
 
 import * as React from 'react';
 
-import { validators as defaultValidators } from 'react-ocean-forms';
-
 import { IRequiredMarkerProps } from './RequiredMarker.types';
 
 /**
@@ -19,12 +17,12 @@ export class RequiredMarker extends React.Component<IRequiredMarkerProps> {
   public static displayName: string = 'RequiredMarker';
 
   public render(): JSX.Element | null {
-    const { validators, meta } = this.props;
+    const { meta } = this.props;
 
     // Do nothing in plaintext mode
     if (meta.plaintext) { return null; }
 
-    if (Array.isArray(validators) && validators.includes(defaultValidators.required)) {
+    if (meta.isRequired) {
       const requiredTitle = meta.stringFormatter('ojs_field_required');
 
       return (

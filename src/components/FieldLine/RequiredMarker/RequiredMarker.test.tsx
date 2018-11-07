@@ -1,20 +1,21 @@
 import * as React from 'react';
 
 import { shallow, ShallowWrapper } from 'enzyme';
-import { TValidator, validators as defaultValidators } from 'react-ocean-forms';
 
 import { createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 import { RequiredMarker } from './RequiredMarker';
 
 describe('<RequiredMarker />', () => {
-  const setup = (plaintext: boolean, validators?: TValidator[]): ShallowWrapper => {
+  const setup = (plaintext: boolean, required?: boolean): ShallowWrapper => {
     const meta = createMockFieldMeta();
     meta.plaintext = plaintext;
+    if (required !== undefined) {
+      meta.isRequired = required;
+    }
 
     return shallow((
       <RequiredMarker
         meta={meta}
-        validators={validators}
       />
     ));
   };
@@ -30,7 +31,7 @@ describe('<RequiredMarker />', () => {
   });
 
   it('should render the field required marker if there is a required field validator', () => {
-    const wrapper = setup(false, [defaultValidators.required]);
+    const wrapper = setup(false, true);
     expect(wrapper.find('.field-required').exists()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });

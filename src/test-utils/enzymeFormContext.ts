@@ -60,6 +60,7 @@ export const createMockFieldMeta = (): IFieldComponentMeta => ({
   valid: true,
   error: null,
   isValidating: false,
+  isRequired: false,
   touched: false,
   stringFormatter: createMockFormatter(),
   plaintext: false,
