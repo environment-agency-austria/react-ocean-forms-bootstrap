@@ -1,10 +1,10 @@
 import { IFieldComponentProps } from 'react-ocean-forms';
-import { IInfoProps } from '../FieldLine';
+import { DefaultizedFieldLineProps } from '../FieldLine';
 
 /**
  * Props for the DatePicker component
  */
-export interface IDatePickerProps extends IFieldComponentProps, IInfoProps {
+export interface IDatePickerProps extends IFieldComponentProps, DefaultizedFieldLineProps {
   dateFormat?: string | boolean;
   timeFormat?: string | boolean;
 }

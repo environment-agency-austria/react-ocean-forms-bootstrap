@@ -1,5 +1,5 @@
 import { IFieldComponentProps } from 'react-ocean-forms';
-import { IInfoProps } from '../FieldLine';
+import { DefaultizedFieldLineProps } from '../FieldLine';
 
 /**
  * Selectable option
@@ -30,7 +30,7 @@ export type ISelectOptions = ISelectOption[];
 /**
  * Props for the Select component
  */
-export interface ISelectProps extends IFieldComponentProps, IInfoProps {
+export interface ISelectProps extends IFieldComponentProps, DefaultizedFieldLineProps {
   /**
    * Placeholder string that will be displayed while
    * the component is empty

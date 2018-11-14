@@ -12,9 +12,9 @@ export interface IInfoProps {
 }
 
 /**
- * Props for the FieldLine component
+ * Base props for the FieldLine component
  */
-export interface IFieldLineProps extends IFieldComponentProps, IInfoProps {
+export interface IBaseFieldLineProps extends IInfoProps {
   /**
    * Label size for the bootstrap label column
    */
@@ -37,3 +37,8 @@ export interface IFieldLineProps extends IFieldComponentProps, IInfoProps {
    */
   suffix?: React.ReactType;
 }
+
+/**
+ * Props for the FieldLine component
+ */
+export interface IFieldLineProps extends IFieldComponentProps, IBaseFieldLineProps { }

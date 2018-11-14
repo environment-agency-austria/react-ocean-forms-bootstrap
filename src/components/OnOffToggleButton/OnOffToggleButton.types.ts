@@ -1,10 +1,10 @@
 import { IFieldComponentProps } from 'react-ocean-forms';
-import { IInfoProps } from '../FieldLine';
+import { DefaultizedFieldLineProps } from '../FieldLine';
 
 /**
  * Props for the OnOffToggleButton component
  */
-export interface IOnOffToggleButtonProps extends IFieldComponentProps, IInfoProps {
+export interface IOnOffToggleButtonProps extends IFieldComponentProps, DefaultizedFieldLineProps {
   /**
    * Label for the on-button
    */

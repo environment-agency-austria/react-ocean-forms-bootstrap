@@ -6,7 +6,7 @@
  */
 import * as React from 'react';
 
-import { FormText } from 'react-ocean-forms';
+import { FormText, PropsOf } from 'react-ocean-forms';
 import { Col, InputGroup, Label } from 'reactstrap';
 
 import { FieldError } from './FieldError';
@@ -103,3 +103,5 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
     );
   }
 }
+
+export type DefaultizedFieldLineProps = JSX.LibraryManagedAttributes<typeof FieldLine, PropsOf<typeof FieldLine>>;
