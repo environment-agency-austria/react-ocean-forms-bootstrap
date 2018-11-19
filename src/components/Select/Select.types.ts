@@ -17,8 +17,7 @@ export interface ISelectOption {
 
 // tslint:disable-next-line:no-any
 export function isSelectOption(object: any): object is ISelectOption {
-  // tslint:disable-next-line:no-unsafe-any
-  return object && typeof object.label === 'string' && typeof object.value === 'string';
+  return object && typeof (<ISelectOption>object).label === 'string' && typeof (<ISelectOption>object).value === 'string';
 }
 
 /**
