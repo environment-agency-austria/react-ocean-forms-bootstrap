@@ -1,11 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [2.0.0] # 2018-11-19
 ### Breaking changes
-- Updated to react-ocean-forms 2.0.0
-- Updated to @fortawesome/react-fontawesome 0.1.3
-- Updated to react-select 2.1.0
+- Updated to `react-ocean-forms` 2.0.0 - [migration guide](https://github.com/environment-agency-austria/react-ocean-forms#upgrading-from-react-ocean-forms-1xx-to-200)
+- Updated to `@fortawesome/react-fontawesome` 0.1.3 - [migration guide](https://github.com/FortAwesome/react-fontawesome/blob/master/UPGRADING.md)
+- Updated to `react-select` 2.1.0 - [migration guide](https://react-select.com/upgrade-guide)
+- Switched some dependencies to peerDependencies - please ensure that you include them in your package.json!
 
 ### Misc
 - Fixed `OnOffToggleButton` not reacting to `disabled` state
