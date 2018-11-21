@@ -532,28 +532,9 @@ ShallowWrapper {
         "results": Array [
           Object {
             "isThrow": false,
-            "value": <div
-              className="react-select-control"
-              id="mock-field"
-              isDisabled={false}
-              isMulti={false}
-              onBlur={[Function]}
-              onChange={[Function]}
-              options={
-                Array [
-                  Object {
-                    "label": "One",
-                    "value": "one",
-                  },
-                  Object {
-                    "label": "Two",
-                    "value": "two",
-                  },
-                ]
-              }
-              placeholder="ojs_select_placeholder"
-            >
+            "value": <div>
               mock select with props
+              {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
             </div>,
           },
         ],
@@ -573,28 +554,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <div
-        className="react-select-control"
-        id="mock-field"
-        isDisabled={false}
-        isMulti={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        options={
-          Array [
-            Object {
-              "label": "One",
-              "value": "one",
-            },
-            Object {
-              "label": "Two",
-              "value": "two",
-            },
-          ]
-        }
-        placeholder="ojs_select_placeholder"
-      >
+      "children": <div>
         mock select with props
+        {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
       </div>,
       "field": Object {
         "disabled": false,
@@ -636,30 +598,16 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "mock select with props",
-        "className": "react-select-control",
-        "id": "mock-field",
-        "isDisabled": false,
-        "isLoading": undefined,
-        "isMulti": false,
-        "isRtl": undefined,
-        "onBlur": [Function],
-        "onChange": [Function],
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
+        "children": Array [
+          "mock select with props",
+          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
         ],
-        "placeholder": "ojs_select_placeholder",
-        "value": undefined,
       },
       "ref": null,
-      "rendered": "mock select with props",
+      "rendered": Array [
+        "mock select with props",
+        "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+      ],
       "type": "div",
     },
     "type": [Function],
@@ -670,28 +618,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <div
-          className="react-select-control"
-          id="mock-field"
-          isDisabled={false}
-          isMulti={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          options={
-            Array [
-              Object {
-                "label": "One",
-                "value": "one",
-              },
-              Object {
-                "label": "Two",
-                "value": "two",
-              },
-            ]
-          }
-          placeholder="ojs_select_placeholder"
-        >
+        "children": <div>
           mock select with props
+          {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
         </div>,
         "field": Object {
           "disabled": false,
@@ -733,30 +662,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "mock select with props",
-          "className": "react-select-control",
-          "id": "mock-field",
-          "isDisabled": false,
-          "isLoading": undefined,
-          "isMulti": false,
-          "isRtl": undefined,
-          "onBlur": [Function],
-          "onChange": [Function],
-          "options": Array [
-            Object {
-              "label": "One",
-              "value": "one",
-            },
-            Object {
-              "label": "Two",
-              "value": "two",
-            },
+          "children": Array [
+            "mock select with props",
+            "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
           ],
-          "placeholder": "ojs_select_placeholder",
-          "value": undefined,
         },
         "ref": null,
-        "rendered": "mock select with props",
+        "rendered": Array [
+          "mock select with props",
+          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+        ],
         "type": "div",
       },
       "type": [Function],

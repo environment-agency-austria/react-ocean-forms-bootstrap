@@ -5,9 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 import { IFieldComponentProps } from 'react-ocean-forms';
-import { DefaultizedFieldLineProps } from '../../FieldLine';
-
+// tslint:disable-next-line:no-submodule-imports We are just importing for the types
 import { Props as SelectProps } from 'react-select/lib/Select';
+
+import { DefaultizedFieldLineProps } from '../../FieldLine';
 
 /**
  * Selectable option

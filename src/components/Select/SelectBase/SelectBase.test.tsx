@@ -7,7 +7,7 @@ import { createMockField, createMockFieldMeta } from '../../../test-utils/enzyme
 import { FieldLine } from '../../FieldLine';
 import { ISelectOption, ISelectOptions } from '../SelectBase';
 import { SelectBase } from './SelectBase';
-import { ISelectBaseProps } from './SelectBase.types';
+import { IPreparedSelectProps, ISelectBaseProps } from './SelectBase.types';
 
 describe('<SelectBase />', () => {
   interface ISetupArgs {
@@ -44,9 +44,12 @@ describe('<SelectBase />', () => {
       { value: 'two', label: 'Two' },
     ];
 
-    const renderSelect = jest.fn((preparedProps) => {
+    const renderSelect = jest.fn((preparedProps: IPreparedSelectProps) => {
       return (
-        <div {...preparedProps}>mock select with props</div>
+        <div>
+          mock select with props
+          {JSON.stringify(preparedProps)}
+        </div>
       );
     });
 
@@ -120,7 +123,7 @@ describe('<SelectBase />', () => {
   describe('field events', () => {
     it('should call field.onChange when the input changes', () => {
       let changeProp: Function | undefined;
-      const renderSelect = jest.fn((props) => {
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
         changeProp = props.onChange;
       });
 
@@ -140,7 +143,7 @@ describe('<SelectBase />', () => {
 
     it('should call field.onBlur when there is an input blur', () => {
       let blurProp: Function | undefined;
-      const renderSelect = jest.fn((props) => {
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
         blurProp = props.onBlur;
       });
 
@@ -173,8 +176,8 @@ describe('<SelectBase />', () => {
   });
 
   it('should set the is-invalid css class to the ReactSelect component if meta.valid is false', () => {
-    let className = '';
-    const renderSelect = jest.fn((props) => {
+    let className: string | undefined = '';
+    const renderSelect = jest.fn((props: IPreparedSelectProps) => {
       className = props.className;
     });
 

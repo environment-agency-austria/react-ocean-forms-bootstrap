@@ -10,7 +10,7 @@
 // ============================================================================
 import * as React from 'react';
 import { withField } from 'react-ocean-forms';
-import { default as Creatable} from 'react-select/lib/Creatable';
+import { Creatable } from 'react-select';
 
 import { IPreparedSelectProps, SelectBase } from '../SelectBase';
 import { ICreatableSelectProps } from './CreatableSelect.types';
