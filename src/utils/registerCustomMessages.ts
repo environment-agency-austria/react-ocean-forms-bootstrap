@@ -11,6 +11,7 @@ import { addCustomMessages } from 'react-ocean-forms';
 export const registerCustomMessages = (): void => {
   const defaultMessages = {
     ojs_select_placeholder: 'Choose a value',
+    ojs_select_creatable_prefix: 'Create',
     ojs_form_select_file: 'Choose file',
     ojs_select_noresults: 'No results',
     ojs_select_clearValue: 'Clear value',

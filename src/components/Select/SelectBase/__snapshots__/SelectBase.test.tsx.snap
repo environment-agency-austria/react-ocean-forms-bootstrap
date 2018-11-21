@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> meta.plaintext should correctly react to meta.plaintext 1`] = `
+exports[`<SelectBase /> meta.plaintext should correctly react to meta.plaintext 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Select
+  Symbol(enzyme.__unrendered__): <SelectBase
     field={
       Object {
         "disabled": false,
@@ -40,6 +40,7 @@ ShallowWrapper {
       ]
     }
     placeholder="ojs_select_placeholder"
+    renderSelect={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -99,6 +100,7 @@ ShallowWrapper {
         },
       ],
       "placeholder": "ojs_select_placeholder",
+      "renderSelect": [MockFunction],
     },
     "ref": null,
     "rendered": Object {
@@ -173,6 +175,7 @@ ShallowWrapper {
           },
         ],
         "placeholder": "ojs_select_placeholder",
+        "renderSelect": [MockFunction],
       },
       "ref": null,
       "rendered": Object {
@@ -217,10 +220,10 @@ ShallowWrapper {
 }
 `;
 
-exports[`<Select /> meta.plaintext should display the label property of the selected option in plaintext mode 1`] = `
+exports[`<SelectBase /> meta.plaintext should display the label property of the selected option in plaintext mode 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Select
+  Symbol(enzyme.__unrendered__): <SelectBase
     field={
       Object {
         "disabled": false,
@@ -260,6 +263,7 @@ ShallowWrapper {
       ]
     }
     placeholder="ojs_select_placeholder"
+    renderSelect={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -322,6 +326,7 @@ ShallowWrapper {
         },
       ],
       "placeholder": "ojs_select_placeholder",
+      "renderSelect": [MockFunction],
     },
     "ref": null,
     "rendered": Object {
@@ -399,6 +404,7 @@ ShallowWrapper {
           },
         ],
         "placeholder": "ojs_select_placeholder",
+        "renderSelect": [MockFunction],
       },
       "ref": null,
       "rendered": Object {
@@ -443,10 +449,10 @@ ShallowWrapper {
 }
 `;
 
-exports[`<Select /> should render correctly 1`] = `
+exports[`<SelectBase /> should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Select
+  Symbol(enzyme.__unrendered__): <SelectBase
     field={
       Object {
         "disabled": false,
@@ -495,6 +501,64 @@ ShallowWrapper {
       ]
     }
     placeholder="ojs_select_placeholder"
+    renderSelect={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "className": "react-select-control",
+              "id": "mock-field",
+              "isDisabled": false,
+              "isLoading": undefined,
+              "isMulti": false,
+              "isRtl": undefined,
+              "onBlur": [Function],
+              "onChange": [Function],
+              "options": Array [
+                Object {
+                  "label": "One",
+                  "value": "one",
+                },
+                Object {
+                  "label": "Two",
+                  "value": "two",
+                },
+              ],
+              "placeholder": "ojs_select_placeholder",
+              "value": undefined,
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": <div
+              className="react-select-control"
+              id="mock-field"
+              isDisabled={false}
+              isMulti={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              options={
+                Array [
+                  Object {
+                    "label": "One",
+                    "value": "one",
+                  },
+                  Object {
+                    "label": "Two",
+                    "value": "two",
+                  },
+                ]
+              }
+              placeholder="ojs_select_placeholder"
+            >
+              mock select with props
+            </div>,
+          },
+        ],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -509,11 +573,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <StateManager
+      "children": <div
         className="react-select-control"
-        defaultInputValue=""
-        defaultMenuIsOpen={false}
-        defaultValue={null}
         id="mock-field"
         isDisabled={false}
         isMulti={false}
@@ -532,7 +593,9 @@ ShallowWrapper {
           ]
         }
         placeholder="ojs_select_placeholder"
-      />,
+      >
+        mock select with props
+      </div>,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -566,32 +629,20 @@ ShallowWrapper {
         "touched": false,
         "valid": true,
       },
-      "multi": false,
-      "options": Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ],
-      "placeholder": "ojs_select_placeholder",
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
+        "children": "mock select with props",
         "className": "react-select-control",
-        "defaultInputValue": "",
-        "defaultMenuIsOpen": false,
-        "defaultValue": null,
         "id": "mock-field",
         "isDisabled": false,
+        "isLoading": undefined,
         "isMulti": false,
+        "isRtl": undefined,
         "onBlur": [Function],
         "onChange": [Function],
         "options": Array [
@@ -608,8 +659,8 @@ ShallowWrapper {
         "value": undefined,
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": "mock select with props",
+      "type": "div",
     },
     "type": [Function],
   },
@@ -619,11 +670,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <StateManager
+        "children": <div
           className="react-select-control"
-          defaultInputValue=""
-          defaultMenuIsOpen={false}
-          defaultValue={null}
           id="mock-field"
           isDisabled={false}
           isMulti={false}
@@ -642,7 +690,9 @@ ShallowWrapper {
             ]
           }
           placeholder="ojs_select_placeholder"
-        />,
+        >
+          mock select with props
+        </div>,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -676,32 +726,20 @@ ShallowWrapper {
           "touched": false,
           "valid": true,
         },
-        "multi": false,
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-        "placeholder": "ojs_select_placeholder",
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
+          "children": "mock select with props",
           "className": "react-select-control",
-          "defaultInputValue": "",
-          "defaultMenuIsOpen": false,
-          "defaultValue": null,
           "id": "mock-field",
           "isDisabled": false,
+          "isLoading": undefined,
           "isMulti": false,
+          "isRtl": undefined,
           "onBlur": [Function],
           "onChange": [Function],
           "options": Array [
@@ -718,8 +756,8 @@ ShallowWrapper {
           "value": undefined,
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "mock select with props",
+        "type": "div",
       },
       "type": [Function],
     },

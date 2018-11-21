@@ -6,21 +6,18 @@
  */
 
 import * as React from 'react';
-
-import { withField } from 'react-ocean-forms';
-import { default as ReactSelect } from 'react-select';
 import { Input as StrapInput } from 'reactstrap';
 
-import { FieldLine } from '../FieldLine';
-import { ISelectOption, ISelectProps, isSelectOption } from './Select.types';
+import { FieldLine } from '../../FieldLine';
+import { IPreparedSelectProps, ISelectBaseProps, ISelectOption, isSelectOption } from './SelectBase.types';
 
 /**
- * Component for displaying bootstrap
+ * Base component for displaying bootstrap
  * form groups with an select input and
  * oForm support
  */
-export class BaseSelect extends React.Component<ISelectProps> {
-  public static displayName: string = 'Select';
+export class SelectBase extends React.Component<ISelectBaseProps> {
+  public static displayName: string = 'SelectBase';
 
   // tslint:disable-next-line:typedef
   public static defaultProps = {
@@ -57,11 +54,19 @@ export class BaseSelect extends React.Component<ISelectProps> {
   // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
+      renderSelect,
       field,
       placeholder,
       options,
-      multi,
       meta,
+
+      // booleans
+      multi,
+      loading,
+      rtl,
+
+      // Other props (field line)
+      ...fieldlineProps
     } = this.props;
 
     // Generate a css class based on the validity of the select element
@@ -98,24 +103,32 @@ export class BaseSelect extends React.Component<ISelectProps> {
       );
     }
 
+    // Format the placeholder
     const placeholderText = meta.stringFormatter(placeholder);
 
+    // Prepare the props for the renderSelect method
+    const preparedProps: IPreparedSelectProps = {
+      id: field.id,
+      value: fieldValue,
+      isDisabled: field.disabled,
+      isMulti: multi,
+      isRtl: rtl,
+      isLoading: loading,
+      onChange: this.handleChange,
+      onBlur: this.handleBlur,
+      options: options,
+      placeholder: placeholderText,
+      className: selectClass,
+    };
+
     return (
-      <FieldLine {...this.props}>
-        <ReactSelect
-          id={field.id}
-          value={fieldValue}
-          isDisabled={field.disabled}
-          onChange={this.handleChange}
-          onBlur={this.handleBlur}
-          options={options}
-          isMulti={multi}
-          placeholder={placeholderText}
-          className={selectClass}
-        />
+      <FieldLine
+        meta={meta}
+        field={field}
+        {...fieldlineProps}
+      >
+        {renderSelect(preparedProps)}
       </FieldLine>
     );
   }
 }
-
-export const Select = withField(BaseSelect);
