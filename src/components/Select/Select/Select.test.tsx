@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { shallow, ShallowWrapper } from 'enzyme';
 import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-forms';
+import { SelectBase as ReactSelect } from 'react-select';
 
 import { createMockField, createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 import { ISelectOptions, SelectBase } from '../SelectBase';
@@ -70,5 +71,15 @@ describe('<Select />', () => {
     const { wrapper } = setup();
 
     expect(wrapper.find(SelectBase).exists()).toBeTruthy();
+  });
+
+  it('should render a react-select', () => {
+    const { wrapper } = setup();
+
+    type SelectInstance = { renderSelect(): JSX.Element };
+    const i = ((wrapper.instance()) as unknown) as SelectInstance;
+    const result = shallow(i.renderSelect());
+
+    expect(result.find(ReactSelect).exists()).toBeTruthy();
   });
 });
