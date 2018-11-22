@@ -1,2 +1,3 @@
+export * from './SelectBase';
 export * from './Select';
-export * from './Select.types';
+export * from './CreatableSelect';

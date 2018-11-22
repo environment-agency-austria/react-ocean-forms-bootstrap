@@ -2,16 +2,16 @@ import * as React from 'react';
 
 import { shallow, ShallowWrapper } from 'enzyme';
 import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-forms';
-import { default as ReactSelect } from 'react-select';
 
-import { createMockField, createMockFieldMeta } from '../../test-utils/enzymeFormContext';
-import { FieldLine } from '../FieldLine';
-import { BaseSelect } from './Select';
-import { ISelectOption, ISelectOptions, ISelectProps } from './Select.types';
+import { createMockField, createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
+import { FieldLine } from '../../FieldLine';
+import { ISelectOption, ISelectOptions } from '../SelectBase';
+import { SelectBase } from './SelectBase';
+import { IPreparedSelectProps, ISelectBaseProps } from './SelectBase.types';
 
-describe('<Select />', () => {
+describe('<SelectBase />', () => {
   interface ISetupArgs {
-    props?: Partial<ISelectProps>;
+    props?: Partial<ISelectBaseProps>;
     fieldOverrides?: Partial<IFieldComponentFieldProps>;
     metaOverrides?: Partial<IFieldComponentMeta>;
   }
@@ -44,12 +44,22 @@ describe('<Select />', () => {
       { value: 'two', label: 'Two' },
     ];
 
+    const renderSelect = jest.fn((preparedProps: IPreparedSelectProps) => {
+      return (
+        <div>
+          mock select with props
+          {JSON.stringify(preparedProps)}
+        </div>
+      );
+    });
+
     const wrapper = shallow((
-      <BaseSelect
+      <SelectBase
         label={fieldLabel}
         meta={meta}
         field={field}
         options={options}
+        renderSelect={renderSelect}
         {...props}
       />
     ));
@@ -68,10 +78,17 @@ describe('<Select />', () => {
   });
 
   it('should render a field line and a react-select', () => {
-    const { wrapper } = setup();
+    const renderSelect = jest.fn();
+
+    const { wrapper } = setup({
+      props: {
+        renderSelect,
+      },
+    });
 
     expect(wrapper.find(FieldLine).exists()).toBeTruthy();
-    expect(wrapper.find(ReactSelect).exists()).toBeTruthy();
+    // expect(wrapper.find(ReactSelect).exists()).toBeTruthy();
+    expect(renderSelect).toBeCalled();
   });
 
   it('should pass the meta props to the field line', () => {
@@ -105,10 +122,17 @@ describe('<Select />', () => {
 
   describe('field events', () => {
     it('should call field.onChange when the input changes', () => {
-      const { wrapper, field, options } = setup();
+      let changeProp: Function | undefined;
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+        changeProp = props.onChange;
+      });
 
-      const changeProp = wrapper.find(ReactSelect).prop('onChange') as Function;
-      changeProp(options[1]);
+      const { field, options } = setup({
+        props: { renderSelect },
+      });
+
+      expect(changeProp).toBeDefined();
+      changeProp && changeProp(options[1]);
 
       expect(field.onChange).toHaveBeenCalledWith({
         target: {
@@ -118,10 +142,17 @@ describe('<Select />', () => {
     });
 
     it('should call field.onBlur when there is an input blur', () => {
-      const { wrapper, field } = setup();
+      let blurProp: Function | undefined;
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+        blurProp = props.onBlur;
+      });
 
-      const blurProp = wrapper.find(ReactSelect).prop('onBlur') as Function;
-      blurProp();
+      const { field } = setup({
+        props: { renderSelect },
+      });
+
+      expect(blurProp).toBeDefined();
+      blurProp && blurProp();
 
       expect(field.onBlur).toHaveBeenCalledWith();
     });
@@ -145,9 +176,18 @@ describe('<Select />', () => {
   });
 
   it('should set the is-invalid css class to the ReactSelect component if meta.valid is false', () => {
-    const { wrapper } = setup({
-      metaOverrides: { valid: false },
+    let className: string | undefined = '';
+    const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+      className = props.className;
     });
-    expect(wrapper.find(ReactSelect).prop('className')).toBe('react-select-control is-invalid');
+
+    setup({
+      metaOverrides: { valid: false },
+      props: {
+        renderSelect,
+      },
+    });
+
+    expect(className).toBe('react-select-control is-invalid');
   });
 });

@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Unreleased Changes
+- Add `CreatableSelect` that is a port for the `Creatable` component from `react-select`
+
 ## [2.0.0] # 2018-11-19
 ### Breaking changes
 - Updated to `react-ocean-forms` 2.0.0 - [migration guide](https://github.com/environment-agency-austria/react-ocean-forms#upgrading-from-react-ocean-forms-1xx-to-200)
