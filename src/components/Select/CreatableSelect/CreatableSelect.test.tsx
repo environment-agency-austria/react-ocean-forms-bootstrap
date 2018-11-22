@@ -10,6 +10,14 @@ import { BaseCreatableSelect } from './CreatableSelect';
 import { ICreatableSelectProps } from './CreatableSelect.types';
 
 describe('<CreatableSelect />', () => {
+  /**
+   * Type to expose the private members
+   */
+  type SelectInstancePrivatesExposed = {
+    renderSelect(): JSX.Element;
+    formatCreateLabel(text: string): React.ReactNode;
+  };
+
   interface ISetupArgs {
     props?: Partial<ICreatableSelectProps>;
     fieldOverrides?: Partial<IFieldComponentFieldProps>;
@@ -22,6 +30,9 @@ describe('<CreatableSelect />', () => {
     meta: IFieldComponentMeta;
     options: ISelectOptions;
   }
+  const exposePrivateMembers = (i: unknown): SelectInstancePrivatesExposed => {
+    return i as SelectInstancePrivatesExposed;
+  };
 
   const setup = ({
     props,
@@ -71,5 +82,39 @@ describe('<CreatableSelect />', () => {
     const { wrapper } = setup();
 
     expect(wrapper.find(SelectBase).exists()).toBeTruthy();
+  });
+
+  it('should render a react-select Creatable', () => {
+    const { wrapper } = setup();
+
+    const i = exposePrivateMembers(wrapper.instance());
+    const result = shallow(i.renderSelect());
+
+    expect(result.exists()).toBe(true);
+  });
+
+  it('should format the create label accordingly', () => {
+    // The string that is passed to the component
+    const mockCreatePrefixLabel = 'mock-create-prefix-label';
+    // The label for which the label should be created
+    const formatCreateLabelInput = 'mock-new-entry';
+    // The mocked result from the stringFormatter
+    const mockStringFormatterResult = 'mock-string-formatter-result';
+    const stringFormatter = jest.fn((): string => mockStringFormatterResult);
+
+    const { wrapper } = setup({
+      metaOverrides: {
+        stringFormatter,
+      },
+      props: {
+        createPrefixLabel: mockCreatePrefixLabel,
+      },
+    });
+
+    const i = exposePrivateMembers(wrapper.instance());
+    const formatCreateLabelResult = i.formatCreateLabel(formatCreateLabelInput);
+
+    expect(stringFormatter).toBeCalledWith(mockCreatePrefixLabel);
+    expect(formatCreateLabelResult).toEqual(`${mockStringFormatterResult} '${formatCreateLabelInput}'`);
   });
 });
