@@ -64,6 +64,8 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       multi,
       loading,
       rtl,
+      searchable,
+      clearable,
 
       // Other props (field line)
       ...fieldlineProps
@@ -114,6 +116,8 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       isMulti: multi,
       isRtl: rtl,
       isLoading: loading,
+      isSearchable: searchable,
+      isClearable: clearable,
       onChange: this.handleChange,
       onBlur: this.handleBlur,
       options: options,

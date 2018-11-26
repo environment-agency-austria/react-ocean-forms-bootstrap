@@ -2,7 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
-- Add `CreatableSelect` that is a port for the `Creatable` component from `react-select`
+- Added `CreatableSelect` that is a port for the `Creatable` component from `react-select`
+- Added new props (`searchable` and `clearable`) to `Select` and `Creatable` to reflect changes made to react-select.
 
 ## [2.0.0] # 2018-11-19
 ### Breaking changes

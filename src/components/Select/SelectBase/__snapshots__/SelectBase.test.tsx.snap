@@ -508,10 +508,12 @@ ShallowWrapper {
             Object {
               "className": "react-select-control",
               "id": "mock-field",
+              "isClearable": undefined,
               "isDisabled": false,
               "isLoading": undefined,
               "isMulti": false,
               "isRtl": undefined,
+              "isSearchable": undefined,
               "onBlur": [Function],
               "onChange": [Function],
               "options": Array [

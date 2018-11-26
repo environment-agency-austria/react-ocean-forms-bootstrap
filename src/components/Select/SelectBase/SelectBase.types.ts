@@ -60,6 +60,14 @@ interface IMappedReactSelectProps {
    * If true, the component shows an loading state
    */
   loading?: boolean;
+  /**
+   * True if the component is searchable, false otherwise.
+   */
+  searchable?: boolean;
+  /**
+   * True if the component is clearable, false otherwise.
+   */
+  clearable?: boolean;
 }
 
 export interface ISelectBasePropsBase extends
