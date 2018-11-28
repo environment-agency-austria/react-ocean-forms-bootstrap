@@ -4,5 +4,8 @@
     "exclude": [
       "config/**"
     ]
+  },
+  "rules": {
+    "no-submodule-imports": [ true, "reactstrap/lib", "react-select/lib" ]
   }
 }
