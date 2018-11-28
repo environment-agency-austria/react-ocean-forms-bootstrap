@@ -48,6 +48,10 @@
       "node"
     ]
   },
+  "dependencies": {
+    "@types/react-select": "^2.0.8",
+    "@types/reactstrap": "^6.4.2"
+  },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
@@ -71,8 +75,6 @@
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.10",
     "@types/react": "^16.7.7",
-    "@types/react-select": "^2.0.8",
-    "@types/reactstrap": "^6.4.2",
     "babel-loader": "^8.0.4",
     "babel-runtime": "^6.26.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
