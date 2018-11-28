@@ -1,5 +1,4 @@
 import { IFieldComponentProps } from 'react-ocean-forms';
-// tslint:disable-next-line:no-submodule-imports
 import { InputType } from 'reactstrap/lib/Input';
 
 import { DefaultizedFieldLineProps } from '../FieldLine';
