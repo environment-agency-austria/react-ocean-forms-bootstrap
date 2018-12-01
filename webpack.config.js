@@ -13,7 +13,7 @@ module.exports = (_env, arg) => {
   const config = {
     entry: {
       index: './src/index.ts',
-      stylesheet: './src/scss/main.scss',
+      main: './src/scss/main.scss',
     },
     devtool: 'source-map',
     output: {
