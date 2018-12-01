@@ -1,11 +1,11 @@
 {
   "name": "react-ocean-forms-bootstrap",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Forms components for react based on the context api.",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "private": false,
-  "eslint.packageManager": "yarn",
+  "sideEffects": false,
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
@@ -20,7 +20,6 @@
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
-    "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "moment": "^2.22.1",
     "react": "^16.4.0",
