@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
 
+## [2.1.2] # 2018-12-01
+- Made production package size smaller
+
 ## [2.1.1] # 2018-11-28
 - Moved `@types/react-select` and `@types/reactstrap` from devDependencies to dependencies, fixes typescript compiling issues
 
