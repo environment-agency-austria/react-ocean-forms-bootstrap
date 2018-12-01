@@ -20,7 +20,6 @@
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
-    "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "moment": "^2.22.1",
     "react": "^16.4.0",

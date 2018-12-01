@@ -67,7 +67,6 @@ module.exports = (_env, arg) => {
       'react-dom': 'commonjs react-dom',
       'react-select': 'commonjs react-select',
       '@fortawesome/fontawesome-svg-core': 'commonjs @fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-solid-svg-icons': 'commonjs @fortawesome/free-solid-svg-icons',
       '@fortawesome/react-fontawesome': 'commonjs @fortawesome/react-fontawesome',
     },
     plugins: [
