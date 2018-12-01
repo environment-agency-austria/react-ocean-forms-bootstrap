@@ -104,7 +104,7 @@ describe('<SelectBase />', () => {
       });
 
       const fieldValue: ISelectOption = field.value as ISelectOption;
-      expect(fieldValue.label).toBe('Two');
+      expect(fieldValue.label).toBe('');
     });
 
     it('should trigger the field.onChange event if the labels mismatch', () => {

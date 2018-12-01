@@ -527,7 +527,7 @@ ShallowWrapper {
                 },
               ],
               "placeholder": "ojs_select_placeholder",
-              "value": undefined,
+              "value": "",
             },
           ],
         ],
@@ -536,7 +536,7 @@ ShallowWrapper {
             "isThrow": false,
             "value": <div>
               mock select with props
-              {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
+              {"id":"mock-field","value":"","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
             </div>,
           },
         ],
@@ -558,7 +558,7 @@ ShallowWrapper {
     "props": Object {
       "children": <div>
         mock select with props
-        {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
+        {"id":"mock-field","value":"","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
       </div>,
       "field": Object {
         "disabled": false,
@@ -602,13 +602,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           "mock select with props",
-          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+          "{\\"id\\":\\"mock-field\\",\\"value\\":\\"\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
         ],
       },
       "ref": null,
       "rendered": Array [
         "mock select with props",
-        "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+        "{\\"id\\":\\"mock-field\\",\\"value\\":\\"\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
       ],
       "type": "div",
     },
@@ -622,7 +622,7 @@ ShallowWrapper {
       "props": Object {
         "children": <div>
           mock select with props
-          {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
+          {"id":"mock-field","value":"","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
         </div>,
         "field": Object {
           "disabled": false,
@@ -666,13 +666,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "mock select with props",
-            "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+            "{\\"id\\":\\"mock-field\\",\\"value\\":\\"\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
           ],
         },
         "ref": null,
         "rendered": Array [
           "mock select with props",
-          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
+          "{\\"id\\":\\"mock-field\\",\\"value\\":\\"\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
         ],
         "type": "div",
       },

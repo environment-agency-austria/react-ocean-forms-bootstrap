@@ -9,7 +9,10 @@ import * as React from 'react';
 import { Input as StrapInput } from 'reactstrap';
 
 import { FieldLine } from '../../FieldLine';
-import { IPreparedSelectProps, ISelectBaseProps, ISelectOption, isSelectOption } from './SelectBase.types';
+import {
+  IPreparedSelectProps, ISelectBaseProps, ISelectFieldValue,
+  ISelectOption, ISelectOptions, isSelectOption,
+} from './SelectBase.types';
 
 /**
  * Base component for displaying bootstrap
@@ -30,7 +33,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * the select because oForms is expecting
    * default input onChange behaviour.
    */
-  private handleChange = (value: ISelectOption): void => {
+  private handleChange = (value: ISelectFieldValue): void => {
     const { field } = this.props;
 
     field.onChange({
@@ -49,6 +52,52 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     const { field } = this.props;
 
     field.onBlur();
+  }
+
+  /**
+   * Update the label of a select option according to the available options
+   *
+   * @param options The available select options
+   * @param value The value that may need update
+   */
+  private updateSelectOptionLabel(options: ISelectOptions, value: ISelectOption): ISelectOption | null {
+    const selectableValue = options.find(item => item.value === value.value);
+
+    if (selectableValue === undefined || selectableValue.label === value.label) {
+      return null;
+    }
+
+    return {
+      ...value,
+      label: selectableValue.label,
+    };
+  }
+
+  private updateLabels(options: ISelectOptions, value: ISelectFieldValue): void {
+    let valueToChange: ISelectFieldValue | null = null;
+    let needsUpdate = false;
+
+    if (isSelectOption(value)) {
+      // If only one option is selected
+      valueToChange = this.updateSelectOptionLabel(options, value);
+      needsUpdate = (valueToChange !== null);
+    } else if (Array.isArray(value)) {
+      // Map the values
+      valueToChange = value.map(v => {
+        const updated = this.updateSelectOptionLabel(options, v);
+        // If null was returned, no updated is needed
+        if (updated === null) { return v; }
+        // Otherwise set the flag to true
+        needsUpdate = true;
+
+        return updated;
+      });
+    }
+
+    // If the value is null, nothing needs to be updated
+    if (valueToChange === null || !needsUpdate) { return; }
+
+    this.handleChange(valueToChange);
   }
 
   // tslint:disable-next-line:member-ordering
@@ -75,18 +124,12 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     let selectClass = 'react-select-control';
     selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
 
-    // Check if the current value has a different label than the value
-    // with the same key in the options array. Bugfix to change the
-    // selected label when the current language changes.
-    let fieldValue: ISelectOption | undefined;
-    if (isSelectOption(field.value)) {
-      fieldValue = field.value;
-      // tslint:disable-next-line:no-non-null-assertion
-      const selectableValue = options.find(item => item.value === fieldValue!.value);
-      if (selectableValue !== undefined && selectableValue.label !== field.value.label) {
-        field.value.label = selectableValue.label;
-        this.handleChange(field.value);
-      }
+    const fieldValue = (field.value as ISelectFieldValue | undefined);
+    if (fieldValue !== undefined) {
+      // Check if the current value has a different label than the value
+      // with the same key in the options array. Bugfix to change the
+      // selected label when the current language changes.
+      this.updateLabels(options, fieldValue);
     }
 
     // Support for plaintext display
