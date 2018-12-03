@@ -35,6 +35,11 @@ export function isSelectOption(object: any): object is ISelectOption {
 export type ISelectOptions = ISelectOption[];
 
 /**
+ * Types for the value that the field can have
+ */
+export type ISelectFieldValue = ISelectOption | ISelectOption[];
+
+/**
  * Wrapper for the base props that maps the props from react-select
  */
 interface IMappedReactSelectProps {
