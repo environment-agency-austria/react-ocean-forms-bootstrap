@@ -131,7 +131,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
   }
 
   /**
-   * Get the value of the field
+   * Get the value of the field with updated labels
    * @param field The field
    * @param options The available options
    */
