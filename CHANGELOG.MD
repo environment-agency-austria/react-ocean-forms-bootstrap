@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
+- Bugfix for `Select` components
 
 ## [2.1.2] # 2018-12-01
 - Made production package size smaller

@@ -107,6 +107,16 @@ describe('<SelectBase />', () => {
       expect(fieldValue.label).toBe('');
     });
 
+    it('should update the label of the selected values if it does not match with the label of the item inside options', () => {
+      const { field } = setup({
+        props: { multi: true },
+        fieldOverrides: { value: [{ value: 'two', label: '' }] },
+      });
+
+      const fieldValue: ISelectOptions = field.value as ISelectOptions;
+      expect(fieldValue[0].label).toBe('');
+    });
+
     it('should trigger the field.onChange event if the labels mismatch', () => {
       const { field } = setup({
         fieldOverrides: { value: { value: 'two', label: '' } },
@@ -141,6 +151,32 @@ describe('<SelectBase />', () => {
       });
     });
 
+    it('should call field.onChange when the input changes (multi=true)', () => {
+      let changeProp: Function | undefined;
+
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+        changeProp = props.onChange;
+      });
+
+      const { field, options } = setup({
+        props: {
+          renderSelect,
+          multi: true,
+        },
+      });
+
+      const selected = [options[0], options[1]];
+
+      expect(changeProp).toBeDefined();
+      changeProp && changeProp(selected);
+
+      expect(field.onChange).toHaveBeenCalledWith({
+        target: {
+          value: selected,
+        },
+      });
+    });
+
     it('should call field.onBlur when there is an input blur', () => {
       let blurProp: Function | undefined;
       const renderSelect = jest.fn((props: IPreparedSelectProps) => {
@@ -170,6 +206,18 @@ describe('<SelectBase />', () => {
       const { wrapper } = setup({
         metaOverrides: { plaintext: true },
         fieldOverrides: { value: { value: 'two', label: 'Two' } },
+      });
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should display the label property of the selected option in plaintext mode (multi=true)', () => {
+      const { wrapper } = setup({
+        props: { multi: true },
+        metaOverrides: { plaintext: true },
+        fieldOverrides: { value: [
+          { value: 'one', label: 'One' },
+          { value: 'two', label: 'Two' },
+        ] },
       });
       expect(wrapper).toMatchSnapshot();
     });

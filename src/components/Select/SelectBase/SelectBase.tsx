@@ -8,11 +8,31 @@
 import * as React from 'react';
 import { Input as StrapInput } from 'reactstrap';
 
+import { IFieldComponentFieldProps } from 'react-ocean-forms';
 import { FieldLine } from '../../FieldLine';
 import {
   IPreparedSelectProps, ISelectBaseProps, ISelectFieldValue,
   ISelectOption, ISelectOptions, isSelectOption,
 } from './SelectBase.types';
+
+/**
+ * The type that the field can have
+ */
+type SelectFieldValue = ISelectFieldValue | undefined;
+
+/**
+ * Result of an update
+ */
+interface IUpdatedLabelsResult {
+  /**
+   * True, if options were updated
+   */
+  needsUpdate: boolean;
+  /**
+   * The options
+   */
+  selectedOptions: SelectFieldValue;
+}
 
 /**
  * Base component for displaying bootstrap
@@ -55,16 +75,17 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
   }
 
   /**
-   * Update the label of a select option according to the available options
+   * Update the label of a select option according to the available options.
+   * If null is returned, the label is already up to date.
    *
    * @param options The available select options
    * @param value The value that may need update
    */
-  private updateSelectOptionLabel(options: ISelectOptions, value: ISelectOption): ISelectOption | null {
+  private updateSelectOptionLabel(options: ISelectOptions, value: ISelectOption): ISelectOption | undefined {
     const selectableValue = options.find(item => item.value === value.value);
 
     if (selectableValue === undefined || selectableValue.label === value.label) {
-      return null;
+      return undefined;
     }
 
     return {
@@ -73,20 +94,29 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     };
   }
 
-  private updateLabels(options: ISelectOptions, value: ISelectFieldValue): void {
-    let valueToChange: ISelectFieldValue | null = null;
+  /**
+   * Get the selected options with updated labels.
+   * This might be needed if the labels were updated because of a language changes
+   * @param options The available options
+   * @param value The current value
+   */
+  private getUpdateLabels(options: ISelectOptions, value: SelectFieldValue): IUpdatedLabelsResult {
+    let selectedOptions: SelectFieldValue;
     let needsUpdate = false;
 
     if (isSelectOption(value)) {
       // If only one option is selected
-      valueToChange = this.updateSelectOptionLabel(options, value);
-      needsUpdate = (valueToChange !== null);
+      const updated = this.updateSelectOptionLabel(options, value);
+      needsUpdate = (updated !== undefined);
+      selectedOptions = (needsUpdate)
+        ? updated
+        : value;
     } else if (Array.isArray(value)) {
       // Map the values
-      valueToChange = value.map(v => {
+      selectedOptions = value.map(v => {
         const updated = this.updateSelectOptionLabel(options, v);
         // If null was returned, no updated is needed
-        if (updated === null) { return v; }
+        if (updated === undefined) { return v; }
         // Otherwise set the flag to true
         needsUpdate = true;
 
@@ -94,10 +124,53 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       });
     }
 
-    // If the value is null, nothing needs to be updated
-    if (valueToChange === null || !needsUpdate) { return; }
+    return {
+      needsUpdate,
+      selectedOptions,
+    };
+  }
 
-    this.handleChange(valueToChange);
+  /**
+   * Get the value of the field
+   * @param field The field
+   * @param options The available options
+   */
+  private getFieldValue(field: IFieldComponentFieldProps, options: ISelectOptions): SelectFieldValue {
+    const fieldValue = (field.value as ISelectFieldValue | undefined);
+    const {
+      needsUpdate,
+      selectedOptions,
+    } = this.getUpdateLabels(options, fieldValue);
+    if (needsUpdate && selectedOptions !== undefined) {
+      // Check if the current value has a different label than the value
+      // with the same key in the options array. Bugfix to change the
+      // selected label when the current language changes.
+      this.handleChange(selectedOptions);
+    }
+
+    return selectedOptions;
+  }
+
+  /**
+   * Renders a plain text view
+   * @param field The field
+   * @param value The selected value
+   */
+  private renderPlaintext(field: IFieldComponentFieldProps, value: SelectFieldValue): JSX.Element {
+    let displayValue = '';
+    if (isSelectOption(value)) {
+      displayValue = value.label;
+    } else if (Array.isArray(value)) {
+      displayValue = value.map(v => v.label).join(', ');
+    }
+
+    return (
+      <FieldLine {...this.props}>
+        <StrapInput {...field} value={displayValue} plaintext>
+          {displayValue}
+        </StrapInput>
+      </FieldLine>
+    );
   }
 
   // tslint:disable-next-line:member-ordering
@@ -120,33 +193,16 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       ...fieldlineProps
     } = this.props;
 
-    // Generate a css class based on the validity of the select element
-    let selectClass = 'react-select-control';
-    selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
-
-    const fieldValue = (field.value as ISelectFieldValue | undefined);
-    if (fieldValue !== undefined) {
-      // Check if the current value has a different label than the value
-      // with the same key in the options array. Bugfix to change the
-      // selected label when the current language changes.
-      this.updateLabels(options, fieldValue);
-    }
+    const fieldValue = this.getFieldValue(field, options);
 
     // Support for plaintext display
     if (meta.plaintext) {
-      let displayValue = '';
-      if (isSelectOption(field.value)) {
-        displayValue = field.value.label;
-      }
-
-      return (
-        <FieldLine {...this.props}>
-          <StrapInput {...field} value="" plaintext>
-            {displayValue}
-          </StrapInput>
-        </FieldLine>
-      );
+      return this.renderPlaintext(field, fieldValue);
     }
+
+    // Generate a css class based on the validity of the select element
+    let selectClass = 'react-select-control';
+    selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
 
     // Format the placeholder
     const placeholderText = meta.stringFormatter(placeholder);
