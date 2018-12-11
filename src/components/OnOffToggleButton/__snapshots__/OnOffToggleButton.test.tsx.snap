@@ -412,7 +412,19 @@ ShallowWrapper {
         "isRequired": false,
         "isValidating": false,
         "plaintext": true,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "on",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "on",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       }
@@ -439,7 +451,7 @@ ShallowWrapper {
         "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
-        "value": "mock-value",
+        "value": "on",
       },
       "label": "field0",
       "meta": Object {
@@ -447,7 +459,19 @@ ShallowWrapper {
         "isRequired": false,
         "isValidating": false,
         "plaintext": true,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "on",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "on",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       },
@@ -471,7 +495,7 @@ ShallowWrapper {
           "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
-          "value": "mock-value",
+          "value": "on",
         },
         "label": "field0",
         "meta": Object {
@@ -479,7 +503,19 @@ ShallowWrapper {
           "isRequired": false,
           "isValidating": false,
           "plaintext": true,
-          "stringFormatter": [MockFunction],
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "on",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "on",
+              },
+            ],
+          },
           "touched": false,
           "valid": true,
         },
@@ -533,7 +569,19 @@ ShallowWrapper {
         "isRequired": false,
         "isValidating": false,
         "plaintext": true,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "off",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "off",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       }
@@ -560,7 +608,7 @@ ShallowWrapper {
         "name": "mock-field",
         "onBlur": [MockFunction],
         "onChange": [MockFunction],
-        "value": false,
+        "value": "off",
       },
       "label": "field0",
       "meta": Object {
@@ -568,7 +616,19 @@ ShallowWrapper {
         "isRequired": false,
         "isValidating": false,
         "plaintext": true,
-        "stringFormatter": [MockFunction],
+        "stringFormatter": [MockFunction] {
+          "calls": Array [
+            Array [
+              "off",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": "off",
+            },
+          ],
+        },
         "touched": false,
         "valid": true,
       },
@@ -592,7 +652,7 @@ ShallowWrapper {
           "name": "mock-field",
           "onBlur": [MockFunction],
           "onChange": [MockFunction],
-          "value": false,
+          "value": "off",
         },
         "label": "field0",
         "meta": Object {
@@ -600,7 +660,19 @@ ShallowWrapper {
           "isRequired": false,
           "isValidating": false,
           "plaintext": true,
-          "stringFormatter": [MockFunction],
+          "stringFormatter": [MockFunction] {
+            "calls": Array [
+              Array [
+                "off",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": "off",
+              },
+            ],
+          },
           "touched": false,
           "valid": true,
         },

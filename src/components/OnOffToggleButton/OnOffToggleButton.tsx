@@ -54,6 +54,7 @@ export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonPro
       offLabel,
       meta: {
         plaintext,
+        stringFormatter,
       },
       field: {
         value,
@@ -63,8 +64,16 @@ export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonPro
     const isOn = !(value === '' || value === false);
 
     if (plaintext) {
+      const plainField = {
+        ...field,
+        value: isOn ? stringFormatter(onLabel) : stringFormatter(offLabel),
+      };
+
       return (
-        <BaseInput {...this.props} />
+        <BaseInput
+          {...this.props}
+          field={plainField}
+        />
       );
     }
 
