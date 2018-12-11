@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
+
+## [2.1.4] # 2018-12-11
 - Bugfix for `Select` components
 - Bugfix for `OnOffToggleButton` component in plaintext mode
 
