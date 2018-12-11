@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
 - Bugfix for `Select` components
+- Bugfix for `OnOffToggleButton` component in plaintext mode
 
 ## [2.1.3] # 2018-12-01
 - Fixed issue with fontawesome icon bundling, this should result in much smaller builds
