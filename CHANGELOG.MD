@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
+- Migrated to rollup to improve package size and tree shaking
 
 ## [2.1.4] # 2018-12-11
 - Bugfix for `Select` components
