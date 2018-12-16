@@ -13,6 +13,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.s?css$': '<rootDir>/config/jest/cssTransform.ts',
   },
   moduleFileExtensions: [
     'ts',
