@@ -11,13 +11,9 @@ module.exports = {
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/test-utils/**',
   ],
-  globals: {
-    'ts-jest': {
-      tsConfig: '<rootDir>/config/jest/tsconfig.jest.json',
-    },
-  },
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.s?css$': '<rootDir>/config/jest/cssTransform.ts',
   },
   moduleFileExtensions: [
     'ts',

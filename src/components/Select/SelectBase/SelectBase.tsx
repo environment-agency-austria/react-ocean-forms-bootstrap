@@ -82,7 +82,14 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * @param value The value that may need update
    */
   private updateSelectOptionLabel(options: ISelectOptions, value: ISelectOption): ISelectOption | undefined {
-    const selectableValue = options.find(item => item.value === value.value);
+    let selectableValue: ISelectOption | undefined;
+    options.some(item => {
+      if (item.value !== value.value) { return false; }
+
+      selectableValue = item;
+
+      return true;
+    });
 
     if (selectableValue === undefined || selectableValue.label === value.label) {
       return undefined;
