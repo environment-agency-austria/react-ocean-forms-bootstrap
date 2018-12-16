@@ -14,7 +14,7 @@
       "es5",
       "dom",
     ],
-    "target": "es5", // we target es2015. babel will do the rest
+    "target": "es5",
     "moduleResolution": "node",
     // Some style guidelines
     "noImplicitAny": true,
