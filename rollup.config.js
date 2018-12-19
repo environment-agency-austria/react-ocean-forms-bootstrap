@@ -14,25 +14,25 @@ const externalDependencies = [
 ];
 
 const getBaseConfig = (showFilesize = false, noTsDeclaration = false) => {
-  const tsconfigOverride = noTsDeclaration ? { 
-    compilerOptions: { 
-      declaration: false, 
-      declarationMap: false 
-    } 
+  const tsconfigOverride = noTsDeclaration ? {
+    compilerOptions: {
+      declaration: false,
+      declarationMap: false
+    }
   } : undefined;
 
   return {
     input: "src/index.ts",
     plugins: [
-      nodeResolve({ 
-        preferBuiltins: true, 
-        browser: true 
-      }),    
+      nodeResolve({
+        preferBuiltins: true,
+        browser: true
+      }),
       typescript({
         clean: false,
         tsconfig: 'tsconfig.build.json',
         tsconfigOverride,
-      }),      
+      }),
       commonjs({
         namedExports: {
           'moment': [
@@ -59,7 +59,7 @@ export default (commands) => {
       format: "cjs",
       exports: "named",
       sourcemap: true,
-    },   
+    },
   };
 
   const esConfig = {
@@ -69,13 +69,12 @@ export default (commands) => {
       format: "es",
       exports: "named",
       sourcemap: true,
-    }  
+    }
   };
 
   if (commands.watch === true) {
     return [
       esConfig,
-      scssConfig
     ];
   } else {
     return [
