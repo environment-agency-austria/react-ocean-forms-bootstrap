@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+- onCreateOption added to CreatableSelect
+
+
 ## [2.1.5] # 2018-12-16
 - Migrated to rollup to improve package size and tree shaking
 
