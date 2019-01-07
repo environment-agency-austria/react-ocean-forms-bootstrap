@@ -60,10 +60,16 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps> 
    * Renders the actual `Select` component with the passed props
    */
   private renderSelect = (preparedProps: IPreparedSelectProps): JSX.Element => {
+
+    const {
+      onCreateOption,
+    } = this.props;
+
     return (
       <Creatable
         {...preparedProps}
         formatCreateLabel={this.formatCreateLabel}
+        onCreateOption={onCreateOption}
       />
     );
   }
