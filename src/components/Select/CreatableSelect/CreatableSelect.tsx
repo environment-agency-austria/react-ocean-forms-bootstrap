@@ -45,12 +45,14 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps> 
   // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
+      handleChange,
       ...selectBaseProps
     } = this.props;
 
     return (
       <SelectBase
         {...selectBaseProps}
+        handleChange={handleChange}
         renderSelect={this.renderSelect}
       />
     );

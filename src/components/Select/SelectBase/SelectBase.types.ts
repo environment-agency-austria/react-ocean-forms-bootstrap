@@ -6,6 +6,7 @@
  */
 import { IFieldComponentProps } from 'react-ocean-forms';
 import { Props as SelectProps } from 'react-select/lib/Select';
+import { ActionMeta } from 'react-select/lib/types';
 
 import { DefaultizedFieldLineProps } from '../../FieldLine';
 
@@ -72,6 +73,10 @@ interface IMappedReactSelectProps {
    * True if the component is clearable, false otherwise.
    */
   clearable?: boolean;
+  /**
+   * custom code for onChange
+   */
+  handleChange?(value: ISelectFieldValue, action?: ActionMeta): void;
 }
 
 export interface ISelectBasePropsBase extends
@@ -95,4 +100,5 @@ export interface ISelectBaseProps extends ISelectBasePropsBase {
    * @param preparedProps The prepared props for the select
    */
   renderSelect(preparedProps: IPreparedSelectProps): JSX.Element;
+  handleChange?(value: ISelectFieldValue, action?: ActionMeta): void;
 }
