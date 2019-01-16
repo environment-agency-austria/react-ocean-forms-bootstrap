@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## UNRELEASED
+## [2.1.7] # 2019-01-16
 - handleChange added to `CreatableSelect`
 
 ## [2.1.6] # 2019-01-07
