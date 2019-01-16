@@ -2,12 +2,13 @@ import * as React from 'react';
 
 import { shallow, ShallowWrapper } from 'enzyme';
 import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-forms';
+import { ActionMeta } from 'react-select/lib/types';
 
 import { createMockField, createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 import { FieldLine } from '../../FieldLine';
 import { ISelectOption, ISelectOptions } from '../SelectBase';
 import { SelectBase } from './SelectBase';
-import { IPreparedSelectProps, ISelectBaseProps } from './SelectBase.types';
+import { IPreparedSelectProps, ISelectBaseProps, ISelectFieldValue } from './SelectBase.types';
 
 describe('<SelectBase />', () => {
   interface ISetupArgs {
@@ -44,6 +45,10 @@ describe('<SelectBase />', () => {
       { value: 'two', label: 'Two' },
     ];
 
+    const handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {
+      return;
+    };
+
     const renderSelect = jest.fn((preparedProps: IPreparedSelectProps) => {
       return (
         <div>
@@ -59,6 +64,7 @@ describe('<SelectBase />', () => {
         meta={meta}
         field={field}
         options={options}
+        handleChange={handleChange}
         renderSelect={renderSelect}
         {...props}
       />
