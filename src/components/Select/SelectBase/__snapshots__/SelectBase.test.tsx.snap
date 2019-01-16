@@ -14,7 +14,6 @@ ShallowWrapper {
         "value": "",
       }
     }
-    handleChange={[Function]}
     label="field0"
     meta={
       Object {
@@ -76,7 +75,6 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "",
       },
-      "handleChange": [Function],
       "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
@@ -152,7 +150,6 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "",
         },
-        "handleChange": [Function],
         "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
@@ -246,7 +243,6 @@ ShallowWrapper {
         ],
       }
     }
-    handleChange={[Function]}
     label="field0"
     meta={
       Object {
@@ -317,7 +313,6 @@ ShallowWrapper {
           },
         ],
       },
-      "handleChange": [Function],
       "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
@@ -402,7 +397,6 @@ ShallowWrapper {
             },
           ],
         },
-        "handleChange": [Function],
         "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
@@ -490,7 +484,6 @@ ShallowWrapper {
         },
       }
     }
-    handleChange={[Function]}
     label="field0"
     meta={
       Object {
@@ -555,7 +548,6 @@ ShallowWrapper {
           "value": "two",
         },
       },
-      "handleChange": [Function],
       "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
@@ -634,7 +626,6 @@ ShallowWrapper {
             "value": "two",
           },
         },
-        "handleChange": [Function],
         "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
@@ -719,7 +710,6 @@ ShallowWrapper {
         "value": "",
       }
     }
-    handleChange={[Function]}
     label="field0"
     meta={
       Object {
@@ -825,7 +815,6 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "value": "",
       },
-      "handleChange": [Function],
       "inputSize": "9",
       "label": "field0",
       "labelClass": "text-right",
@@ -890,7 +879,6 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "value": "",
         },
-        "handleChange": [Function],
         "inputSize": "9",
         "label": "field0",
         "labelClass": "text-right",
