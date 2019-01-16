@@ -56,7 +56,9 @@ describe('<CreatableSelect />', () => {
       { value: 'two', label: 'Two' },
     ];
 
-    const handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {};
+    const handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {
+      return;
+    };
 
     const wrapper = shallow((
       <BaseCreatableSelect
