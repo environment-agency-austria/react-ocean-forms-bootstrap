@@ -238,4 +238,28 @@ describe('<SelectBase />', () => {
 
     expect(className).toBe('react-select-control is-invalid');
   });
+
+  describe('handleChange', () => {
+    it('render with handleChange and call handleChange method', () => {
+      let changeProp: Function | undefined;
+      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+        changeProp = props.onChange;
+      });
+      const handleChange = jest.fn();
+
+      const { options } = setup({
+        props: {
+          renderSelect,
+          handleChange,
+        },
+      });
+
+      const selected = [options[0], options[1]];
+      expect(changeProp).toBeDefined();
+      changeProp && changeProp(selected);
+
+      expect(handleChange).toBeDefined();
+      expect(handleChange).toBeCalled();
+    });
+  });
 });

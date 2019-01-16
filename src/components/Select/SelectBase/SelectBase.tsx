@@ -9,6 +9,7 @@ import * as React from 'react';
 import { Input as StrapInput } from 'reactstrap';
 
 import { IFieldComponentFieldProps } from 'react-ocean-forms';
+import { ActionMeta } from 'react-select/lib/types';
 import { FieldLine } from '../../FieldLine';
 import {
   IPreparedSelectProps, ISelectBaseProps, ISelectFieldValue,
@@ -53,14 +54,18 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * the select because oForms is expecting
    * default input onChange behaviour.
    */
-  private handleChange = (value: ISelectFieldValue): void => {
-    const { field } = this.props;
+  private handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {
+    const { field, handleChange } = this.props;
 
     field.onChange({
       target: {
         value,
       },
     });
+
+    if (handleChange) {
+      handleChange(value, action);
+    }
   }
 
   /**

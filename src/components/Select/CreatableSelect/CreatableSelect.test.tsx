@@ -5,7 +5,8 @@ import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-form
 
 import { createMockField, createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
 
-import { ISelectOptions, SelectBase } from '../SelectBase';
+import { ActionMeta } from 'react-select/lib/types';
+import { ISelectFieldValue, ISelectOptions, SelectBase } from '../SelectBase';
 import { BaseCreatableSelect } from './CreatableSelect';
 import { ICreatableSelectProps } from './CreatableSelect.types';
 
@@ -55,12 +56,17 @@ describe('<CreatableSelect />', () => {
       { value: 'two', label: 'Two' },
     ];
 
+    const handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {
+      return;
+    };
+
     const wrapper = shallow((
       <BaseCreatableSelect
         label={fieldLabel}
         meta={meta}
         field={field}
         options={options}
+        handleChange={handleChange}
         {...props}
       />
     ));
