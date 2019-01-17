@@ -9,11 +9,11 @@
 // Imports
 // ============================================================================
 import * as React from 'react';
-import { withField } from 'react-ocean-forms';
+import { TBasicFieldValue, withField } from 'react-ocean-forms';
 import { Creatable } from 'react-select';
 
 import { IPreparedSelectProps, SelectBase } from '../SelectBase';
-import { ICreatableSelectProps } from './CreatableSelect.types';
+import { ICreatableSelectProps, ICreatableSelectState } from './CreatableSelect.types';
 
 // ============================================================================
 // Components
@@ -21,12 +21,19 @@ import { ICreatableSelectProps } from './CreatableSelect.types';
 /**
  * Component to display a select that can create options
  */
-export class BaseCreatableSelect extends React.Component<ICreatableSelectProps> {
+export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, ICreatableSelectState> {
   public static displayName: string = 'CreatableSelect';
   // tslint:disable-next-line:typedef
   public static defaultProps = {
     createPrefixLabel: 'ojs_select_creatable_prefix',
   };
+
+  constructor(props: Readonly<ICreatableSelectProps>) {
+    super(props);
+    this.state = {
+      loading: false,
+    };
+  }
 
   /**
    * Formats the text that is shown for the create label
@@ -40,6 +47,24 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps> 
     const promptText = meta.stringFormatter(createPrefixLabel);
 
     return `${promptText} '${text}'`;
+  }
+
+  private handleCreateOption = async (value: string): Promise<void> => {
+    const { field, onCreateOption } = this.props;
+    this.setState({ loading: true });
+
+    const result = onCreateOption ? await onCreateOption(value) : undefined;
+    if (!result) {
+      return;
+    }
+    const current = field.value as TBasicFieldValue[];
+
+    field.onChange({
+      target: {
+        value: [... Array.isArray(current) ? current : [], result],
+      },
+    });
+    this.setState({ loading: false });
   }
 
   // tslint:disable-next-line:member-ordering
@@ -63,15 +88,21 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps> 
    */
   private renderSelect = (preparedProps: IPreparedSelectProps): JSX.Element => {
 
+    const { loading } = this.state;
+
     const {
       onCreateOption,
     } = this.props;
 
+    // onChange will not be called if onCreateOption is defined
+    const createOption = onCreateOption ? this.handleCreateOption : undefined;
+
     return (
       <Creatable
         {...preparedProps}
+        isLoading={loading}
         formatCreateLabel={this.formatCreateLabel}
-        onCreateOption={onCreateOption}
+        onCreateOption={createOption}
       />
     );
   }

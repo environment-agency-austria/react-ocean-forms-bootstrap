@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## UNRELEASED
+- onCreateOption as async function in `CreatableSelect`
+- manage isLoading state of `CreatableSelect` in onCreateOption
+- old webpack config removed
+
 ## [2.1.7] # 2019-01-16
 - handleChange added to `CreatableSelect`
 
