@@ -13,6 +13,7 @@
     "lib": [
       "es5",
       "dom",
+      "es2015.promise",
     ],
     "target": "es5",
     "moduleResolution": "node",
@@ -26,6 +27,6 @@
     "allowJs": false,
     "checkJs": false,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,      
+    "allowSyntheticDefaultImports": true,
   }
 }
