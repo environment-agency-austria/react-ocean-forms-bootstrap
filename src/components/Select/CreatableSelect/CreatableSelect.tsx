@@ -49,13 +49,11 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, 
     return `${promptText} '${text}'`;
   }
 
-  private onCreateOption = async (value: string): Promise<void> => {
+  private handleCreateOption = async (value: string): Promise<void> => {
     const { field, onCreateOption } = this.props;
     this.setState({ loading: true });
-    let result;
-    if (onCreateOption) {
-      result = await onCreateOption(value);
-    }
+
+    const result = onCreateOption ? await onCreateOption(value) : undefined;
     if (!result) {
       return;
     }
@@ -97,7 +95,7 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, 
     } = this.props;
 
     // onChange will not be called if onCreateOption is defined
-    const createOption = onCreateOption ? this.onCreateOption : undefined;
+    const createOption = onCreateOption ? this.handleCreateOption : undefined;
 
     return (
       <Creatable

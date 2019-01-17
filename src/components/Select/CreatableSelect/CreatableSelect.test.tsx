@@ -17,6 +17,7 @@ describe('<CreatableSelect />', () => {
   type SelectInstancePrivatesExposed = {
     renderSelect(): JSX.Element;
     formatCreateLabel(text: string): React.ReactNode;
+    handleCreateOption (value: string): Promise<void>;
   };
 
   interface ISetupArgs {
@@ -122,5 +123,61 @@ describe('<CreatableSelect />', () => {
 
     expect(stringFormatter).toBeCalledWith(mockCreatePrefixLabel);
     expect(formatCreateLabelResult).toEqual(`${mockStringFormatterResult} '${formatCreateLabelInput}'`);
+  });
+  describe('onCreateOption', () => {
+    it('should return undefined of onCreateOption', () => {
+      const createOptionProp = jest.fn((value: string) => undefined);
+
+      const { wrapper } = setup({
+        props: {
+          onCreateOption: createOptionProp,
+        },
+      });
+      const i = exposePrivateMembers(wrapper.instance());
+      const result = shallow(i.renderSelect());
+      expect(result.exists()).toBe(true);
+      i.handleCreateOption('abc').catch();
+      expect(createOptionProp).toBeCalled();
+    });
+
+    it('should return new select option of onCreateOption', () => {
+      const createOptionProp = jest.fn((value: string) => {
+        return { value: 'abc', label: 'abc' };
+      });
+
+      const { wrapper } = setup({
+        props: {
+          onCreateOption: createOptionProp,
+        },
+      });
+      const i = exposePrivateMembers(wrapper.instance());
+      i.handleCreateOption('abc').catch();
+      expect(createOptionProp).toBeCalled();
+    });
+
+    it('should call createOption on preselected values', () => {
+      const createOptionProp = jest.fn((value: string) => {
+        return { value: 'abc', label: 'abc' };
+      });
+
+      const { field, wrapper } = setup({
+        props: {
+          onCreateOption: createOptionProp,
+        },
+      });
+      field.value = [{ value: 'efg', label: 'efg'}];
+      const i = exposePrivateMembers(wrapper.instance());
+      i.handleCreateOption('abc').catch();
+      expect(createOptionProp).toBeCalled();
+    });
+    it('should call handleCreateOption without prop onCreateOption', () => {
+      const { field, wrapper } = setup({
+        props: {
+        },
+      });
+      field.value = [{ value: 'efg', label: 'efg'}];
+      const i = exposePrivateMembers(wrapper.instance());
+      i.handleCreateOption('abc').catch();
+    });
   });
 });
