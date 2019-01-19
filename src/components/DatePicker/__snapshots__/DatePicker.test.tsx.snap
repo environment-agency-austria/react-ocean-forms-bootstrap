@@ -48,10 +48,8 @@ ShallowWrapper {
         onChange={[MockFunction]}
         plaintext={true}
         type="text"
-        value=""
-      >
-        Invalid date
-      </Input>,
+        value="Invalid date"
+      />,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -80,7 +78,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "Invalid date",
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
@@ -88,10 +85,10 @@ ShallowWrapper {
         "onChange": [MockFunction],
         "plaintext": true,
         "type": "text",
-        "value": "",
+        "value": "Invalid date",
       },
       "ref": null,
-      "rendered": "Invalid date",
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -110,10 +107,8 @@ ShallowWrapper {
           onChange={[MockFunction]}
           plaintext={true}
           type="text"
-          value=""
-        >
-          Invalid date
-        </Input>,
+          value="Invalid date"
+        />,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -142,7 +137,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Invalid date",
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
@@ -150,10 +144,10 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "plaintext": true,
           "type": "text",
-          "value": "",
+          "value": "Invalid date",
         },
         "ref": null,
-        "rendered": "Invalid date",
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],

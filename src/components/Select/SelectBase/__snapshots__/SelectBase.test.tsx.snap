@@ -64,9 +64,7 @@ ShallowWrapper {
         plaintext={true}
         type="text"
         value=""
-      >
-        
-      </Input>,
+      />,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -108,7 +106,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "",
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
@@ -119,7 +116,7 @@ ShallowWrapper {
         "value": "",
       },
       "ref": null,
-      "rendered": "",
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -139,9 +136,7 @@ ShallowWrapper {
           plaintext={true}
           type="text"
           value=""
-        >
-          
-        </Input>,
+        />,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -183,7 +178,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "",
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
@@ -194,7 +188,7 @@ ShallowWrapper {
           "value": "",
         },
         "ref": null,
-        "rendered": "",
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],
@@ -293,9 +287,7 @@ ShallowWrapper {
         plaintext={true}
         type="text"
         value="One, Two"
-      >
-        One, Two
-      </Input>,
+      />,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -346,7 +338,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "One, Two",
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
@@ -357,7 +348,7 @@ ShallowWrapper {
         "value": "One, Two",
       },
       "ref": null,
-      "rendered": "One, Two",
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -377,9 +368,7 @@ ShallowWrapper {
           plaintext={true}
           type="text"
           value="One, Two"
-        >
-          One, Two
-        </Input>,
+        />,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -430,7 +419,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "One, Two",
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
@@ -441,7 +429,7 @@ ShallowWrapper {
           "value": "One, Two",
         },
         "ref": null,
-        "rendered": "One, Two",
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],
@@ -534,9 +522,7 @@ ShallowWrapper {
         plaintext={true}
         type="text"
         value="Two"
-      >
-        Two
-      </Input>,
+      />,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -581,7 +567,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "Two",
         "disabled": false,
         "id": "mock-field",
         "name": "mock-field",
@@ -592,7 +577,7 @@ ShallowWrapper {
         "value": "Two",
       },
       "ref": null,
-      "rendered": "Two",
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -612,9 +597,7 @@ ShallowWrapper {
           plaintext={true}
           type="text"
           value="Two"
-        >
-          Two
-        </Input>,
+        />,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -659,7 +642,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Two",
           "disabled": false,
           "id": "mock-field",
           "name": "mock-field",
@@ -670,7 +652,7 @@ ShallowWrapper {
           "value": "Two",
         },
         "ref": null,
-        "rendered": "Two",
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],

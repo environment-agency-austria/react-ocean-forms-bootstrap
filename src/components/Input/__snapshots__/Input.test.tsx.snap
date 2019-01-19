@@ -50,9 +50,7 @@ ShallowWrapper {
         plaintext={true}
         type="text"
         value=""
-      >
-        
-      </Input>,
+      />,
       "field": Object {
         "disabled": false,
         "id": "mock-field",
@@ -82,7 +80,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "",
         "disabled": false,
         "id": "mock-field",
         "invalid": undefined,
@@ -94,7 +91,7 @@ ShallowWrapper {
         "value": "",
       },
       "ref": null,
-      "rendered": "",
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -114,9 +111,7 @@ ShallowWrapper {
           plaintext={true}
           type="text"
           value=""
-        >
-          
-        </Input>,
+        />,
         "field": Object {
           "disabled": false,
           "id": "mock-field",
@@ -146,7 +141,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "",
           "disabled": false,
           "id": "mock-field",
           "invalid": undefined,
@@ -158,7 +152,7 @@ ShallowWrapper {
           "value": "",
         },
         "ref": null,
-        "rendered": "",
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],
@@ -264,7 +258,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": undefined,
         "disabled": false,
         "id": "mock-field",
         "invalid": undefined,
@@ -326,7 +319,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": undefined,
           "disabled": false,
           "id": "mock-field",
           "invalid": undefined,

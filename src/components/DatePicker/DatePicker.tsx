@@ -82,7 +82,7 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
 
       return (
         <FieldLine {...this.props}>
-          <StrapInput {...field} value="" plaintext>{displayValue}</StrapInput>
+          <StrapInput {...field} value={displayValue} plaintext />
         </FieldLine>
       );
     }
