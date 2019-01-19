@@ -178,9 +178,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
 
     return (
       <FieldLine {...this.props}>
-        <StrapInput {...field} value={displayValue} plaintext>
-          {displayValue}
-        </StrapInput>
+        <StrapInput {...field} value={displayValue} plaintext />
       </FieldLine>
     );
   }

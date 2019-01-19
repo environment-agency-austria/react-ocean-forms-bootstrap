@@ -47,9 +47,7 @@ export class BaseInput extends React.Component<IInputProps> {
 
     return (
       <FieldLine {...this.props}>
-        <StrapInput type={type} {...field} value={fieldValue} invalid={invalid} plaintext={meta.plaintext}>
-          {meta.plaintext ? field.value : undefined}
-        </StrapInput>
+        <StrapInput type={type} {...field} value={fieldValue} invalid={invalid} plaintext={meta.plaintext} />
       </FieldLine>
     );
   }
