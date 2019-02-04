@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@types/react-select": "^2.0.11",
-    "@types/reactstrap": "^6.4.4"
+    "@types/reactstrap": "^7.1.2"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
