@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 - Fixed `DatePicker` not triggering an onChange while clearing its value
+- Bugfix for `Check` components
 
 ## [3.0.0] # 2019-01-19
 - Upgraded to `reactstrap` 7.1.0 and `react-select` 2.3.0
