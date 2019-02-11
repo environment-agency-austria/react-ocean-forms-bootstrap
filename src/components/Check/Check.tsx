@@ -85,6 +85,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
 
     const isChecked = value === true;
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
+    const disabled = field.disabled || meta.plaintext;
 
     // tslint:disable:strict-boolean-expressions
     return (
@@ -96,18 +97,16 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
         <Col sm={9}>
           <InputGroup className={inputGroupClass}>
             <Label check>
-              {!meta.plaintext && (
-                <Input
-                  id={field.id}
-                  name={field.name}
-                  type="checkbox"
-                  onBlur={field.onBlur}
-                  invalid={!meta.valid}
-                  defaultChecked={isChecked}
-                  onClick={this.handleChange}
-                  disabled={field.disabled}
-                />
-              )}
+              <Input
+                id={field.id}
+                name={field.name}
+                type="checkbox"
+                onBlur={field.onBlur}
+                invalid={!meta.valid}
+                checked={isChecked}
+                onClick={this.handleChange}
+                disabled={disabled}
+              />
               <FormText text={label} />
               <FieldError
                 id={`${field.id}_errors`}
