@@ -126,7 +126,7 @@ describe('<CreatableSelect />', () => {
   });
   describe('onCreateOption', () => {
     it('should return undefined of onCreateOption', () => {
-      const createOptionProp = jest.fn((value: string) => undefined);
+      const createOptionProp = jest.fn().mockReturnValue(undefined);
 
       const { wrapper } = setup({
         props: {
@@ -141,8 +141,9 @@ describe('<CreatableSelect />', () => {
     });
 
     it('should return new select option of onCreateOption', () => {
-      const createOptionProp = jest.fn((value: string) => {
-        return { value: 'abc', label: 'abc' };
+      const createOptionProp = jest.fn().mockReturnValue({
+        value: 'abc',
+        label: 'abc',
       });
 
       const { wrapper } = setup({
@@ -156,8 +157,9 @@ describe('<CreatableSelect />', () => {
     });
 
     it('should call createOption on preselected values', () => {
-      const createOptionProp = jest.fn((value: string) => {
-        return { value: 'abc', label: 'abc' };
+      const createOptionProp = jest.fn().mockReturnValue({
+        value: 'abc',
+        label: 'abc',
       });
 
       const { field, wrapper } = setup({
