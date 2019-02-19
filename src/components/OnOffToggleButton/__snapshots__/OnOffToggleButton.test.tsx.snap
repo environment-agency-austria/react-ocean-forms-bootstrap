@@ -1,1097 +1,215 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BaseOnOffToggleButton /> should render correctly in disabled mode 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <OnOffToggleButton
-    field={
-      Object {
-        "disabled": true,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "mock-value",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    offLabel="off"
-    onLabel="on"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <ButtonGroup
-        id="mock-field"
-        role="group"
-        tag="div"
-      >
-        <Button
-          active={true}
-          color="primary"
-          disabled={true}
-          id="mock-field-on"
-          onClick={[Function]}
-          outline={true}
-          tag="button"
-        >
-          <FormComponent(FormText)
-            text="on"
-          />
-        </Button>
-        <Button
-          active={false}
-          color="primary"
-          disabled={true}
-          id="mock-field-off"
-          onClick={[Function]}
-          outline={true}
-          tag="button"
-        >
-          <FormComponent(FormText)
-            text="off"
-          />
-        </Button>
-      </ButtonGroup>,
-      "field": Object {
-        "disabled": true,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "mock-value",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "offLabel": "off",
-      "onLabel": "on",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Button
-            active={true}
-            color="primary"
-            disabled={true}
-            id="mock-field-on"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="on"
-            />
-          </Button>,
-          <Button
-            active={false}
-            color="primary"
-            disabled={true}
-            id="mock-field-off"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="off"
-            />
-          </Button>,
-        ],
-        "id": "mock-field",
-        "role": "group",
-        "tag": "div",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "active": true,
-            "children": <FormComponent(FormText)
-              text="on"
-            />,
-            "color": "primary",
-            "disabled": true,
-            "id": "mock-field-on",
-            "onClick": [Function],
-            "outline": true,
-            "tag": "button",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "text": "on",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "active": false,
-            "children": <FormComponent(FormText)
-              text="off"
-            />,
-            "color": "primary",
-            "disabled": true,
-            "id": "mock-field-off",
-            "onClick": [Function],
-            "outline": true,
-            "tag": "button",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "text": "off",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <ButtonGroup
-          id="mock-field"
-          role="group"
-          tag="div"
-        >
-          <Button
-            active={true}
-            color="primary"
-            disabled={true}
-            id="mock-field-on"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="on"
-            />
-          </Button>
-          <Button
-            active={false}
-            color="primary"
-            disabled={true}
-            id="mock-field-off"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="off"
-            />
-          </Button>
-        </ButtonGroup>,
-        "field": Object {
-          "disabled": true,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "mock-value",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": false,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "offLabel": "off",
-        "onLabel": "on",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <Button
-              active={true}
-              color="primary"
-              disabled={true}
-              id="mock-field-on"
-              onClick={[Function]}
-              outline={true}
-              tag="button"
-            >
-              <FormComponent(FormText)
-                text="on"
-              />
-            </Button>,
-            <Button
-              active={false}
-              color="primary"
-              disabled={true}
-              id="mock-field-off"
-              onClick={[Function]}
-              outline={true}
-              tag="button"
-            >
-              <FormComponent(FormText)
-                text="off"
-              />
-            </Button>,
-          ],
-          "id": "mock-field",
-          "role": "group",
-          "tag": "div",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "active": true,
-              "children": <FormComponent(FormText)
-                text="on"
-              />,
-              "color": "primary",
-              "disabled": true,
-              "id": "mock-field-on",
-              "onClick": [Function],
-              "outline": true,
-              "tag": "button",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "text": "on",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "active": false,
-              "children": <FormComponent(FormText)
-                text="off"
-              />,
-              "color": "primary",
-              "disabled": true,
-              "id": "mock-field-off",
-              "onClick": [Function],
-              "outline": true,
-              "tag": "button",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "text": "off",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "disabled": true,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "mock-value",
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": false,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  offLabel="off"
+  onLabel="on"
+>
+  <ButtonGroup
+    id="mock-field"
+    role="group"
+    tag="div"
+  >
+    <Button
+      active={true}
+      color="primary"
+      disabled={true}
+      id="mock-field-on"
+      onClick={[Function]}
+      outline={true}
+      tag="button"
+    >
+      <FormText
+        text="on"
+      />
+    </Button>
+    <Button
+      active={false}
+      color="primary"
+      disabled={true}
+      id="mock-field-off"
+      onClick={[Function]}
+      outline={true}
+      tag="button"
+    >
+      <FormText
+        text="off"
+      />
+    </Button>
+  </ButtonGroup>
+</FieldLine>
 `;
 
 exports[`<BaseOnOffToggleButton /> should render plaintext Button 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <OnOffToggleButton
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "mock-value",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      }
-    }
-    offLabel="off"
-    onLabel="on"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "on",
-      },
-      "label": "field0",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "on",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "on",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      },
-      "offLabel": "off",
-      "onLabel": "on",
-      "type": "text",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<Input
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "on",
-        },
-        "label": "field0",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "on",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "on",
-              },
-            ],
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "on",
+    }
+  }
+  label="field0"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction] {
+        "calls": Array [
+          Array [
+            "on",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": "on",
           },
-          "touched": false,
-          "valid": true,
-        },
-        "offLabel": "off",
-        "onLabel": "on",
-        "type": "text",
+        ],
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "touched": false,
+      "valid": true,
+    }
+  }
+  offLabel="off"
+  onLabel="on"
+  type="text"
+/>
 `;
 
 exports[`<BaseOnOffToggleButton /> should render the correct label in plaintext mode 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <OnOffToggleButton
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": false,
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      }
-    }
-    offLabel="off"
-    onLabel="on"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "off",
-      },
-      "label": "field0",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "off",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "off",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      },
-      "offLabel": "off",
-      "onLabel": "on",
-      "type": "text",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<Input
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "off",
-        },
-        "label": "field0",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "off",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "off",
-              },
-            ],
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "off",
+    }
+  }
+  label="field0"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction] {
+        "calls": Array [
+          Array [
+            "off",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": "off",
           },
-          "touched": false,
-          "valid": true,
-        },
-        "offLabel": "off",
-        "onLabel": "on",
-        "type": "text",
+        ],
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "touched": false,
+      "valid": true,
+    }
+  }
+  offLabel="off"
+  onLabel="on"
+  type="text"
+/>
 `;
 
 exports[`<BaseOnOffToggleButton /> should render without crashing 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <OnOffToggleButton
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "mock-value",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    offLabel="off"
-    onLabel="on"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <ButtonGroup
-        id="mock-field"
-        role="group"
-        tag="div"
-      >
-        <Button
-          active={true}
-          color="primary"
-          disabled={false}
-          id="mock-field-on"
-          onClick={[Function]}
-          outline={true}
-          tag="button"
-        >
-          <FormComponent(FormText)
-            text="on"
-          />
-        </Button>
-        <Button
-          active={false}
-          color="primary"
-          disabled={false}
-          id="mock-field-off"
-          onClick={[Function]}
-          outline={true}
-          tag="button"
-        >
-          <FormComponent(FormText)
-            text="off"
-          />
-        </Button>
-      </ButtonGroup>,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "mock-value",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "offLabel": "off",
-      "onLabel": "on",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Button
-            active={true}
-            color="primary"
-            disabled={false}
-            id="mock-field-on"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="on"
-            />
-          </Button>,
-          <Button
-            active={false}
-            color="primary"
-            disabled={false}
-            id="mock-field-off"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="off"
-            />
-          </Button>,
-        ],
-        "id": "mock-field",
-        "role": "group",
-        "tag": "div",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "active": true,
-            "children": <FormComponent(FormText)
-              text="on"
-            />,
-            "color": "primary",
-            "disabled": false,
-            "id": "mock-field-on",
-            "onClick": [Function],
-            "outline": true,
-            "tag": "button",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "text": "on",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "active": false,
-            "children": <FormComponent(FormText)
-              text="off"
-            />,
-            "color": "primary",
-            "disabled": false,
-            "id": "mock-field-off",
-            "onClick": [Function],
-            "outline": true,
-            "tag": "button",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "text": "off",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <ButtonGroup
-          id="mock-field"
-          role="group"
-          tag="div"
-        >
-          <Button
-            active={true}
-            color="primary"
-            disabled={false}
-            id="mock-field-on"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="on"
-            />
-          </Button>
-          <Button
-            active={false}
-            color="primary"
-            disabled={false}
-            id="mock-field-off"
-            onClick={[Function]}
-            outline={true}
-            tag="button"
-          >
-            <FormComponent(FormText)
-              text="off"
-            />
-          </Button>
-        </ButtonGroup>,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "mock-value",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": false,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "offLabel": "off",
-        "onLabel": "on",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <Button
-              active={true}
-              color="primary"
-              disabled={false}
-              id="mock-field-on"
-              onClick={[Function]}
-              outline={true}
-              tag="button"
-            >
-              <FormComponent(FormText)
-                text="on"
-              />
-            </Button>,
-            <Button
-              active={false}
-              color="primary"
-              disabled={false}
-              id="mock-field-off"
-              onClick={[Function]}
-              outline={true}
-              tag="button"
-            >
-              <FormComponent(FormText)
-                text="off"
-              />
-            </Button>,
-          ],
-          "id": "mock-field",
-          "role": "group",
-          "tag": "div",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "active": true,
-              "children": <FormComponent(FormText)
-                text="on"
-              />,
-              "color": "primary",
-              "disabled": false,
-              "id": "mock-field-on",
-              "onClick": [Function],
-              "outline": true,
-              "tag": "button",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "text": "on",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "active": false,
-              "children": <FormComponent(FormText)
-                text="off"
-              />,
-              "color": "primary",
-              "disabled": false,
-              "id": "mock-field-off",
-              "onClick": [Function],
-              "outline": true,
-              "tag": "button",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "text": "off",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "mock-value",
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": false,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  offLabel="off"
+  onLabel="on"
+>
+  <ButtonGroup
+    id="mock-field"
+    role="group"
+    tag="div"
+  >
+    <Button
+      active={true}
+      color="primary"
+      disabled={false}
+      id="mock-field-on"
+      onClick={[Function]}
+      outline={true}
+      tag="button"
+    >
+      <FormText
+        text="on"
+      />
+    </Button>
+    <Button
+      active={false}
+      color="primary"
+      disabled={false}
+      id="mock-field-off"
+      onClick={[Function]}
+      outline={true}
+      tag="button"
+    >
+      <FormText
+        text="off"
+      />
+    </Button>
+  </ButtonGroup>
+</FieldLine>
 `;

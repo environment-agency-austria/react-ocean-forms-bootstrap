@@ -133,7 +133,7 @@ describe('<SelectBase />', () => {
   describe('field events', () => {
     it('should call field.onChange when the input changes', () => {
       let changeProp: Function | undefined;
-      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+      const renderSelect = jest.fn().mockImplementation((props: IPreparedSelectProps) => {
         changeProp = props.onChange;
       });
 
@@ -153,8 +153,7 @@ describe('<SelectBase />', () => {
 
     it('should call field.onChange when the input changes (multi=true)', () => {
       let changeProp: Function | undefined;
-
-      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+      const renderSelect = jest.fn().mockImplementation((props: IPreparedSelectProps) => {
         changeProp = props.onChange;
       });
 
@@ -179,7 +178,7 @@ describe('<SelectBase />', () => {
 
     it('should call field.onBlur when there is an input blur', () => {
       let blurProp: Function | undefined;
-      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+      const renderSelect = jest.fn().mockImplementation((props: IPreparedSelectProps) => {
         blurProp = props.onBlur;
       });
 
@@ -224,8 +223,8 @@ describe('<SelectBase />', () => {
   });
 
   it('should set the is-invalid css class to the ReactSelect component if meta.valid is false', () => {
-    let className: string | undefined = '';
-    const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+    let className: string | undefined;
+    const renderSelect = jest.fn().mockImplementation((props: IPreparedSelectProps) => {
       className = props.className;
     });
 
@@ -242,7 +241,7 @@ describe('<SelectBase />', () => {
   describe('handleChange', () => {
     it('render with handleChange and call handleChange method', () => {
       let changeProp: Function | undefined;
-      const renderSelect = jest.fn((props: IPreparedSelectProps) => {
+      const renderSelect = jest.fn().mockImplementation((props: IPreparedSelectProps) => {
         changeProp = props.onChange;
       });
       const handleChange = jest.fn();
