@@ -1,325 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectBase /> meta.plaintext should correctly react to meta.plaintext 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SelectBase
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    multi={false}
-    options={
-      Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ]
-    }
-    placeholder="ojs_select_placeholder"
-    renderSelect={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value=""
-      />,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "multi": false,
-      "options": Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ],
-      "placeholder": "ojs_select_placeholder",
-      "renderSelect": [MockFunction],
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": "",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value=""
-        />,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "multi": false,
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-        "placeholder": "ojs_select_placeholder",
-        "renderSelect": [MockFunction],
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "",
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  multi={false}
+  options={
+    Array [
+      Object {
+        "label": "One",
+        "value": "one",
       },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+      Object {
+        "label": "Two",
+        "value": "two",
       },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+    ]
+  }
+  placeholder="ojs_select_placeholder"
+  renderSelect={[MockFunction]}
+>
+  <Input
+    disabled={false}
+    id="mock-field"
+    name="mock-field"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    plaintext={true}
+    type="text"
+    value=""
+  />
+</FieldLine>
 `;
 
 exports[`<SelectBase /> meta.plaintext should display the label property of the selected option in plaintext mode (multi=true) 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SelectBase
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    multi={true}
-    options={
-      Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ]
-    }
-    placeholder="ojs_select_placeholder"
-    renderSelect={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value="One, Two"
-      />,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "multi": true,
-      "options": Array [
+<FieldLine
+  field={
+    Object {
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": Array [
         Object {
           "label": "One",
           "value": "one",
@@ -329,601 +75,154 @@ ShallowWrapper {
           "value": "two",
         },
       ],
-      "placeholder": "ojs_select_placeholder",
-      "renderSelect": [MockFunction],
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": "One, Two",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value="One, Two"
-        />,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": Array [
-            Object {
-              "label": "One",
-              "value": "one",
-            },
-            Object {
-              "label": "Two",
-              "value": "two",
-            },
-          ],
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "multi": true,
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-        "placeholder": "ojs_select_placeholder",
-        "renderSelect": [MockFunction],
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  multi={true}
+  options={
+    Array [
+      Object {
+        "label": "One",
+        "value": "one",
       },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": "One, Two",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+      Object {
+        "label": "Two",
+        "value": "two",
       },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+    ]
+  }
+  placeholder="ojs_select_placeholder"
+  renderSelect={[MockFunction]}
+>
+  <Input
+    disabled={false}
+    id="mock-field"
+    name="mock-field"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    plaintext={true}
+    type="text"
+    value="One, Two"
+  />
+</FieldLine>
 `;
 
 exports[`<SelectBase /> meta.plaintext should display the label property of the selected option in plaintext mode 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SelectBase
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": Object {
-          "label": "Two",
-          "value": "two",
-        },
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    multi={false}
-    options={
-      Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ]
-    }
-    placeholder="ojs_select_placeholder"
-    renderSelect={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="mock-field"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value="Two"
-      />,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": Object {
-          "label": "Two",
-          "value": "two",
-        },
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "multi": false,
-      "options": Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ],
-      "placeholder": "ojs_select_placeholder",
-      "renderSelect": [MockFunction],
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": "Two",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value="Two"
-        />,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": Object {
-            "label": "Two",
-            "value": "two",
-          },
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "multi": false,
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-        "placeholder": "ojs_select_placeholder",
-        "renderSelect": [MockFunction],
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": Object {
+        "label": "Two",
+        "value": "two",
       },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": "Two",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  multi={false}
+  options={
+    Array [
+      Object {
+        "label": "One",
+        "value": "one",
       },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
+      Object {
+        "label": "Two",
+        "value": "two",
       },
-    },
-  },
-}
+    ]
+  }
+  placeholder="ojs_select_placeholder"
+  renderSelect={[MockFunction]}
+>
+  <Input
+    disabled={false}
+    id="mock-field"
+    name="mock-field"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    plaintext={true}
+    type="text"
+    value="Two"
+  />
+</FieldLine>
 `;
 
 exports[`<SelectBase /> should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SelectBase
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      }
+<FieldLine
+  field={
+    Object {
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "",
     }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      }
-    }
-    multi={false}
-    options={
-      Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ]
-    }
-    placeholder="ojs_select_placeholder"
-    renderSelect={
-      [MockFunction] {
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": false,
+      "stringFormatter": [MockFunction] {
         "calls": Array [
           Array [
-            Object {
-              "className": "react-select-control",
-              "id": "mock-field",
-              "isClearable": undefined,
-              "isDisabled": false,
-              "isLoading": undefined,
-              "isMulti": false,
-              "isRtl": undefined,
-              "isSearchable": undefined,
-              "onBlur": [Function],
-              "onChange": [Function],
-              "options": Array [
-                Object {
-                  "label": "One",
-                  "value": "one",
-                },
-                Object {
-                  "label": "Two",
-                  "value": "two",
-                },
-              ],
-              "placeholder": "ojs_select_placeholder",
-              "value": undefined,
-            },
+            "ojs_select_placeholder",
           ],
         ],
         "results": Array [
           Object {
-            "isThrow": false,
-            "value": <div>
-              mock select with props
-              {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
-            </div>,
+            "type": "return",
+            "value": "ojs_select_placeholder",
           },
         ],
-      }
+      },
+      "touched": false,
+      "valid": true,
     }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <div>
-        mock select with props
-        {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
-      </div>,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction] {
-          "calls": Array [
-            Array [
-              "ojs_select_placeholder",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": "ojs_select_placeholder",
-            },
-          ],
-        },
-        "touched": false,
-        "valid": true,
-      },
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          "mock select with props",
-          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        "mock select with props",
-        "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
-      ],
-      "type": "div",
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div>
-          mock select with props
-          {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
-        </div>,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": false,
-          "stringFormatter": [MockFunction] {
-            "calls": Array [
-              Array [
-                "ojs_select_placeholder",
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": "ojs_select_placeholder",
-              },
-            ],
-          },
-          "touched": false,
-          "valid": true,
-        },
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "mock select with props",
-            "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "mock select with props",
-          "{\\"id\\":\\"mock-field\\",\\"isDisabled\\":false,\\"isMulti\\":false,\\"options\\":[{\\"value\\":\\"one\\",\\"label\\":\\"One\\"},{\\"value\\":\\"two\\",\\"label\\":\\"Two\\"}],\\"placeholder\\":\\"ojs_select_placeholder\\",\\"className\\":\\"react-select-control\\"}",
-        ],
-        "type": "div",
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+  }
+>
+  <div>
+    mock select with props
+    {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
+  </div>
+</FieldLine>
 `;

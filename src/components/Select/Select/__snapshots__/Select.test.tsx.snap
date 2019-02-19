@@ -1,152 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Select /> should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Select
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    options={
-      Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ]
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "mock-field",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      },
-      "label": "field0",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "multi": false,
-      "options": Array [
-        Object {
-          "label": "One",
-          "value": "one",
-        },
-        Object {
-          "label": "Two",
-          "value": "two",
-        },
-      ],
-      "placeholder": "ojs_select_placeholder",
-      "renderSelect": [Function],
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<SelectBase
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "mock-field",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "",
-        },
-        "label": "field0",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": false,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "multi": false,
-        "options": Array [
-          Object {
-            "label": "One",
-            "value": "one",
-          },
-          Object {
-            "label": "Two",
-            "value": "two",
-          },
-        ],
-        "placeholder": "ojs_select_placeholder",
-        "renderSelect": [Function],
+      "disabled": false,
+      "id": "mock-field",
+      "name": "mock-field",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "",
+    }
+  }
+  label="field0"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": false,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  multi={false}
+  options={
+    Array [
+      Object {
+        "label": "One",
+        "value": "one",
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
+      Object {
+        "label": "Two",
+        "value": "two",
       },
-    },
-  },
-}
+    ]
+  }
+  placeholder="ojs_select_placeholder"
+  renderSelect={[Function]}
+/>
 `;

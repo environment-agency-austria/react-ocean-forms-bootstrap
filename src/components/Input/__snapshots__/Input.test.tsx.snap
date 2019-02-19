@@ -1,357 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Input /> should react on meta.plaintext correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Input
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    type="text"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="field0"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={true}
-        type="text"
-        value=""
-      />,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": true,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "type": "text",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "invalid": undefined,
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": true,
-        "type": "text",
-        "value": "",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="field0"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={true}
-          type="text"
-          value=""
-        />,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "field0",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": true,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "type": "text",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "invalid": undefined,
-          "name": "field0",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": true,
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "disabled": false,
+      "id": "mock-field",
+      "name": "field0",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "",
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": true,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  type="text"
+>
+  <Input
+    disabled={false}
+    id="mock-field"
+    name="field0"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    plaintext={true}
+    type="text"
+    value=""
+  />
+</FieldLine>
 `;
 
 exports[`<Input /> should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Input
-    field={
-      Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      }
-    }
-    label="field0"
-    meta={
-      Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      }
-    }
-    type="text"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Input
-        disabled={false}
-        id="mock-field"
-        name="field0"
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        plaintext={false}
-        type="text"
-        value=""
-      />,
-      "field": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "value": "",
-      },
-      "inputSize": "9",
-      "label": "field0",
-      "labelClass": "text-right",
-      "labelSize": "3",
-      "meta": Object {
-        "error": null,
-        "isRequired": false,
-        "isValidating": false,
-        "plaintext": false,
-        "stringFormatter": [MockFunction],
-        "touched": false,
-        "valid": true,
-      },
-      "type": "text",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "disabled": false,
-        "id": "mock-field",
-        "invalid": undefined,
-        "name": "field0",
-        "onBlur": [MockFunction],
-        "onChange": [MockFunction],
-        "plaintext": false,
-        "type": "text",
-        "value": "",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<FieldLine
+  field={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Input
-          disabled={false}
-          id="mock-field"
-          name="field0"
-          onBlur={[MockFunction]}
-          onChange={[MockFunction]}
-          plaintext={false}
-          type="text"
-          value=""
-        />,
-        "field": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "name": "field0",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "value": "",
-        },
-        "inputSize": "9",
-        "label": "field0",
-        "labelClass": "text-right",
-        "labelSize": "3",
-        "meta": Object {
-          "error": null,
-          "isRequired": false,
-          "isValidating": false,
-          "plaintext": false,
-          "stringFormatter": [MockFunction],
-          "touched": false,
-          "valid": true,
-        },
-        "type": "text",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "id": "mock-field",
-          "invalid": undefined,
-          "name": "field0",
-          "onBlur": [MockFunction],
-          "onChange": [MockFunction],
-          "plaintext": false,
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+      "disabled": false,
+      "id": "mock-field",
+      "name": "field0",
+      "onBlur": [MockFunction],
+      "onChange": [MockFunction],
+      "value": "",
+    }
+  }
+  inputSize="9"
+  label="field0"
+  labelClass="text-right"
+  labelSize="3"
+  meta={
+    Object {
+      "error": null,
+      "isRequired": false,
+      "isValidating": false,
+      "plaintext": false,
+      "stringFormatter": [MockFunction],
+      "touched": false,
+      "valid": true,
+    }
+  }
+  type="text"
+>
+  <Input
+    disabled={false}
+    id="mock-field"
+    name="field0"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    plaintext={false}
+    type="text"
+    value=""
+  />
+</FieldLine>
 `;
