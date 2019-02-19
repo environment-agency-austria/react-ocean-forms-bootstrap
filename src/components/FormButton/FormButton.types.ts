@@ -1,6 +1,6 @@
 import {FormButton, PropsOf, Subtract } from 'react-ocean-forms';
 
-type TUpstreamButtonProps = PropsOf<typeof FormButton>;
+type TUpstreamButtonProps = JSX.LibraryManagedAttributes<typeof FormButton, PropsOf<typeof FormButton>>;
 
 /**
  * Props for the FormButton component
