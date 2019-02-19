@@ -3,10 +3,6 @@ module.exports = {
     '<rootDir>/config/jest/enzyme.ts',
     '<rootDir>/src/utils/registerCustomMessages.ts',
   ],
-  testMatch: [
-    '**/__tests__/**/*.ts?(x)',
-    '**/?(*.)+(spec|test).ts?(x)',
-  ],
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/test-utils/**',
@@ -15,15 +11,7 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.s?css$': '<rootDir>/config/jest/cssTransform.ts',
   },
-  moduleFileExtensions: [
-    'ts',
-    'tsx',
-    'web.js',
-    'mjs',
-    'js',
-    'json',
-    'web.jsx',
-    'jsx',
-    'node'
+  snapshotSerializers: [
+    'enzyme-to-json/serializer',
   ],
 };
