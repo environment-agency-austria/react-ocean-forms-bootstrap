@@ -94,7 +94,8 @@ describe('<DatePicker />', () => {
         throw new Error('Invalid test state');
       }
 
-      jest.spyOn(moment, 'isMoment').mockReturnValue(true);
+      const spiedIsMoment = jest.spyOn(moment, 'isMoment');
+      spiedIsMoment.mockReturnValue(true);
 
       const mockDate = {
         format: jest.fn().mockReturnValue('formatted-mock-date'),
@@ -104,6 +105,24 @@ describe('<DatePicker />', () => {
       expect(field.onChange).toHaveBeenCalledWith({
         target: {
           value: 'formatted-mock-date',
+        },
+      });
+
+      spiedIsMoment.mockRestore();
+    });
+
+    it('should call onChange correctly if the changed value is an empty string', () => {
+      const { wrapper, field } = setup();
+      const onChangeProp: Function | undefined = wrapper.find(Datetime).prop('onChange');
+
+      if (onChangeProp === undefined) {
+        throw new Error('Invalid test state');
+      }
+
+      onChangeProp('');
+      expect(field.onChange).toHaveBeenCalledWith({
+        target: {
+          value: '',
         },
       });
     });

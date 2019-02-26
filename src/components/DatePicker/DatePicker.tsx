@@ -22,14 +22,21 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
   public static displayName: string = 'DatePicker';
 
   private handleChange = (value: moment.Moment | string): void => {
-    if (!(moment.isMoment(value))) { return; }
-
     const { field } = this.props;
-    field.onChange({
-      target: {
-        value: value.format(),
-      },
-    });
+
+    if (moment.isMoment(value)) {
+      field.onChange({
+        target: {
+          value: value.format(),
+        },
+      });
+    } else if (value === '') {
+      field.onChange({
+        target: {
+          value,
+        },
+      });
+    }
   }
 
   /**
