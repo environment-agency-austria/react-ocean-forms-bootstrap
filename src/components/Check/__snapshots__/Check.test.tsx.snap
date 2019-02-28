@@ -65,7 +65,7 @@ exports[`<Check /> should render correctly 1`] = `
         }
       >
         <Input
-          defaultChecked={false}
+          checked={false}
           disabled={false}
           id="mock-field"
           invalid={false}

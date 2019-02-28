@@ -81,6 +81,6 @@ describe('<Check />', () => {
       { metaOverrides: { plaintext: true } },
     );
 
-    expect(wrapper.find('Input').exists()).toBeFalsy();
+    expect(wrapper.find('Input').exists()).toBeTruthy();
   });
 });
