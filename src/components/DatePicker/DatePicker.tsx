@@ -8,6 +8,7 @@
 import * as React from 'react';
 
 import moment from 'moment';
+
 import { default as Datetime } from 'react-datetime';
 import { withField } from 'react-ocean-forms';
 import { Input as StrapInput } from 'reactstrap';
@@ -20,6 +21,29 @@ import { IDatePickerProps } from './DatePicker.types';
  */
 export class BaseDatePicker extends React.Component<IDatePickerProps> {
   public static displayName: string = 'DatePicker';
+
+  private handleBlur = (value: moment.Moment | string): void => {
+    const { field, inputFormat } = this.props;
+
+    const inputFieldFormat = inputFormat ? inputFormat : undefined;
+    const parsed = moment(value, inputFieldFormat);
+
+    const formatted = parsed.isValid ? parsed : value;
+
+    if (moment.isMoment(formatted)) {
+      field.onChange({
+        target: {
+          value: formatted.format(),
+        },
+      });
+    } else if (value === '') {
+      field.onChange({
+        target: {
+          value,
+        },
+      });
+    }
+  }
 
   private handleChange = (value: moment.Moment | string): void => {
     const { field } = this.props;
@@ -47,6 +71,10 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
     const { dateFormat, timeFormat } = this.props;
 
     let parsedFormat = '';
+
+    if (!value.isValid()) {
+      return '';
+    }
 
     if (typeof dateFormat === 'string') {
       parsedFormat = dateFormat;
@@ -103,6 +131,7 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
         <Datetime
           value={formattedValue}
           onChange={this.handleChange}
+          onBlur={this.handleBlur}
           dateFormat={dateFormat}
           timeFormat={timeFormat}
           inputProps={inputProps}
