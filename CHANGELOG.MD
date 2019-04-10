@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+- Fixed `DatePicker`plaintext rendering of invalid date
+- New prop inputFormat for `DatePicker`
 - Fixed `DatePicker` not triggering an onChange while clearing its value
 - Bugfix for `Check` components
 

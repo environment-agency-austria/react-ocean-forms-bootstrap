@@ -138,6 +138,7 @@ describe('<DatePicker />', () => {
       const displayValueSetup = (props?: Partial<IDatePickerProps>): Function => {
         const { wrapper } = setup({
           props,
+          fieldOverrides: {value: moment() },
           metaOverrides: { plaintext: true },
         });
 
@@ -165,6 +166,7 @@ describe('<DatePicker />', () => {
         (name?: string, dateFormat?: string, timeFormat?: string) => {
         const mockDate = {
           format: jest.fn().mockReturnValue('mock-date'),
+          isValid: jest.fn().mockReturnValue(true),
         };
 
         const callback = displayValueSetup({

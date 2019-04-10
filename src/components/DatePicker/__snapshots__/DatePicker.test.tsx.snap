@@ -36,7 +36,7 @@ exports[`<DatePicker /> meta.plaintext handling should react on meta.plaintext c
     onChange={[MockFunction]}
     plaintext={true}
     type="text"
-    value="Invalid date"
+    value=""
   />
 </FieldLine>
 `;
