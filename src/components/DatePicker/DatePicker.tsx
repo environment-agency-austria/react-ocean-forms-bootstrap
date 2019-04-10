@@ -25,10 +25,9 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
   private handleBlur = (value: moment.Moment | string): void => {
     const { field, inputFormat } = this.props;
 
-    const inputFieldFormat = inputFormat ? inputFormat : undefined;
-    const parsed = moment(value, inputFieldFormat);
+    const parsed = moment(value, inputFormat);
 
-    const formatted = parsed.isValid ? parsed : value;
+    const formatted = (parsed.isValid() === true) ? parsed : value;
 
     if (moment.isMoment(formatted)) {
       field.onChange({
@@ -40,6 +39,12 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
       field.onChange({
         target: {
           value,
+        },
+      });
+    } else {
+      field.onChange({
+        target: {
+          value: '',
         },
       });
     }
