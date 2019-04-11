@@ -108,6 +108,7 @@ describe('<DatePicker />', () => {
         },
       });
 
+      // Does not work
       spiedIsMoment.mockRestore();
     });
 
@@ -128,6 +129,76 @@ describe('<DatePicker />', () => {
     });
   });
 
+  describe('onBlur handling', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+      jest.restoreAllMocks();
+    });
+    it('should call onBlur with no valid date value', () => {
+      const { wrapper, field } = setup();
+      const onBlurProp: Function | undefined = wrapper.find(Datetime).prop('onBlur');
+
+      if (onBlurProp === undefined) {
+        throw new Error('Invalid test state');
+      }
+
+      const spiedIsMoment = jest.spyOn(moment, 'isMoment').mockImplementation(() => false);
+
+      const mockDate = {
+        format: jest.fn().mockReturnValue('formatted-mock-date'),
+        isValid: jest.fn().mockReturnValue(false),
+      };
+
+      onBlurProp(mockDate);
+      expect(spiedIsMoment).toHaveBeenCalled();
+      expect(field.onChange).toHaveBeenCalledWith({
+        target: {
+          value: '',
+        },
+      });
+
+    });
+
+    it('should call onBlur with valid date value', () => {
+      const { wrapper, field } = setup();
+      const onBlurProp: Function | undefined = wrapper.find(Datetime).prop('onBlur');
+
+      if (onBlurProp === undefined) {
+        throw new Error('Invalid test state');
+      }
+
+      const spiedIsMoment = jest.spyOn(moment, 'isMoment').mockImplementation(() => true);
+
+      const mockDate = moment.utc([2019, 0, 1]);
+
+      onBlurProp(mockDate);
+      expect(spiedIsMoment).toHaveBeenCalled();
+      expect(field.onChange).toHaveBeenCalledWith({
+        target: {
+          value: '2019-01-01T00:00:00Z',
+        },
+      });
+
+    });
+
+    it('should call onBlur correctly if the changed value is an empty string', () => {
+      const { wrapper, field } = setup();
+      const onBlurProp: Function | undefined = wrapper.find(Datetime).prop('onBlur');
+
+      if (onBlurProp === undefined) {
+        throw new Error('Invalid test state');
+      }
+
+      onBlurProp('');
+      expect(field.onChange).toHaveBeenCalledWith({
+        target: {
+          value: '',
+        },
+      });
+
+    });
+  });
+
   describe('meta.plaintext handling', () => {
     it('should react on meta.plaintext correctly', () => {
       const { wrapper } = setup({ metaOverrides: { plaintext: true }});
@@ -138,6 +209,7 @@ describe('<DatePicker />', () => {
       const displayValueSetup = (props?: Partial<IDatePickerProps>): Function => {
         const { wrapper } = setup({
           props,
+          fieldOverrides: {value: moment() },
           metaOverrides: { plaintext: true },
         });
 
@@ -165,6 +237,7 @@ describe('<DatePicker />', () => {
         (name?: string, dateFormat?: string, timeFormat?: string) => {
         const mockDate = {
           format: jest.fn().mockReturnValue('mock-date'),
+          isValid: jest.fn().mockReturnValue(true),
         };
 
         const callback = displayValueSetup({
