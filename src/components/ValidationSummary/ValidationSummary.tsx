@@ -48,7 +48,6 @@ export class ValidationSummary extends React.Component<IValidationSummaryProps> 
     );
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     return (
       <CoreValidationSummary

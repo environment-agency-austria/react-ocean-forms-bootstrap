@@ -68,7 +68,6 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
     });
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       field,
@@ -87,7 +86,6 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
     const inputGroupClass = info !== undefined ? 'has-info' : undefined;
     const disabled = field.disabled || meta.plaintext;
 
-    // tslint:disable:strict-boolean-expressions
     return (
       <FieldRow meta={meta} className={className}>
         <Col sm={3} className="text-right check-label-col">
@@ -125,7 +123,6 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
         </Col>
       </FieldRow>
     );
-    // tslint:enable:strict-boolean-expressions
   }
 }
 

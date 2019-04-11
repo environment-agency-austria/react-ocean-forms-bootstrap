@@ -7,7 +7,6 @@
 
 import { addCustomMessages } from 'react-ocean-forms';
 
-// tslint:disable-next-line:naming-convention
 export const registerCustomMessages = (): void => {
   const defaultMessages = {
     ojs_select_placeholder: 'Choose a value',

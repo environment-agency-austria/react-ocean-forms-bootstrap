@@ -10,7 +10,6 @@ describe('<FieldLineAddon />', () => {
   const setup = (
     plaintext: boolean,
     content?: React.ReactNode,
-    // tslint:disable-next-line:no-reserved-keywords
     type: IFieldLineAddonType = 'prepend',
   ): ShallowWrapper => {
     return shallow((
@@ -22,7 +21,6 @@ describe('<FieldLineAddon />', () => {
     ));
   };
 
-  // tslint:disable-next-line:no-reserved-keywords
   const checkAddonRender = (wrapper: ShallowWrapper, type: IFieldLineAddonType): void => {
     it('should render an InputGroupAddon', () => {
       expect(wrapper.find('InputGroupAddon').exists()).toBeTruthy();

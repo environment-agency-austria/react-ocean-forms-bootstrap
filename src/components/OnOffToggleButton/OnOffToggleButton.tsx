@@ -22,7 +22,6 @@ import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
 export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonProps> {
   public static displayName: string = 'OnOffToggleButton';
 
-  // tslint:disable-next-line:typedef
   public static defaultProps = {
     onLabel: 'ojs_togglebutton_on',
     offLabel: 'ojs_togglebutton_off',
@@ -46,7 +45,6 @@ export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonPro
     this.onRadioBtnClick(false);
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       field,

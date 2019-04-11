@@ -31,7 +31,6 @@ interface IFieldLineState {
 export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState> {
   public static displayName: string = 'FieldLine';
 
-  // tslint:disable-next-line:typedef
   public static defaultProps = {
     labelSize: '3',
     inputSize: '9',
@@ -55,7 +54,6 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
     }));
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       field,
