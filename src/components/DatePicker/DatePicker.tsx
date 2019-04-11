@@ -27,7 +27,7 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
 
     const parsed = moment(value, inputFormat);
 
-    const formatted = (parsed.isValid() === true) ? parsed : value;
+    const formatted = (parsed.isValid()) ? parsed : value;
 
     if (moment.isMoment(formatted)) {
       field.onChange({
