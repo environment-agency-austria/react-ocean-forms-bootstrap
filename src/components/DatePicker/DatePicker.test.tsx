@@ -232,9 +232,7 @@ describe('<DatePicker />', () => {
         ['Mock Mock', 'Mock', 'Mock'],
       ];
 
-      it.each(cases)(
-        'should format the value with "%s" if dateFormat is %s and timeFormat is %s',
-        (name?: string, dateFormat?: string, timeFormat?: string) => {
+      it.each(cases)('should format the value with "%s" if dateFormat is %s and timeFormat is %s', (name?: string, dateFormat?: string, timeFormat?: string) => {
         const mockDate = {
           format: jest.fn().mockReturnValue('mock-date'),
           isValid: jest.fn().mockReturnValue(true),
