@@ -7,7 +7,6 @@ export interface IFieldLineAddonProps {
   /**
    * Addon type
    */
-  // tslint:disable-next-line:no-reserved-keywords
   type: IFieldLineAddonType;
   /**
    * Form plaintext mode

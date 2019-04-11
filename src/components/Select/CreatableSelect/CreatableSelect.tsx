@@ -23,7 +23,6 @@ import { ICreatableSelectProps, ICreatableSelectState } from './CreatableSelect.
  */
 export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, ICreatableSelectState> {
   public static displayName: string = 'CreatableSelect';
-  // tslint:disable-next-line:typedef
   public static defaultProps = {
     createPrefixLabel: 'ojs_select_creatable_prefix',
   };
@@ -67,7 +66,6 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, 
     this.setState({ loading: false });
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       handleChange,

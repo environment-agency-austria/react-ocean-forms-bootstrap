@@ -18,7 +18,6 @@ import { createMockFormatter } from './createMockFormatter';
 /**
  * Creates a form context
  */
-// tslint:disable-next-line:naming-convention
 export const createMockFormContext = (registerCallback?: Function): IFormContext => ({
   fieldPrefix: null,
 
@@ -55,7 +54,6 @@ export const createMockFormContext = (registerCallback?: Function): IFormContext
 /**
  * Creates a mock field meta
  */
-// tslint:disable-next-line:naming-convention
 export const createMockFieldMeta = (): IFieldComponentMeta => ({
   valid: true,
   error: null,
@@ -69,7 +67,6 @@ export const createMockFieldMeta = (): IFieldComponentMeta => ({
 /**
  * Creates a mock field shape
  */
-// tslint:disable-next-line:naming-convention
 export const createMockField = (): IFieldComponentFieldProps => ({
   id: 'mock-field',
   name: 'mock-field',

@@ -43,7 +43,6 @@ interface IUpdatedLabelsResult {
 export class SelectBase extends React.Component<ISelectBaseProps> {
   public static displayName: string = 'SelectBase';
 
-  // tslint:disable-next-line:typedef
   public static defaultProps = {
     multi: false,
     placeholder: 'ojs_select_placeholder',
@@ -183,7 +182,6 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     );
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       renderSelect,

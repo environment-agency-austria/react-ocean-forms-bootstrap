@@ -1,5 +1,4 @@
 // Register our stylesheets
-// tslint:disable-next-line:no-import-side-effect
 import './scss/main.scss';
 
 // Register our custom messages to react-ocean-forms

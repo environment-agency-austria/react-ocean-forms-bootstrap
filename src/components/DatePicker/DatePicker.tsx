@@ -96,7 +96,6 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
     return value.format(parsedFormat === '' ? undefined : parsedFormat);
   }
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       field,

@@ -10,6 +10,5 @@ export interface IInputProps extends IFieldComponentProps, DefaultizedFieldLineP
   /**
    * Html input type
    */
-  // tslint:disable-next-line:no-reserved-keywords
   type: InputType;
 }

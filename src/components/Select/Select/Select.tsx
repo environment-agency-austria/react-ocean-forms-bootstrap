@@ -21,7 +21,6 @@ import { ISelectProps } from './Select.types';
 export class BaseSelect extends React.Component<ISelectProps> {
   public static displayName: string = 'Select';
 
-  // tslint:disable-next-line:member-ordering
   public render(): JSX.Element {
     const {
       ...selectBaseProps

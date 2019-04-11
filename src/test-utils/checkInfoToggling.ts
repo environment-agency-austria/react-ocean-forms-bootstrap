@@ -4,7 +4,6 @@ import { ShallowWrapper } from 'enzyme';
  * Re-usable test suite to check the info visibility
  * toggling between InfoAlert and InfoAddonButton
  */
-// tslint:disable-next-line:naming-convention
 export const checkInfoToggling = (wrapper: ShallowWrapper): void => {
   describe('info visible toggling', () => {
     const getVisibility = (): boolean => wrapper.find('InfoAlert').prop('visible');
