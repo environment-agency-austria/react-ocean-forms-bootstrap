@@ -1,9 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## [3.1.0] # 2019-04-11
 - Fixed `DatePicker`plaintext rendering of invalid date
-- New prop inputFormat for `DatePicker`
+- New prop inputFormat for `DatePicker` (new feature)
 - Fixed `DatePicker` not triggering an onChange while clearing its value
 - Bugfix for `Check` components
 
