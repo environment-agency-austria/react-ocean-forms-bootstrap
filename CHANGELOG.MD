@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [3.2.0] # 2019-08-20
+- Improved `FormButton` props to include all reactstrap props
+- Added `fieldErrorComponent` to `ValidationSummary`
+- Added `ValidationFieldError` component as default renderer of `ValidationSummary` errors
+
 ## [3.1.0] # 2019-04-11
 - Fixed `DatePicker`plaintext rendering of invalid date
 - New prop inputFormat for `DatePicker` (new feature)
