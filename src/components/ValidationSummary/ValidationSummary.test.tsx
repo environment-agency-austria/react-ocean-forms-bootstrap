@@ -5,6 +5,7 @@ import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
 
 import { ValidationSummary } from './ValidationSummary';
 import { IValidationSummaryProps } from './ValidationSummary.types';
+import { IValidationFieldErrorProps } from './ValidationFieldError';
 
 describe('<ValidationSummary />', () => {
   interface ISetupArgs {
@@ -56,6 +57,29 @@ describe('<ValidationSummary />', () => {
     });
 
     it('should correctly render the render prop', () => {
+      const renderWrapper = shallow(renderFieldErrorProp(
+        'mock-id',
+        'mock-name',
+        'mock-error',
+        jest.fn(),
+      ));
+      expect(renderWrapper).toMatchSnapshot();
+    });
+  });
+
+  describe('fieldErrorComponent prop', () => {
+    const CustomErrorRenderer: React.FC<IValidationFieldErrorProps> = () => {
+      return <div id="mock-error" />;
+    };
+
+    const { wrapper } = setup({
+      props: {
+        fieldErrorComponent: CustomErrorRenderer,
+      }
+    });
+    const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop<((...rest: unknown[]) => JSX.Element)>('renderFieldError');
+
+    it('should accept custom field error components', () => {
       const renderWrapper = shallow(renderFieldErrorProp(
         'mock-id',
         'mock-name',
