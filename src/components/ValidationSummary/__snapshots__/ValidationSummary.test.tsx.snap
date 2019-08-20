@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ValidationSummary /> fieldErrorComponent prop should accept custom field error components 1`] = `
+<div
+  id="mock-error"
+/>
+`;
+
 exports[`<ValidationSummary /> render prop should correctly render the render prop 1`] = `
 <Fade
   appear={true}

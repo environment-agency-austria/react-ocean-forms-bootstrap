@@ -6,12 +6,11 @@
  */
 import * as React from 'react';
 
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
 import { Alert } from 'reactstrap';
 
 import { IValidationSummaryProps } from './ValidationSummary.types';
+import { ValidationFieldError } from './ValidationFieldError';
 
 /**
  * Component for displaying a summary of all
@@ -27,16 +26,15 @@ export class ValidationSummary extends React.Component<IValidationSummaryProps> 
     errors: React.ReactNode,
     linkCallback: React.MouseEventHandler,
   ): JSX.Element => {
+    const { fieldErrorComponent: FieldErrorComponent = ValidationFieldError } = this.props;
+
     return (
-      <li key={id}>
-        <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" />
-        <a href={`#${id}`} onClick={linkCallback}>
-          {fieldName}
-          :
-          {' '}
-          {errors}
-        </a>
-      </li>
+      <FieldErrorComponent
+        id={id}
+        fieldName={fieldName}
+        errors={errors}
+        linkCallback={linkCallback}
+      />
     );
   }
 
