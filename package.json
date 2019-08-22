@@ -16,7 +16,7 @@
     "lint": "eslint \"src/**\""
   },
   "dependencies": {
-    "@types/react-select": "^2.0.19",
+    "@types/react-select": "^3.0.3",
     "@types/reactstrap": "^7.1.4"
   },
   "peerDependencies": {
