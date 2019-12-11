@@ -27,6 +27,7 @@ exports[`<ValidatingSpinner /> should render a FontAwesomeIcon if isValidating i
   rotation={null}
   size={null}
   spin={true}
+  swapOpacity={false}
   symbol={false}
   title=""
   transform={null}

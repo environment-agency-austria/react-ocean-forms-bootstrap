@@ -63,6 +63,7 @@ exports[`<ValidationSummary /> renderFieldError prop should correctly render the
     rotation={null}
     size={null}
     spin={false}
+    swapOpacity={false}
     symbol={false}
     title=""
     transform={null}
