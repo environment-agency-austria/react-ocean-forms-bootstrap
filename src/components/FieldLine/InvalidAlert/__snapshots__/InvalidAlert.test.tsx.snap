@@ -27,6 +27,7 @@ exports[`<InvalidAlert /> should render a FontAwesomeIcon if valid is false 1`] 
   rotation={null}
   size={null}
   spin={false}
+  swapOpacity={false}
   symbol={false}
   title=""
   transform={null}

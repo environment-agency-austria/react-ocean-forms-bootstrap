@@ -25,7 +25,7 @@ export interface ISelectOption {
 }
 
 export function isSelectOption(object: any): object is ISelectOption {
-  return object && typeof (<ISelectOption>object).label === 'string' && typeof (<ISelectOption>object).value === 'string';
+  return object && typeof (object as ISelectOption).label === 'string' && typeof (object as ISelectOption).value === 'string';
 }
 
 /**

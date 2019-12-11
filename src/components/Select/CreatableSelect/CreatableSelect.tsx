@@ -60,7 +60,7 @@ export class BaseCreatableSelect extends React.Component<ICreatableSelectProps, 
 
     field.onChange({
       target: {
-        value: [... Array.isArray(current) ? current : [], result],
+        value: [...Array.isArray(current) ? current : [], result],
       },
     });
     this.setState({ loading: false });
