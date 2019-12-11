@@ -1,4 +1,4 @@
-import { IFieldComponentProps } from 'react-ocean-forms';
+import { IUseFieldResult } from 'react-ocean-forms';
 
 /**
  * Props for components that use the info
@@ -16,17 +16,21 @@ export interface IInfoProps {
  */
 export interface IBaseFieldLineProps extends IInfoProps {
   /**
+   * Label of the input element
+   */
+  label: string;
+  /**
    * Label size for the bootstrap label column
    */
-  labelSize: string;
+  labelSize?: string;
   /**
    * Input size for the bootstrap input column
    */
-  inputSize: string;
+  inputSize?: string;
   /**
    * CssClass for the label column
    */
-  labelClass: string;
+  labelClass?: string;
 
   /**
    * Prefix component
@@ -41,4 +45,4 @@ export interface IBaseFieldLineProps extends IInfoProps {
 /**
  * Props for the FieldLine component
  */
-export interface IFieldLineProps extends IFieldComponentProps, IBaseFieldLineProps { }
+export interface IFieldLineProps extends IUseFieldResult<unknown>, IBaseFieldLineProps { }

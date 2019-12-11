@@ -3,7 +3,7 @@
  */
 export interface IInfoAddonButtonProps {
   /**
-   * ???
+   * Info text - will hide this button if empty
    */
   info?: string;
   /**
