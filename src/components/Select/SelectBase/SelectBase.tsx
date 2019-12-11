@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Input as StrapInput } from 'reactstrap';
 
 import { IFieldComponentFieldProps } from 'react-ocean-forms';
@@ -146,7 +146,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * @param field The field
    * @param options The available options
    */
-  private getFieldValue(field: IFieldComponentFieldProps, options: ISelectOptions): SelectFieldValue {
+  private getFieldValue(field: IFieldComponentFieldProps<ISelectFieldValue>, options: ISelectOptions): SelectFieldValue {
     const fieldValue = (field.value as ISelectFieldValue | undefined);
     const {
       needsUpdate,
@@ -167,7 +167,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * @param field The field
    * @param value The selected value
    */
-  private renderPlaintext(field: IFieldComponentFieldProps, value: SelectFieldValue): JSX.Element {
+  private renderPlaintext(field: IFieldComponentFieldProps<ISelectFieldValue>, value: SelectFieldValue): JSX.Element {
     let displayValue = '';
     if (isSelectOption(value)) {
       displayValue = value.label;
@@ -177,7 +177,12 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
 
     return (
       <FieldLine {...this.props}>
-        <StrapInput {...field} value={displayValue} plaintext />
+        <StrapInput
+          {...field}
+          value={displayValue}
+          plaintext
+          onChange={undefined}
+        />
       </FieldLine>
     );
   }

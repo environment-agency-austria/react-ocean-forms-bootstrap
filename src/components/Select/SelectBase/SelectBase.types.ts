@@ -8,7 +8,7 @@ import { IFieldComponentProps } from 'react-ocean-forms';
 import { Props as SelectProps } from 'react-select/lib/Select';
 import { ActionMeta } from 'react-select/lib/types';
 
-import { DefaultizedFieldLineProps } from '../../FieldLine';
+import { IBaseFieldLineProps } from '../../FieldLine';
 
 /**
  * Selectable option
@@ -79,8 +79,8 @@ interface IMappedReactSelectProps {
 }
 
 export interface ISelectBasePropsBase extends
-  IFieldComponentProps,
-  DefaultizedFieldLineProps,
+  IFieldComponentProps<ISelectFieldValue>,
+  IBaseFieldLineProps,
   IMappedReactSelectProps {
 }
 
