@@ -4561,10 +4561,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-ocean-forms@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-2.2.0.tgz#88ba6159d074e8bfa7fe2d1f6ffe4289a35fb482"
-  integrity sha512-XorO/qRWJf0253+XoP49ysJJcBtCvrTDALD8ZO9li3oJioYD82sovAYu6aj3uCEClLjfUTDiAQhdF4A/dpRSIQ==
+react-ocean-forms@^3.0.0-beta.5:
+  version "3.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/react-ocean-forms/-/react-ocean-forms-3.0.0-beta.5.tgz#41ba3c49139984deec8f793e4459353992baec90"
+  integrity sha512-riJsLj9uEyECQOOyQNGHurKnV3tsDhbVuFfjl/v+55xZ8JbIpNYbVjlUDaUFHnRlYxZfCbUA5lZJqNku+pJN0w==
 
 react-onclickoutside@^6.5.0:
   version "6.9.0"
