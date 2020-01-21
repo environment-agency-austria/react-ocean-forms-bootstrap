@@ -20,7 +20,7 @@ import { OnOffToggleButtonChoice } from './OnOffToggleButtonChoice';
  * form groups with an html input and
  * oForm support
  */
-export const OnOffToggleButton = <TSubmitValue extends unknown>(props: IOnOffToggleButtonProps<TSubmitValue>): JSX.Element => {
+export const OnOffToggleButton = <TSubmitValue extends unknown = boolean>(props: IOnOffToggleButtonProps<TSubmitValue>): JSX.Element => {
   const {
     onLabel = 'ojs_togglebutton_on',
     offLabel = 'ojs_togglebutton_off',
