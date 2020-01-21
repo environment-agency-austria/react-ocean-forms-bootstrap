@@ -41,20 +41,15 @@ export const Check = <TSubmitValue extends unknown = boolean>(props: ICheckProps
    * the checkbox so we can use the checked
    * property instead of value.
    */
-  const handleChange = useCallback((event: React.MouseEvent<HTMLInputElement>) => {
-    // event.target.checked exists in this case
-    // because of the HtmlInputElement
-    // @ts-ignore
-    const checked = event.target.checked as boolean;
-
+  const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     fieldProps.onChange({
       target: {
-        value: checked,
+        value: event.target.checked,
       },
     });
   }, [fieldProps]);
 
-  const isChecked = rest.value === true;
+  const isChecked = fieldProps.value === true;
   const inputGroupClass = rest.info !== undefined ? 'has-info' : undefined;
   const disabled = fieldProps.disabled || metaProps.plaintext;
 
@@ -72,9 +67,9 @@ export const Check = <TSubmitValue extends unknown = boolean>(props: ICheckProps
               name={fieldProps.name}
               type="checkbox"
               onBlur={fieldProps.onBlur}
+              onChange={handleChange}
               invalid={!metaProps.valid}
               checked={isChecked}
-              onClick={handleChange}
               disabled={disabled}
             />
             <FormText text={rest.label} />
