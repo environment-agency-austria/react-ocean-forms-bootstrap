@@ -9,6 +9,7 @@ import React from 'react';
 
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useFormText } from 'react-ocean-forms';
 
 import { IInvalidAlertProps } from './InvalidAlert.types';
 
@@ -18,12 +19,15 @@ import { IInvalidAlertProps } from './InvalidAlert.types';
 export const InvalidAlert: React.FC<IInvalidAlertProps> = (props) => {
   const { valid } = props;
 
+  const invalidTitle = useFormText('ojs_field_invalid');
+
   if (valid) { return null; }
 
   return (
     <FontAwesomeIcon
       icon={faExclamationCircle}
       className="ico-invalid mr-2"
+      title={invalidTitle}
     />
   );
 };
