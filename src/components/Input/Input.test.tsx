@@ -69,7 +69,7 @@ describe('<Input />', () => {
   });
 
   it('should react on meta.valid correctly', () => {
-    const { asFragment, getByLabelText, getByText } = render(
+    const { getByRole, getByLabelText, getByText } = render(
       <Form plaintext>
         <Input name="mock" label="mock" validators={[validators.required]} />
       </Form>
@@ -78,7 +78,7 @@ describe('<Input />', () => {
     fireEvent.change(getByLabelText('mock'), { target: { value: 'temp value' }});
     fireEvent.change(getByLabelText('mock'), { target: { value: '' }});
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(getByRole('textbox')).toHaveClass('is-invalid');
     expect(getByText('This field is mandatory.')).toBeVisible();
   });
 });
