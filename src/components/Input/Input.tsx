@@ -27,10 +27,11 @@ export const Input = <TSubmitValue extends unknown>(props: IInputProps<TSubmitVa
   const { fieldProps, metaProps } = useField(rest);
 
   const invalid = metaProps.valid === true ? undefined : true;
+  const defaultizedValue = fieldProps.value ?? '';
 
   return (
     <FieldLine {...rest} fieldProps={fieldProps} metaProps={metaProps}>
-      <StrapInput type={type} {...fieldProps} invalid={invalid} plaintext={metaProps.plaintext} />
+      <StrapInput type={type} {...fieldProps} value={defaultizedValue} invalid={invalid} plaintext={metaProps.plaintext} />
     </FieldLine>
   );
 };
