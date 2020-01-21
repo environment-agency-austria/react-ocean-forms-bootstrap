@@ -4,15 +4,10 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import { Subtract } from 'react-ocean-forms';
-
-import { ISelectBasePropsBase, SelectBase } from '../SelectBase';
-
-type ISelectBaseDefaultProps = (typeof SelectBase)['defaultProps'];
-type WithExcluded = Subtract<ISelectBasePropsBase, ISelectBaseDefaultProps>;
+import { ISelectBasePropsBase } from '../SelectBase';
 
 /**
  * Props for the component `Select`
  */
-export interface ISelectProps extends WithExcluded, Partial<ISelectBaseDefaultProps> {
+export interface ISelectProps<TSubmitValue> extends ISelectBasePropsBase<TSubmitValue> {
 }

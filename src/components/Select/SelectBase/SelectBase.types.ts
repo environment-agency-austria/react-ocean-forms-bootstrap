@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import { IFieldComponentProps } from 'react-ocean-forms';
+import { IUseFieldProps, IFieldComponentFieldProps } from 'react-ocean-forms';
 import { Props as SelectProps } from 'react-select/lib/Select';
 import { ActionMeta } from 'react-select/lib/types';
 
@@ -51,7 +51,7 @@ interface IMappedReactSelectProps {
    * Placeholder string that will be displayed while
    * the component is empty
    */
-  placeholder: string;
+  placeholder?: string;
   /**
    * True, if the select component should be in multi-select mode
    */
@@ -78,8 +78,8 @@ interface IMappedReactSelectProps {
   handleChange?(value: ISelectFieldValue, action?: ActionMeta): void;
 }
 
-export interface ISelectBasePropsBase extends
-  IFieldComponentProps<ISelectFieldValue>,
+export interface ISelectBasePropsBase<TSubmitValue> extends
+  IUseFieldProps<ISelectFieldValue, TSubmitValue>,
   IBaseFieldLineProps,
   IMappedReactSelectProps {
 }
@@ -93,11 +93,11 @@ export type IPreparedSelectProps = SelectProps;
 /**
  * Props for the `SelectBase` component
  */
-export interface ISelectBaseProps extends ISelectBasePropsBase {
+export interface ISelectBaseProps<TSubmitValue> extends ISelectBasePropsBase<TSubmitValue> {
   /**
    * Callback to render the actual select component with `preparedProps`
    * @param preparedProps The prepared props for the select
    */
-  renderSelect(preparedProps: IPreparedSelectProps): JSX.Element;
+  renderSelect(preparedProps: IPreparedSelectProps, fieldProps: IFieldComponentFieldProps<ISelectFieldValue>): JSX.Element;
   handleChange?(value: ISelectFieldValue, action?: ActionMeta): void;
 }
