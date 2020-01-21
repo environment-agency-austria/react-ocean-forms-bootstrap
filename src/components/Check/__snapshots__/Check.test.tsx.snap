@@ -33,6 +33,7 @@ exports[`<Check /> should add the has-info class to InputGroup if info is presen
           >
             <button
               class="btn btn-outline-secondary"
+              title="ojs_show_information"
               type="button"
             >
               <svg

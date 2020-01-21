@@ -9,6 +9,7 @@ import React from 'react';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, InputGroupAddon } from 'reactstrap';
+import { useFormText } from 'react-ocean-forms';
 
 import { IInfoAddonButtonProps } from './InfoAddonButton.types';
 
@@ -18,12 +19,14 @@ import { IInfoAddonButtonProps } from './InfoAddonButton.types';
 export const InfoAddonButton: React.FC<IInfoAddonButtonProps> = (props) => {
   const { info, plaintext, onClick } = props;
 
+  const titleText = useFormText('ojs_show_information');
+
   if (plaintext) { return null; }
   if (info === undefined || info === '') { return null; }
 
   return (
     <InputGroupAddon addonType="append">
-      <Button onClick={onClick} outline>
+      <Button onClick={onClick} outline title={titleText}>
         <FontAwesomeIcon icon={faExclamationCircle} />
       </Button>
     </InputGroupAddon>

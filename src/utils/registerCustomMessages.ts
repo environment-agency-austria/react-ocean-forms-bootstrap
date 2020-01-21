@@ -16,6 +16,7 @@ export const registerCustomMessages = (): void => {
     ojs_select_clearValue: 'Clear value',
     ojs_togglebutton_on: 'On',
     ojs_togglebutton_off: 'Off',
+    ojs_show_information: 'Show information',
   };
   addCustomMessages(defaultMessages);
 };
