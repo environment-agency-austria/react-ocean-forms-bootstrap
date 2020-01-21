@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormButton /> should render without crashing 1`] = `
-<FormButton
-  component={[Function]}
-  disabled={false}
-  onClick={[Function]}
-  type="submit"
-/>
+<DocumentFragment>
+  <form
+    class=""
+  >
+    <button
+      class="btn btn-secondary"
+      type="submit"
+    >
+      Mock button
+    </button>
+  </form>
+</DocumentFragment>
 `;

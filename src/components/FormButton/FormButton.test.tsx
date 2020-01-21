@@ -1,15 +1,20 @@
-import * as  React from 'react';
+import React from 'react';
 
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react'
+import { Form } from 'react-ocean-forms';
 
 import { FormButton } from './FormButton';
 
 describe('<FormButton />', () => {
-  const wrapper = shallow((
-    <FormButton />
-  ));
-
   it('should render without crashing', () => {
-    expect(wrapper).toMatchSnapshot();
+    const { asFragment, getByRole, getByText } = render(
+      <Form>
+        <FormButton>Mock button</FormButton>
+      </Form>
+    );
+
+    expect(getByRole('button')).toBeInTheDocument();
+    expect(getByText('Mock button')).toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
