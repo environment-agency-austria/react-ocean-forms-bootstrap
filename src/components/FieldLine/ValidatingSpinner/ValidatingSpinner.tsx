@@ -9,6 +9,7 @@ import React from 'react';
 
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useFormText } from 'react-ocean-forms';
 
 import { IValidatingSpinnerProps } from './ValidatingSpinner.types';
 
@@ -18,6 +19,8 @@ import { IValidatingSpinnerProps } from './ValidatingSpinner.types';
 export const ValidatingSpinner: React.FC<IValidatingSpinnerProps> = (props) => {
   const { isValidating } = props;
 
+  const validatingTitle = useFormText('ojs_field_validating');
+
   if (!isValidating) { return null; }
 
   return (
@@ -25,6 +28,7 @@ export const ValidatingSpinner: React.FC<IValidatingSpinnerProps> = (props) => {
       icon={faSpinner}
       spin
       className="ico-loading mr-2"
+      title={validatingTitle}
     />
   );
 };
