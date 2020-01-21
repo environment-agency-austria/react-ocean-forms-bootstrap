@@ -40,8 +40,8 @@ export const FieldLine: React.FC<IFieldLineProps> = (props) => {
 
   const [infoVisible, setInfoVisible] = useState(false);
   const toggleInfo = useCallback(() => {
-    setInfoVisible(!infoVisible);
-  }, [infoVisible]);
+    setInfoVisible(oldVisible => !oldVisible);
+  }, []);
 
   return (
     <FieldRow valid={metaProps.valid} touched={metaProps.touched}>
