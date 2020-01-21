@@ -20,7 +20,7 @@ export const OnOffToggleButtonChoice: React.FC<OnOffToggleButtonChoiceProps> = (
     <Button
       id={`${fieldProps.id}-${variant}`}
       color="primary"
-      onClick={onClick.bind(variant === 'on')}
+      onClick={onClick.bind(null, variant === 'on')}
       outline
       active={active}
       disabled={fieldProps.disabled}
