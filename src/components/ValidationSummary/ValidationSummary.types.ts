@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { PropsOf, Subtract, ValidationSummary } from 'react-ocean-forms';
 
 import { IValidationFieldErrorProps } from './ValidationFieldError';
