@@ -37,6 +37,7 @@ export const ValidationSummary: React.FC<IValidationSummaryProps> = (props) => {
     return (
       <FieldErrorComponent
         id={id}
+        key={id}
         fieldName={fieldName}
         errors={errors}
         linkCallback={linkCallback}

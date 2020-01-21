@@ -1,92 +1,52 @@
-import * as  React from 'react';
+import React from 'react';
 
-import { shallow, ShallowWrapper } from 'enzyme';
-import { ValidationSummary as CoreValidationSummary } from 'react-ocean-forms';
+import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { Form, Input, FormButton, validators } from 'react-ocean-forms';
 
 import { ValidationSummary } from './ValidationSummary';
-import { IValidationSummaryProps } from './ValidationSummary.types';
 import { IValidationFieldErrorProps } from './ValidationFieldError';
 
 describe('<ValidationSummary />', () => {
-  interface ISetupArgs {
-    props?: Partial<IValidationSummaryProps>;
-  }
-
-  interface ISetupResult {
-    wrapper: ShallowWrapper;
-  }
-
-  const setup = ({
-    props,
-  }: ISetupArgs = {}): ISetupResult => {
-    const wrapper = shallow((
-      <ValidationSummary id="mock-summary" {...props} />
-    ));
-
-    return {
-      wrapper,
-    };
-  };
-
   it('should render without crashing', () => {
-    const { wrapper } = setup();
-    expect(wrapper).toMatchSnapshot();
+    const { asFragment } = render(
+      <Form>
+        <ValidationSummary id="validation-summary" />
+        <Input name="mock" label="mock" />
+      </Form>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  describe('render prop', () => {
-    const { wrapper } = setup();
-    const renderProp = wrapper.find(CoreValidationSummary).prop<((children: JSX.Element) => JSX.Element)>('render');
+  it('should be visible when an error occurs', async () => {
+    const { asFragment, getByText } = render(
+      <Form>
+        <ValidationSummary id="validation-summary" disableFocusOnSubmit />
+        <Input name="mock" label="mock" validators={[validators.required]} />
+        <FormButton type="submit">Submit</FormButton>
+      </Form>
+    );
 
-    it('should set the render prop correctly', () => {
-      expect(typeof renderProp).toBe('function');
-    });
-
-    it('should correctly render the render prop', () => {
-      const mockChildren = <div id="mock" />;
-      const renderWrapper = shallow(renderProp(mockChildren));
-      expect(renderWrapper).toMatchSnapshot();
-    });
+    fireEvent.click(getByText('Submit'));
+    const fragment = await waitForElement(() => asFragment());
+    expect(fragment).toMatchSnapshot();
   });
 
-  describe('renderFieldError prop', () => {
-    const { wrapper } = setup();
-    const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop<((...rest: unknown[]) => JSX.Element)>('renderFieldError');
-
-    it('should set the render prop correctly', () => {
-      expect(typeof renderFieldErrorProp).toBe('function');
-    });
-
-    it('should correctly render the render prop', () => {
-      const renderWrapper = shallow(renderFieldErrorProp(
-        'mock-id',
-        'mock-name',
-        'mock-error',
-        jest.fn(),
-      ));
-      expect(renderWrapper).toMatchSnapshot();
-    });
-  });
-
-  describe('fieldErrorComponent prop', () => {
+  it('should accept custom field error components', async () => {
     const CustomErrorRenderer: React.FC<IValidationFieldErrorProps> = () => {
-      return <div id="mock-error" />;
+      return <div>Custom error renderer</div>;
     };
 
-    const { wrapper } = setup({
-      props: {
-        fieldErrorComponent: CustomErrorRenderer,
-      }
-    });
-    const renderFieldErrorProp = wrapper.find(CoreValidationSummary).prop<((...rest: unknown[]) => JSX.Element)>('renderFieldError');
+    const { getByText } = render(
+      <Form>
+        <ValidationSummary id="validation-summary" disableFocusOnSubmit fieldErrorComponent={CustomErrorRenderer} />
+        <Input name="mock" label="mock" validators={[validators.required]} />
+        <FormButton type="submit">Submit</FormButton>
+      </Form>
+    );
 
-    it('should accept custom field error components', () => {
-      const renderWrapper = shallow(renderFieldErrorProp(
-        'mock-id',
-        'mock-name',
-        'mock-error',
-        jest.fn(),
-      ));
-      expect(renderWrapper).toMatchSnapshot();
-    });
+    fireEvent.click(getByText('Submit'));
+    const customError = await waitForElement(() => getByText('Custom error renderer'));
+    expect(customError).toBeVisible();
   });
 });
