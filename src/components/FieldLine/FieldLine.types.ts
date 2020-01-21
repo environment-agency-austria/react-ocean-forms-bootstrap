@@ -35,11 +35,11 @@ export interface IBaseFieldLineProps extends IInfoProps {
   /**
    * Prefix component
    */
-  prefix?: React.ReactType;
+  prefix?: React.ReactNode;
   /**
    * Suffix component
    */
-  suffix?: React.ReactType;
+  suffix?: React.ReactNode;
 }
 
 /**
