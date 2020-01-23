@@ -44,6 +44,14 @@ export type ISelectFieldValue = ISelectOption | ISelectOption[];
  */
 interface IMappedReactSelectProps {
   /**
+   * Id for Select component container
+   */
+  id?: string;
+  /**
+   * Id for search input field
+   */
+  inputId?: string;
+  /**
    * Selectable options
    */
   options: ISelectOptions;

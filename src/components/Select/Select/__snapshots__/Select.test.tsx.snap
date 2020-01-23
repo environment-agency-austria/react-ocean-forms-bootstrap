@@ -12,6 +12,8 @@ exports[`<Select /> should render correctly 1`] = `
       "value": "",
     }
   }
+  id="id"
+  inputId="inputId"
   label="field0"
   meta={
     Object {

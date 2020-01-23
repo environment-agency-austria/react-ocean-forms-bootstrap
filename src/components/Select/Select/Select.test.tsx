@@ -46,6 +46,8 @@ describe('<Select />', () => {
 
     const wrapper = shallow((
       <BaseSelect
+        id="id"
+        inputId="inputId"
         label={fieldLabel}
         meta={meta}
         field={field}
