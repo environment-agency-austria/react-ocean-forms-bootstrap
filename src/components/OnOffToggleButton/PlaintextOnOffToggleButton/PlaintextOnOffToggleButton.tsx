@@ -14,7 +14,7 @@ export const PlaintextOnOffToggleButton: React.FC<PlaintextOnOffToggleButtonProp
     ...rest
   } = props;
 
-  const isOn = !(fieldProps.value ?? false);
+  const isOn = fieldProps.value ?? true;
   const plaintextValue = isOn ? metaProps.stringFormatter(onLabel) : metaProps.stringFormatter(offLabel);
   const plaintextValid = metaProps.valid === true ? undefined : true;
 
