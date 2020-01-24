@@ -16,14 +16,12 @@ export const PlaintextOnOffToggleButton: React.FC<PlaintextOnOffToggleButtonProp
 
   const isOn = fieldProps.value ?? true;
   const plaintextValue = isOn ? metaProps.stringFormatter(onLabel) : metaProps.stringFormatter(offLabel);
-  const plaintextValid = metaProps.valid === true ? undefined : true;
 
   return (
     <FieldLine {...rest} fieldProps={fieldProps} metaProps={metaProps}>
       <StrapInput
         {...fieldProps}
         value={plaintextValue}
-        invalid={plaintextValid}
         onChange={undefined}
         plaintext
         readOnly
