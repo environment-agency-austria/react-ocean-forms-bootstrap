@@ -6,7 +6,7 @@ exports[`<FieldLine /> should correctly set custom prop values 1`] = `
     class=""
   >
     <div
-      class="row form-group"
+      class="custom container row form-group"
     >
       <label
         class="custom col-sm-2 col-form-label"

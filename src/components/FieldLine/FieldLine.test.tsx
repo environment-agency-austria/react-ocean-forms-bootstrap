@@ -46,7 +46,7 @@ describe('<FieldLine />', () => {
     const props = generateMockProps();
     const { asFragment } = render(
       <Form>
-        <FieldLine {...props} labelSize="2" inputSize="10" labelClass="custom" />
+        <FieldLine {...props} labelSize="2" inputSize="10" labelClass="custom" containerClass="custom container" />
       </Form>
     );
 
@@ -78,28 +78,33 @@ describe('<FieldLine />', () => {
   });
 
   describe('info handling', () => {
-    function generateInfoMockProps(): IFieldLineProps {
+    it('should not display an info button without info', () => {
       const props = generateMockProps();
-      props.info = 'mock info';
-      return props;
-    }
-
-    it('should display an info button', () => {
-      const props = generateInfoMockProps();
-      const { getByRole } = render(
+      const { queryByTitle } = render(
         <Form>
           <FieldLine {...props} />
         </Form>
       );
 
-      expect(getByRole('button')).toBeVisible();
+      expect(queryByTitle('ojs_show_information')).toBeNull();
+    });
+
+    it('should display an info button', () => {
+      const props = generateMockProps();
+      const { getByTitle } = render(
+        <Form>
+          <FieldLine {...props} info="mock info" />
+        </Form>
+      );
+
+      expect(getByTitle('ojs_show_information')).toBeVisible();
     });
 
     it('should togle info visibility when info button is clicked', async () => {
-      const props = generateInfoMockProps();
+      const props = generateMockProps();
       const { getByText, queryByText, getByTitle } = render(
         <Form>
-          <FieldLine {...props} />
+          <FieldLine {...props} info="mock info" />
         </Form>
       );
 
@@ -111,6 +116,144 @@ describe('<FieldLine />', () => {
       fireEvent.click(getByTitle('ojs_show_information'));
       await waitForElementToBeRemoved(() => getByText('mock info'));
       expect(queryByText('mock info')).toBeNull();
+    });
+  });
+
+  describe('error handling', () => {
+    it('should not have any error roles in default mode', () => {
+      const props = generateMockProps();
+      const { getByRole } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByRole('form').firstChild).not.toHaveClass('is-invalid');
+    });
+
+    it('should correctly display a single error', () => {
+      const props = generateMockProps();
+      props.metaProps.valid = false;
+      props.metaProps.error = { message_id: 'mock error', params: { } };
+
+      const { getByText, getByRole } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByText('mock error')).toBeVisible();
+      expect(getByRole('form').firstChild).toHaveClass('is-invalid');
+    });
+
+    it('should correctly display multiple errors', () => {
+      const props = generateMockProps();
+      props.metaProps.valid = false;
+      props.metaProps.error = [
+        { message_id: 'mock error', params: { } },
+        { message_id: 'mock second error', params: { } }
+      ];
+
+      const { getByText } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByText('mock error')).toBeVisible();
+      expect(getByText('mock second error')).toBeVisible();
+    });
+  });
+
+  describe('required fields handling', () => {
+    it('should not display a required marker on not required fields', () => {
+      const props = generateMockProps();
+      const { queryByTitle } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(queryByTitle('Required')).toBeNull();
+    });
+
+    it('should display a required marker on required fields', () => {
+      const props = generateMockProps();
+      props.metaProps.isRequired = true;
+
+      const { getByTitle } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByTitle('Required')).toBeVisible();
+    });
+
+    it('should not display a required marker on required fields in plaintext mode', () => {
+      const props = generateMockProps();
+      props.metaProps.isRequired = true;
+      props.metaProps.plaintext = true;
+
+      const { queryByTitle } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(queryByTitle('Required')).toBeNull();
+    });
+  });
+
+  describe('validation handling', () => {
+    it('should not display a validating spinner on not validating fields', () => {
+      const props = generateMockProps();
+      const { queryByTitle } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(queryByTitle('ojs_field_validating')).toBeNull();
+    });
+
+    it('should display a validating spinner on validating fields', () => {
+      const props = generateMockProps();
+      props.metaProps.isValidating = true;
+
+      const { getByTitle } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByTitle('ojs_field_validating')).toBeInTheDocument();
+    });
+  });
+
+  describe('touched handling', () => {
+    it('should not have is-touched class by default', () => {
+      const props = generateMockProps();
+      const { getByRole } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByRole('form').firstChild).not.toHaveClass('is-touched');
+    });
+
+    it('should have the is-touched class on touched fields', () => {
+      const props = generateMockProps();
+      props.metaProps.touched = true;
+
+      const { getByRole } = render(
+        <Form>
+          <FieldLine {...props} />
+        </Form>
+      );
+
+      expect(getByRole('form').firstChild).toHaveClass('is-touched');
     });
   });
 });
