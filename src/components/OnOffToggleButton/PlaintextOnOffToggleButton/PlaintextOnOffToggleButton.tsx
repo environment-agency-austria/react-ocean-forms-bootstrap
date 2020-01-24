@@ -24,8 +24,9 @@ export const PlaintextOnOffToggleButton: React.FC<PlaintextOnOffToggleButtonProp
         {...fieldProps}
         value={plaintextValue}
         invalid={plaintextValid}
-        plaintext={metaProps.plaintext}
         onChange={undefined}
+        plaintext
+        readOnly
       />
     </FieldLine>
   );
