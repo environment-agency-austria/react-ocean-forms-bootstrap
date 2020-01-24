@@ -36,6 +36,7 @@ export const FieldLine: React.FC<IFieldLineProps> = (props) => {
     labelSize = '3',
     inputSize = '9',
     labelClass = 'text-right',
+    containerClass,
   } = props;
 
   const [infoVisible, setInfoVisible] = useState(false);
@@ -44,7 +45,7 @@ export const FieldLine: React.FC<IFieldLineProps> = (props) => {
   }, []);
 
   return (
-    <FieldRow valid={metaProps.valid} touched={metaProps.touched}>
+    <FieldRow className={containerClass} valid={metaProps.valid} touched={metaProps.touched}>
       <Label sm={labelSize} for={fieldProps.id} className={labelClass}>
         <InvalidAlert valid={metaProps.valid} />
         <ValidatingSpinner isValidating={metaProps.isValidating} />

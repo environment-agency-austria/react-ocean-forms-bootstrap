@@ -31,6 +31,10 @@ export interface IBaseFieldLineProps extends IInfoProps {
    * CssClass for the label column
    */
   labelClass?: string;
+  /**
+   * CssClass for the field line container
+   */
+  containerClass?: string;
 
   /**
    * Prefix component
