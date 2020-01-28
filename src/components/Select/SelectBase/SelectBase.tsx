@@ -218,6 +218,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     // Prepare the props for the renderSelect method
     const preparedProps: IPreparedSelectProps = {
       id: field.id,
+      inputId: `${field.id}-input`,
       value: fieldValue,
       isDisabled: field.disabled,
       isMulti: multi,
