@@ -1,7 +1,9 @@
 module.exports = {
   setupFiles: [
-    '<rootDir>/config/jest/enzyme.ts',
     '<rootDir>/src/utils/registerCustomMessages.ts',
+  ],
+  setupFilesAfterEnv: [
+    '<rootDir>/config/jest/testingLibrary.ts',
   ],
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
@@ -11,7 +13,4 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.s?css$': '<rootDir>/config/jest/cssTransform.ts',
   },
-  snapshotSerializers: [
-    'enzyme-to-json/serializer',
-  ],
 };

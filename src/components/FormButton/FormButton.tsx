@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 
 import { FormButton as BaseFormButton } from 'react-ocean-forms';
 import { Button } from 'reactstrap';
@@ -17,12 +17,6 @@ import { IFormButtonProps } from './FormButton.types';
  * automatically disable the button if the
  * form is busy
  */
-export class FormButton extends React.Component<IFormButtonProps> {
-  public static displayName: string = 'FormButton';
-
-  public render(): JSX.Element {
-    return (
-      <BaseFormButton component={Button} {...this.props} />
-    );
-  }
-}
+export const FormButton: React.FC<IFormButtonProps> = (props) => {
+  return <BaseFormButton component={Button} {...props} />;
+};

@@ -5,145 +5,107 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React, { useCallback } from 'react';
 
 import moment from 'moment';
-
 import { default as Datetime } from 'react-datetime';
-import { withField } from 'react-ocean-forms';
-import { Input as StrapInput } from 'reactstrap';
+import { useField } from 'react-ocean-forms';
 
 import { FieldLine } from '../FieldLine';
 import { IDatePickerProps } from './DatePicker.types';
+import { PlaintextDatePicker } from './PlaintextDatePicker';
 
 /**
  * Component for displaying datetime
  */
-export class BaseDatePicker extends React.Component<IDatePickerProps> {
-  public static displayName: string = 'DatePicker';
+export const DatePicker = <TSubmitValue extends unknown = string>(props: IDatePickerProps<TSubmitValue>): JSX.Element => {
+  const {
+    dateFormat, timeFormat, inputFormat,
+    ...rest
+  } = props;
 
-  private handleBlur = (value: moment.Moment | string): void => {
-    const { field, inputFormat } = this.props;
+  const { fieldProps, metaProps } = useField(rest);
 
+  const handleBlur = useCallback((value: moment.Moment | string) => {
     const parsed = moment(value, inputFormat);
 
     const formatted = (parsed.isValid()) ? parsed : value;
 
     if (moment.isMoment(formatted)) {
-      field.onChange({
+      fieldProps.onChange({
         target: {
           value: formatted.format(),
         },
       });
     } else if (value === '') {
-      field.onChange({
+      fieldProps.onChange({
         target: {
           value,
         },
       });
     } else {
-      field.onChange({
+      fieldProps.onChange({
         target: {
           value: '',
         },
       });
     }
-  }
+  }, [fieldProps, inputFormat]);
 
-  private handleChange = (value: moment.Moment | string): void => {
-    const { field } = this.props;
-
+  const handleChange = useCallback((value: moment.MomentInput) => {
     if (moment.isMoment(value)) {
-      field.onChange({
+      fieldProps.onChange({
         target: {
           value: value.format(),
         },
       });
     } else if (value === '') {
-      field.onChange({
+      fieldProps.onChange({
         target: {
           value,
         },
       });
     }
-  }
+  }, [fieldProps]);
 
-  /**
-   * Mimicks the behaviour of react-datetime to display
-   * the same value in plaintext mode
-   */
-  private getDisplayValue = (value: moment.Moment): string => {
-    const { dateFormat, timeFormat } = this.props;
-
-    let parsedFormat = '';
-
-    if (!value.isValid()) {
-      return '';
-    }
-
-    if (typeof dateFormat === 'string') {
-      parsedFormat = dateFormat;
-    } else if (dateFormat === true) {
-      parsedFormat = 'L';
-    }
-
-    if (typeof timeFormat === 'string') {
-      parsedFormat = `${parsedFormat} ${timeFormat}`.trim();
-    } else if (timeFormat === true) {
-      parsedFormat = `${parsedFormat} LT`.trim();
-    }
-
-    return value.format(parsedFormat === '' ? undefined : parsedFormat);
-  }
-
-  public render(): JSX.Element {
-    const {
-      field,
-      dateFormat,
-      timeFormat,
-      meta,
-    } = this.props;
-
-    const fieldValue = field.value;
-    if (typeof fieldValue !== 'string' && typeof fieldValue !== 'number'
-        && !moment.isMoment(fieldValue) && fieldValue !== undefined) {
-      throw new Error(
-        'Incompatible field value supplied for input component '
-        + `${field.id}. Only values with type string, number or undefined are allowed.`,
-      );
-    }
-
-    const formattedValue = moment(fieldValue);
-
-    // Support for plaintext display
-    if (meta.plaintext) {
-      const displayValue = this.getDisplayValue(formattedValue);
-
-      return (
-        <FieldLine {...this.props}>
-          <StrapInput {...field} value={displayValue} plaintext />
-        </FieldLine>
-      );
-    }
-
-    const inputProps = {
-      disabled: field.disabled,
-    };
-
-    return (
-      <FieldLine {...this.props}>
-        <Datetime
-          value={formattedValue}
-          onChange={this.handleChange}
-          onBlur={this.handleBlur}
-          dateFormat={dateFormat}
-          timeFormat={timeFormat}
-          inputProps={inputProps}
-          closeOnSelect
-        />
-      </FieldLine>
+  const fieldValue = fieldProps.value;
+  if (typeof fieldValue !== 'string' && typeof fieldValue !== 'number'
+      && !moment.isMoment(fieldValue) && fieldValue !== undefined) {
+    throw new Error(
+      'Incompatible field value supplied for input component '
+      + `${fieldProps.id}. Only values with type string, number or undefined are allowed.`,
     );
   }
-}
 
-export const DatePicker = withField(BaseDatePicker);
+  const formattedValue = moment(fieldValue);
+
+  // Support for plaintext display
+  if (metaProps.plaintext) {
+    return (
+      <PlaintextDatePicker
+        label={props.label}
+        fieldProps={fieldProps}
+        metaProps={metaProps}
+        momentValue={formattedValue}
+      />
+    );
+  }
+
+  const inputProps = {
+    disabled: fieldProps.disabled,
+  };
+
+  return (
+    <FieldLine {...props} fieldProps={fieldProps} metaProps={metaProps}>
+      <Datetime
+        value={formattedValue}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        dateFormat={dateFormat}
+        timeFormat={timeFormat}
+        inputProps={inputProps}
+        closeOnSelect
+      />
+    </FieldLine>
+  );
+};

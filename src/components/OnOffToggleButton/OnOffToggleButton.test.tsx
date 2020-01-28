@@ -1,102 +1,113 @@
-import * as React from 'react';
+import React from 'react';
 
-import { shallow, ShallowWrapper } from 'enzyme';
-import { FormText, IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-forms';
+import { render, fireEvent } from '@testing-library/react';
+import { Form } from 'react-ocean-forms';
+import { OnOffToggleButton } from './OnOffToggleButton';
 
-import { createMockField, createMockFieldMeta } from '../../test-utils/enzymeFormContext';
-import { BaseOnOffToggleButton } from './OnOffToggleButton';
-import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
+describe('<OnOffToggleButton />', () => {
+  it('should render correctly', () => {
+    const { asFragment, getByText, getByLabelText } = render(
+      <Form>
+        <OnOffToggleButton name="mock" label="mock" />
+      </Form>
+    );
 
-describe('<BaseOnOffToggleButton />', () => {
-  const fieldLabel = 'field0';
+    expect(getByLabelText('mock')).toBeVisible();
 
-  interface ISetupArgs {
-    props?: Partial<IOnOffToggleButtonProps>;
-    metaOverrides?: Partial<IFieldComponentMeta>;
-    fieldOverrides?: Partial<IFieldComponentFieldProps>;
-  }
+    expect(getByText('ojs_togglebutton_on')).toBeVisible();
+    expect(getByText('ojs_togglebutton_on')).toHaveClass('active');
 
-  interface ISetupResult {
-    wrapper: ShallowWrapper;
-    field: IFieldComponentFieldProps;
-  }
+    expect(getByText('ojs_togglebutton_off')).toBeVisible();
+    expect(getByText('ojs_togglebutton_off')).not.toHaveClass('active');
 
-  const setup = ({
-    props,
-    metaOverrides,
-    fieldOverrides,
-  }: ISetupArgs = {}): ISetupResult => {
-    const meta = {
-      ...createMockFieldMeta(),
-      ...metaOverrides,
-    };
-    const field = {
-      ...createMockField(),
-      ...fieldOverrides,
-    };
-
-    const wrapper = shallow((
-      <BaseOnOffToggleButton
-        label={fieldLabel}
-        meta={meta}
-        field={field}
-        onLabel="on"
-        offLabel="off"
-        {...props}
-      />
-    ));
-
-    return {
-      wrapper,
-      field,
-    };
-  };
-
-  it('should render without crashing', () => {
-    const { wrapper } = setup();
-    expect(wrapper).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render plaintext Button', () => {
-    const { wrapper } = setup({
-      metaOverrides: {
-        plaintext: true,
-      },
+  describe('plaintext mode', () => {
+    it('should render plaintext Button', () => {
+      const { asFragment, getByDisplayValue, queryByDisplayValue, getByLabelText } = render(
+        <Form plaintext>
+          <OnOffToggleButton name="mock" label="mock" />
+        </Form>
+      );
+
+      expect(getByLabelText('mock')).toBeVisible();
+
+      expect(getByDisplayValue('ojs_togglebutton_on')).toBeVisible();
+      expect(getByDisplayValue('ojs_togglebutton_on')).toHaveAttribute('readonly');
+
+      expect(queryByDisplayValue('ojs_togglebutton_off')).toBeNull();
+
+      expect(asFragment()).toMatchSnapshot();
     });
-    expect(wrapper).toMatchSnapshot();
-  });
 
-  it('should render the correct label in plaintext mode', () => {
-    const { wrapper } = setup({
-      metaOverrides: { plaintext: true },
-      fieldOverrides: { value: false },
+    it('should render the correct label in plaintext mode', () => {
+      const { getByDisplayValue, queryByDisplayValue, getByLabelText } = render(
+        <Form plaintext>
+          <OnOffToggleButton name="mock" label="mock" onLabel="mock on label" offLabel="mock off label" value={false} />
+        </Form>
+      );
+
+      expect(getByLabelText('mock')).toBeVisible();
+
+      expect(getByDisplayValue('mock off label')).toBeVisible();
+      expect(getByDisplayValue('mock off label')).toHaveAttribute('readonly');
+
+      expect(queryByDisplayValue('mock on label')).toBeNull();
     });
-    expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render correctly in disabled mode', () => {
-    const { wrapper } = setup({
-      fieldOverrides: { disabled: true },
+  describe('disabled mode', () => {
+    it('should render correctly in disabled mode', () => {
+      const { getByText } = render(
+        <Form disabled>
+          <OnOffToggleButton name="mock" label="mock" />
+        </Form>
+      );
+
+      expect(getByText('ojs_togglebutton_on')).toBeVisible();
+      expect(getByText('ojs_togglebutton_on')).toBeDisabled();
+
+      expect(getByText('ojs_togglebutton_off')).toBeVisible();
+      expect(getByText('ojs_togglebutton_off')).toBeDisabled();
     });
-    expect(wrapper).toMatchSnapshot();
   });
 
-  const testButton = (value: 'on' | 'off'): void => {
-    describe(`${value} Button`, () => {
-      const { wrapper, field } = setup();
-      const buttonOn = wrapper.find(`#${field.id}-${value}`);
+  const testButton = (initialValue: boolean): void => {
+    describe(`Button with initial value: ${initialValue}`, () => {
+      it('should set the correct button as active', () => {
+        const { getByText } = render(
+          <Form>
+            <OnOffToggleButton name="mock" label="mock" value={initialValue} onLabel="on" offLabel="off" />
+          </Form>
+        );
 
-      it('should render labels for button', () => {
-        expect(buttonOn.find(FormText).prop('text')).toBe(value);
+        const activeButton = initialValue ? 'on' : 'off';
+        const inactiveButton = initialValue ? 'off' : 'on';
+
+        expect(getByText(activeButton)).toHaveClass('active');
+        expect(getByText(inactiveButton)).not.toHaveClass('active');
       });
 
       it('should trigger onChange on click', () => {
-        buttonOn.simulate('click');
-        expect(field.onChange).toHaveBeenCalledWith({ target: { value: value === 'on' } });
+        const handleChange = jest.fn();
+        const { getByText } = render(
+          <Form>
+            <OnOffToggleButton name="mock" label="mock" value={initialValue} onLabel="on" offLabel="off" onChange={handleChange} />
+          </Form>
+        );
+
+        const inactiveButton = initialValue ? 'off' : 'on';
+        fireEvent.click(getByText(inactiveButton));
+
+        expect(handleChange).toHaveBeenCalledTimes(1);
+        expect(handleChange).toHaveBeenCalledWith(!initialValue);
+
+        expect(getByText(inactiveButton)).toHaveClass('active');
       });
     });
   };
 
-  testButton('on');
-  testButton('off');
+  testButton(true);
+  testButton(false);
 });

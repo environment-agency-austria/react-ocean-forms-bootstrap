@@ -5,29 +5,29 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useFormText } from 'react-ocean-forms';
 
 import { IInvalidAlertProps } from './InvalidAlert.types';
 
 /**
  * Displays an error icon if valid is false
  */
-export class InvalidAlert extends React.Component<IInvalidAlertProps> {
-  public static displayName: string = 'InvalidAlert';
+export const InvalidAlert: React.FC<IInvalidAlertProps> = (props) => {
+  const { valid } = props;
 
-  public render(): JSX.Element | null {
-    const { valid } = this.props;
+  const invalidTitle = useFormText('ojs_field_invalid');
 
-    if (valid) { return null; }
+  if (valid) { return null; }
 
-    return (
-      <FontAwesomeIcon
-        icon={faExclamationCircle}
-        className="ico-invalid mr-2"
-      />
-    );
-  }
-}
+  return (
+    <FontAwesomeIcon
+      icon={faExclamationCircle}
+      className="ico-invalid mr-2"
+      title={invalidTitle}
+    />
+  );
+};

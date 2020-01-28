@@ -5,103 +5,67 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React, { useCallback } from 'react';
 
-import { FormText, withField } from 'react-ocean-forms';
-import { Button, ButtonGroup } from 'reactstrap';
+import { useField } from 'react-ocean-forms';
+import {  ButtonGroup } from 'reactstrap';
 
 import { FieldLine } from '../FieldLine';
-import { BaseInput } from '../Input';
 import { IOnOffToggleButtonProps } from './OnOffToggleButton.types';
+import { PlaintextOnOffToggleButton } from './PlaintextOnOffToggleButton';
+import { OnOffToggleButtonChoice } from './OnOffToggleButtonChoice';
 
 /**
  * Component for displaying bootstrap
  * form groups with an html input and
  * oForm support
  */
-export class BaseOnOffToggleButton extends React.Component<IOnOffToggleButtonProps> {
-  public static displayName: string = 'OnOffToggleButton';
+export const OnOffToggleButton = <TSubmitValue extends unknown = boolean>(props: IOnOffToggleButtonProps<TSubmitValue>): JSX.Element => {
+  const {
+    onLabel = 'ojs_togglebutton_on',
+    offLabel = 'ojs_togglebutton_off',
+    ...rest
+  } = props;
 
-  public static defaultProps = {
-    onLabel: 'ojs_togglebutton_on',
-    offLabel: 'ojs_togglebutton_off',
-  };
+  const { fieldProps, metaProps } = useField(rest);
 
-  private onRadioBtnClick = (value: boolean): void => {
-    const { field: { onChange } } = this.props;
-
+  const { onChange } = fieldProps;
+  const onRadioBtnClick = useCallback((value: boolean) => {
     onChange({
       target: {
         value,
-      },
+      }
     });
-  }
+  }, [onChange]);
 
-  private onOnButtonClick = (): void => {
-    this.onRadioBtnClick(true);
-  }
-
-  private onOffButtonClick = (): void => {
-    this.onRadioBtnClick(false);
-  }
-
-  public render(): JSX.Element {
-    const {
-      field,
-      onLabel,
-      offLabel,
-      meta: {
-        plaintext,
-        stringFormatter,
-      },
-      field: {
-        value,
-      },
-    } = this.props;
-
-    const isOn = !(value === '' || value === false);
-
-    if (plaintext) {
-      const plainField = {
-        ...field,
-        value: isOn ? stringFormatter(onLabel) : stringFormatter(offLabel),
-      };
-
-      return (
-        <BaseInput
-          {...this.props}
-          field={plainField}
-        />
-      );
-    }
-
+  if (metaProps.plaintext) {
     return (
-      <FieldLine {...this.props}>
-        <ButtonGroup id={field.id}>
-          <Button
-            id={`${field.id}-on`}
-            color="primary"
-            onClick={this.onOnButtonClick}
-            outline
-            active={isOn}
-            disabled={field.disabled}
-          >
-            <FormText text={onLabel} />
-          </Button>
-          <Button
-            id={`${field.id}-off`}
-            color="primary"
-            onClick={this.onOffButtonClick}
-            outline
-            active={!isOn}
-            disabled={field.disabled}
-          >
-            <FormText text={offLabel} />
-          </Button>
-        </ButtonGroup>
-      </FieldLine>
+      <PlaintextOnOffToggleButton
+        fieldProps={fieldProps}
+        metaProps={metaProps}
+        onLabel={onLabel}
+        offLabel={offLabel}
+        {...rest}
+      />
     );
   }
-}
 
-export const OnOffToggleButton = withField(BaseOnOffToggleButton);
+  return (
+    <FieldLine {...rest} fieldProps={fieldProps} metaProps={metaProps}>
+      <ButtonGroup id={fieldProps.id}>
+        <OnOffToggleButtonChoice
+          variant="on"
+          label={onLabel}
+          fieldProps={fieldProps}
+          onClick={onRadioBtnClick}
+        />
+        <OnOffToggleButtonChoice
+          variant="off"
+          label={offLabel}
+          fieldProps={fieldProps}
+          onClick={onRadioBtnClick}
+        />
+      </ButtonGroup>
+    </FieldLine>
+  );
+};

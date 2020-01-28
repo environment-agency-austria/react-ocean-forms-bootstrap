@@ -5,11 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 
-import { withField } from 'react-ocean-forms';
+import { useField } from 'react-ocean-forms';
 import { Input as StrapInput } from 'reactstrap';
-import { InputType } from 'reactstrap/lib/Input';
 
 import { FieldLine } from '../FieldLine';
 import { IInputProps } from './Input.types';
@@ -17,38 +16,22 @@ import { IInputProps } from './Input.types';
 /**
  * Component for displaying bootstrap
  * form groups with an html input and
- * oForm support
+ * react-ocean-forms support
  */
-export class BaseInput extends React.Component<IInputProps> {
-  public static displayName: string = 'Input';
+export const Input = <TSubmitValue extends unknown>(props: IInputProps<TSubmitValue>): JSX.Element => {
+  const {
+    type = 'text',
+    ...rest
+  } = props;
 
-  public static defaultProps: { type: InputType } = {
-    type: 'text',
-  };
+  const { fieldProps, metaProps } = useField(rest);
 
-  public render(): JSX.Element {
-    const {
-      field,
-      type,
-      meta,
-    } = this.props;
+  const invalid = metaProps.valid === true ? undefined : true;
+  const defaultizedValue = fieldProps.value ?? '';
 
-    const invalid = meta.valid === true ? undefined : true;
-
-    const fieldValue = field.value;
-    if (typeof fieldValue !== 'string' && typeof fieldValue !== 'number' && fieldValue !== undefined) {
-      throw new Error(
-        'Incompatible field value supplied for input component '
-        + `${field.id}. Only values with type string, number or undefined are allowed.`,
-      );
-    }
-
-    return (
-      <FieldLine {...this.props}>
-        <StrapInput type={type} {...field} value={fieldValue} invalid={invalid} plaintext={meta.plaintext} />
-      </FieldLine>
-    );
-  }
-}
-
-export const Input = withField(BaseInput);
+  return (
+    <FieldLine {...rest} fieldProps={fieldProps} metaProps={metaProps}>
+      <StrapInput type={type} {...fieldProps} value={defaultizedValue} invalid={invalid} plaintext={metaProps.plaintext} />
+    </FieldLine>
+  );
+};

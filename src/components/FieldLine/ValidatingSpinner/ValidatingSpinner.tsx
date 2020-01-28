@@ -5,30 +5,30 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useFormText } from 'react-ocean-forms';
 
 import { IValidatingSpinnerProps } from './ValidatingSpinner.types';
 
 /**
  * Displays an error icon if valid is false
  */
-export class ValidatingSpinner extends React.Component<IValidatingSpinnerProps> {
-  public static displayName: string = 'ValidatingSpinner';
+export const ValidatingSpinner: React.FC<IValidatingSpinnerProps> = (props) => {
+  const { isValidating } = props;
 
-  public render(): JSX.Element | null {
-    const { isValidating } = this.props;
+  const validatingTitle = useFormText('ojs_field_validating');
 
-    if (!isValidating) { return null; }
+  if (!isValidating) { return null; }
 
-    return (
-      <FontAwesomeIcon
-        icon={faSpinner}
-        spin
-        className="ico-loading mr-2"
-      />
-    );
-  }
-}
+  return (
+    <FontAwesomeIcon
+      icon={faSpinner}
+      spin
+      className="ico-loading mr-2"
+      title={validatingTitle}
+    />
+  );
+};

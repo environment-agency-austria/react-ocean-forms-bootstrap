@@ -1,98 +1,132 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Check /> should render correctly 1`] = `
-<FieldRow
-  meta={
-    Object {
-      "error": null,
-      "isRequired": false,
-      "isValidating": false,
-      "plaintext": false,
-      "stringFormatter": [MockFunction],
-      "touched": false,
-      "valid": true,
-    }
-  }
->
-  <Col
-    className="text-right check-label-col"
-    sm={3}
-    tag="div"
-    widths={
-      Array [
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-      ]
-    }
+exports[`<Check /> should add the has-info class to InputGroup if info is present 1`] = `
+<DocumentFragment>
+  <form
+    class=""
   >
-    <InvalidAlert
-      valid={true}
-    />
-    <ValidatingSpinner
-      isValidating={false}
-    />
-  </Col>
-  <Col
-    sm={9}
-    tag="div"
-    widths={
-      Array [
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-      ]
-    }
-  >
-    <InputGroup
-      tag="div"
+    <div
+      class="row form-group"
     >
-      <Label
-        check={true}
-        tag="label"
-        widths={
-          Array [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-          ]
-        }
-      >
-        <Input
-          checked={false}
-          disabled={false}
-          id="mock-field"
-          invalid={false}
-          name="mock-field"
-          onBlur={[MockFunction]}
-          onClick={[Function]}
-          type="checkbox"
-        />
-        <FormText
-          text="field0"
-        />
-        <FieldError
-          error={null}
-          id="mock-field_errors"
-          invalid={false}
-        />
-      </Label>
-      <InfoAddonButton
-        onClick={[Function]}
-        plaintext={false}
+      <div
+        class="text-right check-label-col col-sm-3"
       />
-    </InputGroup>
-    <InfoAlert
-      onClose={[Function]}
-      plaintext={false}
-      visible={false}
-    />
-  </Col>
-</FieldRow>
+      <div
+        class="col-sm-9"
+      >
+        <div
+          class="has-info input-group"
+        >
+          <label
+            class="form-check-label"
+          >
+            <input
+              class="form-check-input"
+              id="mock"
+              name="mock"
+              type="checkbox"
+            />
+            mock
+          </label>
+          <div
+            class="input-group-append"
+          >
+            <button
+              class="btn btn-outline-secondary"
+              title="ojs_show_information"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-exclamation-circle fa-w-16 "
+                data-icon="exclamation-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`<Check /> should react correctly to plaintext mode 1`] = `
+<DocumentFragment>
+  <form
+    class=" plaintext"
+  >
+    <div
+      class="row form-group"
+    >
+      <div
+        class="text-right check-label-col col-sm-3"
+      />
+      <div
+        class="col-sm-9"
+      >
+        <div
+          class="has-info input-group"
+        >
+          <label
+            class="form-check-label"
+          >
+            <input
+              class="form-check-input"
+              disabled=""
+              id="mock"
+              name="mock"
+              type="checkbox"
+            />
+            mock
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`<Check /> should render without crashing 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+  >
+    <div
+      class="row form-group"
+    >
+      <div
+        class="text-right check-label-col col-sm-3"
+      />
+      <div
+        class="col-sm-9"
+      >
+        <div
+          class="input-group"
+        >
+          <label
+            class="form-check-label"
+          >
+            <input
+              class="form-check-input"
+              id="mock"
+              name="mock"
+              type="checkbox"
+            />
+            mock
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
 `;

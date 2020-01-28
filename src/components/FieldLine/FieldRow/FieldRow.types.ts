@@ -1,5 +1,3 @@
-import { IFieldComponentMeta } from 'react-ocean-forms';
-
 /**
  * Props for the FieldRow component
  */
@@ -9,8 +7,11 @@ export interface IFieldRowProps {
    */
   className?: string;
   /**
-   * Field meta
-   * @see IFieldComponentMeta
+   * True if the field is valid
    */
-  meta: IFieldComponentMeta;
+  valid: boolean;
+  /**
+   * True if the field has been touched
+   */
+  touched: boolean;
 }

@@ -1,12 +1,13 @@
-import { IFieldComponentMeta } from 'react-ocean-forms';
-
 /**
  * Props for the RequiredMarker component
  */
 export interface IRequiredMarkerProps {
   /**
-   * Field meta
-   * @see IFieldComponentMeta
+   * True if the required marker should be hidden
    */
-  meta: IFieldComponentMeta;
+  hidden: boolean;
+  /**
+   * True if the field is required
+   */
+  required: boolean;
 }

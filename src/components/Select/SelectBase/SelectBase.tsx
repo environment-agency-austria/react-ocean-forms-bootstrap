@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Input as StrapInput } from 'reactstrap';
 
-import { IFieldComponentFieldProps } from 'react-ocean-forms';
+import { useField } from 'react-ocean-forms';
 import { ActionMeta } from 'react-select/lib/types';
 import { FieldLine } from '../../FieldLine';
 import {
@@ -40,23 +40,34 @@ interface IUpdatedLabelsResult {
  * form groups with an select input and
  * oForm support
  */
-export class SelectBase extends React.Component<ISelectBaseProps> {
-  public static displayName: string = 'SelectBase';
+export const SelectBase = <TSubmitValue extends unknown = ISelectFieldValue>(props: ISelectBaseProps<TSubmitValue>): JSX.Element => {
+  const {
+    renderSelect,
+    placeholder = 'ojs_select_placeholder',
+    options,
 
-  public static defaultProps = {
-    multi: false,
-    placeholder: 'ojs_select_placeholder',
-  };
+    // booleans
+    multi = false,
+    loading,
+    rtl,
+    searchable,
+    clearable,
+
+    // Other props (field line)
+    ...fieldlineProps
+  } = props;
+
+  const { fieldProps, metaProps } = useField(props);
 
   /**
    * Manually handle the onChange event of
    * the select because oForms is expecting
    * default input onChange behaviour.
    */
-  private handleChange = (value: ISelectFieldValue, action?: ActionMeta): void => {
-    const { field, handleChange } = this.props;
+  const handleChange = useCallback((value: ISelectFieldValue, action?: ActionMeta): void => {
+    const { handleChange } = props;
 
-    field.onChange({
+    fieldProps.onChange({
       target: {
         value,
       },
@@ -65,18 +76,16 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     if (handleChange) {
       handleChange(value, action);
     }
-  }
+  }, [fieldProps, props]);
 
   /**
    * Manually handle the onBlur event of
    * the select because oForms is expecting
    * default input onBlur behaviour.
    */
-  private handleBlur = (): void => {
-    const { field } = this.props;
-
-    field.onBlur();
-  }
+  const handleBlur = useCallback((): void => {
+    fieldProps.onBlur();
+  }, [fieldProps]);
 
   /**
    * Update the label of a select option according to the available options.
@@ -85,7 +94,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * @param options The available select options
    * @param value The value that may need update
    */
-  private updateSelectOptionLabel(options: ISelectOptions, value: ISelectOption): ISelectOption | undefined {
+  const updateSelectOptionLabel = useCallback((options: ISelectOptions, value: ISelectOption): ISelectOption | undefined => {
     let selectableValue: ISelectOption | undefined;
     options.some(item => {
       if (item.value !== value.value) { return false; }
@@ -103,7 +112,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       ...value,
       label: selectableValue.label,
     };
-  }
+  }, []);
 
   /**
    * Get the selected options with updated labels.
@@ -111,13 +120,13 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
    * @param options The available options
    * @param value The current value
    */
-  private getUpdateLabels(options: ISelectOptions, value: SelectFieldValue): IUpdatedLabelsResult {
+  const getUpdateLabels = useCallback((options: ISelectOptions, value: SelectFieldValue): IUpdatedLabelsResult => {
     let selectedOptions: SelectFieldValue;
     let needsUpdate = false;
 
     if (isSelectOption(value)) {
       // If only one option is selected
-      const updated = this.updateSelectOptionLabel(options, value);
+      const updated = updateSelectOptionLabel(options, value);
       needsUpdate = (updated !== undefined);
       selectedOptions = (needsUpdate)
         ? updated
@@ -125,7 +134,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
     } else if (Array.isArray(value)) {
       // Map the values
       selectedOptions = value.map(v => {
-        const updated = this.updateSelectOptionLabel(options, v);
+        const updated = updateSelectOptionLabel(options, v);
         // If null was returned, no updated is needed
         if (updated === undefined) { return v; }
         // Otherwise set the flag to true
@@ -139,108 +148,82 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       needsUpdate,
       selectedOptions,
     };
-  }
+  }, [updateSelectOptionLabel]);
 
   /**
    * Get the value of the field with updated labels
    * @param field The field
    * @param options The available options
    */
-  private getFieldValue(field: IFieldComponentFieldProps, options: ISelectOptions): SelectFieldValue {
-    const fieldValue = (field.value as ISelectFieldValue | undefined);
+  const fieldValue = useMemo(() => {
+    const fieldValue = (fieldProps.value as ISelectFieldValue | undefined);
     const {
       needsUpdate,
       selectedOptions,
-    } = this.getUpdateLabels(options, fieldValue);
+    } = getUpdateLabels(options, fieldValue);
     if (needsUpdate && selectedOptions !== undefined) {
       // Check if the current value has a different label than the value
       // with the same key in the options array. Bugfix to change the
       // selected label when the current language changes.
-      this.handleChange(selectedOptions);
+      handleChange(selectedOptions);
     }
 
     return selectedOptions;
-  }
+  }, [fieldProps.value, getUpdateLabels, handleChange, options]);
 
-  /**
-   * Renders a plain text view
-   * @param field The field
-   * @param value The selected value
-   */
-  private renderPlaintext(field: IFieldComponentFieldProps, value: SelectFieldValue): JSX.Element {
+  // Support for plaintext display
+  if (metaProps.plaintext) {
     let displayValue = '';
-    if (isSelectOption(value)) {
-      displayValue = value.label;
-    } else if (Array.isArray(value)) {
-      displayValue = value.map(v => v.label).join(', ');
+    if (isSelectOption(fieldValue)) {
+      displayValue = fieldValue.label;
+    } else if (Array.isArray(fieldValue)) {
+      displayValue = fieldValue.map(v => v.label).join(', ');
     }
 
     return (
-      <FieldLine {...this.props}>
-        <StrapInput {...field} value={displayValue} plaintext />
+      <FieldLine {...props} fieldProps={fieldProps} metaProps={metaProps}>
+        <StrapInput
+          {...fieldProps}
+          value={displayValue}
+          plaintext
+          onChange={undefined}
+        />
       </FieldLine>
     );
   }
 
-  public render(): JSX.Element {
-    const {
-      renderSelect,
-      field,
-      placeholder,
-      options,
-      meta,
+  // Generate a css class based on the validity of the select element
+  let selectClass = 'react-select-control';
+  selectClass = (selectClass + (metaProps.valid ? '' : ' is-invalid')).trim();
 
-      // booleans
-      multi,
-      loading,
-      rtl,
-      searchable,
-      clearable,
+  // Format the placeholder
+  const placeholderText = metaProps.stringFormatter(placeholder);
 
-      // Other props (field line)
-      ...fieldlineProps
-    } = this.props;
+  // Prepare the props for the renderSelect method
+  const preparedProps: IPreparedSelectProps = {
+    id: fieldProps.id,
+    inputId: `${fieldProps.id}-input`,
+    value: fieldValue,
+    isDisabled: fieldProps.disabled,
+    isMulti: multi,
+    isRtl: rtl,
+    isLoading: loading,
+    isSearchable: searchable,
+    isClearable: clearable,
+    onChange: handleChange,
+    onBlur: handleBlur,
+    options: options,
+    placeholder: placeholderText,
+    className: selectClass,
+  };
 
-    const fieldValue = this.getFieldValue(field, options);
-
-    // Support for plaintext display
-    if (meta.plaintext) {
-      return this.renderPlaintext(field, fieldValue);
-    }
-
-    // Generate a css class based on the validity of the select element
-    let selectClass = 'react-select-control';
-    selectClass = (selectClass + (meta.valid ? '' : ' is-invalid')).trim();
-
-    // Format the placeholder
-    const placeholderText = meta.stringFormatter(placeholder);
-
-    // Prepare the props for the renderSelect method
-    const preparedProps: IPreparedSelectProps = {
-      id: field.id,
-      inputId: `${field.id}-input`,
-      value: fieldValue,
-      isDisabled: field.disabled,
-      isMulti: multi,
-      isRtl: rtl,
-      isLoading: loading,
-      isSearchable: searchable,
-      isClearable: clearable,
-      onChange: this.handleChange,
-      onBlur: this.handleBlur,
-      options: options,
-      placeholder: placeholderText,
-      className: selectClass,
-    };
-
-    return (
-      <FieldLine
-        meta={meta}
-        field={field}
-        {...fieldlineProps}
-      >
-        {renderSelect(preparedProps)}
-      </FieldLine>
-    );
-  }
-}
+  return (
+    <FieldLine
+      fieldProps={fieldProps}
+      metaProps={metaProps}
+      {...fieldlineProps}
+    >
+      {renderSelect(preparedProps, fieldProps)}
+    </FieldLine>
+  );
+};

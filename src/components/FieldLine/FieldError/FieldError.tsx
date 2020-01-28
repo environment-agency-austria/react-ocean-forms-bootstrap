@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react';
+import React from 'react';
 
 import { FormText } from 'react-ocean-forms';
 import { FormFeedback } from 'reactstrap';
@@ -16,15 +16,12 @@ import { IFieldErrorProps } from './FieldError.types';
  * Component for displaying bootstrap
  * form feedbacks if there are any errors
  */
-export class FieldError extends React.Component<IFieldErrorProps> {
-  public static displayName: string = 'FieldError';
-
-  public render(): JSX.Element | null {
-    const {
-      id,
-      invalid,
-      error,
-    } = this.props;
+export const FieldError: React.FC<IFieldErrorProps> = (props) => {
+  const {
+    id,
+    invalid,
+    error,
+  } = props;
 
     // If the field isn't invalid do nothing
     if (invalid !== true || error === null) { return null; }
@@ -38,9 +35,8 @@ export class FieldError extends React.Component<IFieldErrorProps> {
     )));
 
     return (
-      <React.Fragment>
+      <>
         {errors}
-      </React.Fragment>
+      </>
     );
-  }
-}
+};

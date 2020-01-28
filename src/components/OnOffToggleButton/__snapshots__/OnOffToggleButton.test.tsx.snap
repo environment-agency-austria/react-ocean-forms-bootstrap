@@ -1,215 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BaseOnOffToggleButton /> should render correctly in disabled mode 1`] = `
-<FieldLine
-  field={
-    Object {
-      "disabled": true,
-      "id": "mock-field",
-      "name": "mock-field",
-      "onBlur": [MockFunction],
-      "onChange": [MockFunction],
-      "value": "mock-value",
-    }
-  }
-  inputSize="9"
-  label="field0"
-  labelClass="text-right"
-  labelSize="3"
-  meta={
-    Object {
-      "error": null,
-      "isRequired": false,
-      "isValidating": false,
-      "plaintext": false,
-      "stringFormatter": [MockFunction],
-      "touched": false,
-      "valid": true,
-    }
-  }
-  offLabel="off"
-  onLabel="on"
->
-  <ButtonGroup
-    id="mock-field"
-    role="group"
-    tag="div"
+exports[`<OnOffToggleButton /> plaintext mode should render plaintext Button 1`] = `
+<DocumentFragment>
+  <form
+    class=" plaintext"
   >
-    <Button
-      active={true}
-      color="primary"
-      disabled={true}
-      id="mock-field-on"
-      onClick={[Function]}
-      outline={true}
-      tag="button"
+    <div
+      class="row form-group"
     >
-      <FormText
-        text="on"
-      />
-    </Button>
-    <Button
-      active={false}
-      color="primary"
-      disabled={true}
-      id="mock-field-off"
-      onClick={[Function]}
-      outline={true}
-      tag="button"
-    >
-      <FormText
-        text="off"
-      />
-    </Button>
-  </ButtonGroup>
-</FieldLine>
+      <label
+        class="text-right col-sm-3 col-form-label"
+        for="mock"
+      >
+        mock
+      </label>
+      <div
+        class="col-sm-9"
+      >
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control-plaintext"
+            id="mock"
+            name="mock"
+            readonly=""
+            type="text"
+            value="ojs_togglebutton_on"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
 `;
 
-exports[`<BaseOnOffToggleButton /> should render plaintext Button 1`] = `
-<Input
-  field={
-    Object {
-      "disabled": false,
-      "id": "mock-field",
-      "name": "mock-field",
-      "onBlur": [MockFunction],
-      "onChange": [MockFunction],
-      "value": "on",
-    }
-  }
-  label="field0"
-  meta={
-    Object {
-      "error": null,
-      "isRequired": false,
-      "isValidating": false,
-      "plaintext": true,
-      "stringFormatter": [MockFunction] {
-        "calls": Array [
-          Array [
-            "on",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": "on",
-          },
-        ],
-      },
-      "touched": false,
-      "valid": true,
-    }
-  }
-  offLabel="off"
-  onLabel="on"
-  type="text"
-/>
-`;
-
-exports[`<BaseOnOffToggleButton /> should render the correct label in plaintext mode 1`] = `
-<Input
-  field={
-    Object {
-      "disabled": false,
-      "id": "mock-field",
-      "name": "mock-field",
-      "onBlur": [MockFunction],
-      "onChange": [MockFunction],
-      "value": "off",
-    }
-  }
-  label="field0"
-  meta={
-    Object {
-      "error": null,
-      "isRequired": false,
-      "isValidating": false,
-      "plaintext": true,
-      "stringFormatter": [MockFunction] {
-        "calls": Array [
-          Array [
-            "off",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": "off",
-          },
-        ],
-      },
-      "touched": false,
-      "valid": true,
-    }
-  }
-  offLabel="off"
-  onLabel="on"
-  type="text"
-/>
-`;
-
-exports[`<BaseOnOffToggleButton /> should render without crashing 1`] = `
-<FieldLine
-  field={
-    Object {
-      "disabled": false,
-      "id": "mock-field",
-      "name": "mock-field",
-      "onBlur": [MockFunction],
-      "onChange": [MockFunction],
-      "value": "mock-value",
-    }
-  }
-  inputSize="9"
-  label="field0"
-  labelClass="text-right"
-  labelSize="3"
-  meta={
-    Object {
-      "error": null,
-      "isRequired": false,
-      "isValidating": false,
-      "plaintext": false,
-      "stringFormatter": [MockFunction],
-      "touched": false,
-      "valid": true,
-    }
-  }
-  offLabel="off"
-  onLabel="on"
->
-  <ButtonGroup
-    id="mock-field"
-    role="group"
-    tag="div"
+exports[`<OnOffToggleButton /> should render correctly 1`] = `
+<DocumentFragment>
+  <form
+    class=""
   >
-    <Button
-      active={true}
-      color="primary"
-      disabled={false}
-      id="mock-field-on"
-      onClick={[Function]}
-      outline={true}
-      tag="button"
+    <div
+      class="row form-group"
     >
-      <FormText
-        text="on"
-      />
-    </Button>
-    <Button
-      active={false}
-      color="primary"
-      disabled={false}
-      id="mock-field-off"
-      onClick={[Function]}
-      outline={true}
-      tag="button"
-    >
-      <FormText
-        text="off"
-      />
-    </Button>
-  </ButtonGroup>
-</FieldLine>
+      <label
+        class="text-right col-sm-3 col-form-label"
+        for="mock"
+      >
+        mock
+      </label>
+      <div
+        class="col-sm-9"
+      >
+        <div
+          class="input-group"
+        >
+          <div
+            class="btn-group"
+            id="mock"
+            role="group"
+          >
+            <button
+              class="btn btn-outline-primary active"
+              id="mock-on"
+              type="button"
+            >
+              ojs_togglebutton_on
+            </button>
+            <button
+              class="btn btn-outline-primary"
+              id="mock-off"
+              type="button"
+            >
+              ojs_togglebutton_off
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
 `;

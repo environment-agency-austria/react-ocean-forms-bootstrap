@@ -1,130 +1,84 @@
-import * as React from 'react';
+import React from 'react';
 
-import { shallow, ShallowWrapper } from 'enzyme';
-import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-forms';
-import { Input as StrapInput } from 'reactstrap';
+import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { Form, validators } from 'react-ocean-forms';
 
-import { createMockField, createMockFieldMeta } from '../../test-utils/enzymeFormContext';
-import { FieldLine } from '../FieldLine';
-import { BaseInput } from './Input';
-import { IInputProps } from './Input.types';
+import { Input } from './Input';
 
 describe('<Input />', () => {
-  const fieldId = 'field0';
-
-  interface ISetupArgs {
-    props?: Partial<IInputProps>;
-    fieldOverrides?: Partial<IFieldComponentFieldProps>;
-    metaOverrides?: Partial<IFieldComponentMeta>;
-  }
-
-  interface ISetupResult {
-    wrapper: ShallowWrapper;
-    field: IFieldComponentFieldProps;
-    meta: IFieldComponentMeta;
-  }
-
-  const setup = ({
-    props,
-    metaOverrides,
-    fieldOverrides,
-  }: ISetupArgs = {}): ISetupResult => {
-    const fieldName = 'field0';
-    const fieldLabel = 'field0';
-
-    const meta = {
-      ...createMockFieldMeta(),
-      ...metaOverrides,
-    };
-    const field = {
-      ...createMockField(),
-      value: '',
-      name: fieldName,
-      ...fieldOverrides,
-    };
-
-    const wrapper = shallow((
-      <BaseInput
-        label={fieldLabel}
-        meta={meta}
-        field={field}
-        {...props}
-      />
-    ));
-
-    return {
-      wrapper,
-      field,
-      meta,
-    };
-  };
-
   it('should render correctly', () => {
-    const { wrapper } = setup();
-    expect(wrapper).toMatchSnapshot();
-  });
+    const { asFragment, getByRole, getByLabelText } = render(
+      <Form>
+        <Input name="mock" label="mock" />
+      </Form>
+    );
 
-  it('should render a field line and a bootstrap input', () => {
-    const { wrapper } = setup();
-
-    expect(wrapper.find(FieldLine).exists()).toBeTruthy();
-    expect(wrapper.find('Input').exists()).toBeTruthy();
-  });
-
-  it('should render a text input by default', () => {
-    const { wrapper } = setup();
-
-    expect(wrapper.find('Input').prop('type')).toEqual('text');
+    expect(getByRole('textbox')).toBeVisible();
+    expect(getByLabelText('mock')).toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should let the user override the input type', () => {
     const inputType = 'number';
-    const { wrapper } = setup({ props: { type: inputType } });
+    const { getByLabelText } = render(
+      <Form>
+        <Input name="mock" label="mock" type={inputType} />
+      </Form>
+    );
 
-    expect(wrapper.find('Input').prop('type')).toEqual(inputType);
+    expect(getByLabelText('mock')).toBeVisible();
+    expect(getByLabelText('mock')).toHaveAttribute('type', inputType);
   });
 
-  it('should pass the meta props to the field line', () => {
-    const { wrapper, meta } = setup();
+  it('should call field.onChange when the input changes', async () => {
+    const changedValue = 'changed value';
+    const handleChange = jest.fn();
+    const { getByLabelText } = render(
+      <Form>
+        <Input name="mock" label="mock" onChange={handleChange} />
+      </Form>
+    );
 
-    expect(wrapper.find(FieldLine).prop('meta')).toEqual(meta);
-  });
+    fireEvent.change(getByLabelText('mock'), { target: { value: changedValue }});
+    expect(handleChange).toHaveBeenCalledWith(changedValue);
 
-  it('should call field.onChange when the input changes', () => {
-    const { wrapper, field } = setup();
-    const event = { target: { name: fieldId, value: 'test_value' } };
-
-    wrapper.find('Input').simulate('change', event);
-    expect(field.onChange).toHaveBeenCalledWith(event);
+    const input = await waitForElement(() => getByLabelText('mock'));
+    expect(input).toHaveValue(changedValue);
   });
 
   it('should call field.onBlur when there is an input blur', () => {
-    const { wrapper, field } = setup();
-    const event = { target: { name: fieldId } };
+    const handleBlur = jest.fn();
+    const { getByLabelText } = render(
+      <Form>
+        <Input name="mock" label="mock" onBlur={handleBlur} />
+      </Form>
+    );
 
-    wrapper.find('Input').simulate('blur', event);
-    expect(field.onBlur).toHaveBeenCalledWith(event);
+    fireEvent.blur(getByLabelText('mock'));
+    expect(handleBlur).toHaveBeenCalled();
   });
 
   it('should react on meta.plaintext correctly', () => {
-    const { wrapper } = setup({
-      metaOverrides: { plaintext: true },
-    });
-    expect(wrapper).toMatchSnapshot();
+    const { asFragment } = render(
+      <Form plaintext>
+        <Input name="mock" label="mock" />
+      </Form>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should react on meta.valid correctly', () => {
-    const { wrapper } = setup({
-      metaOverrides: {
-        valid: false,
-      },
-    });
-    expect(wrapper.find(StrapInput).prop('invalid')).toBe(true);
-  });
+    const { getByRole, getByLabelText, getByText } = render(
+      <Form plaintext>
+        <Input name="mock" label="mock" validators={[validators.required]} />
+      </Form>
+    );
 
-  it('should throw an error if the field value is incompatible (not string, number or undefined)', () => {
-    expect(() => {
-      setup({ fieldOverrides: { value: true } });
-    }).toThrowError();
+    fireEvent.change(getByLabelText('mock'), { target: { value: 'temp value' }});
+    fireEvent.change(getByLabelText('mock'), { target: { value: '' }});
+
+    expect(getByRole('textbox')).toHaveClass('is-invalid');
+    expect(getByText('This field is mandatory.')).toBeVisible();
   });
 });
