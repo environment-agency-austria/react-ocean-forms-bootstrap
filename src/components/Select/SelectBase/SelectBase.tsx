@@ -202,6 +202,7 @@ export const SelectBase = <TSubmitValue extends unknown = ISelectFieldValue>(pro
   // Prepare the props for the renderSelect method
   const preparedProps: IPreparedSelectProps = {
     id: fieldProps.id,
+    inputId: `${fieldProps.id}-input`,
     value: fieldValue,
     isDisabled: fieldProps.disabled,
     isMulti: multi,
