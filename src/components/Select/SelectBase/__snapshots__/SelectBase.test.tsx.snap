@@ -222,7 +222,7 @@ exports[`<SelectBase /> should render correctly 1`] = `
 >
   <div>
     mock select with props
-    {"id":"mock-field","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
+    {"id":"mock-field","inputId":"mock-field-input","isDisabled":false,"isMulti":false,"options":[{"value":"one","label":"One"},{"value":"two","label":"Two"}],"placeholder":"ojs_select_placeholder","className":"react-select-control"}
   </div>
 </FieldLine>
 `;
