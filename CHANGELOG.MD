@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [3.2.1] # 2020-02-07
+- Fixed `FieldLine` prefix and suffix typings
+- Fixed html id generation in `Select`
+
 ## [3.2.0] # 2019-08-20
 - Improved `FormButton` props to include all reactstrap props
 - Added `fieldErrorComponent` to `ValidationSummary`
