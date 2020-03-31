@@ -82,4 +82,14 @@ describe('<Select />', () => {
 
     expect(result.find(ReactSelect).exists()).toBeTruthy();
   });
+
+  it('should render a react-select without value', () => {
+    const { wrapper } = setup({ fieldOverrides: {value: undefined}});
+
+    type SelectInstance = { renderSelect(): JSX.Element };
+    const i = ((wrapper.instance()) as unknown) as SelectInstance;
+    
+    const result = shallow(i.renderSelect());
+    expect(result.find(ReactSelect).exists()).toBeTruthy();
+  })
 });
