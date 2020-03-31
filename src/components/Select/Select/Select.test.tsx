@@ -5,7 +5,7 @@ import { IFieldComponentFieldProps, IFieldComponentMeta } from 'react-ocean-form
 import { SelectBase as ReactSelect } from 'react-select';
 
 import { createMockField, createMockFieldMeta } from '../../../test-utils/enzymeFormContext';
-import { ISelectOptions, SelectBase } from '../SelectBase';
+import { ISelectOptions, SelectBase, IPreparedSelectProps } from '../SelectBase';
 import { BaseSelect } from './Select';
 import { ISelectProps } from './Select.types';
 
@@ -83,13 +83,13 @@ describe('<Select />', () => {
     expect(result.find(ReactSelect).exists()).toBeTruthy();
   });
 
-  it('should render a react-select without value', () => {
-    const { wrapper } = setup({ fieldOverrides: {value: undefined}});
+  it('should render a react-select with value', () => {
+    const { wrapper } = setup();
 
-    type SelectInstance = { renderSelect(): JSX.Element };
+    type SelectInstance = { renderSelect(preparedProps: IPreparedSelectProps): JSX.Element };
     const i = ((wrapper.instance()) as unknown) as SelectInstance;
     
-    const result = shallow(i.renderSelect());
+    const result = shallow(i.renderSelect( { value: { label: 'Test', value: 'test'}}));
     expect(result.find(ReactSelect).exists()).toBeTruthy();
   })
 });
