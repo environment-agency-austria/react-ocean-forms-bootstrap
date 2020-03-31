@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [4.0.0] # 2020-03-31
+- Updated to `reactstrap` 8.4.1 and `react-select` 2.4.4
+- Correctly clear internal state of `react-select`
+
 ## [3.2.1] # 2020-02-07
 - Fixed `FieldLine` prefix and suffix typings
 - Fixed html id generation in `Select`
