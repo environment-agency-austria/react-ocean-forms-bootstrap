@@ -7,5 +7,5 @@ import { DefaultizedFieldLineProps } from '../FieldLine';
 export interface IDatePickerProps extends IFieldComponentProps, DefaultizedFieldLineProps {
   dateFormat?: string | boolean;
   timeFormat?: string | boolean;
-  inputFormat?: string | [string];
+  inputFormat?: string | string[];
 }
