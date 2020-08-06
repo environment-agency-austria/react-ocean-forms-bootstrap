@@ -1,4 +1,4 @@
-import { IFieldComponentProps } from 'react-ocean-forms';
+import { IFieldComponentProps, IMessageValues } from 'react-ocean-forms';
 
 /**
  * Props for components that use the info
@@ -27,6 +27,11 @@ export interface IBaseFieldLineProps extends IInfoProps {
    * CssClass for the label column
    */
   labelClass: string;
+
+  /**
+   * values object for label text
+   */
+  labelValues?: IMessageValues;
 
   /**
    * Prefix component

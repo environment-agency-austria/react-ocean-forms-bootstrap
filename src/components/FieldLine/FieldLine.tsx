@@ -66,6 +66,7 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
       labelSize,
       inputSize,
       labelClass,
+      labelValues,
     } = this.props;
 
     const { infoVisible } = this.state;
@@ -75,7 +76,7 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
         <Label sm={labelSize} for={field.id} className={labelClass}>
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
-          <FormText text={label} />
+          <FormText text={label} values={labelValues} />
           <RequiredMarker meta={meta} />
         </Label>
         <Col sm={inputSize}>

@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
+## [4.1.0] # 2020-08-06
+ - Prop `labelValues` for `FieldLine` and `Check` added
+
 ## [4.0.0] # 2020-03-31
 - Updated to `reactstrap` 8.4.1 and `react-select` 2.4.4
 - Correctly clear internal state of `react-select`

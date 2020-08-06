@@ -1,4 +1,4 @@
-import { IFieldComponentProps } from 'react-ocean-forms';
+import { IFieldComponentProps, IMessageValues } from 'react-ocean-forms';
 import { IInfoProps } from '../FieldLine';
 
 /**
@@ -9,4 +9,10 @@ export interface ICheckProps extends IFieldComponentProps, IInfoProps {
    * CSS class name
    */
   className?: string;
+
+  /**
+   * values object for label text
+   */
+  labelValues?: IMessageValues;
+
 }
