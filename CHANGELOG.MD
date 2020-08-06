@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [4.1.0] # 2019-08-20
+ - Prop `labelValues` for `FieldLine` and `Check` added
+
+
 ## [3.2.1] # 2020-02-07
 - Fixed `FieldLine` prefix and suffix typings
 - Fixed html id generation in `Select`
