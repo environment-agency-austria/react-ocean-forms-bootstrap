@@ -38,8 +38,13 @@ export class BaseSelect extends React.Component<ISelectProps> {
    * Renders the actual `Select` component with the passed props
    */
   private renderSelect = (preparedProps: IPreparedSelectProps): JSX.Element => {
+    const value = preparedProps && preparedProps.value ? preparedProps.value : null;
+
     return (
-      <ReactSelect {...preparedProps} />
+      <ReactSelect
+        {...preparedProps}
+        value={value}
+      />
     );
   }
 }
