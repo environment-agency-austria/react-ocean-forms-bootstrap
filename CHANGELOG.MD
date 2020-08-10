@@ -1,6 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [4.2.0] # 2020-08-10
+ - Prop `onRenderLabel` for `Check` added
 
 ## [4.1.0] # 2020-08-06
  - Prop `labelValues` for `FieldLine` and `Check` added
