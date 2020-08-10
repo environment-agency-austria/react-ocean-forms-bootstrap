@@ -15,4 +15,6 @@ export interface ICheckProps extends IFieldComponentProps, IInfoProps {
    */
   labelValues?: IMessageValues;
 
+  onRenderLabel?(field: IFieldComponentProps): void;
+
 }

@@ -73,6 +73,7 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
       field,
       label,
       labelValues,
+      onRenderLabel,
       className,
       meta,
       info,
@@ -106,7 +107,11 @@ export class BaseCheck extends React.Component<ICheckProps, ICheckState> {
                 onClick={this.handleChange}
                 disabled={disabled}
               />
-              <FormText text={label} values={labelValues} />
+              {onRenderLabel ? 
+                onRenderLabel({ field, meta, label })
+                :
+                <FormText text={label} values={labelValues} />
+                }
               <FieldError
                 id={`${field.id}_errors`}
                 invalid={!meta.valid}
