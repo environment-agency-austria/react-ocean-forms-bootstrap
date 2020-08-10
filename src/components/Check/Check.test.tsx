@@ -83,4 +83,12 @@ describe('<Check />', () => {
 
     expect(wrapper.find('Input').exists()).toBeTruthy();
   });
+  it('should render checkbox with onRenderLabel', () => {
+    const renderLabelProp = jest.fn().mockImplementation(() => <div>custom label component</div> );
+    const { wrapper } = setup(
+      { props: { 
+        onRenderLabel:  renderLabelProp }});
+        console.log('wrapper', wrapper);
+    expect(renderLabelProp).toBeCalled();
+  });
 });
