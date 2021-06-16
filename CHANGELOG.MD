@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [4.2.2] # 2021-06-16
+ - Fixed WAI issue in `DatePicker`
+
 ## [4.2.1] # 2021-06-16
  - Fixed WAI issue in `Select`
  

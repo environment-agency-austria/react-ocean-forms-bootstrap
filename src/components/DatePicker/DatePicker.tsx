@@ -127,6 +127,7 @@ export class BaseDatePicker extends React.Component<IDatePickerProps> {
     }
 
     const inputProps = {
+      id: field.id,
       disabled: field.disabled,
     };
 

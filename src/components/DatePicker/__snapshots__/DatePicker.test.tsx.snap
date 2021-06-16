@@ -79,6 +79,7 @@ exports[`<DatePicker /> should render correctly 1`] = `
     inputProps={
       Object {
         "disabled": false,
+        "id": "mock-field",
       }
     }
     onBlur={[Function]}
