@@ -1,6 +1,6 @@
 {
   "name": "react-ocean-forms-bootstrap",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Forms components for react based on the context api.",
   "main": "build/index.js",
   "module": "build/index.es.js",
