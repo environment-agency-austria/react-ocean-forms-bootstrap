@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [4.2.4] # 2021-07-01
+ - Fixed issue in `FieldLine` for changes in `Select` and `SelectBase`
+
 ## [4.2.3] # 2021-07-01
  - Fixed WAI issue in `Select` and `SelectBase`
 
@@ -48,7 +51,7 @@ All notable changes to this project will be documented in this file.
 ## [2.1.6] # 2019-01-07
 - onCreateOption added to `CreatableSelect`
 
-## [2.1.5] # 2018-12-16
+ ## [2.1.5] # 2018-12-16
 - Migrated to rollup to improve package size and tree shaking
 
 ## [2.1.4] # 2018-12-11
