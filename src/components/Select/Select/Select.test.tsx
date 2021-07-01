@@ -46,6 +46,7 @@ describe('<Select />', () => {
 
     const wrapper = shallow((
       <BaseSelect
+        id={props?.id}
         label={fieldLabel}
         meta={meta}
         field={field}
@@ -67,6 +68,11 @@ describe('<Select />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render correctly with explicit id', () => {
+    const { wrapper } = setup({props: { id: 'mock-field-id'}});
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render a select-base', () => {
     const { wrapper } = setup();
 
@@ -74,7 +80,7 @@ describe('<Select />', () => {
   });
 
   it('should render a react-select', () => {
-    const { wrapper } = setup();
+    const { wrapper } = setup({props: { id: 'mock-field-id'}});
 
     type SelectInstance = { renderSelect(): JSX.Element };
     const i = ((wrapper.instance()) as unknown) as SelectInstance;

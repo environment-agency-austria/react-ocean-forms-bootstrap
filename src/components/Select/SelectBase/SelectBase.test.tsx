@@ -77,6 +77,11 @@ describe('<SelectBase />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render correctly with explicit id', () => {
+    const { wrapper } = setup({props: { id: 'mock-field-id'}});
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render a field line and a react-select', () => {
     const renderSelect = jest.fn();
 

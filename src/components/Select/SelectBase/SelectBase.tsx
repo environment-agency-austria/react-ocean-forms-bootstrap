@@ -189,7 +189,7 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       placeholder,
       options,
       meta,
-
+      id,
       // booleans
       multi,
       loading,
@@ -217,8 +217,8 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
 
     // Prepare the props for the renderSelect method
     const preparedProps: IPreparedSelectProps = {
-      id: `${field.id}-container`,
-      inputId: field.id,
+      id: id ? `${id}-container` : `${field.id}-container`,
+      inputId: id ? id : field.id,
       value: fieldValue,
       isDisabled: field.disabled,
       isMulti: multi,
@@ -232,6 +232,8 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       placeholder: placeholderText,
       className: selectClass,
     };
+
+    console.log('PREPARE Props ', id, field, preparedProps);
 
     return (
       <FieldLine
