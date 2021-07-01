@@ -56,6 +56,7 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
 
   public render(): JSX.Element {
     const {
+      id,
       field,
       meta,
       label,
@@ -71,9 +72,10 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
 
     const { infoVisible } = this.state;
 
+    const fieldId = id ? id : field.id;
     return (
       <FieldRow meta={meta}>
-        <Label sm={labelSize} for={field.id} className={labelClass}>
+        <Label sm={labelSize} for={fieldId} className={labelClass}>
           <InvalidAlert valid={meta.valid} />
           <ValidatingSpinner isValidating={meta.isValidating} />
           <FormText text={label} values={labelValues} />
@@ -86,7 +88,7 @@ export class FieldLine extends React.Component<IFieldLineProps, IFieldLineState>
             <FieldLineAddon plaintext={meta.plaintext} type="append" content={suffix} />
             <InfoAddonButton info={info} plaintext={meta.plaintext} onClick={this.toggleInfo} />
             <FieldError
-              id={`${field.id}_errors`}
+              id={`${fieldId}_errors`}
               invalid={!meta.valid}
               error={meta.error}
             />

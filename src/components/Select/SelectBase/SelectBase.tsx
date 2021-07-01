@@ -233,13 +233,12 @@ export class SelectBase extends React.Component<ISelectBaseProps> {
       className: selectClass,
     };
 
-    console.log('PREPARE Props ', id, field, preparedProps);
-
     return (
       <FieldLine
         meta={meta}
         field={field}
         {...fieldlineProps}
+        id={id ? id : field.id}
       >
         {renderSelect(preparedProps)}
       </FieldLine>

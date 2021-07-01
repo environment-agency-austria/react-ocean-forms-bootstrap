@@ -192,6 +192,7 @@ exports[`<SelectBase /> should render correctly 1`] = `
       "value": "",
     }
   }
+  id="mock-field"
   inputSize="9"
   label="field0"
   labelClass="text-right"
@@ -239,6 +240,7 @@ exports[`<SelectBase /> should render correctly with explicit id 1`] = `
       "value": "",
     }
   }
+  id="mock-field-id"
   inputSize="9"
   label="field0"
   labelClass="text-right"

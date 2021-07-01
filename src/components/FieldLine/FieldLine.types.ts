@@ -16,6 +16,10 @@ export interface IInfoProps {
  */
 export interface IBaseFieldLineProps extends IInfoProps {
   /**
+   * optional id for field line instead of id from field
+   */
+  id?: string;
+  /**
    * Label size for the bootstrap label column
    */
   labelSize: string;
